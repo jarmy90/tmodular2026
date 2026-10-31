@@ -1,0 +1,33 @@
+TM Core v0.7.4 - Selftest y pruebas
+
+Fecha: 2026-10-27
+Motor: python\TM_CORE_PYTHON_v074_FUNCTIONAL_READER.py
+Tests: python\TM_CORE_PYTHON_v074_TESTS.py
+
+Comando:
+python "python\TM_CORE_PYTHON_v074_FUNCTIONAL_READER.py" --selftest
+
+Salida:
+SELFTEST OK v0.7.4: 8 comprobaciones
+
+Comando:
+python -m pytest "python\TM_CORE_PYTHON_v074_TESTS.py" -q
+
+Salida:
+13 passed
+
+Cobertura de aceptación:
+- feed completo y ventana
+- movimiento 65.20 y causalidad
+- lectura clave 65.20 / TT 29615.20 / FT
+- límite de 3 activas
+- guardia A desproporcionada
+- sin TT antes de B
+- invariancia de prefijo hasta 16:59
+- GAP no detiene la vela
+- buffer CUT 2.00
+- A mayor que módulo sin invalidación
+- CSV, JSON y campos obligatorios
+- vocabulario funcional sin términos prohibidos
+- ausencia de hardcode de la ventana
+- selftest interno

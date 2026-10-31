@@ -1,0 +1,10 @@
+{
+  "reader": "TM_REFERENCE_INTERPRETER_V1_DIRECT_AUT",
+  "tests": 17,
+  "passed": 17,
+  "failed": 0,
+  "all_pass": true,
+  "canonical": 1,
+  "provisional": 16,
+  "scope": "AUT directo con precondicion A_CONFIRMED"
+}

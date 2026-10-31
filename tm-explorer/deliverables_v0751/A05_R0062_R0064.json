@@ -1,0 +1,14 @@
+{
+  "base_window_reading": "R0062",
+  "full_window_reading": "R0064",
+  "event_count": 26,
+  "module": "29667.30->29602.10 X=65.20",
+  "a": "29602.10->29680.40 A=78.30",
+  "b": "29680.40->29600.20 B=80.20",
+  "tt_target": 2961520,
+  "tt_price": 2961420,
+  "ft": true,
+  "ft_price": 2962110,
+  "ft_structural_time": 1792169846302,
+  "pass": true
+}

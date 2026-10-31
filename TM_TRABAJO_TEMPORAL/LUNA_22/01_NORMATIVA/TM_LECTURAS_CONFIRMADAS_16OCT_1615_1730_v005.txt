@@ -1,0 +1,737 @@
+TM - REGISTRO VIVO DE LECTURAS CONFIRMADAS Y AUDITADAS
+Fecha: 16 de octubre de 2026
+Ventana maestra: 16:15:00 a 17:30:00 (fin exclusivo)
+Símbolo: USTEC - IC Markets - paso mínimo observado 0,1
+Tickfeed maestro: TM_TICKFEED_ICMARKETS_TESTER_USTEC_20261016_1615_1730.csv
+Estado del documento: ABIERTO Y ACUMULATIVO
+Versión: v0.05
+
+======================================================================
+1. CRITERIO DE INCLUSIÓN
+======================================================================
+
+Este documento distingue cuatro estados:
+
+[A] CONFIRMADA POR JAVIER Y COPILOT
+Lectura expresamente revisada y aceptada por ambos.
+
+[B] CONFIRMADA PARCIALMENTE
+Parte de la estructura está fijada, pero la lectura completa de la vela o
+su continuidad todavía necesita revisión tick a tick.
+
+[C] REFERENCIA FÍSICA AUDITADA
+OHLC y orden de ticks disponibles, pero sin lectura funcional conjunta
+cerrada. No se considera golden funcional.
+
+[D] PENDIENTE
+Todavía no leída conjuntamente.
+
+Regla de control: una vela no pasa a [A] por cobertura automática del Python,
+por color, por OHLC, ni por una reconstrucción retrospectiva. Debe conservar
+la causalidad y ser aceptada expresamente en la lectura conjunta.
+
+======================================================================
+2. COBERTURA DEL TICKFEED
+======================================================================
+
+Ticks totales: 20.335
+Velas M1: 75
+Primer tick: 16:15:00.016
+Último tick: 17:29:59.897
+Warm-up: 16:15 a 16:29, 15 velas
+Ventana de lectura: 16:30 a 17:29, 60 velas
+Minutos ausentes: 0
+Huecos de sequence_id: 0
+Duplicados exactos: 0
+Retrocesos temporales: 0
+
+El tramo 16:20 a 17:00 coincide exactamente, tick por tick, con el feed de
+referencia anterior de 11.120 ticks. Por tanto, las lecturas ya trabajadas no
+cambian por la ampliación del archivo.
+
+======================================================================
+3. RESUMEN DE VELAS DISPONIBLES Y ESTADO ACTUAL
+======================================================================
+
+16:15-16:18  [A] CONFIRMADAS en la lectura principal.
+16:19-16:22  [A] CONFIRMADAS en la lectura principal y local 1-2-3/AUT.
+16:23-16:24  [A] CONFIRMADAS con orden causal tick a tick.
+16:25-16:29  [A] CONFIRMADAS por Javier. Warm-up humano 16:15-16:29 cerrado.
+16:30        [A] CONFIRMADA.
+16:31        [A] CONFIRMADA.
+16:32        [A] CONFIRMADA.
+16:33-16:36  [B] CONTINUIDAD ABIERTA; OHLC conocido, función no cerrada.
+16:37        [A] CONFIRMADA en su lectura independiente como 1 bajista.
+16:38        [A] CONFIRMADA la rama de apertura: gap, no hay 2; A/B/AUT y
+              posible TT deben resolverse causalmente. El resultado exacto
+              completo se mantiene sujeto al orden de ticks.
+16:39        [B] LECTURA LOCAL DOMINANTE fijada conceptualmente; falta dejar
+              cerrados todos sus hitos exactos tick a tick.
+16:40-16:41  [D] PENDIENTES de certificación conjunta.
+16:42-16:44  [B] CASO CANÓNICO trabajado, pero no se incorpora todavía como
+              golden completo por vela en este registro sin una nueva pasada.
+16:45-16:48  [B] CASO CANÓNICO trabajado. Existen reglas conjuntas y varias
+              confluencias TT, pero falta normalizar vela por vela.
+16:49-17:29  [D] PENDIENTES de certificación conjunta. Los resultados de un
+              motor o de DeepSeek no sustituyen nuestra validación.
+
+Recuento prudente dentro de 16:15-17:29:
+- Confirmadas completas [A]: 14 velas: 16:15-16:24, 16:30-16:32 y 16:37.
+- Confirmación estructural parcial [A/B]: 16:38 y 16:39.
+- Casos trabajados pero pendientes de normalización: 16:42-16:48.
+- Primera vela pendiente en orden cronológico: 16:33. El bloque 16:25-16:29 queda confirmado y 16:30-16:32 ya constaba confirmado.
+
+No se mantienen por ahora las cifras informales de “17 velas perfectas”. Este
+registro usa un criterio más estricto para no confundir velas estudiadas con
+velas golden completamente certificadas.
+
+======================================================================
+4. LECTURAS CONFIRMADAS
+======================================================================
+
+---------------------------------------------------------------------
+VELA 16:30 - [A] CONFIRMADA POR JAVIER Y COPILOT
+---------------------------------------------------------------------
+OHLC BID:
+Apertura: 29820,60
+Máximo:   29838,20
+Mínimo:   29784,60
+Cierre:   29811,60
+Medida máximo-mínimo: 53,60 puntos
+
+Lectura canónica:
+- 1 bajista.
+- El recorrido completo se simplifica funcionalmente como un único 1.
+- Las oscilaciones internas no crean funciones independientes.
+- Al finalizar el descenso y comenzar el movimiento contrario nace A Grande.
+- La vela constituye el módulo bajista inicial de 53,60 puntos.
+
+Estado al cierre:
+- Módulo/1 bajista activo.
+- A Grande iniciada y pendiente de determinar su final causal.
+
+---------------------------------------------------------------------
+VELA 16:31 - [A] CONFIRMADA POR JAVIER Y COPILOT
+---------------------------------------------------------------------
+OHLC BID:
+Apertura: 29810,80
+Máximo:   29810,80
+Mínimo:   29760,30
+Cierre:   29793,10
+
+Referencias:
+FINAL_A = 29810,80
+Módulo de la vela 16:30 = 53,60 puntos
+Objetivo TT = 29810,80 - 53,60 = 29757,20
+Mínimo real = 29760,30
+Distancia pendiente = 3,10 puntos
+
+Lectura canónica:
+- Desde FINAL_A comienza B bajista.
+- Funciona como B y posible TT del módulo de la vela 16:30.
+- El TT queda pendiente.
+- No se confirma porque el precio no alcanza el 100 %.
+- Quedarse a 3,10 puntos no equivale a completar el TT.
+
+Estado al cierre:
+- B bajista activa.
+- TT bajista pendiente en 29757,20.
+
+---------------------------------------------------------------------
+VELA 16:32 - [A] CONFIRMADA POR JAVIER Y COPILOT
+---------------------------------------------------------------------
+OHLC BID:
+Apertura: 29796,70
+Máximo:   29820,80
+Mínimo:   29794,10
+Cierre:   29809,80
+
+Apertura:
+- Abre con gap.
+- Con gap no puede existir 2.
+
+Referencias pendientes al abrir:
+Objetivo TT = 29757,20
+FINAL_A = 29810,80
+
+Orden causal confirmado:
+1. No alcanza 29757,20.
+2. Sí supera 29810,80.
+3. El cruce del FINAL_A se produce aproximadamente a las 16:32:23, con un
+   tick de 29811,80.
+
+Lectura canónica:
+- TT bajista fallido.
+- No existe reset por TT, porque el TT nunca se confirmó.
+- Las velas 16:30 y 16:31 se reclasifican como módulo conjunto.
+- La vela 16:32 desarrolla la nueva A Grande de ese módulo conjunto por la
+  rama de gap.
+
+Estado al cierre:
+- Módulo conjunto 16:30-16:31.
+- Nueva A Grande activa/desarrollada en 16:32.
+
+---------------------------------------------------------------------
+VELA 16:37 - [A] CONFIRMADA EN SU LECTURA INDEPENDIENTE
+---------------------------------------------------------------------
+OHLC BID:
+Apertura: 29734,80
+Máximo:   29744,40
+Mínimo:   29683,20
+Cierre:   29689,10
+
+Lectura canónica:
+- El análisis independiente comienza en esta vela.
+- La vela 16:37 se clasifica como 1 bajista.
+- Su módulo se mide desde 29744,40 hasta 29683,20.
+- Medida del módulo: 61,20 puntos.
+- Esta lectura sirve de referencia para resolver causalmente la vela 16:38.
+
+---------------------------------------------------------------------
+VELA 16:38 - [A/B] RAMA DE APERTURA CONFIRMADA; CIERRE FUNCIONAL PENDIENTE
+---------------------------------------------------------------------
+OHLC BID:
+Apertura: 29688,30
+Máximo:   29701,10
+Mínimo:   29670,90
+Cierre:   29678,40
+
+Lectura confirmada:
+- Abre con gap respecto a la vela 16:37.
+- Por tanto, no puede existir 2.
+- Debe recorrerse la rama A Grande -> B -> AUT -> posible TT.
+- A Grande se mide desde el final de la vela 16:37 hasta el máximo de 16:38.
+- Desde el final de A, situado en el máximo de 16:38, el descenso se compara
+  con el módulo de 61,20 puntos de la vela 16:37.
+
+Pendiente antes de convertirla en golden completa:
+- Fijar con ticks los tiempos y precios exactos de A, B, AUT y posible TT.
+- Registrar cuál es el estado vigente al cierre sin usar información futura.
+
+---------------------------------------------------------------------
+VELA 16:39 - [B] LECTURA LOCAL DOMINANTE CONFIRMADA CON DETALLE PENDIENTE
+---------------------------------------------------------------------
+OHLC BID:
+Apertura: 29678,60
+Máximo:   29708,10
+Mínimo:   29669,20
+Cierre:   29693,30
+
+Lectura conceptual confirmada:
+- Una lectura grande anterior puede conservarse solo como escenario secundario.
+- La lectura dominante debe reiniciarse localmente.
+- Si la apertura es en plano, el descenso forma módulo por descarte.
+- La subida posterior actúa como A Grande.
+- Si supera la base del módulo, confirma AUT y pasa a nuevo 1 alcista.
+- Si después gira y baja estructuralmente, ese descenso pasa a ser el nuevo
+  1 bajista dominante.
+- No debe mantenerse como principal un TT grande anterior poco probable.
+
+Pendiente antes de convertirla en [A]:
+- Verificar plano/gap/cola con los primeros ticks.
+- Fijar módulo, final de A, AUT y cambio de dominancia con sequence_id exacto.
+
+======================================================================
+5. VELAS CON REFERENCIA FÍSICA, PERO SIN GOLDEN FUNCIONAL CERRADO
+======================================================================
+
+16:33  O=29808,30 H=29819,20 L=29782,10 C=29785,90
+       Debe continuar desde la A de 16:32; no se permite reset inventado.
+
+16:34  O=29784,90 H=29792,80 L=29765,70 C=29766,90
+       Resolver continuidad mediante ticks y referencias activas.
+
+16:35  O=29766,40 H=29780,30 L=29717,60 C=29720,70
+       Recorrido amplio que debe simplificarse funcionalmente.
+
+16:36  O=29719,10 H=29738,40 L=29712,40 C=29735,70
+       No crear una función por cada giro interno.
+
+Estas cuatro velas no se marcan aún como confirmadas completas.
+
+======================================================================
+6. CASOS YA TRABAJADOS QUE DEBEMOS NORMALIZAR DE NUEVO
+======================================================================
+
+16:42-16:44
+- Caso canónico incorporado al árbol, pero debe transformarse en fichas por
+  vela con structural_time y knowledge_time separados.
+
+16:45-16:48
+- Existe lectura canónica conjunta con módulo, A Grande, B candidata y varias
+  confluencias TT.
+- Debe repetirse la pasada con el tickfeed maestro ampliado y quedar expresada
+  vela por vela antes de marcarse como golden completa.
+
+16:52-16:56
+- Se utilizó para auditar motores y detectar spoilers.
+- No se considera golden humano completo en este documento.
+- La salida retrospectiva de DeepSeek no sustituye la confirmación conjunta.
+
+======================================================================
+7. PLAN DE CONTINUACIÓN
+======================================================================
+
+Comenzaremos en 16:15 y avanzaremos sin saltos:
+
+1. Leer 16:15-16:29 como warm-up real, no como datos descartables.
+2. Determinar qué estructura llega viva a 16:30.
+3. Cotejar 16:30-16:32 con la lectura ya confirmada.
+4. Cerrar 16:33-16:36.
+5. Cotejar y completar 16:37-16:39.
+6. Continuar secuencialmente hasta 17:29.
+
+En cada nueva vela añadiremos:
+- OHLC físico.
+- Gap/plano/cola inicial.
+- Estado recibido.
+- Funciones activas.
+- Eventos con hora y sequence_id de confirmación.
+- Reclasificaciones.
+- Estado al cierre.
+- Validación expresa de Javier y Copilot.
+
+======================================================================
+8. PRIMERA VELA A LEER AHORA
+======================================================================
+
+16:25 - [D] PENDIENTE
+
+Esta es la siguiente vela de la lectura conjunta tras cerrar 16:15-16:24.
+
+
+======================================================================
+9. BLOQUE CONFIRMADO 16:15-16:22
+======================================================================
+
+REGLA CANÓNICA DE PLANO APLICADA
+- Una apertura es en plano cuando |apertura - cierre anterior| < 0,25 puntos.
+- Diferencias de 0,1 o 0,2 puntos son plano.
+- Una diferencia exacta de 0,25 puntos o superior no es plano.
+- Después de confirmar plano se comprueba la cola inicial y el tamaño exigido
+  para clasificar 2.
+
+---------------------------------------------------------------------
+VELA 16:15 - [A] CONFIRMADA
+---------------------------------------------------------------------
+OHLC BID:
+Apertura: 29877,0
+Máximo:   29877,0
+Mínimo:   29860,8
+Cierre:   29861,0
+
+Lectura canónica:
+- Módulo bajista inicial.
+- Medida: 29877,0 - 29860,8 = 16,2 puntos.
+
+---------------------------------------------------------------------
+VELA 16:16 - [A] CONFIRMADA
+---------------------------------------------------------------------
+OHLC BID:
+Apertura: 29861,1
+Máximo:   29861,1
+Mínimo:   29848,5
+Cierre:   29853,6
+
+Apertura y clasificación:
+- Cierre anterior: 29861,0.
+- Diferencia de apertura: +0,1 puntos.
+- Como |+0,1| < 0,25, abre en plano.
+- Abre en su máximo y baja; no existe cola superior inicial relevante.
+- Recorrido bajista: 29861,1 - 29848,5 = 12,6 puntos.
+- El módulo anterior mide 16,2 puntos.
+- Como 12,6 < 16,2, no es 2.
+- Se clasifica como módulo por descarte.
+
+Integración:
+- 16:15 y 16:16 forman módulo conjunto.
+- Origen: 29877,0.
+- Extremo: 29848,5.
+- X = 28,5 puntos.
+
+---------------------------------------------------------------------
+VELA 16:17 - [A] CONFIRMADA
+---------------------------------------------------------------------
+OHLC BID:
+Apertura: 29854,3
+Máximo:   29857,6
+Mínimo:   29852,1
+Cierre:   29854,5
+
+Lectura canónica:
+- Abre con diferencia +0,7; no abre en plano.
+- A Grande del módulo conjunto 16:15-16:16.
+- A Grande: 29848,5 -> 29857,6.
+- Tamaño A = 9,1 puntos.
+- Después del máximo comienza B bajista.
+
+---------------------------------------------------------------------
+VELA 16:18 - [A] CONFIRMADA
+---------------------------------------------------------------------
+OHLC BID:
+Apertura: 29853,8
+Máximo:   29857,4
+Mínimo:   29843,0
+Cierre:   29849,3
+
+Orden causal confirmado:
+- Primero sube hasta 29857,4.
+- No supera el final previo de A, situado en 29857,6.
+- Por tanto, no extiende A Grande.
+- Después baja hasta 29843,0.
+- El descenso desde 29857,6 supera el 100 % de A.
+- También supera 127 % de A + 0,25.
+- Confirma AUT bajista; B Grande deja de ser la clasificación vigente.
+
+TT principal:
+- Módulo conjunto X = 28,5 puntos.
+- Final de A = 29857,6.
+- Objetivo TT = 29857,6 - 28,5 = 29829,1.
+- El mínimo 29843,0 no alcanza el objetivo.
+- TT principal pendiente.
+
+---------------------------------------------------------------------
+VELA 16:19 - [A] CONFIRMADA
+---------------------------------------------------------------------
+OHLC BID:
+Apertura: 29848,9
+Máximo:   29850,0
+Mínimo:   29842,5
+Cierre:   29845,0
+
+Lecturas coexistentes:
+- En la lectura principal, continúa el AUT bajista iniciado en 16:18.
+- Simultáneamente, la vela 16:19 forma un nuevo 1 bajista local.
+- Medida del 1 local: 29850,0 - 29842,5 = 7,5 puntos.
+
+---------------------------------------------------------------------
+VELA 16:20 - [A] CONFIRMADA COMO 2
+---------------------------------------------------------------------
+OHLC BID:
+Apertura: 29844,8
+Máximo:   29844,8
+Mínimo:   29832,5
+Cierre:   29836,0
+
+Condiciones de 2:
+- Cierre anterior: 29845,0.
+- Diferencia de apertura: -0,2 puntos.
+- Como |-0,2| < 0,25, abre en plano.
+- Abre en su máximo y baja; no existe cola superior inicial relevante.
+- Recorrido de 16:20: 29844,8 - 29832,5 = 12,3 puntos.
+- Medida del 1 de 16:19: 7,5 puntos.
+- Como 12,3 >= 7,5, cumple el tamaño requerido.
+
+Clasificación definitiva:
+- 16:20 es 2 bajista confirmado.
+- No debe registrarse como “posible 2”.
+
+---------------------------------------------------------------------
+VELA 16:21 - [A] CONFIRMADA COMO 3
+---------------------------------------------------------------------
+OHLC BID:
+Apertura: 29835,0
+Máximo:   29836,3
+Mínimo:   29830,3
+Cierre:   29830,8
+
+Lectura canónica:
+- Continúa después del 2 confirmado de 16:20.
+- Marca un nuevo mínimo en 29830,3.
+- Completa la estructura local.
+
+Clasificación definitiva:
+- 16:21 es 3 confirmado.
+- La secuencia local queda: 16:19 = 1; 16:20 = 2; 16:21 = 3.
+- La diferencia de apertura de 16:21 no invalida el 2 ya confirmado.
+
+TT principal:
+- Objetivo pendiente: 29829,1.
+- Mínimo alcanzado: 29830,3.
+- Queda 1,2 puntos por encima.
+- El TT principal sigue pendiente; no se concede por aproximación.
+
+---------------------------------------------------------------------
+VELA 16:22 - [A] CONFIRMADA COMO A GRANDE, AUT Y NUEVO 1
+---------------------------------------------------------------------
+OHLC BID:
+Apertura: 29831,3
+Máximo:   29850,8
+Mínimo:   29831,3
+Cierre:   29846,5
+
+Lectura local dominante:
+- Desde el final del 3 nace A Grande alcista.
+- A Grande local: 29830,3 -> 29850,8.
+- Tamaño: 20,5 puntos.
+- La referencia relevante es el inicio/origen del módulo local 1-2-3,
+  situado en el máximo de 16:19: 29850,0.
+- 16:22 alcanza 29850,8 y supera 29850,0 en 0,8 puntos.
+
+Clasificación definitiva:
+- Confirma AUT alcista del módulo local 1-2-3.
+- AUT alcista pasa a ser nuevo 1 alcista dominante.
+- No debe registrarse únicamente como A Grande ni como AUT posible.
+- No necesita superar 29877,0, porque esa referencia pertenece al módulo
+  principal anterior y no al módulo local que gobierna esta clasificación.
+
+ESTADO CONJUNTO AL CIERRE DE 16:22
+
+Lectura principal anterior:
+- Módulo conjunto 16:15-16:16.
+- A Grande en 16:17.
+- AUT bajista desde 16:18.
+- TT principal en 29829,1 todavía pendiente.
+
+Lectura local dominante:
+- 16:19 = 1 bajista.
+- 16:20 = 2 bajista confirmado.
+- 16:21 = 3 bajista confirmado.
+- 16:22 = A Grande alcista.
+- 16:22 = AUT alcista confirmado.
+- 16:22 = nuevo 1 alcista dominante.
+
+Próxima vela pendiente para la lectura conjunta: 16:23.
+
+
+======================================================================
+10. BLOQUE CONFIRMADO 16:23-16:24
+======================================================================
+
+PUNTO DE PARTIDA
+- En 16:22 quedó confirmado un nuevo 1 alcista dominante.
+- El máximo y extremo final de ese 1 es 29850,8, alcanzado a las
+  16:22:52.576, sequence_id 1809.
+- Antes del cierre de 16:22 el precio baja hasta 29846,5.
+- Esa bajada final es el inicio de A Grande contraria al nuevo 1 alcista.
+
+---------------------------------------------------------------------
+VELA 16:23 - [A] CONFIRMADA
+---------------------------------------------------------------------
+OHLC BID:
+Apertura: 29846,8
+Máximo:   29852,6
+Mínimo:   29837,3
+Cierre:   29837,4
+
+Apertura:
+- Cierre anterior: 29846,5.
+- Diferencia: +0,3 puntos.
+- Como 0,3 >= 0,25, no abre en plano.
+
+Orden causal exacto:
+1. La bajada iniciada al final de 16:22 continúa al comenzar 16:23.
+2. Alcanza 29842,8 a las 16:23:02.021, sequence_id 1846.
+3. Ese recorrido completa/extiende A Grande bajista nacida en 29850,8.
+4. Desde 29842,8 el precio sube hasta 29852,6 a las 16:23:12.154,
+   sequence_id 1879.
+5. La subida actúa como B de la A bajista y supera el inicio de A, 29850,8.
+6. Por tanto, confirma AUT alcista; no queda como simple B.
+7. Después el precio gira y baja hasta 29837,3 a las 16:23:59.498,
+   sequence_id 2062.
+8. La bajada supera la base/origen del módulo local del AUT, situada en
+   29842,8.
+9. El AUT alcista queda integrado como módulo y la bajada es A Grande de ese
+   módulo; al superar su base confirma AUT bajista y pasa a nuevo 1 bajista.
+
+Clasificación definitiva al cierre de 16:23:
+- A Grande bajista desde el final de 16:22.
+- B alcista que confirma AUT alcista al superar 29850,8.
+- El AUT alcista se convierte en módulo local.
+- La bajada posterior supera 29842,8.
+- Se confirma AUT bajista y nace un nuevo 1 bajista dominante.
+
+---------------------------------------------------------------------
+VELA 16:24 - [A] CONFIRMADA
+---------------------------------------------------------------------
+OHLC BID:
+Apertura: 29836,0
+Máximo:   29840,6
+Mínimo:   29828,1
+Cierre:   29834,5
+
+Apertura:
+- Cierre anterior: 29837,4.
+- Diferencia: -1,4 puntos.
+- No abre en plano.
+
+Orden causal relevante:
+- Continúa inicialmente el nuevo 1 bajista hasta 29833,3 a las 16:24:03.761,
+  sequence_id 2078.
+- Sube hasta 29838,0 a las 16:24:10.704, sequence_id 2107.
+- Vuelve a 29833,3 y después alcanza 29840,6 a las 16:24:25.558,
+  sequence_id 2165.
+- Finalmente baja hasta 29828,1 a las 16:24:49.819,
+  sequence_id 2259.
+
+Lectura canónica confirmada:
+- La vela desarrolla A Grande contraria al nuevo 1 bajista.
+- El giro posterior desarrolla B.
+- B supera la referencia funcional necesaria y confirma AUT bajista.
+- El TT alcista de la lectura anterior no se alcanza.
+- No se concede TT por aproximación ni por la forma visual de la vela.
+
+Estado al cierre de 16:24:
+- Nuevo 1 bajista dominante extendido.
+- Secuencia A -> B -> AUT recorrida dentro de la vela.
+- TT alcista pendiente/no alcanzado.
+
+Próxima vela pendiente para la lectura conjunta: 16:25.
+
+
+======================================================================
+11. ADENDA EXPERTA Y BLOQUE CONFIRMADO 16:24-16:29
+======================================================================
+
+AUTORIDAD
+- Lectura dictada y confirmada por Javier.
+- Se separa la evidencia física de apertura/OHLC de la clasificación funcional.
+- Las funciones continúan entre velas cuando conservan la misma finalidad.
+- No se fragmentan por el cambio de vela ni por oscilaciones internas absorbibles.
+
+---------------------------------------------------------------------
+AJUSTE FUNCIONAL DE 16:24 - [A] CONFIRMADO
+---------------------------------------------------------------------
+
+Lectura vigente:
+- En 16:24 se recorren A Grande, B Grande y A Grande usada como tendencia.
+- El avance no alcanza el 100 % del TT correspondiente.
+- Estado al cierre: TT pendiente/no alcanzado.
+
+Esta lectura sustituye cualquier descripción anterior de 16:24 que presentase
+una cadena funcional distinta.
+
+---------------------------------------------------------------------
+VELA 16:25 - [A] CONFIRMADA
+---------------------------------------------------------------------
+
+Evidencia física BID:
+- Cierre anterior: 29834,5.
+- Apertura: 29848,5.
+- Diferencia: +14,0 puntos.
+- Máximo: 29875,4.
+- Mínimo: 29848,5.
+- Cierre: 29870,8.
+- Existe gap alcista grande; no hay 2.
+
+Lectura funcional:
+- El gap recoge causalmente la secuencia A Grande, B Grande y A Grande usada
+  como tendencia.
+- La A Grande usada como tendencia confirma el cambio funcional y el nuevo 1
+  dominante alcista.
+- En la propia vela se completa un TT alcista.
+- La cola superior final deja preparado el recorrido contrario que se leerá en
+  16:26 como A Grande bajista de la lectura principal.
+
+Estado al cierre:
+- TT alcista confirmado.
+- Nuevo 1 alcista dominante.
+- Inicio de A Grande bajista en la cola superior/final.
+
+---------------------------------------------------------------------
+VELA 16:26 - [A] CONFIRMADA CON DOBLE LECTURA
+---------------------------------------------------------------------
+
+Evidencia física BID:
+- Cierre anterior: 29870,8.
+- Apertura: 29869,3.
+- Diferencia: -1,5 puntos; no es plano.
+- Máximo: 29873,8.
+- Mínimo: 29849,1.
+- Cierre: 29849,3.
+
+Lectura principal:
+- La cola superior de 16:25 y el desplazamiento bajista de 16:26 forman A
+  Grande bajista respecto del 1/TT alcista de 16:25.
+- Lo principal de 16:26 es el FT del TT alcista confirmado en 16:25.
+
+Lectura concurrente/local:
+- El recorrido bajista de 16:26 forma módulo por descarte.
+- Desde ese módulo se desarrolla A Grande en la transición posterior.
+- A Grande usada como tendencia confirma un TT de escala pequeña.
+
+Estado al cierre:
+- FT estructural del TT de 16:25 confirmado.
+- Módulo bajista por descarte activo para la lectura local.
+- Se conserva la doble lectura sin proliferar módulos adicionales.
+
+---------------------------------------------------------------------
+VELA 16:27 - [A] CONFIRMADA
+---------------------------------------------------------------------
+
+Evidencia física BID:
+- Cierre anterior: 29849,3.
+- Apertura: 29849,5.
+- Diferencia: +0,2 puntos.
+- Abre en plano por ser |+0,2| < 0,25.
+- Máximo: 29850,8.
+- Mínimo: 29836,8.
+- Cierre: 29841,3.
+- Existe una cola inicial pequeña; la clasificación funcional no se reduce a 2.
+
+Lectura funcional:
+- Se recorren A Grande, B Grande y A Grande usada como tendencia.
+- Queda un TT pendiente, todavía sin alcanzar el 100 %.
+- La lectura se conserva causalmente para su posible culminación posterior.
+
+Estado al cierre:
+- A Grande usada como tendencia confirmada.
+- TT pendiente/no alcanzado.
+
+---------------------------------------------------------------------
+VELA 16:28 - [A] CONFIRMADA
+---------------------------------------------------------------------
+
+Evidencia física BID:
+- Cierre anterior: 29841,3.
+- Apertura: 29835,6.
+- Diferencia: -5,7 puntos; existe gap bajista.
+- Máximo: 29844,8.
+- Mínimo: 29833,8.
+- Cierre: 29841,1.
+
+Lectura funcional:
+- Se repite la secuencia A Grande, B Grande y A Grande usada como tendencia.
+- Queda TT pendiente de la lectura nacida en 16:27.
+- Permanece también pendiente el TT de escala mayor vinculado a la estructura
+  grande de 16:26.
+- Ambas lecturas coexisten sin crear una cadena adicional de mini módulos.
+
+Estado al cierre:
+- Dos TT pendientes: el local de 16:27 y el de escala mayor de 16:26.
+
+---------------------------------------------------------------------
+VELA 16:29 - [A] CONFIRMADA
+---------------------------------------------------------------------
+
+Evidencia física BID:
+- Cierre anterior: 29841,1.
+- Apertura: 29840,1.
+- Diferencia: -1,0 puntos; no es plano.
+- Máximo: 29841,5.
+- Mínimo y cierre: 29822,1.
+
+Lectura funcional:
+- El movimiento bajista culmina los dos TT que permanecían pendientes:
+  1) TT local nacido en la estructura de 16:27.
+  2) TT de escala mayor vinculado a la estructura grande de 16:26.
+- Antes del inicio de la sesión siguiente, la lectura dominante queda bajista.
+- Se reconoce un nuevo 1 bajista.
+- Se conserva también la lectura de módulo por descarte y el 1 bajista
+  correspondiente, sin multiplicar escalas.
+
+Estado al cierre de 16:29:
+- Dos TT bajistas confirmados/cumplidos.
+- Nuevo 1 bajista dominante.
+- Módulo por descarte bajista conservado como estructura concurrente.
+
+======================================================================
+12. ESTADO DEL WARM-UP HUMANO AL CIERRE DE 16:29
+======================================================================
+
+- Ventana 16:15-16:29: cerrada con lectura humana confirmada.
+- Lectura dominante al cierre: 1 bajista.
+- Lectura concurrente: módulo por descarte con 1 bajista.
+- 16:30 puede analizarse como primera vela posterior al warm-up humano.
+- Las referencias concretas de cada TT deben extraerse del tickfeed al crear el
+  golden estructurado, sin usar horas o precios como reglas del motor.

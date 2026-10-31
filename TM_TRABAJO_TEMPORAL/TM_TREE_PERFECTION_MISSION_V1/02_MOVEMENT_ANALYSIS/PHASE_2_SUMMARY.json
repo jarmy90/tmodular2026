@@ -1,0 +1,24 @@
+{
+  "generated_from": {
+    "L1": "BLIND_V3_GENERATIONS.csv",
+    "L2": "L2_1619_1624_GENERATIONS.csv"
+  },
+  "L1_generations": 26,
+  "L2_generations": 3,
+  "total_rows": 29,
+  "counts": {
+    "L1_PRIMARY:VALID_PRIMARY": 19,
+    "L1_PRIMARY:INTEGRATED_IN_LARGER_MODULE": 6,
+    "L1_PRIMARY:VALID_PRIMARY_PENDING": 1,
+    "L2_SECONDARY:VALID_SECONDARY": 1,
+    "L2_SECONDARY:INTEGRATED_IN_LARGER_MODULE": 2
+  },
+  "L1_end_reasons": {
+    "AUT_B": 4,
+    "A_USED_AS_TREND": 15,
+    "GAP": 6,
+    "OPEN_AT_FEED_END": 1
+  },
+  "a_gate_note": "b100 and bturn produce the same 26 L1 generations; only A confirmation time differs. The hierarchy is experimental and does not freeze the tree.",
+  "hierarchy_status": "EXPERIMENTAL_HIERARCHY_V1_NOT_CANON"
+}

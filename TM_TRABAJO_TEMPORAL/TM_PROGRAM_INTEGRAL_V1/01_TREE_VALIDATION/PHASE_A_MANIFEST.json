@@ -1,0 +1,270 @@
+{
+ "phase": "A",
+ "version": "v1",
+ "generated_utc": "2026-10-30T13:12:04.628440+00:00",
+ "authority": {
+  "tree": "v2.19 WORKING_CANON_NOT_FROZEN",
+  "tree_sha256": "94A1408A6123ED66948988334E7D540C2A2692C36EEA3CB736DBFF0DA2346B17",
+  "engine_authority": false,
+  "tree_modified": false,
+  "engine_modified": false,
+  "goldens_modified": false,
+  "observational_only": true
+ },
+ "inputs": [
+  {
+   "id": "tree_v219",
+   "path": "TM_CANON_ACTIVO/01_ARBOL/TM_ARBOL_MAESTRO_CANONICO_COMPLETO_v2_19_ACUMULADO.md",
+   "absolute_path": "C:\\Users\\profesor\\tm\\Teoria Modular\\TM_CANON_ACTIVO\\01_ARBOL\\TM_ARBOL_MAESTRO_CANONICO_COMPLETO_v2_19_ACUMULADO.md",
+   "size": 562639,
+   "sha256": "94A1408A6123ED66948988334E7D540C2A2692C36EEA3CB736DBFF0DA2346B17",
+   "modified_utc": "2026-10-30T08:17:04.256015+00:00",
+   "expected_sha256": "94A1408A6123ED66948988334E7D540C2A2692C36EEA3CB736DBFF0DA2346B17",
+   "hash_matches": true
+  },
+  {
+   "id": "lecturas_v005",
+   "path": "TM_CANON_ACTIVO/03_LECTURAS_HUMANAS/TM_LECTURAS_CONFIRMADAS_16OCT_1615_1730_v005.txt",
+   "absolute_path": "C:\\Users\\profesor\\tm\\Teoria Modular\\TM_CANON_ACTIVO\\03_LECTURAS_HUMANAS\\TM_LECTURAS_CONFIRMADAS_16OCT_1615_1730_v005.txt",
+   "size": 26713,
+   "sha256": "F5D7550C42C90897D833E6C2A3FAF772753A129640FD4411DE4190CB2CF94226",
+   "modified_utc": "2026-10-29T08:29:20.935202+00:00",
+   "expected_sha256": "F5D7550C42C90897D833E6C2A3FAF772753A129640FD4411DE4190CB2CF94226",
+   "hash_matches": true
+  },
+  {
+   "id": "tickfeed_maestro",
+   "path": "TM_CANON_ACTIVO/02_TICKS/TM_TICKFEED_1615_1730.csv",
+   "absolute_path": "C:\\Users\\profesor\\tm\\Teoria Modular\\TM_CANON_ACTIVO\\02_TICKS\\TM_TICKFEED_1615_1730.csv",
+   "size": 3496855,
+   "sha256": "5F701BE2307352CB559ABBD7BB856A6FD2A1F91E5D269A93DCC9AE2992E2C9FF",
+   "modified_utc": "2026-10-27T11:37:21.386620+00:00",
+   "expected_sha256": "5F701BE2307352CB559ABBD7BB856A6FD2A1F91E5D269A93DCC9AE2992E2C9FF",
+   "hash_matches": true
+  },
+  {
+   "id": "r5_auditado",
+   "path": "C:\\Users\\profesor\\OpenBot\\Agents\\agent-ece275c8-821a-43f3-b05f-6cdf123b7ade\\deliverables_R5\\python\\TM_CORE_PYTHON_v0752_CANONICAL_R5.py",
+   "absolute_path": "C:\\Users\\profesor\\OpenBot\\Agents\\agent-ece275c8-821a-43f3-b05f-6cdf123b7ade\\deliverables_R5\\python\\TM_CORE_PYTHON_v0752_CANONICAL_R5.py",
+   "size": 158090,
+   "sha256": "9BD1BEDB5DEC8C5A1C3A831338503E90CC04EE3CD776CF4E01D27CF8AA0EBEAE",
+   "modified_utc": "2026-10-30T08:16:14.410577+00:00",
+   "expected_sha256": "9BD1BEDB5DEC8C5A1C3A831338503E90CC04EE3CD776CF4E01D27CF8AA0EBEAE",
+   "hash_matches": true
+  },
+  {
+   "id": "mandato_continuacion",
+   "path": "TM_TRABAJO_TEMPORAL/TM_PROGRAM_INTEGRAL_V1/00_INPUTS/TM_MANDATO_CONTINUACION_SECCION_4_HASTA_FINAL.txt",
+   "absolute_path": "C:\\Users\\profesor\\tm\\Teoria Modular\\TM_TRABAJO_TEMPORAL\\TM_PROGRAM_INTEGRAL_V1\\00_INPUTS\\TM_MANDATO_CONTINUACION_SECCION_4_HASTA_FINAL.txt",
+   "size": 21535,
+   "sha256": "F9050901565C334E1DAF6BA48DF42DC0AB5D0F081798B27598318E48B0AD3657",
+   "modified_utc": "2026-10-30T12:32:57.336973+00:00",
+   "expected_sha256": "f9050901565c334e1daf6ba48df42dc0ab5d0f081798b27598318e48b0ad3657",
+   "hash_matches": true
+  }
+ ],
+ "outputs": [
+  {
+   "id": "blind_reader.py",
+   "path": "TM_TRABAJO_TEMPORAL/TM_PROGRAM_INTEGRAL_V1/01_TREE_VALIDATION/blind_reader.py",
+   "absolute_path": "C:\\Users\\profesor\\tm\\Teoria Modular\\TM_TRABAJO_TEMPORAL\\TM_PROGRAM_INTEGRAL_V1\\01_TREE_VALIDATION\\blind_reader.py",
+   "size": 48000,
+   "sha256": "5453936409204D742D74E6F51D73B09DC3E1185E23F633261B5179C7E392F458",
+   "modified_utc": "2026-10-30T12:59:49.829207+00:00"
+  },
+  {
+   "id": "verify_phase_a.py",
+   "path": "TM_TRABAJO_TEMPORAL/TM_PROGRAM_INTEGRAL_V1/01_TREE_VALIDATION/verify_phase_a.py",
+   "absolute_path": "C:\\Users\\profesor\\tm\\Teoria Modular\\TM_TRABAJO_TEMPORAL\\TM_PROGRAM_INTEGRAL_V1\\01_TREE_VALIDATION\\verify_phase_a.py",
+   "size": 2493,
+   "sha256": "B888BB80DCAC17537111DE59D7CC0589106F600AEE636B1BDD85E30695B18B9A",
+   "modified_utc": "2026-10-30T12:54:49.169987+00:00"
+  },
+  {
+   "id": "run_r5_block.py",
+   "path": "TM_TRABAJO_TEMPORAL/TM_PROGRAM_INTEGRAL_V1/01_TREE_VALIDATION/run_r5_block.py",
+   "absolute_path": "C:\\Users\\profesor\\tm\\Teoria Modular\\TM_TRABAJO_TEMPORAL\\TM_PROGRAM_INTEGRAL_V1\\01_TREE_VALIDATION\\run_r5_block.py",
+   "size": 2856,
+   "sha256": "4E66D4D9E4E1420EC518D82CEBEAFCDC4103840676391C20F2B0B0ECDF016EF0",
+   "modified_utc": "2026-10-30T12:56:26.462556+00:00"
+  },
+  {
+   "id": "build_phase_a_manifest.py",
+   "path": "TM_TRABAJO_TEMPORAL/TM_PROGRAM_INTEGRAL_V1/01_TREE_VALIDATION/build_phase_a_manifest.py",
+   "absolute_path": "C:\\Users\\profesor\\tm\\Teoria Modular\\TM_TRABAJO_TEMPORAL\\TM_PROGRAM_INTEGRAL_V1\\01_TREE_VALIDATION\\build_phase_a_manifest.py",
+   "size": 6968,
+   "sha256": "619AE10E14DBA598945264BC1794AE8E20B4E5C98346F3532159E245E63E89A6",
+   "modified_utc": "2026-10-30T13:11:07.963567+00:00"
+  },
+  {
+   "id": "BLIND_TREE_READINGS_1649_1729.md",
+   "path": "TM_TRABAJO_TEMPORAL/TM_PROGRAM_INTEGRAL_V1/01_TREE_VALIDATION/BLIND_TREE_READINGS_1649_1729.md",
+   "absolute_path": "C:\\Users\\profesor\\tm\\Teoria Modular\\TM_TRABAJO_TEMPORAL\\TM_PROGRAM_INTEGRAL_V1\\01_TREE_VALIDATION\\BLIND_TREE_READINGS_1649_1729.md",
+   "size": 16832,
+   "sha256": "5902A0DDB8002BB34E922907CF6237636CD0C1EC1488C83D0E4A44E5DE2A4DCF",
+   "modified_utc": "2026-10-30T13:02:31.728351+00:00"
+  },
+  {
+   "id": "BLIND_TREE_SECONDARY_READINGS.md",
+   "path": "TM_TRABAJO_TEMPORAL/TM_PROGRAM_INTEGRAL_V1/01_TREE_VALIDATION/BLIND_TREE_SECONDARY_READINGS.md",
+   "absolute_path": "C:\\Users\\profesor\\tm\\Teoria Modular\\TM_TRABAJO_TEMPORAL\\TM_PROGRAM_INTEGRAL_V1\\01_TREE_VALIDATION\\BLIND_TREE_SECONDARY_READINGS.md",
+   "size": 10501,
+   "sha256": "CFE3467444B1FF313C9ED30AADBD5D023EE4292EBDD674B6972AAA2204703343",
+   "modified_utc": "2026-10-30T13:08:04.365859+00:00"
+  },
+  {
+   "id": "BLIND_TREE_CONCEPTUAL_GAPS.md",
+   "path": "TM_TRABAJO_TEMPORAL/TM_PROGRAM_INTEGRAL_V1/01_TREE_VALIDATION/BLIND_TREE_CONCEPTUAL_GAPS.md",
+   "absolute_path": "C:\\Users\\profesor\\tm\\Teoria Modular\\TM_TRABAJO_TEMPORAL\\TM_PROGRAM_INTEGRAL_V1\\01_TREE_VALIDATION\\BLIND_TREE_CONCEPTUAL_GAPS.md",
+   "size": 10078,
+   "sha256": "17A4E516B7A80F5D2C6A76B2AC7E0447670A8711596F448233C83CA230C13019",
+   "modified_utc": "2026-10-30T13:04:40.448192+00:00"
+  },
+  {
+   "id": "BLIND_TREE_FIRST_DIVERGENCES.csv",
+   "path": "TM_TRABAJO_TEMPORAL/TM_PROGRAM_INTEGRAL_V1/01_TREE_VALIDATION/BLIND_TREE_FIRST_DIVERGENCES.csv",
+   "absolute_path": "C:\\Users\\profesor\\tm\\Teoria Modular\\TM_TRABAJO_TEMPORAL\\TM_PROGRAM_INTEGRAL_V1\\01_TREE_VALIDATION\\BLIND_TREE_FIRST_DIVERGENCES.csv",
+   "size": 3533,
+   "sha256": "0455ACAA775124F26DB4B6658591B5BADC1CBAA1B05509947512EFB73C74C5B6",
+   "modified_utc": "2026-10-30T13:11:51.045949+00:00"
+  },
+  {
+   "id": "BLIND_TREE_TRACE_1649_1729.jsonl",
+   "path": "TM_TRABAJO_TEMPORAL/TM_PROGRAM_INTEGRAL_V1/01_TREE_VALIDATION/BLIND_TREE_TRACE_1649_1729.jsonl",
+   "absolute_path": "C:\\Users\\profesor\\tm\\Teoria Modular\\TM_TRABAJO_TEMPORAL\\TM_PROGRAM_INTEGRAL_V1\\01_TREE_VALIDATION\\BLIND_TREE_TRACE_1649_1729.jsonl",
+   "size": 12892900,
+   "sha256": "8150F4023523F37A7717101C8035BBD41DA85ECF96CA0C006251BD338814AB03",
+   "modified_utc": "2026-10-30T13:00:46.149469+00:00"
+  },
+  {
+   "id": "BLIND_TREE_EVENTS_1649_1729.csv",
+   "path": "TM_TRABAJO_TEMPORAL/TM_PROGRAM_INTEGRAL_V1/01_TREE_VALIDATION/BLIND_TREE_EVENTS_1649_1729.csv",
+   "absolute_path": "C:\\Users\\profesor\\tm\\Teoria Modular\\TM_TRABAJO_TEMPORAL\\TM_PROGRAM_INTEGRAL_V1\\01_TREE_VALIDATION\\BLIND_TREE_EVENTS_1649_1729.csv",
+   "size": 36483,
+   "sha256": "369E823C9540073D071CE10B8BF073A69194B46AF3A90FDE6367E513AAAD2111",
+   "modified_utc": "2026-10-30T13:00:46.170636+00:00"
+  },
+  {
+   "id": "BLIND_TREE_STATE_AT_BAR_CLOSE.csv",
+   "path": "TM_TRABAJO_TEMPORAL/TM_PROGRAM_INTEGRAL_V1/01_TREE_VALIDATION/BLIND_TREE_STATE_AT_BAR_CLOSE.csv",
+   "absolute_path": "C:\\Users\\profesor\\tm\\Teoria Modular\\TM_TRABAJO_TEMPORAL\\TM_PROGRAM_INTEGRAL_V1\\01_TREE_VALIDATION\\BLIND_TREE_STATE_AT_BAR_CLOSE.csv",
+   "size": 3734,
+   "sha256": "F3F3B9451FBD0DD4CBD501F7EC717B3B60FC691646E4144DD8CA197C2552FE98",
+   "modified_utc": "2026-10-30T13:00:46.183309+00:00"
+  },
+  {
+   "id": "BLIND_TREE_GENERATIONS_1649_1729.csv",
+   "path": "TM_TRABAJO_TEMPORAL/TM_PROGRAM_INTEGRAL_V1/01_TREE_VALIDATION/BLIND_TREE_GENERATIONS_1649_1729.csv",
+   "absolute_path": "C:\\Users\\profesor\\tm\\Teoria Modular\\TM_TRABAJO_TEMPORAL\\TM_PROGRAM_INTEGRAL_V1\\01_TREE_VALIDATION\\BLIND_TREE_GENERATIONS_1649_1729.csv",
+   "size": 3707,
+   "sha256": "63768588AA7C0770BFFE7569511B0B52ABD2AEF06FC26E28348D4CED792FB62B",
+   "modified_utc": "2026-10-30T13:00:46.193831+00:00"
+  },
+  {
+   "id": "verify_phase_a.json",
+   "path": "TM_TRABAJO_TEMPORAL/TM_PROGRAM_INTEGRAL_V1/01_TREE_VALIDATION/verify_phase_a.json",
+   "absolute_path": "C:\\Users\\profesor\\tm\\Teoria Modular\\TM_TRABAJO_TEMPORAL\\TM_PROGRAM_INTEGRAL_V1\\01_TREE_VALIDATION\\verify_phase_a.json",
+   "size": 330,
+   "sha256": "CB58F6071CC06B1A84912E72FCA0FE89ABCD8D124B086DAFD3A9AC30CC012D14",
+   "modified_utc": "2026-10-30T13:00:43.644209+00:00"
+  },
+  {
+   "id": "R5_BLOCK_EVIDENCE.json",
+   "path": "TM_TRABAJO_TEMPORAL/TM_PROGRAM_INTEGRAL_V1/01_TREE_VALIDATION/R5_BLOCK_EVIDENCE.json",
+   "absolute_path": "C:\\Users\\profesor\\tm\\Teoria Modular\\TM_TRABAJO_TEMPORAL\\TM_PROGRAM_INTEGRAL_V1\\01_TREE_VALIDATION\\R5_BLOCK_EVIDENCE.json",
+   "size": 1459280,
+   "sha256": "3B109D6D8C181D34C2AE460BEC41EED151E49C87DBF9BD7E8A2169807FAD2A43",
+   "modified_utc": "2026-10-30T12:56:39.024682+00:00"
+  }
+ ],
+ "reports": [
+  {
+   "id": "01_MANDATE_CONTINUATION_RECORD.md",
+   "path": "TM_TRABAJO_TEMPORAL/TM_PROGRAM_INTEGRAL_V1/08_REPORTS/01_MANDATE_CONTINUATION_RECORD.md",
+   "absolute_path": "C:\\Users\\profesor\\tm\\Teoria Modular\\TM_TRABAJO_TEMPORAL\\TM_PROGRAM_INTEGRAL_V1\\08_REPORTS\\01_MANDATE_CONTINUATION_RECORD.md",
+   "size": 2829,
+   "sha256": "5A8468F4FF2158B2772CFF4F6BF351074F1C8DC84C0997668A09BA3CADB2EFB4",
+   "modified_utc": "2026-10-30T13:11:00.889252+00:00"
+  },
+  {
+   "id": "PHASE_A_CHECKPOINT_v1.md",
+   "path": "TM_TRABAJO_TEMPORAL/TM_PROGRAM_INTEGRAL_V1/08_REPORTS/PHASE_A_CHECKPOINT_v1.md",
+   "absolute_path": "C:\\Users\\profesor\\tm\\Teoria Modular\\TM_TRABAJO_TEMPORAL\\TM_PROGRAM_INTEGRAL_V1\\08_REPORTS\\PHASE_A_CHECKPOINT_v1.md",
+   "size": 7085,
+   "sha256": "017E0D5E92AFB61391239CA8EB2761CDADDBFE9A8901DD2007A0D2C5538819B5",
+   "modified_utc": "2026-10-30T13:10:49.461720+00:00"
+  }
+ ],
+ "commands": [
+  "python blind_reader.py --from 16:15 --to 17:29 --events out_ev.csv --bar-close out_bc.csv --generations out_gen.csv --trace out_trace.jsonl",
+  "python verify_phase_a.py",
+  "python run_r5_block.py",
+  "python build_phase_a_manifest.py"
+ ],
+ "block": {
+  "from": "16:49:00.012",
+  "to": "17:29:59.897",
+  "bars": 41,
+  "ticks": 11414,
+  "first_sequence_id": 8922,
+  "last_sequence_id": 20335,
+  "generations": 16,
+  "regular_modules_123": 0,
+  "discard_modules": 16,
+  "aut": 8,
+  "a_used_as_trend": 4,
+  "c_used_as_trend": 2,
+  "open_at_feed_end": 1,
+  "events": 454
+ },
+ "verification": {
+  "determinism_run1": "b219049b26d1221905b7451a92ba4710ea6b7103e54f7088fa74ca230656eede",
+  "determinism_run2": "b219049b26d1221905b7451a92ba4710ea6b7103e54f7088fa74ca230656eede",
+  "determinism_equal": true,
+  "prefixes_checked": 41,
+  "prefixes_ok": 41,
+  "prefix_failures": [],
+  "ticks": 20335,
+  "exceptions": 0
+ },
+ "policies": {
+  "H1": "1 = rango direccional de su vela",
+  "H2": "A se confirma con 6,00 puntos (minimo teorico v2.5)",
+  "H3": "retroceso valido de 2: >= 2,00 y <= 50 %",
+  "H4": "B Grande monotona; A puede extenderse",
+  "H5": "TT evaluado tick a tick",
+  "H6": "TT sobrevive al AUT como patron",
+  "H7": "gap: esbozo implicito, sin ticks inventados"
+ },
+ "open_questions": [
+  "Q1 unidad de 1 en vela no monotona",
+  "Q2 autonomia de A y propiedad del extremo del modulo",
+  "Q3 gap significativo y referencia de C",
+  "Q4 dominancia y concurrencia"
+ ],
+ "registered_gaps": [
+  "Q_TWO_LIFECYCLE",
+  "Q_TAIL",
+  "Q_MODULE_MEASURE",
+  "Q_50",
+  "Q_TT_FAILURE",
+  "Q_FT",
+  "Q_C_ABSORPTION",
+  "Q_CONCURRENCY",
+  "Q_AUT_NEW_ONE"
+ ],
+ "gate_a": {
+  "status": "PASS_WITH_OPEN_QUESTIONS",
+  "all_ticks_traversed": true,
+  "every_function_traceable": true,
+  "ambiguities_explicit": true,
+  "spoilers_used": false,
+  "deterministic": true,
+  "prefixes_consistent": true,
+  "hardcoding": false,
+  "next_phase": "B"
+ },
+ "next_phase_blockers": [
+  "Q1 y Q2 requieren decision experta antes de congelar el arbol ejecutable"
+ ]
+}

@@ -1,0 +1,2 @@
+﻿pattern_id,type,status,direction,origin_time,origin_price,end_time,end_price,size,reading_id,cycle_id,detail
+P0001,TT,ABSORBIDO,UP,16:57:19.671,29608.80,16:57:38.948,29623.30,14.50,R0001,C0001,"{""absorbed_by_reading_id"": ""R0003"", ""absorbed_time"": ""16:57:39.149"", ""scale"": 1, ""target"": ""29621.90"", ""x"": ""13.10""}"

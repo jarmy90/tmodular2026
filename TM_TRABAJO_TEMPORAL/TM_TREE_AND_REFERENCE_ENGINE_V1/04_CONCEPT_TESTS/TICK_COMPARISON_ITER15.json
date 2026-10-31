@@ -1,0 +1,26 @@
+{
+  "B1": {
+    "ticks": 937,
+    "first_divergence": false,
+    "cycle_id": 0,
+    "events": 25
+  },
+  "B2": {
+    "ticks": 898,
+    "first_divergence": false,
+    "cycle_id": 0,
+    "events": 40
+  },
+  "B3": {
+    "ticks": 2297,
+    "first_divergence": false,
+    "cycle_id": 0,
+    "events": 77
+  },
+  "B4": {
+    "ticks": 2552,
+    "first_divergence": false,
+    "cycle_id": 1,
+    "events": 143
+  }
+}

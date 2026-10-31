@@ -1,0 +1,14 @@
+transition,node,condition,state_required,python_symbol,expected,actual,deviation,severity,root_cause,authority,test
+ONE_AT_CLOSE,CIERRE DE VELA,1 delimitado y medido al cierre,_on_bar_close,_confirm_one_at_close,one_status=CONFIRMED kt=ultimo tick,CONFIRMED kt=ultimo tick,ninguna,-,Q-ONE-AT-CLOSE,CANONICAL,A1
+MODULE_BY_DISCARD,2 NO ALCANZA 100%,medida de 2 < 1 al cierre,TWO_LIVE,_module_by_discard,mod_size=2850,2850,ninguna,-,v2.13 CANONICAL,A2
+A_GRANDE,MOVIMIENTO CONTRARIO,contrario estructural desde modulo,THREE_LIVE,_open_contrary,A 9,1 desde 29848,5,910@2984850,ninguna,-,v2.13 CANONICAL,A3
+B_GRANDE,100% DE A,B >= A,B_LIVE,_on_b_candidate_tick,B Grande en el primer tick,B Grande en el primer tick,ninguna,-,P-BG-01 CANONICAL,BG-*
+AUT_B,B > 127%+0,25,B > limite,B_LIVE,_confirm_aut,AUT + nuevo 1 desde B,AUT + nuevo 1 desde B,ninguna,-,P-BG-02 CANONICAL,BG-14
+AUT_DIRECT_A,A CONFIRMADA SUPERA BASE,A confirmada y A > mod_origin,A_CONFIRMED,_confirm_aut_direct,nuevo 1 desde A,nuevo 1 desde A,ninguna,-,v2.19 CANONICAL,AD-*
+C_GRANDE,CONTRARIO DESDE B GRANDE,contrario >= 2 puntos,B_GRANDE,_open_c,C Grande,C Grande,ninguna,-,v2.19 CANONICAL,C-*
+CUT,C SUPERA FINAL DE A,C > final real de A,C_LIVE,_cut_tick,CUT confirmado sin reset,CUT confirmado sin reset,ninguna,-,v2.20 CANONICAL,CUT-*
+GAP_NEW_ONE,APERTURA NO PLANA,abs(open-prev_close) >= 0,25,WAIT_OPENING,_new_one_from_gap_open,nuevo 1 desde OPEN sin precios internos,nuevo 1 desde OPEN,ninguna,-,v2.19 CANONICAL,GP-*
+TT_PENDING,OBJETIVO TT,primer tick que toca objetivo,A_PENDING/_on_tt_tick,TT confirmado en el primer tick,TT confirmado en el primer tick,ninguna,-,v2.7 CANONICAL,TT-*
+TT_AT_OPEN,TT PENDIENTE + GAP,arbitro cronologico antes del ciclo,NEW_ONE_ACTIVE,_maybe_tt_open_resolution,TT heredado + nuevo 1 mismo tick,DOUBLE_BELONGING,ninguna,-,decision experta 2,GP-12
+FT_PATTERN,CONTRARIO DESDE EXTREMO TT,recorrido estructural tras 100% TT,TT confirmado,_on_ft_tick,FT confirmado,FT confirmado,PROVISIONAL tick exacto,media,autonomia del retorno,PROVISIONAL,PAT-*
+LOCAL_READING,LECTURA ANIDADA 16:19-16:23,nacimiento y declaracion,NWO_LOCAL,none (sonda apagada),A local 20,5 @29830,3 -> AUT directo -> A 29850,8->29842,8 -> B 29852,6 -> AUT,A 9,1 desde 29848,5 (L1),lectura local ausente,alta,Q-L2-BIRTH,OPEN_RULE,-

@@ -1,0 +1,17 @@
+test_id,transition,kind,description,pass,detail
+AD-01,AUT_DIRECT,boundary,A toca exactamente la base -> no AUT directo todavia,True,aut= a=CONTRARY_MOVE_PENDING n= a_extreme=10000 base=10000
+AD-02,AUT_DIRECT,positive,A supera la base por un tick minimo -> AUT directo,True,aut=AUT_DIRECT_BY_A n=NEW_ONE_ACTIVE kt=120200
+AD-03,AUT_DIRECT,positive,A salta desde debajo hasta encima -> AUT directo en el mismo tick,True,aut=AUT_DIRECT_BY_A n_extreme=10500
+AD-04,AUT_DIRECT,positive,A continua despues del AUT -> extiende nuevo 1,True,n_extreme=10200 n_size=1200
+AD-05,AUT_DIRECT,negative,no existe B en la via directa (tampoco tras extension),True,b= b_tras_ext= aut_b= b_grande_kt=0 active=NEW_ONE
+AD-06,AUT_DIRECT,negative,"no se aplica 127%+0,25 en la via directa",True,aut_direct=AUT_DIRECT_BY_A b_grande= aut_b=
+AD-07,AUT_DIRECT,positive,nuevo 1 conserva origen de A,True,n_origin=9000 a_origin=9000
+AD-08,AUT_DIRECT,positive,structural_time del nuevo 1 = structural_time de A,True,n_st=60000 a_origin_st=60000
+AD-09,AUT_DIRECT,positive,knowledge_time = primer tick de cruce,True,aut_direct_kt=120200 cross_kt=120200 n_kt=120200
+AD-10,AUT_DIRECT,negative,A queda archivada y pierde autoridad activa,True,a_authority=ARCHIVED a_status=A_CONFIRMED_ARCHIVED active=NEW_ONE
+AD-11,AUT_DIRECT,negative,modulo queda como referencia congelada,True,module_authority=FROZEN_REFERENCE
+AD-12,AUT_DIRECT,boundary,tocar base y retroceder -> no AUT directo,True,aut= a=A_CONFIRMED a_extreme=10000
+AD-13,AUT_DIRECT,positive,cruce dentro de la misma vela,True,aut=AUT_DIRECT_BY_A aut_kt=120300
+AD-14,AUT_DIRECT,positive,cruce entre velas sin reiniciar A,True,aut=AUT_DIRECT_BY_A a_origin=9000 n_origin=9000
+AD-DET,global,determinism,doble ejecucion identica en la via directa,True,len_a=9 len_b=9
+AD-PRE,global,prefix,prefijo consistente en la via directa,True,prefix=6 full=9

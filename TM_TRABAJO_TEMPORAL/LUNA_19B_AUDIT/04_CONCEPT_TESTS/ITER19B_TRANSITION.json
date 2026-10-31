@@ -1,0 +1,40 @@
+{
+  "anchors_total": 11,
+  "anchors_passed": 11,
+  "transition": {
+    "tt_objective": 2987050,
+    "tt_confirmed_price": 2987060,
+    "tt_confirmed_seq": 2519,
+    "physical_extreme": 2987540,
+    "physical_extreme_seq": 2532,
+    "functional_extreme": 2987540,
+    "functional_extreme_status": "CONFIRMED",
+    "functional_extreme_knowledge_seq": 2535,
+    "ft_origin": 2987540,
+    "ft_structural_seq": 2532,
+    "ft_knowledge_seq": 2535,
+    "ft_absorbed_candidates": 2,
+    "ft_at_1626_close": 2984910,
+    "a_principal_origin": 2987540,
+    "local_g1_closure_seq": 2535,
+    "local_g1_archive_seq": 2553,
+    "local_slot": "",
+    "archived_generation_writes": 0,
+    "local_g2_decision": "NOT_OPENED",
+    "local_g2_mod_by_bar": {
+      "986": 0,
+      "987": 0,
+      "988": 0,
+      "989": 0
+    }
+  },
+  "human_reading_result": "HUMAN_READING_CONFIRMED_BY_TICKS",
+  "human_correction": {
+    "human_value": 2987540,
+    "engine_value_before": 2987180,
+    "tick_derived_value": 2987540,
+    "difference": 360,
+    "rule": "FT nace del extremo funcional; un TT que supera el extremo invalida el candidato previo (retroceso interno)",
+    "downstream_effect": "FT del TT de 16:25 = A principal 26,3 puntos; LOCAL-G1 se archiva al conocer el extremo, no al confirmar el objetivo"
+  }
+}

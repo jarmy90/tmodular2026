@@ -1,0 +1,19 @@
+test_id,area,kind,classification,description,pass,detail
+CR-01,cycle,positive,CANONICAL_PASS,TT confirmado en el tick del objetivo,True,tt=TT_CONFIRMED kt=58740100 cycle=0
+CR-02,cycle,positive,CANONICAL_PASS,la vela siguiente reinicia el ciclo y abre 2 candidata,True,cycle=1 one=2985760->2982910 two=CANDIDATE
+CR-03,cycle,positive,CANONICAL_PASS,el reinicio conserva la trazabilidad del TT anterior,True,prev_tt=2982910/2982910 tt=2982910/2982910/TT_CONFIRMED
+CR-04,cycle,negative,CANONICAL_PASS,el nuevo 1 no abre 2 dentro de su propia vela,True,reset=31 two_after=[33]
+CR-05,cycle,negative,CANONICAL_PASS,sin TT al 100 % no hay reinicio de ciclo,True,cycle=0 tt=TT_PENDING
+CR-06,cycle,boundary,CANONICAL_PASS,gap en la vela siguiente: 2 prohibido y rama de gap,True,two=IMPOSSIBLE_NO_FLAT
+CR-07,cycle,positive,CANONICAL_PASS,reinicio tambien tras el nuevo 1 nacido de C-tendencia,True,prev_c=10001 two=CANDIDATE
+CUT-CHAIN-01,cut,positive,CANONICAL_PASS,CUT confirmado sin crear nuevo 1,True,cut=CUT_CONFIRMED n=''
+CUT-CHAIN-02,cut,positive,CANONICAL_PASS,CUT precede a C usada como tendencia y al nuevo 1,True,"order=['CUT_CONFIRMED', 'C_USED_AS_TREND']"
+CUT-CHAIN-03,cut,boundary,CANONICAL_PASS,final real de A y base del modulo son referencias distintas,True,a_extreme=9500 base=10000
+FT-01,ft,negative,CANONICAL_PASS,antes del 100 % de TT no existe FT,True,ft=''
+FT-02,ft,positive,CANONICAL_PASS,"FT se origina en el extremo REAL del TT, no en el nivel 100 %",True,origin=2982010 tt_ext=2982010 obj=2982910
+FT-03,ft,positive,PROVISIONAL_POLICY_PASS,FT se confirma estructuralmente con extremo propio (tick exacto PROVISIONAL),True,ft=FT_CONFIRMED kt=58800100 size=490
+FT-04,ft,positive,CANONICAL_PASS,FT convive con el ciclo nuevo sin consumir su autoridad,True,cycle=1 two=IMPOSSIBLE_NO_FLAT active=NEW_ONE ft=FT_CONFIRMED
+FT-05,ft,negative,CANONICAL_PASS,FT es patron: no aparece como funcion activa,True,active=NEW_ONE n=NEW_ONE_ACTIVE
+FT-06,ft,boundary,PROVISIONAL_POLICY_PASS,un retroceso menor que el filtro de ruido no confirma FT (filtro 2 pts PROVISIONAL),True,ft=FT_POSSIBLE
+CR-DET,cycle,determinism,CANONICAL_PASS,doble ejecucion identica,True,len=941
+CR-PRE,cycle,prefix,CANONICAL_PASS,prefijo sin spoiler (estado previo no conoce el objetivo),True,prefix=939 full=941

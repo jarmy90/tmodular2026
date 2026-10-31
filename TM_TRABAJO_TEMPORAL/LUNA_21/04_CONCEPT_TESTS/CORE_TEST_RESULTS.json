@@ -1,0 +1,8 @@
+{
+  "reader": "TM_REFERENCE_INTERPRETER_V1_CORE",
+  "tests": 19,
+  "passed": 19,
+  "failed": 0,
+  "all_pass": true,
+  "scope": "core 1/2/3/module; A/B/C not implemented"
+}

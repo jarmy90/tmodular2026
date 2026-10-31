@@ -1,0 +1,74 @@
+
+======================================================================
+9. CORRECCIÓN CANÓNICA DE PLANO Y REVISIÓN 16:15-16:22
+======================================================================
+
+Corrección confirmada por Javier:
+- PLANO cuando |apertura - cierre anterior| < 0,25 puntos.
+- Una diferencia de 0,1 o 0,2 se absorbe como plano y no se trata como gap.
+- Una diferencia exacta de 0,25 o superior no es plano.
+- Después de confirmar plano todavía deben verificarse la cola inicial y el
+  tamaño exigido para clasificar 2.
+
+Aplicación:
+
+16:15 - CONFIRMADA
+Módulo bajista: 29877,0 -> 29860,8. Tamaño 16,2 puntos.
+
+16:16 - CONFIRMADA
+Apertura 29861,1 frente a cierre 29861,0: diferencia +0,1, por tanto PLANO.
+No tiene cola superior inicial relevante: abre en 29861,1, máximo 29861,1 y baja.
+Recorrido bajista 29861,1 -> 29848,5: 12,6 puntos.
+Como 12,6 < 16,2, no alcanza el tamaño de la vela 16:15 y no es 2.
+Se clasifica como módulo por descarte.
+Las velas 16:15 y 16:16 forman módulo conjunto 29877,0 -> 29848,5, X=28,5.
+
+16:17 - CONFIRMADA EN SU ESTRUCTURA PRINCIPAL
+Apertura 29854,3 frente a cierre 29853,6: +0,7, no es plano.
+A Grande del módulo conjunto: 29848,5 -> 29857,6, A=9,1.
+Después comienza B bajista.
+
+16:18 - CONFIRMADA EN ORDEN CAUSAL
+Primero sube: máximo 29857,4 a las 16:18:08.556, seq 740.
+No supera el final de A previo, 29857,6, por tanto no extiende A.
+Después baja hasta 29843,0 a las 16:18:56.751, seq 923.
+El descenso desde 29857,6 supera el 100 % de A y también 127 %+0,25;
+confirma AUT bajista. El TT del módulo conjunto queda pendiente en 29829,1.
+
+16:19 - LECTURA PRINCIPAL CONFIRMADA; LECTURA LOCAL EN REVISIÓN
+Continuación bajista de AUT. Máximo 29850,0 y mínimo 29842,5.
+Se conserva la posible lectura local: A Grande al final de 16:18, B durante
+16:19 y movimiento contrario pequeño posterior, pendiente de cerrar con sus
+referencias exactas.
+
+16:20 - CORRECCIÓN: APERTURA EN PLANO Y POSIBLE 2
+Apertura 29844,8 frente a cierre 29845,0: diferencia -0,2, por tanto PLANO.
+Abre en su máximo y baja, sin cola superior inicial relevante.
+Si 16:19 se fija como nuevo 1 bajista (29850,0 -> 29842,5, tamaño 7,5),
+16:20 recorre 29844,8 -> 29832,5, tamaño 12,3, igual o mayor que 1.
+Por tanto, la lectura alternativa 16:19=1 y 16:20=2 vuelve a ser válida.
+
+16:21 - POSIBLE 3 DE LA LECTURA ALTERNATIVA
+Apertura 29835,0 frente a cierre 29836,0: diferencia -1,0, no es plano.
+Marca nuevo mínimo en 29830,3.
+La lectura como 3 debe conservarse porque sucede después del 2 válido de
+16:20; el gap de 16:21 no invalida retrospectivamente el 2 ya confirmado.
+La comprobación final del retroceso menor del 50 % se hará sobre la referencia
+exacta acordada para el patrón 1-2-3.
+El TT principal 29829,1 sigue pendiente por 1,2 puntos.
+
+16:22 - A GRANDE CONFIRMADA; AUT ALCISTA NO CONFIRMADO
+Apertura 29831,3 frente a cierre 29830,8: +0,5, no es plano.
+Sube desde el inicio y desarrolla A Grande alcista desde el mínimo anterior
+29830,3 hasta 29850,8, tamaño 20,5.
+No supera el origen del módulo conjunto 29877,0, por tanto todavía no confirma
+AUT alcista del módulo 16:15-16:16 por cruce de su inicio.
+
+Estado conjunto al cierre de 16:22:
+- Lectura principal: módulo 16:15-16:16, A 16:17, AUT bajista desarrollado y
+  TT principal 29829,1 todavía pendiente.
+- Lectura alternativa válida: 16:19 como 1, 16:20 como 2 y 16:21 como posible 3.
+- 16:22 desarrolla A Grande alcista de la estructura 1-2-3/local, pero no ha
+  superado todavía 29877,0.
+
+Próxima vela a estudiar: 16:23.

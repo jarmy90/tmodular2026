@@ -1,0 +1,385 @@
+================================================================================
+00 - LEEME PRIMERO
+JERARQUIA OFICIAL DE DOCUMENTOS TM PARA ECC / OPENCODE
+================================================================================
+
+OBJETIVO
+
+Evitar que los agentes se confundan al encontrar varios dossiers, prompts,
+motores y CSV dentro de la misma carpeta.
+
+Este archivo no añade reglas TM nuevas. Define qué documento debe leerse, qué
+prioridad tiene cada fuente y qué hacer cuando dos archivos se contradicen.
+
+================================================================================
+1. RESPUESTA CORTA: CUAL ES EL MEJOR DOSSIER
+================================================================================
+
+DOSSIER BASE PRINCIPAL:
+
+    Dossier_TM_v3_Lectura_Obligatoria.txt
+
+Es el mejor dossier general disponible porque incorpora:
+
+- lectura previa obligatoria;
+- estados CONFIRMADO, PENDIENTE, NO EXISTE, FALLIDO y SIN REGLA ESCRITA;
+- orden obligatorio de comprobación;
+- protocolo para imágenes;
+- control del vocabulario;
+- tratamiento explícito de reglas pendientes;
+- prohibición de inventar datos o completar escenas por apariencia.
+
+PERO NO ES LA ÚNICA FUENTE.
+
+Las decisiones expertas posteriores de Javier sobre AUT, concurrencia y
+reclasificación corrigen o amplían partes del dossier v3.
+
+Por tanto, la fuente normativa completa se obtiene aplicando la jerarquía del
+apartado 2.
+
+================================================================================
+2. JERARQUIA NORMATIVA OBLIGATORIA
+================================================================================
+
+PRIORIDAD 1 - DECISIONES EXPERTAS POSTERIORES
+
+    DECISIONES_EXPERTO.md
+
+Este archivo se irá creando durante el aprendizaje supervisado.
+Cada respuesta posterior y explícita de Javier tiene prioridad sobre cualquier
+texto anterior que contradiga esa respuesta.
+
+Una decisión solo se considera normativa cuando contiene:
+
+- pregunta y contexto;
+- respuesta literal de Javier;
+- regla general extraída;
+- estado CERRADA;
+- tests asociados;
+- fecha y versión.
+
+PRIORIDAD 2 - REGLAS CERRADAS DEL PROYECTO
+
+    REGLAS_CERRADAS.md
+
+Contiene solamente reglas ya verificadas contra dossiers y decisiones del
+experto. No debe incluir hipótesis ni escenas visuales no confirmadas.
+
+PRIORIDAD 3 - DOSSIER BASE
+
+    Dossier_TM_v3_Lectura_Obligatoria.txt
+
+Es la referencia base para:
+
+- protocolo de lectura;
+- vocabulario;
+- estados;
+- 1, 2 y 3;
+- módulo;
+- A Grande, B Grande y C Grande;
+- AUT, TT, CUT y FT;
+- doble lectura;
+- gaps;
+- errores prohibidos;
+- aspectos pendientes.
+
+PRIORIDAD 4 - ADENDA DE CONCURRENCIA Y RECLASIFICACION
+
+    Dossier_TM_v4_Concurrencia_Reclasificacion.txt
+
+Debe usarse únicamente para las novedades posteriores sobre:
+
+- AUT inmediato al superar 127 % + 0,25;
+- posibilidad de mantener dos o, excepcionalmente, tres lecturas válidas;
+- posible 1 después de AUT;
+- reclasificación live;
+- integración de movimientos anteriores como módulo o 1 conjunto;
+- conservación del historial de eventos.
+
+RESTRICCION IMPORTANTE:
+
+La adenda v4 contiene expresiones heredadas que Javier ha corregido después.
+No deben trasladarse a eventos, estados, golden o documentación funcional los
+términos:
+
+- local;
+- superior;
+- estructura;
+- giro;
+- B excesiva;
+- observador.
+
+En la capa funcional deben sustituirse por vocabulario TM exacto o por:
+
+- lectura 1;
+- lectura 2;
+- lectura 3;
+- movimiento contrario;
+- lectura candidata;
+- lectura reclasificada;
+- lectura integrada;
+- lectura invalidada.
+
+PRIORIDAD 5 - DOSSIER HISTORICO
+
+    Dossier_TM_Mejorado_Reglas_Vocabulario_Protocolo_v2.txt
+
+Se conserva como historial y trazabilidad. No debe utilizarse para resolver una
+contradicción frente a v3, v4 corregido, REGLAS_CERRADAS.md o
+DECISIONES_EXPERTO.md.
+
+================================================================================
+3. DOCUMENTOS DE PROCESO, NO DE TEORIA
+================================================================================
+
+El siguiente archivo define cómo deben trabajar los agentes, pero no sustituye
+el dossier TM:
+
+    Prompt_ECC_OpenCode_TM_Aprendizaje_Experto_Orquestacion_v2.txt
+
+Este prompt tiene autoridad sobre:
+
+- orquestación real de agentes;
+- Gate Cero de comprensión;
+- reconstrucción de movimientos;
+- preguntas al experto mediante escenas;
+- memoria del aprendizaje;
+- separación entre núcleo y golden;
+- TDD;
+- replay determinista;
+- política anti-spoilers;
+- gates de desarrollo.
+
+No debe utilizarse como fuente para inventar una regla matemática TM que no esté
+cerrada en el dossier o por Javier.
+
+El siguiente prompt queda SUPERADO y no debe utilizarse si está presente:
+
+    Prompt_ECC_OpenCode_Motor_TM_8_Velas_v1.txt
+
+Motivo:
+
+El prompt de aprendizaje experto y orquestación v2 es posterior, exige agentes
+reales y obliga a preguntar a Javier antes de programar reglas ambiguas.
+
+================================================================================
+4. DOCUMENTOS Y ARCHIVOS QUE NO SON FUENTE NORMATIVA
+================================================================================
+
+NO utilizar como fuente de verdad TM:
+
+- archivos .mq5 anteriores;
+- scripts patch_tm_*.py;
+- CSV de eventos de motores anteriores;
+- CSV de estados de motores anteriores;
+- CSV de resumen de motores anteriores;
+- READMEs de versiones antiguas;
+- nombres de fases del código;
+- comentarios del código;
+- fotografías sin ticks;
+- golden provisional;
+- resultados visuales probables.
+
+Estos archivos sirven para:
+
+- auditoría;
+- detectar errores anteriores;
+- comparar regresiones;
+- reconstruir datos;
+- estudiar por qué falló un motor.
+
+Nunca sirven para crear una regla TM nueva.
+
+================================================================================
+5. TRATAMIENTO DE CONTRADICCIONES
+================================================================================
+
+Cuando dos fuentes se contradigan:
+
+1. No elegir automáticamente la versión más reciente.
+2. Aplicar la jerarquía de este archivo.
+3. Buscar una decisión cerrada en DECISIONES_EXPERTO.md.
+4. Si no existe, registrar la contradicción en CONTRADICCIONES.md.
+5. Reconstruir los movimientos y mediciones objetivas.
+6. Formular a Javier una pregunta mediante escenas.
+7. Guardar la respuesta literal.
+8. Extraer una regla general.
+9. Crear primero un test rojo.
+10. Solo después actualizar REGLAS_CERRADAS.md y programar.
+
+Está prohibido resolver una contradicción mirando qué opción hace coincidir el
+golden.
+
+================================================================================
+6. REGLAS POSTERIORES QUE YA PREVALECEN SOBRE TEXTOS ANTIGUOS
+================================================================================
+
+Estas decisiones se consideran cerradas para la fase actual:
+
+A. AUT
+
+    B Grande supera 127 % + 0,25 puntos
+    -> AUT inmediato en ese mismo tick.
+
+No debe utilizarse B_EXCESIVA para este hecho.
+
+AUT no decide todavía si el movimiento terminará siendo 1.
+
+B. MOVIMIENTOS Y VELAS
+
+- La TM lee movimientos, no colores de velas.
+- Una vela puede contener varios movimientos.
+- Un movimiento puede continuar en velas posteriores.
+- El orden intravela es obligatorio.
+- No se puede clasificar una escena solo con Open, High, Low y Close si falta el
+  orden de los ticks.
+
+C. C GRANDE
+
+- C Grande solo puede aparecer después de B Grande.
+- El movimiento contrario comienza como C Grande candidata.
+- Si B Grande crea después un nuevo extremo, C Grande candidata se cancela.
+- CUT solo se confirma cuando C Grande alcanza el final de A Grande.
+
+D. CONCURRENCIA
+
+- La concurrencia es habitual: normalmente coexisten dos lecturas.
+- Excepcionalmente pueden mantenerse tres si las tres siguen siendo
+  matemáticamente válidas y coherentes; máximo operativo tres.
+- No se abre una lectura por cada oscilación intravela, ni por ruido o
+  micromovimiento: esos movimientos no se calculan.
+- La permanencia se decide por coherencia de movimiento, no por cada oscilación.
+- Reclasificar no significa borrar.
+
+E. APRENDIZAJE
+
+- Si una escena admite varias clasificaciones, los agentes deben reconstruir los
+  movimientos y preguntar a Javier.
+- La respuesta debe convertirse en regla general, test y memoria del proyecto.
+- El motor no memoriza velas, precios ni resultados del golden.
+
+================================================================================
+7. REGLAS QUE SIGUEN PENDIENTES
+================================================================================
+
+No deben suponerse todavía:
+
+- tolerancia exacta de salida en plano;
+- serie de precio definitiva: Bid, Ask, Last o punto medio;
+- umbral general entre ruido y movimiento TM;
+- momento matemático exacto en que un movimiento contrario candidato queda
+  confirmado como A Grande, B Grande o C Grande;
+- prioridad completa entre lecturas concurrentes;
+- reglas completas de FT;
+- tratamiento completo de C Grande cuando no alcanza CUT;
+- todos los casos de reclasificación como módulo o 1 conjunto.
+
+Estas cuestiones deben consultarse a Javier mediante escenas objetivas.
+
+================================================================================
+8. ORDEN DE LECTURA OBLIGATORIO PARA LOS AGENTES
+================================================================================
+
+Todo agente que analice TM debe leer, en este orden:
+
+1. 00_LEEME_PRIMERO_PRIORIDAD_DOCUMENTOS_TM.txt
+2. DECISIONES_EXPERTO.md, si existe
+3. REGLAS_CERRADAS.md, si existe
+4. Dossier_TM_v3_Lectura_Obligatoria.txt
+5. La adenda final de Dossier_TM_v4_Concurrencia_Reclasificacion.txt
+6. REGLAS_PROVISIONALES.md, si existe
+7. CONTRADICCIONES.md, si existe
+8. DICCIONARIO_TM.md, si existe
+
+Para el modo de trabajo multiagente, leer además:
+
+9. Prompt_ECC_OpenCode_TM_Aprendizaje_Experto_Orquestacion_v2.txt
+
+No es obligatorio leer v2 salvo para auditoría histórica.
+
+================================================================================
+9. RECOMENDACION DE ORGANIZACION DE CARPETAS
+================================================================================
+
+Crear esta separación lógica sin borrar archivos:
+
+    /00_CONTROL
+        00_LEEME_PRIMERO_PRIORIDAD_DOCUMENTOS_TM.txt
+        DECISIONES_EXPERTO.md
+        REGLAS_CERRADAS.md
+        REGLAS_PROVISIONALES.md
+        CONTRADICCIONES.md
+        DICCIONARIO_TM.md
+
+    /01_DOSSIER_VIGENTE
+        Dossier_TM_v3_Lectura_Obligatoria.txt
+        Dossier_TM_v4_Concurrencia_Reclasificacion.txt
+
+    /02_ORQUESTACION
+        Prompt_ECC_OpenCode_TM_Aprendizaje_Experto_Orquestacion_v2.txt
+
+    /03_DATOS
+        ticks
+        OHLC
+        gráficos
+
+    /04_GOLDEN_EXTERNO
+        golden provisional y validado
+
+    /05_NUCLEO
+        motor productivo
+
+    /06_TESTS
+        tests y replay
+
+    /90_HISTORICO
+        dossier v2
+        motores MQL5 anteriores
+        parches
+        CSV anteriores
+        READMEs antiguos
+
+No borrar ni mover automáticamente archivos sin autorización. Primero crear un
+inventario y proponer el plan de organización.
+
+================================================================================
+10. INSTRUCCION CORTA PARA ECC / OPENCODE
+================================================================================
+
+Antes de pensar, analizar o programar:
+
+1. Lee íntegramente este archivo.
+2. Trata Dossier_TM_v3_Lectura_Obligatoria.txt como dossier base.
+3. Aplica solamente las novedades válidas de v4.
+4. Da prioridad a DECISIONES_EXPERTO.md y REGLAS_CERRADAS.md.
+5. Usa el prompt de aprendizaje experto v2 como protocolo de orquestación.
+6. No uses motores, CSV o golden como fuente de reglas.
+7. Si hay contradicción, no elijas: pregunta a Javier mediante escenas.
+8. No programes hasta superar el Gate Cero de comprensión.
+
+================================================================================
+11. DECISION FINAL
+================================================================================
+
+EL MEJOR DOSSIER BASE ES:
+
+    Dossier_TM_v3_Lectura_Obligatoria.txt
+
+LA NOVEDAD POSTERIOR QUE DEBE AÑADIRSE ES:
+
+    Adenda de Dossier_TM_v4_Concurrencia_Reclasificacion.txt
+
+EL PROTOCOLO DE TRABAJO MULTIAGENTE VIGENTE ES:
+
+    Prompt_ECC_OpenCode_TM_Aprendizaje_Experto_Orquestacion_v2.txt
+
+LA FUENTE DE MAYOR AUTORIDAD DURANTE EL APRENDIZAJE SERÁ:
+
+    DECISIONES_EXPERTO.md
+
+Si un archivo contradice una decisión experta cerrada, prevalece la decisión
+experta. La contradicción se documenta y no se oculta.
+
+================================================================================
+FIN
+================================================================================

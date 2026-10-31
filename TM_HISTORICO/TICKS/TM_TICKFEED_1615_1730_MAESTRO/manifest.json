@@ -1,0 +1,15 @@
+{
+  "fecha": "2026-10-28",
+  "motivo_sustitucion": "Fuente maestra de ticks indicada por Javier.",
+  "estado": "APROBADO_POR_JAVIER",
+  "autoridad": "Javier; fuente designada",
+  "dependencias": [],
+  "archivos": [
+    {
+      "path": "TM_TICKFEED_1615_1730.csv",
+      "size_bytes": 3496855,
+      "sha256": "5F701BE2307352CB559ABBD7BB856A6FD2A1F91E5D269A93DCC9AE2992E2C9FF"
+    }
+  ],
+  "nota": "Copia histórica verificada; los originales se conservaron sin cambios."
+}

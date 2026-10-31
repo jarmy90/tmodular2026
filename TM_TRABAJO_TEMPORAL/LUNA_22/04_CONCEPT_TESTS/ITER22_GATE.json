@@ -1,0 +1,294 @@
+{
+  "iteration": "22",
+  "status": "AB_DELIMITATION_AND_LOCAL_BRANCH_COMPLETE",
+  "engine_sha256": "D77DCDDE59F807DF2FF40AA2EA93E4F4A44EE0464D95B0A904934343AD75D00C",
+  "support_sha256": {
+    "tm_candidates.py": "FF9A2916E2E4561BD21108E30D956319404373E0F6AF500F41BC9B99FD5C9292",
+    "tm_concurrent_readings.py": "7D64844DAE268C1E5C0528C7656E95BA4292ED8F15E4C4AF6C39D0CF3E88AE1F",
+    "tm_local_generation.py": "1A33EF048C0D3DA27EF653AD96B9CE8D998BDFB18AC986140CBC474EBE474762",
+    "tm_market_layer.py": "5938A54C224AC2C15BD018843C98745D1A205DB3C19553262D60E08DCC1F1CCF",
+    "tm_reading_manager.py": "19AC7341CF0ADC0B835700F0696FB6E38A69C2D8A2E7E233DF1E46B7C235DADB",
+    "tm_reference_interpreter_v1_direct_aut.py": "D77DCDDE59F807DF2FF40AA2EA93E4F4A44EE0464D95B0A904934343AD75D00C"
+  },
+  "regressions": {
+    "regressions_169": 169,
+    "regressions_169_total": 169,
+    "iteration_19b_tests": 23,
+    "iteration_19b_anchors": 12,
+    "iteration_20_anchors": 10,
+    "iteration_21_tests": 50,
+    "iteration_21_tests_total": 50,
+    "iteration_22_tests": 39,
+    "iteration_22_tests_total": 39,
+    "human_anchors_passed": 13,
+    "human_anchors_total": 19
+  },
+  "authority": {
+    "after_module_authority": "TREE_QUESTION",
+    "a_development_authority": "TREE_QUESTION",
+    "b_development_authority": "TREE_QUESTION",
+    "b_grande_authority": "TREE_QUESTION",
+    "b_limit_authority": "TREE_QUESTION",
+    "commits_admit": 2,
+    "commits_confirm": 6
+  },
+  "invariants": {
+    "legacy_preemptions": 0,
+    "local_g2_inherited_references": 0,
+    "local_b_uses_local_a": true,
+    "main_b_uses_main_a": true,
+    "cross_owner_ratios": 0,
+    "bar_close_forced_a_closures": 0,
+    "a_closures_at_structural_end": 1,
+    "candidate_b_writes_a": 0,
+    "functional_b_commits_a_close": true,
+    "candidate_state_writes": 0,
+    "cross_owner_reference_reads": 0,
+    "consumes_violations": 0,
+    "archived_generation_writes": 0,
+    "active_branches": 2,
+    "third_branch_attempts": 0,
+    "determinism": true,
+    "prefix_consistency": true
+  },
+  "local_g2": {
+    "status": "LOCAL_CONFIRMED",
+    "module": {
+      "id": "LOCAL-G2:MODULE:002",
+      "origin": 2987380,
+      "extreme": 2982210,
+      "size": 5170,
+      "dir": -1,
+      "status": "LOCAL_MODULE_BY_DISCARD_A",
+      "source_function_id": "LOCAL-G2:A:001",
+      "st": 1792167960081,
+      "kt": 1792167976866
+    },
+    "a": {
+      "id": "LOCAL-G2:A:001",
+      "origin": 2987380,
+      "extreme": 2986260,
+      "size": 1120,
+      "dir": -1,
+      "status": "A_CONFIRMED",
+      "source_module_id": "LOCAL-G2:MODULE:001",
+      "birth_module_extreme": 2987380,
+      "st": 1792167961885,
+      "kt": 1792167976866
+    },
+    "b": {
+      "id": "LOCAL-G2:B:001",
+      "source_function_id": "LOCAL-G2:A:001",
+      "origin": 2986260,
+      "extreme": 2986700,
+      "size": 440,
+      "dir": 1,
+      "status": "B_CANDIDATE_CONFIRMED",
+      "ratio": 0.3929,
+      "level_100": 1120,
+      "level_127": 1447,
+      "grande_status": "",
+      "grande_kt": 0
+    },
+    "tt": {
+      "id": "",
+      "status": "",
+      "dir": 0,
+      "final_a": 0,
+      "objective": 0,
+      "invalidation": 0,
+      "invalidation_kind": "",
+      "module_id": "",
+      "module_origin": 0,
+      "module_extreme": 0,
+      "module_size": 0,
+      "source_function_id": "",
+      "opened_at_seq": 0,
+      "st": 0,
+      "kt": 0,
+      "first_boundary": ""
+    },
+    "commits": [
+      {
+        "seq": 2623,
+        "node": "LOCAL_A_DEVELOPMENT",
+        "kind": "CONFIRM",
+        "fields": [
+          "a_status"
+        ]
+      },
+      {
+        "seq": 2627,
+        "node": "LOCAL_B_DEVELOPMENT",
+        "kind": "CONFIRM",
+        "fields": [
+          "b_status"
+        ]
+      }
+    ]
+  },
+  "local_g2_scene_16_27": {
+    "status": "LOCAL_CONFIRMED",
+    "module": {
+      "id": "LOCAL-G2:MODULE:001",
+      "origin": 2985080,
+      "extreme": 2982210,
+      "size": 2870,
+      "dir": -1,
+      "status": "LOCAL_MODULE_BY_DISCARD",
+      "source_function_id": "",
+      "st": 1792168025684,
+      "kt": 1792168030112
+    },
+    "a": {
+      "id": "LOCAL-G2:A:001",
+      "origin": 2984710,
+      "extreme": 2985060,
+      "size": 350,
+      "dir": 1,
+      "status": "A_CONFIRMED",
+      "source_module_id": "LOCAL-G2:MODULE:001",
+      "birth_module_extreme": 2984710,
+      "st": 1792168026892,
+      "kt": 1792168030112
+    },
+    "b": {
+      "id": "LOCAL-G2:B:001",
+      "source_function_id": "LOCAL-G2:A:001",
+      "origin": 2985060,
+      "extreme": 2984380,
+      "size": 680,
+      "dir": -1,
+      "status": "AUT",
+      "ratio": 1.9429,
+      "level_100": 350,
+      "level_127": 469,
+      "grande_status": "CAUSAL_CROSS_IN_AUT_TICK",
+      "grande_kt": 1792168030513
+    },
+    "tt": {
+      "id": "LOCAL-G2:TT:001",
+      "status": "TT_CONFIRMED",
+      "dir": -1,
+      "final_a": 2985060,
+      "objective": 2984360,
+      "invalidation": 2985060,
+      "invalidation_kind": "FINAL_A",
+      "module_id": "LOCAL-G2:MODULE:001",
+      "module_origin": 2985080,
+      "module_extreme": 2984380,
+      "module_size": 700,
+      "source_function_id": "LOCAL-G2:B:001",
+      "opened_at_seq": 2842,
+      "st": 1792168029912,
+      "kt": 1792168030513,
+      "first_boundary": "OBJECTIVE@2857"
+    }
+  },
+  "human_claims": {
+    "16_27_b_grande_local": {
+      "claim": "B Grande en la lectura local (16:27)",
+      "tick_derived": {
+        "a_local": 1120,
+        "b_local": 440,
+        "ratio": 0.3929,
+        "level_100": 1120,
+        "status": "B_CANDIDATE_CONFIRMED",
+        "module_overextensions": 53
+      },
+      "classification": "PARTIALLY_CONFIRMED",
+      "contradiction": false,
+      "reason": "B=440 / A=1120 = 39.3 % del 100 % exigido; no hay B Grande en la ventana; el dominante continua mas alla del extremo de A, de modo que la B es un rebote interno del modulo"
+    },
+    "16_28_two_pending_tt": {
+      "claim": "dos TT pendientes con propietarios distintos al cierre 16:28",
+      "tick_derived": {
+        "main_tt_16_28": "TT_PENDING",
+        "main_objective": 2982280,
+        "local_tt_16_28": "",
+        "local_objective": 0,
+        "active_tts": 1
+      },
+      "classification": "CORRECTED_BY_TICKS",
+      "contradiction": false,
+      "reason": "TT activos con propietario al cierre de 16:28: 1 (mayor=TT_PENDING, local=ninguno)"
+    },
+    "16_29_tt_confirmation": {
+      "claim": "ambos TT confirman en 16:29",
+      "tick_derived": {
+        "main_16_29": "TT_CONFIRMED",
+        "main_objective": 2982280,
+        "main_confirmed_bar": 989,
+        "local": "",
+        "local_first_boundary": ""
+      },
+      "classification": "CORRECTED_BY_TICKS",
+      "contradiction": false,
+      "reason": "TT mayor TT_CONFIRMED en 16:29; TT local no armado"
+    }
+  },
+  "local_scene_sensitivity_16_27_seed": {
+    "status": "LOCAL_CONFIRMED",
+    "module": {
+      "id": "LOCAL-G2:MODULE:001",
+      "origin": 2985080,
+      "extreme": 2982210,
+      "size": 2870,
+      "dir": -1,
+      "status": "LOCAL_MODULE_BY_DISCARD",
+      "source_function_id": "",
+      "st": 1792168025684,
+      "kt": 1792168030112
+    },
+    "a": {
+      "id": "LOCAL-G2:A:001",
+      "origin": 2984710,
+      "extreme": 2985060,
+      "size": 350,
+      "dir": 1,
+      "status": "A_CONFIRMED",
+      "source_module_id": "LOCAL-G2:MODULE:001",
+      "birth_module_extreme": 2984710,
+      "st": 1792168026892,
+      "kt": 1792168030112
+    },
+    "b": {
+      "id": "LOCAL-G2:B:001",
+      "source_function_id": "LOCAL-G2:A:001",
+      "origin": 2985060,
+      "extreme": 2984380,
+      "size": 680,
+      "dir": -1,
+      "status": "AUT",
+      "ratio": 1.9429,
+      "level_100": 350,
+      "level_127": 469,
+      "grande_status": "CAUSAL_CROSS_IN_AUT_TICK",
+      "grande_kt": 1792168030513
+    },
+    "tt": {
+      "id": "LOCAL-G2:TT:001",
+      "status": "TT_CONFIRMED",
+      "dir": -1,
+      "final_a": 2985060,
+      "objective": 2984360,
+      "invalidation": 2985060,
+      "invalidation_kind": "FINAL_A",
+      "module_id": "LOCAL-G2:MODULE:001",
+      "module_origin": 2985080,
+      "module_extreme": 2984380,
+      "module_size": 700,
+      "source_function_id": "LOCAL-G2:B:001",
+      "opened_at_seq": 2842,
+      "st": 1792168029912,
+      "kt": 1792168030513,
+      "first_boundary": "OBJECTIVE@2857"
+    },
+    "note": "sonda de sensibilidad: una rama local sembrada en 16:27 produce AUT y TT propio. No es la rama propietaria (LOCAL-G2 se siembra en 16:26); LOCAL_SEED_POLICY abierta"
+  },
+  "open_questions": [
+    "MODULE_ORIGIN_RESOLUTION",
+    "LOCAL_SEED_POLICY"
+  ],
+  "hardcoded_market_values": 0
+}

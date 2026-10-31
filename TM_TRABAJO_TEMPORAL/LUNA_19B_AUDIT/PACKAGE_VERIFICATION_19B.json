@@ -1,0 +1,44 @@
+{
+  "zip": "TM_ITERATION_19B_REVIEW.zip",
+  "zip_sha256": "638157C7CF302346A4F7B39EBB7A9AD395B830DAD13F5EE5D114FFD21064CCBC",
+  "zip_bytes": 128490,
+  "entries": 59,
+  "engine_sha256": "E12692A409973FC3F72FCCEC830ECF7E9E7136A0CAD439BC4DD3B0F246676350",
+  "verification": "OK",
+  "problems": [],
+  "runs_from_extracted": {
+    "run_iteration_16_all.py": {
+      "returncode": 0,
+      "tail": [
+        "  \"failed\": 0,",
+        "  \"authority_source\": \"CSV classification column (structured)\"",
+        "}"
+      ]
+    },
+    "run_iteration_17_anchors.py": {
+      "returncode": 0,
+      "tail": [
+        "    \"CONTINUATION_ACROSS_BAR\"",
+        "  ]",
+        "}"
+      ]
+    },
+    "run_iteration_19b_tests.py": {
+      "returncode": 0,
+      "tail": [
+        "PASS FT-19B-22 dos ejecuciones producen el mismo estado | identical=True",
+        "PASS FT-19B-23 tablas exportadas coherentes con GenerationRecord/PatternRecord | gen=ARCHIVED/2553 tt=HISTORICAL/2987540",
+        "TOTAL 23 PASS 23"
+      ]
+    },
+    "run_iteration_19b_anchors.py": {
+      "returncode": 0,
+      "tail": [
+        "  \"anchors_total\": 11,",
+        "  \"anchors_passed\": 11",
+        "}"
+      ]
+    }
+  },
+  "feed": "C:\\Users\\profesor\\tm\\Teoria Modular\\TM_CANON_ACTIVO\\02_TICKS\\TM_TICKFEED_1615_1730.csv"
+}

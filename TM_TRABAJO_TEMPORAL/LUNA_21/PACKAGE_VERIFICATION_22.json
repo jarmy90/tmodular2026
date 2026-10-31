@@ -1,0 +1,84 @@
+{
+  "zip": "TM_ITERATION_22_REVIEW.zip",
+  "zip_sha256": "F7B3E4059DAD9D555F8A3894057205EAE2C53A70713D05B78C011E6BE3461197",
+  "zip_bytes": 374091,
+  "entries": 88,
+  "engine_sha256": "D77DCDDE59F807DF2FF40AA2EA93E4F4A44EE0464D95B0A904934343AD75D00C",
+  "verification": "OK",
+  "problems": [],
+  "runs_from_extracted": {
+    "run_iteration_16_all.py": {
+      "returncode": 0,
+      "tail": [
+        "  \"failed\": 0,",
+        "  \"authority_source\": \"CSV classification column (structured)\"",
+        "}"
+      ]
+    },
+    "run_iteration_17_anchors.py": {
+      "returncode": 0,
+      "tail": [
+        "    \"CONTINUATION_ACROSS_BAR\"",
+        "  ]",
+        "}"
+      ]
+    },
+    "run_iteration_19b_tests.py": {
+      "returncode": 0,
+      "tail": [
+        "PASS FT-19B-22 dos ejecuciones producen el mismo estado | identical=True",
+        "PASS FT-19B-23 tablas exportadas coherentes con GenerationRecord/PatternRecord | gen=ARCHIVED/2553 tt=HISTORICAL/2987540",
+        "TOTAL 23 PASS 23"
+      ]
+    },
+    "run_iteration_19b_anchors.py": {
+      "returncode": 0,
+      "tail": [
+        "  \"anchors_total\": 12,",
+        "  \"anchors_passed\": 12",
+        "}"
+      ]
+    },
+    "run_iteration_20_anchors.py": {
+      "returncode": 0,
+      "tail": [
+        "  \"anchors_total\": 10,",
+        "  \"anchors_passed\": 10",
+        "}"
+      ]
+    },
+    "run_iteration_21_tests.py": {
+      "returncode": 0,
+      "tail": [
+        "PASS C24 el motor no contiene precios, horas ni atajos del caso | hallazgos=[]",
+        "PASS C25 todo patron y generacion tiene propietario y slot | patrones=2 generaciones=2",
+        "TOTAL 50 PASS 50 FAIL 0"
+      ]
+    },
+    "run_iteration_22_tests.py": {
+      "returncode": 0,
+      "tail": [
+        "PASS D7 la rama local no contiene precios ni horas del caso | hallazgos=[]",
+        "PASS D8 preguntas migradas presentes en el arbol | nodos=['AFTER_MODULE', 'A_DEVELOPMENT', 'B_DEVELOPMENT', 'B_GRANDE_CONFIRMATION', 'B_LIMIT']",
+        "TOTAL 39 PASS 39 FAIL 0"
+      ]
+    },
+    "run_iteration_21_gate.py": {
+      "returncode": 0,
+      "tail": [
+        " \"reason\": \"OWNER_ERROR: la B del tramo local se esta midiendo con la A de PRIMARY-G1. La lectura humana exige una A local propia (LOCAL-G2 limpia), no la A principal.\",",
+        " \"open_question\": \"AB_DELIMITATION_IN_NOISY_BAR\"",
+        "}"
+      ]
+    },
+    "run_iteration_22_gate.py": {
+      "returncode": 0,
+      "tail": [
+        " \"human_anchors_passed\": 13,",
+        " \"human_anchors_total\": 19",
+        "}"
+      ]
+    }
+  },
+  "feed": "C:\\Users\\profesor\\tm\\Teoria Modular\\TM_CANON_ACTIVO\\02_TICKS\\TM_TICKFEED_1615_1730.csv"
+}

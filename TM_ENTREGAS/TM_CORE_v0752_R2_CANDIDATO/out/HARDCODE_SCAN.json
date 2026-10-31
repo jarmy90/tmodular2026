@@ -1,0 +1,6 @@
+{
+  "status": "PASS",
+  "engine_file": "python/TM_CORE_PYTHON_v0752_CANONICAL.py",
+  "forbidden_golden_literals_checked": 26,
+  "hits": []
+}

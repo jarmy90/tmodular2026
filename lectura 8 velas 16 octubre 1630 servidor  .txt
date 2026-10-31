@@ -1,0 +1,51 @@
+VELA 1
+1 bajista
+
+VELA 2
+Salida en plano
+→ 2 bajista
+→ posible 3
+
+VELA 3
+Movimiento contrario superior al 50 %
+→ 3 fallido
+→ velas 1 y 2 forman módulo
+→ comienza A Grande alcista
+
+VELA 4
+Termina de extenderse A Grande
+→ comienza B Grande bajista
+
+VELA 5
+Continúa B Grande bajista
+
+VELA 6
+B Grande alcanza 100 %
+→ B Grande confirmada
+B Grande alcanza 127 % + 0,25
+→ AUT inmediato
+→ TT pendiente
+→ TT confirmado
+→ el movimiento bajista puede ser 1
+
+VELA 7
+El movimiento bajista continúa hasta el mínimo
+→ termina el posible 1 bajista
+Dentro de la misma vela comienza movimiento alcista
+→ A Grande alcista
+
+VELA 8
+Desde el máximo de A Grande comienza movimiento bajista
+→ B Grande bajista
+B Grande alcanza 127 % + 0,25
+→ AUT inmediato
+Después comienza movimiento alcista
+→ C Grande alcista
+C Grande alcanza el máximo de A Grande
+→ CUT
+
+VELA 9
+Se observa qué función conserva el movimiento posterior al CUT:
+→ C Grande puede quedar como 1
+→ las lecturas anteriores continúan o se reclasifican
+   según los movimientos posteriores

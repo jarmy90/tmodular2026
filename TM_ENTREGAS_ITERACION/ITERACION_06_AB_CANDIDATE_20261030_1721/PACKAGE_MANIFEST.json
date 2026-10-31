@@ -1,0 +1,188 @@
+{
+  "iteration_id": "ITERACION_06_AB_CANDIDATE",
+  "date": "2026-10-30T17:21:30",
+  "objective": "A, return and B candidate on the approved core",
+  "folder": "C:\\Users\\profesor\\tm\\Teoria Modular\\TM_ENTREGAS_ITERACION\\ITERACION_06_AB_CANDIDATE_20261030_1721",
+  "zip_path": "C:\\Users\\profesor\\tm\\Teoria Modular\\TM_ENTREGAS_ITERACION\\TM_ITERATION_06_REVIEW.zip",
+  "members": [
+    {
+      "path": "01_CHECKPOINT_AB_CANDIDATE.md",
+      "original_path": "TM_TRABAJO_TEMPORAL\\TM_TREE_AND_REFERENCE_ENGINE_V1\\10_REPORTS\\CHECKPOINT_6_AB_CANDIDATE.md",
+      "size": 3618,
+      "sha256": "0b23b3f5376583592680028fc0858339d4d567f86881f8f486ce21fc31e7cd5e",
+      "reason": "checkpoint"
+    },
+    {
+      "path": "02_EXECUTABLE_TREE_AB.md",
+      "original_path": "TM_TRABAJO_TEMPORAL\\TM_TREE_AND_REFERENCE_ENGINE_V1\\02_EXECUTABLE_TREE\\TM_TREE_EXECUTABLE_AB_CANDIDATE_V1.md",
+      "size": 2764,
+      "sha256": "0e5ca71942fbbf0121b0ff932e70014ae8f88700165d16662c46b3517198c36a",
+      "reason": "A/B executable tree"
+    },
+    {
+      "path": "03_TRANSITIONS_AB.csv",
+      "original_path": "TM_TRABAJO_TEMPORAL\\TM_TREE_AND_REFERENCE_ENGINE_V1\\03_TRANSITION_SPECS\\TM_TREE_TRANSITIONS_AB_CANDIDATE_V1.csv",
+      "size": 3160,
+      "sha256": "44c06e4bf8687238d0d1b962a966195a560d532566b2021573a10961e01f4395",
+      "reason": "A/B transition specs"
+    },
+    {
+      "path": "04_TEST_MATRIX_AB.csv",
+      "original_path": "TM_TRABAJO_TEMPORAL\\TM_TREE_AND_REFERENCE_ENGINE_V1\\04_CONCEPT_TESTS\\CONCEPT_TEST_MATRIX_AB_CANDIDATE_V1.csv",
+      "size": 1419,
+      "sha256": "d2bad8ff4764f20046163e36cb87e8eb0b4772163f20a32a16735bdb4814b493",
+      "reason": "A/B test matrix"
+    },
+    {
+      "path": "05_AB_TEST_RESULTS.csv",
+      "original_path": "TM_TRABAJO_TEMPORAL\\TM_TREE_AND_REFERENCE_ENGINE_V1\\04_CONCEPT_TESTS\\AB_CANDIDATE_TEST_RESULTS.csv",
+      "size": 1449,
+      "sha256": "c76b1071f24ff6e66764e34b8f0dd341122089e9c66a181cc1c7a6094ff1b714",
+      "reason": "A/B test results"
+    },
+    {
+      "path": "06_AB_TEST_SUMMARY.json",
+      "original_path": "TM_TRABAJO_TEMPORAL\\TM_TREE_AND_REFERENCE_ENGINE_V1\\04_CONCEPT_TESTS\\AB_CANDIDATE_TEST_RESULTS.json",
+      "size": 132,
+      "sha256": "36156d5b71511253d9acd65885b6b43e962104cb7ab27273e22afa43d712e205",
+      "reason": "A/B summary"
+    },
+    {
+      "path": "07_CORE_TEST_RESULTS.csv",
+      "original_path": "TM_TRABAJO_TEMPORAL\\TM_TREE_AND_REFERENCE_ENGINE_V1\\04_CONCEPT_TESTS\\CORE_TEST_RESULTS.csv",
+      "size": 1637,
+      "sha256": "3b892c56fd7e9d8eca42a5411127cb4760f1de8bf861a1de067184f1d4034908",
+      "reason": "core baseline 19/19"
+    },
+    {
+      "path": "08_CORE_TEST_SUMMARY.json",
+      "original_path": "TM_TRABAJO_TEMPORAL\\TM_TREE_AND_REFERENCE_ENGINE_V1\\04_CONCEPT_TESTS\\CORE_TEST_RESULTS.json",
+      "size": 180,
+      "sha256": "c8b034d3417d42656fdc9630a5d9a3dec6030cfe2a6c029c2fd6a02fd4a9f033",
+      "reason": "core summary"
+    },
+    {
+      "path": "09_CORE_REPLAY_CHECKS.json",
+      "original_path": "TM_TRABAJO_TEMPORAL\\TM_TREE_AND_REFERENCE_ENGINE_V1\\04_CONCEPT_TESTS\\CORE_REPLAY_CHECKS.json",
+      "size": 451,
+      "sha256": "0bc828f360c0122f226063d0525d6704b7ca072e4632e4957244062674b8fa7c",
+      "reason": "core replay checks"
+    },
+    {
+      "path": "10_REFERENCE_INTERPRETER_AB.py",
+      "original_path": "TM_TRABAJO_TEMPORAL\\TM_TREE_AND_REFERENCE_ENGINE_V1\\05_REFERENCE_ENGINE\\tm_reference_interpreter_v1_ab_candidate.py",
+      "size": 30520,
+      "sha256": "09a16f9ca1386855e26f4d49593e6c4171a67fe72f9494cb5bd98a4626cbaa71",
+      "reason": "A/B reference interpreter"
+    },
+    {
+      "path": "11_REFERENCE_INTERPRETER_CORE.py",
+      "original_path": "TM_TRABAJO_TEMPORAL\\TM_TREE_AND_REFERENCE_ENGINE_V1\\05_REFERENCE_ENGINE\\tm_reference_interpreter_v1.py",
+      "size": 20485,
+      "sha256": "ef3a4a56ff56591497b6f478adcabf945077d518c174c8d604595a54ad5edcc6",
+      "reason": "approved core baseline"
+    },
+    {
+      "path": "12_STATE_L1_1615_1618.json",
+      "original_path": "TM_TRABAJO_TEMPORAL\\TM_TREE_AND_REFERENCE_ENGINE_V1\\06_SYNTHETIC_REPLAYS\\ab_state_1615_1618.json",
+      "size": 1348,
+      "sha256": "a8c301e087080a57f646aa8346d19db248ce7700cdb96fcd40daa5df805835eb",
+      "reason": "L1 A/B state"
+    },
+    {
+      "path": "13_EVENTS_L1_1615_1618.csv",
+      "original_path": "TM_TRABAJO_TEMPORAL\\TM_TREE_AND_REFERENCE_ENGINE_V1\\06_SYNTHETIC_REPLAYS\\ab_events_1615_1618.csv",
+      "size": 1371,
+      "sha256": "c054ea5cc56f1a4ad70ce7ce402facad0f139ca0b64361858b7067513ab56744",
+      "reason": "L1 A/B events"
+    },
+    {
+      "path": "14_STATE_L2_1619_1622.json",
+      "original_path": "TM_TRABAJO_TEMPORAL\\TM_TREE_AND_REFERENCE_ENGINE_V1\\07_REAL_REPLAYS\\ab_state_L2_1619_1622.json",
+      "size": 1357,
+      "sha256": "4eb0d849df85500073d235999f8090c10b11e891d247ebe17d210161a8b9f69a",
+      "reason": "L2 A/B state"
+    },
+    {
+      "path": "15_EVENTS_L2_1619_1622.csv",
+      "original_path": "TM_TRABAJO_TEMPORAL\\TM_TREE_AND_REFERENCE_ENGINE_V1\\07_REAL_REPLAYS\\ab_events_L2_1619_1622.csv",
+      "size": 2865,
+      "sha256": "10d189a96ea48fff9dd3c62b26889d7b1e90f26047f201d7ec33b4a10b4348e9",
+      "reason": "L2 A/B events"
+    },
+    {
+      "path": "16_TREE_PYTHON_MATRIX_AB.csv",
+      "original_path": "TM_TRABAJO_TEMPORAL\\TM_TREE_AND_REFERENCE_ENGINE_V1\\08_TREE_PYTHON_COMPARISON\\AB_TREE_PYTHON_MATRIX_V1.csv",
+      "size": 1829,
+      "sha256": "d4b82b96beecd09c23061388189ca6cf7728577e1a47eadc56e592a2767790a4",
+      "reason": "tree-Python comparison"
+    },
+    {
+      "path": "17_OPEN_RULES_AB.md",
+      "original_path": "TM_TRABAJO_TEMPORAL\\TM_TREE_AND_REFERENCE_ENGINE_V1\\09_OPEN_RULES\\OPEN_RULES_AB_CANDIDATE_V1.md",
+      "size": 1997,
+      "sha256": "2126ab74b54b5cd1c99acb197286453649f49d819e532d68340183f529efa9b3",
+      "reason": "open rules"
+    },
+    {
+      "path": "18_AB_CANDIDATE_MANIFEST.json",
+      "original_path": "TM_TRABAJO_TEMPORAL\\TM_TREE_AND_REFERENCE_ENGINE_V1\\11_MANIFEST\\AB_CANDIDATE_MANIFEST.json",
+      "size": 7993,
+      "sha256": "04f74b5b70ad31191b4b2967a67313a0b18e320adc8b446a54e84d4403a28f9e",
+      "reason": "manifest"
+    },
+    {
+      "path": "19_TRACE_INDEX.json",
+      "original_path": "TM_TRABAJO_TEMPORAL/TM_TREE_AND_REFERENCE_ENGINE_V1",
+      "size": 689,
+      "sha256": "d1653f2bb03a9603690e0c5fa0494bbb4796e140349ec6504cbe66e452bd0e41",
+      "reason": "full trace hashes and paths"
+    },
+    {
+      "path": "20_TRACE_SAMPLE.jsonl",
+      "original_path": "TM_TRABAJO_TEMPORAL/TM_TREE_AND_REFERENCE_ENGINE_V1",
+      "size": 9319,
+      "sha256": "6cf49196b9f9fe3945f913622ce81b0c03b844c3250a17731fc5bc730f36b486",
+      "reason": "focal trace sample"
+    },
+    {
+      "path": "SHA256SUMS.txt",
+      "original_path": "TM_ENTREGAS_ITERACION\\ITERACION_06_AB_CANDIDATE_20261030_1721\\SHA256SUMS.txt",
+      "size": 1857,
+      "sha256": "678cbdb1ad9f663915045421ea19984a07a54567dcbc61b14006ab6992d7143a",
+      "reason": "hashes of the package members"
+    }
+  ],
+  "member_count": 21,
+  "metadata_not_self_hashed": [
+    "PACKAGE_MANIFEST.json"
+  ],
+  "originals_modified": false,
+  "tree_modified": false,
+  "engine_modified": false,
+  "golden_modified": false,
+  "tests": {
+    "core": 19,
+    "ab_candidate": 14,
+    "total": 33,
+    "failed": 0
+  },
+  "anchors": {
+    "L1": {
+      "module": 2850,
+      "A": 910,
+      "B_origin": 2985760
+    },
+    "L2": {
+      "one": 750,
+      "two": 1230,
+      "three": 2983030,
+      "module": 1970,
+      "A": 2050
+    }
+  },
+  "gate_core": "PASS",
+  "gate_ab_candidate": "GATE_A_B_CANDIDATE_PASS",
+  "tree_gate": "NOT_READY_TO_FREEZE_TREE",
+  "engine_status": "REFERENCE_ENGINE_INCOMPLETE"
+}

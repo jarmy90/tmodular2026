@@ -1,0 +1,17 @@
+test_id,area,kind,classification,description,pass,detail
+GAP-01,gap,positive,CANONICAL_PASS,apertura no plana registrada con sus estados,True,"ev=['NON_FLAT_OPEN_OBSERVED', 'NO_TWO_BY_NON_FLAT_OPEN', 'TWO_IMPOSSIBLE_NO_FLAT', 'GAP_IMPLICIT_SEQUENCE', 'GAP_IMPLICIT_NEW_ONE']"
+GAP-02,gap,negative,CANONICAL_PASS,2 prohibido por apertura no plana,True,two=IMPOSSIBLE_NO_FLAT
+GAP-03,gap,positive,CANONICAL_PASS,gap resuelve A/B Grande/tendencia implicitos y nuevo 1 en la apertura,True,one=NEW_ONE_ACTIVE origin=9830 dir=1
+GAP-03b,gap,negative,CANONICAL_PASS,el gap no se mide como una unica A desde el extremo previo,True,a='' one=NEW_ONE_ACTIVE
+GAP-04,gap,negative,CANONICAL_PASS,gap no inventa ticks ni precios internos,True,trace=5 ticks=5
+GAP-05,gap,positive,CANONICAL_PASS,la funcion viva no se divide al cambiar de vela ni rota sin TT,True,cont=True n=9830->9900 two=IMPOSSIBLE_NO_FLAT
+GAP-06,gap,positive,CANONICAL_PASS,"ancla 16:24-16:25: nuevo 1 alcista desde 29848,5",True,origin=2984850 dir=1 size=1150
+GAP-07,gap,negative,CANONICAL_PASS,el nuevo 1 no se mide desde el cierre previo ni desde 29828-ish,True,origin=2984850
+GAP-08,gap,positive,CANONICAL_PASS,secuencia implicita registrada sin precios internos inventados,True,trace=8 ticks=8
+GAP-09,gap,negative,CANONICAL_PASS,las funciones previas pierden autoridad activa tras el gap,True,active=NEW_ONE a= b= c=
+CONC-01,concurrency,positive,CANONICAL_PASS,L1 aislada == L1 en composicion (sin interferencia),True,equal=True
+CONC-02,concurrency,positive,CANONICAL_PASS,L2 aislada == L2 en composicion (sin interferencia),True,equal=True
+CONC-03,concurrency,negative,CANONICAL_PASS,"ids propios y parent correcto, sin tercera escala",True,"ids=['L1', 'L2'] parent=L1"
+CONC-04,concurrency,negative,CANONICAL_PASS,cero fugas entre lecturas,True,leaks=[]
+CONC-05,concurrency,determinism,CANONICAL_PASS,doble composicion identica,True,deterministic
+CONC-06,concurrency,negative,CANONICAL_PASS,tercera escala prohibida sin regla expresa,True,blocked=True

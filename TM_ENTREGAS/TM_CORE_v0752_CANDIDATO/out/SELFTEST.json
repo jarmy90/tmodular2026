@@ -1,0 +1,5 @@
+{
+  "status": "PASS",
+  "checks": 8,
+  "command": "python python/TM_CORE_PYTHON_v0752_CANONICAL.py --selftest"
+}

@@ -1,0 +1,213 @@
+{
+  "package": "TM_CANON_v2_13_PROPUESTA",
+  "version": "2.13 R1",
+  "status": "CANDIDATO_PENDIENTE_APROBACION",
+  "date": "2026-10-28",
+  "approved_base": "TM_ARBOL_MAESTRO_CANONICO_COMPLETO_v2_12.md",
+  "active_stable_tree": "v2.12; unchanged",
+  "candidate_tree": "TM_ARBOL_MAESTRO_CANONICO_COMPLETO_v2_13_PROPUESTA.md",
+  "approval_gate": "ARBOL_v2_13_APROBADO_POR_JAVIER",
+  "golden": {
+    "name": "TM_LECTURAS_CONFIRMADAS_16OCT_1615_1730_v003.txt",
+    "sha256": "1E634EBB6C004D297E0ACB6B0D378DE5CFBBE7BBEC82FE26363E47C762104E5B",
+    "states": {
+      "A": 14,
+      "B": 13,
+      "C": 0,
+      "D": 48
+    },
+    "total_minutes": 75
+  },
+  "phase0_observation_v0751_archive": {
+    "archive": "deliverables_v0751_corrected_COMPLETE.zip",
+    "manifest_declared_file_count": 46,
+    "physical_archive_entry_count": 48,
+    "additional_control_files": [
+      "manifest.json",
+      "SHA256SUMS.txt"
+    ],
+    "explanation": "El file_count 46 enumera archivos payload; el ZIP contiene además su manifiesto y el listado de hashes como dos controles físicos. El ZIP original y la rama legacy no se modificaron."
+  },
+  "rules_pending_changed": false,
+  "engine_tests_golden_feed_legacy_deliverables_modified": false,
+  "phase2_or_afs2_executed": false,
+  "items_excluded": [
+    "motor v0.7.5.2",
+    "AFS2",
+    "nuevas reglas FT",
+    "cambios a REGLAS_PROVISIONALES"
+  ],
+  "file_count": 25,
+  "archive_physical_count_expected": 27,
+  "archive_control_files_not_counted_in_file_count": [
+    "manifest.json",
+    "SHA256SUMS.txt"
+  ],
+  "files": [
+    {
+      "path": "CLASIFICACION_CONTENIDO_v2_12.csv.md",
+      "size_bytes": 1910,
+      "sha256": "3D3A9B92280479E780E41404CDD399A8B2B5D52AD1BC6874F55DF53816FD1E13",
+      "role": "R1 deliverable or exact source snapshot"
+    },
+    {
+      "path": "CONTRADICCIONES_RESUELTAS_Y_PENDIENTES.md",
+      "size_bytes": 3724,
+      "sha256": "4D36C259761EBE12239C31E8469DE4EB31812460B892125CF8A5A9C1EB1B4CE6",
+      "role": "R1 deliverable or exact source snapshot"
+    },
+    {
+      "path": "DECISION_AUTORIDAD_PLANO_GAP_JAVIER.md",
+      "size_bytes": 464,
+      "sha256": "B00385556B1A2236A9735FE3E17FEC5CFF6B11CA0F59C3243FDA8461B44C91D7",
+      "role": "R1 deliverable or exact source snapshot"
+    },
+    {
+      "path": "DIFF_v2_12_a_v2_13_PROPUESTA.diff",
+      "size_bytes": 589060,
+      "sha256": "1088F54F6D953CDDDF92F2C86CBCD312D704A933FC58D8213A9489F4623A4279",
+      "role": "R1 deliverable or exact source snapshot"
+    },
+    {
+      "path": "DIFF_v2_13_inicial_a_R1.diff",
+      "size_bytes": 3380,
+      "sha256": "2F09AEE3C9259ED7C8B479C11F1ED017189C5C304DB7B5551C28D0B426E12EE7",
+      "role": "R1 deliverable or exact source snapshot"
+    },
+    {
+      "path": "historical/Dossier_TM_v3_Lectura_Obligatoria.txt",
+      "size_bytes": 40543,
+      "sha256": "9A043FB0C6BA07AA4B3E94C4ACF7A53534BDED6BC0B106DE00202BCF43AF907A",
+      "role": "R1 deliverable or exact source snapshot"
+    },
+    {
+      "path": "historical/Dossier_TM_v4_Concurrencia_Reclasificacion.txt",
+      "size_bytes": 34024,
+      "sha256": "E2E80DD9D67AF80E80F58F81A08A48F14B867D02624B702976E3C0291418DBFF",
+      "role": "R1 deliverable or exact source snapshot"
+    },
+    {
+      "path": "historical/TM_ARBOL_MAESTRO_CANONICO_COMPLETO_v2_12.md",
+      "size_bytes": 548810,
+      "sha256": "07880B12EE0A40FC09821D2248CD01071B9AE8C3EF4147130049B3EB39F997A8",
+      "role": "R1 deliverable or exact source snapshot"
+    },
+    {
+      "path": "INFORME_CAMBIOS_R1.md",
+      "size_bytes": 1249,
+      "sha256": "96E546565EEB95B786E24A7929A8AC509441346A3DBB26CC049ED5666360B415",
+      "role": "R1 deliverable or exact source snapshot"
+    },
+    {
+      "path": "README_REPRODUCCION.md",
+      "size_bytes": 1835,
+      "sha256": "86795FE35F37D5D8016B87BFE24B5DF9B54CF7BE7457BD19B33206344710AC13",
+      "role": "R1 deliverable or exact source snapshot"
+    },
+    {
+      "path": "REGLAS_SUPERADAS.csv",
+      "size_bytes": 5932,
+      "sha256": "B97640B806B521A762AAD9984FF1C3A4280911CE2D08FBFE522B21B69F4B2ED5",
+      "role": "R1 deliverable or exact source snapshot"
+    },
+    {
+      "path": "source/00_LEEME_PRIMERO_PRIORIDAD_DOCUMENTOS_TM.txt",
+      "size_bytes": 12616,
+      "sha256": "AF82AE964F7C52DDAF4176CF3D49922D470672940A010CED1CA8535CB9C39F23",
+      "role": "R1 deliverable or exact source snapshot"
+    },
+    {
+      "path": "source/A00_Resumen_v0751.json",
+      "size_bytes": 1546,
+      "sha256": "7BE772738400746996787F370830A58161C312DAC10ADD837D58789A2B317E15",
+      "role": "R1 deliverable or exact source snapshot"
+    },
+    {
+      "path": "source/A06_Readiness_v0751.json",
+      "size_bytes": 29417,
+      "sha256": "0676E0420527C2BFAFB64641364D4C6A5813B58C64D8E76D14EC3E32203C644A",
+      "role": "R1 deliverable or exact source snapshot"
+    },
+    {
+      "path": "source/AGENTS.md",
+      "size_bytes": 4248,
+      "sha256": "83309F9621D8FD50B8CFE3DDD64A15253D29A81F9B13CD7D940C7A89EC91B2D6",
+      "role": "R1 deliverable or exact source snapshot"
+    },
+    {
+      "path": "source/DECISIONES_EXPERTO.md",
+      "size_bytes": 68634,
+      "sha256": "A3B3B053DD5AB01CE96F6F606FFAE9917BDC8640A3D41464FF0E5AF922ADD6EC",
+      "role": "R1 deliverable or exact source snapshot"
+    },
+    {
+      "path": "source/MANIFEST_ACTIVO_FASE0.json",
+      "size_bytes": 10169,
+      "sha256": "1E8FE940D361901EA6DE256DDB7845B7C5763844ABBD87419B1250F0EFF0B0F2",
+      "role": "R1 deliverable or exact source snapshot"
+    },
+    {
+      "path": "source/PREGUNTAS_PENDIENTES.md",
+      "size_bytes": 42411,
+      "sha256": "62FFE3D17ABC22A859C730536A3D726A761A3745DC1676FE40391D5D3CABEF2F",
+      "role": "R1 deliverable or exact source snapshot"
+    },
+    {
+      "path": "source/REGLAS_CERRADAS.md",
+      "size_bytes": 24204,
+      "sha256": "B5FDBB3E19D95B78841F140E5952CE397FA2AEC533D2F6D0D2D1AA5AB086C1F2",
+      "role": "R1 deliverable or exact source snapshot"
+    },
+    {
+      "path": "source/REGLAS_PROVISIONALES.md",
+      "size_bytes": 9639,
+      "sha256": "BB992BDDC47EC78F3DF5340328F1C48BEDC1EFF0765405AEC74F22A2DE3AD536",
+      "role": "R1 deliverable or exact source snapshot"
+    },
+    {
+      "path": "source/TM_ARBOL_MAESTRO_CANONICO_COMPLETO_v2_13_PROPUESTA_INICIAL.md",
+      "size_bytes": 12663,
+      "sha256": "D385FFDFE931CFDCCC99976E9A69C502658642385D7BF381979861DC559887B7",
+      "role": "R1 deliverable or exact source snapshot"
+    },
+    {
+      "path": "source/TM_LECTURAS_CONFIRMADAS_16OCT_1615_1730_v003.txt",
+      "size_bytes": 20709,
+      "sha256": "1E634EBB6C004D297E0ACB6B0D378DE5CFBBE7BBEC82FE26363E47C762104E5B",
+      "role": "R1 deliverable or exact source snapshot"
+    },
+    {
+      "path": "TM_ARBOL_MAESTRO_CANONICO_COMPLETO_v2_13_PROPUESTA_R1.md",
+      "size_bytes": 13008,
+      "sha256": "465886E3671E21A4B7C962A61CB4AA54C8AC8D4359C10FCE6B20E89D13C3EBC5",
+      "role": "R1 deliverable or exact source snapshot"
+    },
+    {
+      "path": "TM_v2_13_REGISTRO_GOLDEN_HUMANO.csv",
+      "size_bytes": 17699,
+      "sha256": "0107B9F56CB291572E8E1D887A19CE551311CB1C29E44671D4121A1B98F5AF80",
+      "role": "R1 deliverable or exact source snapshot"
+    },
+    {
+      "path": "TM_v2_13_REGLA_A_GOLDEN.csv",
+      "size_bytes": 3025,
+      "sha256": "59BFF19320C4E5EDD0D048442955AC3CEC48B010E5010F492E6B236F83EDB4EE",
+      "role": "R1 deliverable or exact source snapshot"
+    }
+  ],
+  "previous_corrected_zip_count_note": {
+    "archive": "deliverables_v0751_corrected_COMPLETE.zip",
+    "manifest_declared_file_count": 46,
+    "physical_archive_entry_count": 48,
+    "additional_control_files": [
+      "manifest.json",
+      "SHA256SUMS.txt"
+    ],
+    "explanation": "46 archivos de payload declarados; el ZIP contiene adem?s manifest.json y SHA256SUMS.txt como controles. El ZIP legacy/corrected no se alter?."
+  },
+  "artifact_status": "CANDIDATO_PENDIENTE_AUDITORIA_MIMO_Y_APROBACION_JAVIER",
+  "supersedes_candidate": "TM_CANON_v2_13_PROPUESTA.zip",
+  "source_zip_sha256": "A42274932680493CFEA99F0D8587258B11C61E7B7EC8C9FDB49322403FC01E3F",
+  "change_summary": "Solo correcciones de trazabilidad ordenadas por Javier; sin cambios de regla/golden/feed/motor/tests.",
+  "authority_decision": "DECISION_AUTORIDAD_PLANO_GAP_JAVIER.md"
+}

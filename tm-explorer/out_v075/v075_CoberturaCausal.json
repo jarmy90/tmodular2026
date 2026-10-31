@@ -1,0 +1,14 @@
+{
+  "rows": 1335,
+  "geometric_count": 1335,
+  "functional_count": 1335,
+  "causal_geometric_count": 1314,
+  "causal_functional_count": 1263,
+  "uncovered_causal_geometric": 21,
+  "uncovered_causal_functional": 72,
+  "reasons": {
+    "A_NO_CONOCIDA": 51,
+    "CUBIERTO": 1263,
+    "SIN_LECTURA_CONOCIDA": 21
+  }
+}

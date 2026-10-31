@@ -1,0 +1,11 @@
+Haz una prueba sin modificar archivos:
+
+1. @rules-analyst explica la diferencia entre B Grande candidata, B Grande,
+   C Grande y AUT segun AGENTS.md.
+2. @movement-reconstructor reconstruye un intervalo pequeno sin clasificarlo
+   definitivamente.
+3. @data-auditor busca acceso desde src/core hacia golden y datos futuros.
+4. @tm-reviewer revisa las tres respuestas.
+
+Ejecuta 1, 2 y 3 en paralelo. Devuelve identificador de cada sesion, tarea,
+evidencia, dudas y estado del Gate Cero.

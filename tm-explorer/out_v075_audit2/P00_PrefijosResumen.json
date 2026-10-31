@@ -1,0 +1,30 @@
+{
+  "feed": "C:\\Users\\profesor\\OpenBot\\Shared\\Transfers\\fb8c2a5d-d62c-48d0-8120-bae2016283c4\\TM_TICKFEED_1615_1730.csv",
+  "seed": 20261016,
+  "process_model": "un proceso por shard; recarga fisica del CSV y motor nuevos por corte",
+  "shards": 4,
+  "shard_exit_codes": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "cutoffs": 3327,
+  "pass": 3327,
+  "failures": 0,
+  "prefix_failures": 0,
+  "r0062_cutoffs": 1782,
+  "r0062_failures": 0,
+  "category_counts": {
+    "aleatorio_500": 500,
+    "cierre_vela": 75,
+    "evento": 511,
+    "evento_antes": 511,
+    "r0062_todos": 1782,
+    "umbral_AUT": 38,
+    "umbral_AUT_antes": 38,
+    "umbral_B_100": 60,
+    "umbral_B_100_antes": 60
+  },
+  "first_failure": null
+}

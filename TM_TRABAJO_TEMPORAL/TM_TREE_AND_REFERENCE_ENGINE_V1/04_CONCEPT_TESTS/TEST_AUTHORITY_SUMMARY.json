@@ -1,0 +1,16 @@
+{
+  "reader_module": "tm_reference_interpreter_v1_direct_aut",
+  "reader_path": "C:\\Users\\profesor\\tm\\Teoria Modular\\TM_TRABAJO_TEMPORAL\\TM_TREE_AND_REFERENCE_ENGINE_V1\\05_REFERENCE_ENGINE\\tm_reference_interpreter_v1_direct_aut.py",
+  "reader_sha256": "950FAC7A3C5B65E3893283C8A59196F003DE50787A743202678486398E48A326",
+  "core_version": "TM_REFERENCE_INTERPRETER_V1_DIRECT_AUT",
+  "suites": 8,
+  "suites_bound": 8,
+  "tests_total": 146,
+  "pass": 146,
+  "fail": 0,
+  "canonical_pass": 104,
+  "provisional_policy_pass": 39,
+  "open_rule_block": 3,
+  "failed": 0,
+  "authority_source": "CSV classification column (structured)"
+}

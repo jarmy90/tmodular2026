@@ -1,0 +1,15 @@
+{
+  "fecha": "2026-10-28",
+  "motivo_sustitucion": "Golden humano vigente indicado expresamente.",
+  "estado": "APROBADO_POR_JAVIER",
+  "autoridad": "Javier; autoridad golden",
+  "dependencias": [],
+  "archivos": [
+    {
+      "path": "TM_LECTURAS_CONFIRMADAS_16OCT_1615_1730_v003.txt",
+      "size_bytes": 20709,
+      "sha256": "1E634EBB6C004D297E0ACB6B0D378DE5CFBBE7BBEC82FE26363E47C762104E5B"
+    }
+  ],
+  "nota": "Copia histórica verificada; los originales se conservaron sin cambios."
+}

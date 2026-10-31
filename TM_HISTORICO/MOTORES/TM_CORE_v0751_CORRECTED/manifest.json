@@ -1,0 +1,18 @@
+{
+  "fecha": "2026-10-28",
+  "motivo_sustitucion": "Parche intermedio corregido preservado como candidato.",
+  "estado": "CANDIDATO_PENDIENTE_APROBACION",
+  "autoridad": "Ninguna autoridad teórica",
+  "dependencias": [
+    "tickfeed maestro",
+    "golden v003 solo para comparación"
+  ],
+  "archivos": [
+    {
+      "path": "TM_CORE_PYTHON_v0751_STREAMING.py",
+      "size_bytes": 93635,
+      "sha256": "4A2877CC7F47E0565D6D788BA20D198486CDDEBA718F6A8F8498222B38DDEFE2"
+    }
+  ],
+  "nota": "Copia histórica verificada; los originales se conservaron sin cambios."
+}

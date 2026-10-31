@@ -1,0 +1,18 @@
+[
+  {
+    "path": "TM_TRABAJO_TEMPORAL\\TM_TREE_AND_REFERENCE_ENGINE_V1\\06_SYNTHETIC_REPLAYS\\bg_trace_1615_1618.jsonl",
+    "label": "L1_BG_1615_1618",
+    "size": 701606,
+    "sha256": "8dbac53a287823f0fbb786f57c7dd41c52c6ad375e42af637ca8730063c605df",
+    "lines": 937,
+    "note": "full trace only in project; sample included"
+  },
+  {
+    "path": "TM_TRABAJO_TEMPORAL\\TM_TREE_AND_REFERENCE_ENGINE_V1\\07_REAL_REPLAYS\\bg_trace_L2_1619_1622.jsonl",
+    "label": "L2_BG_1619_1622",
+    "size": 660576,
+    "sha256": "7dd3c54d671576b9fb0d5e2359b35b40c4b43683853a1f6add36a42417c4d2db",
+    "lines": 898,
+    "note": "full trace only in project; sample included"
+  }
+]

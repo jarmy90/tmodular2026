@@ -1,0 +1,10 @@
+{
+  "core_raw_sha256": "cd5c6feb858dbdd6d31fd39ee7c3085e8d56d93f82b5e8d8ba39a81c9d1f31d7",
+  "feed_points": 20335,
+  "events": 6559,
+  "readings": 1426,
+  "local_sequences": 1,
+  "local_events": 4901,
+  "R0062_R0064": [],
+  "comparison_exit": 2
+}

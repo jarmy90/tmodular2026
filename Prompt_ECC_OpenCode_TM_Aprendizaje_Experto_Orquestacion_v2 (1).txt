@@ -1,0 +1,727 @@
+MISIÓN ECC / OPENCODE
+APRENDER A LEER TEORÍA MODULAR ANTES DE PROGRAMAR EL MOTOR
+
+======================================================================
+0. INSTRUCCIÓN SUPREMA AL ORQUESTADOR
+======================================================================
+
+Actúa como ORQUESTADOR PRINCIPAL. No simules una orquestación dentro de una sola respuesta.
+Debes crear y ejecutar agentes especializados reales mediante las capacidades disponibles en ECC/OpenCode.
+
+Antes de escribir lógica productiva debes demostrar:
+
+1. Qué agentes reales has creado o invocado.
+2. Qué tarea concreta recibió cada agente.
+3. Qué agentes se ejecutaron en paralelo.
+4. Qué artefacto produjo cada agente.
+5. Qué dependencias y gates impiden avanzar.
+6. Qué preguntas deben trasladarse al experto TM.
+
+No afirmes que existen agentes si no han sido creados o invocados realmente.
+Si el entorno no permite crear agentes reales, indícalo expresamente y detente. No simules salidas multiagente.
+
+El experto humano es Javier. Javier conoce la lectura profesional de la Teoría Modular. Los agentes deben aprender las reglas generales preguntando a Javier sobre movimientos y escenas ambiguas.
+
+El objetivo no es copiar una lectura ya conocida ni hacer pasar un golden por fuerza.
+El objetivo es que los agentes comprendan la TM, formulen dudas inteligentes, conviertan las respuestas del experto en reglas generales y solo después construyan un motor determinista.
+
+PROHIBIDO PROGRAMAR EL NÚCLEO TM ANTES DE SUPERAR EL GATE DE COMPRENSIÓN.
+
+======================================================================
+1. MATERIAL DISPONIBLE
+======================================================================
+
+Dentro del proyecto pueden existir:
+
+- Dossiers TM v1-v4.
+- Documento de contexto de conversaciones anteriores.
+- Dataset de veinte velas.
+- CSV de ticks.
+- CSV de OHLC, eventos y estados de motores anteriores.
+- Motores MQL5 anteriores.
+- Fotografías o capturas de gráficos.
+- Una lectura profesional provisional de las primeras velas.
+
+Los dossiers, gráficos y lecturas anteriores son fuentes de trabajo, no sustituyen la consulta al experto cuando exista una duda real.
+
+El golden es externo al motor. El golden no puede enseñar la respuesta al núcleo productivo.
+
+======================================================================
+2. OBJETIVO DE ESTA MISIÓN
+======================================================================
+
+PRIMER OBJETIVO
+
+Demostrar que los agentes saben observar y razonar movimientos TM antes de implementar reglas.
+
+SEGUNDO OBJETIVO
+
+Cerrar, con Javier, las reglas necesarias para leer las ocho primeras velas.
+
+TERCER OBJETIVO
+
+Construir un replay determinista que procese ticks en orden temporal y descubra la lectura sin:
+
+- precios cableados;
+- fechas cableadas;
+- símbolo cableado;
+- números de vela cableados;
+- acceso al golden;
+- conocimiento de ticks futuros;
+- excepciones específicas para la muestra.
+
+CUARTO OBJETIVO
+
+Solo después de superar las ocho primeras velas, usar las velas 9-20 como prueba de generalización no vista.
+
+======================================================================
+3. PRINCIPIO DE APRENDIZAJE SUPERVISADO POR EXPERTO
+======================================================================
+
+Los agentes no deben inventar una regla por encajar con el golden.
+
+Cuando una escena admite varias lecturas posibles, el agente debe:
+
+1. Reconstruir el orden real de los ticks.
+2. Separar hechos observados de clasificaciones TM.
+3. Mantener todas las lecturas matemáticamente válidas.
+4. Formular una pregunta concreta a Javier.
+5. Registrar la respuesta literal.
+6. Extraer una regla general.
+7. Crear ejemplos y contraejemplos.
+8. Crear primero un test rojo.
+9. Implementar después la regla.
+10. Repetir el replay desde el primer tick.
+11. Detectar regresiones.
+12. Preguntar de nuevo si la respuesta no basta para resolver el conflicto.
+
+El agente debe aprender REGLAS, no memorizar ESCENAS.
+
+Ejemplo incorrecto:
+
+- En la vela 8 hay CUT.
+
+Ejemplo correcto:
+
+- C Grande solo puede comenzar después de B Grande.
+- Si aparece un movimiento contrario, es C Grande candidata.
+- Si B Grande crea después un nuevo extremo, C Grande candidata se cancela y B Grande continúa.
+- CUT solo se confirma cuando C Grande alcanza el final de A Grande.
+
+======================================================================
+4. GATE CERO: DEMOSTRACIÓN DE COMPRENSIÓN TM
+======================================================================
+
+Antes de programar, los agentes deben superar una evaluación dirigida por Javier.
+
+El ORQUESTADOR debe crear al menos estos agentes reales:
+
+1. RULES_ANALYST
+2. MOVEMENT_RECONSTRUCTOR
+3. SCENE_QUESTIONER
+4. DATA_AUDITOR
+5. GOLDEN_CURATOR
+6. TM_VOCABULARY_REVIEWER
+7. TDD_GUIDE
+8. CORE_TM_ENGINEER
+9. CODE_REVIEWER
+10. E2E_VALIDATOR
+11. MQL5_ADAPTER
+
+En el Gate Cero solo trabajan:
+
+- RULES_ANALYST
+- MOVEMENT_RECONSTRUCTOR
+- SCENE_QUESTIONER
+- DATA_AUDITOR
+- GOLDEN_CURATOR
+- TM_VOCABULARY_REVIEWER
+
+CORE_TM_ENGINEER no puede comenzar todavía.
+MQL5_ADAPTER no puede comenzar todavía.
+
+APROBACIÓN DEL GATE CERO
+
+El Gate Cero solo se supera si:
+
+- se han reconstruido los movimientos sin usar solo el color u OHLC;
+- se han detectado las dudas verdaderas;
+- las preguntas distinguen correctamente hechos y posibilidades;
+- las preguntas usan vocabulario TM;
+- Javier ha respondido las dudas bloqueantes;
+- las respuestas están registradas como reglas generales;
+- no quedan contradicciones bloqueantes para el primer bloque de implementación.
+
+======================================================================
+5. ARQUITECTURA DE AGENTES
+======================================================================
+
+AGENTE: RULES_ANALYST
+
+Responsabilidad:
+
+- Leer íntegramente los dossiers y decisiones anteriores.
+- Separar regla cerrada, provisional, contradictoria, ejemplo y golden.
+- No deducir reglas por observación del resultado esperado.
+- Crear:
+  - REGLAS_CERRADAS.md
+  - REGLAS_PROVISIONALES.md
+  - CONTRADICCIONES.md
+  - DICCIONARIO_TM.md
+- Transformar cada respuesta de Javier en una regla general antes de programar.
+
+AGENTE: MOVEMENT_RECONSTRUCTOR
+
+Responsabilidad:
+
+- Leer ticks en orden estricto.
+- Reconstruir movimientos dentro de cada vela y entre velas.
+- No clasificar automáticamente cada movimiento como lectura TM.
+- Determinar el orden real de apertura, extremos, retrocesos y nuevas extensiones.
+- Crear CRONOLOGIA_MOVIMIENTOS.md.
+
+Formato mínimo por movimiento:
+
+TIMESTAMP | PRECIO | DIRECCIÓN | NUEVO EXTREMO | RETROCESO | LECTURAS AFECTADAS | FUNCIÓN TM POSIBLE
+
+Debe responder preguntas como:
+
+- ¿La vela alcanzó primero el máximo o el mínimo?
+- ¿El movimiento comenzó en la vela anterior?
+- ¿El cambio de vela interrumpió realmente el movimiento?
+- ¿Un movimiento contrario fue cancelado por un nuevo extremo?
+- ¿Qué lecturas continúan siendo válidas?
+
+AGENTE: SCENE_QUESTIONER
+
+Responsabilidad:
+
+- Convertir dudas reales en escenas claras para Javier.
+- Preguntar una duda bloqueante cada vez, salvo que varias dependan de la misma regla.
+- No preguntar lo ya respondido.
+- No formular preguntas vagas.
+- No presentar como hecho una clasificación no confirmada.
+- Crear y mantener:
+  - PREGUNTAS_PENDIENTES.md
+  - DECISIONES_EXPERTO.md
+
+AGENTE: DATA_AUDITOR
+
+Responsabilidad:
+
+- Verificar el CSV de ticks.
+- Confirmar orden temporal, duplicados, huecos, delimitador, decimal y zona horaria.
+- Identificar si se usa Bid, Ask, Last o punto medio.
+- Reconstruir OHLC M1 para auditoría.
+- Verificar que gráfico, ticks y CSV pertenecen al mismo instrumento, bróker, sesión y serie de precios.
+- Crear AUDITORIA_DATOS.md.
+- No realizar lectura TM.
+
+AGENTE: GOLDEN_CURATOR
+
+Responsabilidad:
+
+- Mantener un golden externo y provisional.
+- Incluir solo hechos cerrados por Javier.
+- Marcar como PENDIENTE cualquier escena aún no confirmada.
+- No utilizar un resultado visual probable como evento obligatorio.
+- Mantener separado:
+  - hecho confirmado;
+  - posibilidad válida;
+  - clasificación pendiente;
+  - evento invalidado.
+- Crear:
+  - golden_eventos_velas_1_8.json
+  - golden_estados_velas_1_8.json
+  - GOLDEN_EXPLICADO.md
+
+AGENTE: TM_VOCABULARY_REVIEWER
+
+Responsabilidad:
+
+- Revisar las preguntas antes de enviarlas a Javier.
+- Revisar reglas, golden, eventos, estados y documentación.
+- Exigir vocabulario TM.
+- Rechazar terminología no autorizada en la capa funcional.
+- Crear REVISION_VOCABULARIO_TM.md.
+
+AGENTE: TDD_GUIDE
+
+Responsabilidad:
+
+- Empezar solo cuando el Gate Cero permita el bloque correspondiente.
+- Crear tests rojos antes de implementar.
+- Crear replay determinista.
+- Comparar contra el golden únicamente después de ejecutar el motor.
+- Localizar el primer tick de desviación.
+
+AGENTE: CORE_TM_ENGINEER
+
+Responsabilidad:
+
+- Implementar el núcleo independiente de MT5.
+- Procesar un tick por llamada.
+- Mantener estado serializable.
+- No acceder al golden.
+- No implementar reglas todavía ambiguas.
+- No usar datos específicos del caso.
+
+AGENTE: CODE_REVIEWER
+
+Responsabilidad:
+
+- Buscar hardcodes y spoilers.
+- Detectar lectura creada por cada oscilación.
+- Detectar estados imposibles.
+- Detectar pérdida silenciosa de lecturas.
+- Confirmar que AUT no convierte automáticamente el movimiento en 1 definitivo.
+- Confirmar que reclasificar no significa borrar.
+- Crear REVISION_CODIGO.md.
+
+AGENTE: E2E_VALIDATOR
+
+Responsabilidad:
+
+- Ejecutar replay desde el primer tick.
+- Informar el primer tick de desviación.
+- Incluir estado anterior, evento esperado, evento obtenido, lecturas activas y regla afectada.
+- Repetir el replay completo después de cada cambio.
+- Crear VALIDACION_CIEGA.md.
+
+AGENTE: MQL5_ADAPTER
+
+Responsabilidad:
+
+- Empezar únicamente cuando velas 1-8 superen la validación offline.
+- Adaptar OnTick sin reinterpretar reglas.
+- Garantizar equivalencia entre replay y MT5.
+
+======================================================================
+6. ORQUESTACIÓN REAL Y PARALELIZACIÓN
+======================================================================
+
+PRIMERA OLEADA, EN PARALELO
+
+- RULES_ANALYST
+- DATA_AUDITOR
+- MOVEMENT_RECONSTRUCTOR
+- GOLDEN_CURATOR
+
+SEGUNDA OLEADA, EN PARALELO
+
+- SCENE_QUESTIONER prepara preguntas a partir de dudas reales.
+- TM_VOCABULARY_REVIEWER revisa preguntas y artefactos.
+
+PAUSA OBLIGATORIA
+
+El ORQUESTADOR presenta a Javier:
+
+- agentes realmente ejecutados;
+- artefactos creados;
+- cronología de movimientos;
+- contradicciones;
+- preguntas bloqueantes.
+
+No se programa durante esta pausa.
+
+TERCERA OLEADA
+
+Solo después de respuestas expertas suficientes:
+
+- TDD_GUIDE crea tests rojos.
+- CORE_TM_ENGINEER implementa el bloque aprobado.
+
+CUARTA OLEADA, EN PARALELO
+
+- CODE_REVIEWER
+- TM_VOCABULARY_REVIEWER
+- E2E_VALIDATOR
+
+MQL5_ADAPTER queda bloqueado hasta validación offline completa de velas 1-8.
+
+======================================================================
+7. FORMATO OBLIGATORIO DE PREGUNTA AL EXPERTO
+======================================================================
+
+Toda pregunta debe usar exactamente esta estructura:
+
+ID DE DUDA:
+AGENTE QUE LA ORIGINA:
+ESTADO: BLOQUEANTE / NO BLOQUEANTE
+REGLA AFECTADA:
+
+HECHOS OBJETIVOS:
+- Timestamp inicial:
+- Timestamp final:
+- Vela o velas:
+- Apertura:
+- Extremos en orden temporal:
+- Precio final:
+- Serie de precio usada: Bid / Ask / Last / punto medio
+- Movimientos reconstruidos:
+- Lecturas activas antes de la duda:
+
+LO QUE SABEMOS POR TM:
+- Regla 1:
+- Regla 2:
+
+LO QUE NO SABEMOS:
+- Punto exacto no resuelto.
+
+ESCENAS POSIBLES:
+
+ESCENA A
+- Secuencia de movimientos:
+- Clasificación TM posible:
+- Eventos que produciría:
+- Condición que la confirmaría:
+- Condición que la cancelaría:
+
+ESCENA B
+- Secuencia de movimientos:
+- Clasificación TM posible:
+- Eventos que produciría:
+- Condición que la confirmaría:
+- Condición que la cancelaría:
+
+ESCENA C
+- Solo si es imprescindible.
+
+PREGUNTA CONCRETA A JAVIER:
+- Una pregunta contestable, sin ambigüedad.
+
+EFECTO DE LA RESPUESTA:
+- Regla que se podrá cerrar.
+- Tests afectados.
+- Bloque de implementación desbloqueado.
+
+======================================================================
+8. REGLAS PARA FORMULAR ESCENAS DE MOVIMIENTO
+======================================================================
+
+Los agentes deben describir primero el recorrido y después proponer la clasificación.
+
+Nunca preguntar basándose únicamente en:
+
+- color de la vela;
+- cuerpo de la vela;
+- High-Low sin orden temporal;
+- cierre alcista o bajista;
+- apariencia visual aislada.
+
+Ejemplo de pregunta correcta para una vela con máximo y mínimo conocidos:
+
+HECHOS:
+- Abre en P0.
+- Alcanza primero P1.
+- Después alcanza P2.
+- Finalmente cierra en P3.
+
+ESCENA A:
+- Si P1 es máximo y ocurre antes que P2:
+  A Grande puede continuar hasta P1;
+  después puede comenzar B Grande hasta P2;
+  si alcanza 127 % + 0,25, AUT es inmediato.
+
+ESCENA B:
+- Si P2 es mínimo y ocurre antes que P1:
+  continúa el posible 1 anterior hasta P2;
+  después comienza movimiento contrario hasta P1;
+  ese movimiento puede ser A Grande.
+
+PREGUNTA:
+- Con este orden real de ticks y estas lecturas activas, ¿qué movimientos mantienen cada función TM y qué evento confirma o cancela cada posibilidad?
+
+======================================================================
+9. REGISTRO Y MEMORIA DEL APRENDIZAJE
+======================================================================
+
+Crear y mantener obligatoriamente:
+
+- DECISIONES_EXPERTO.md
+- PREGUNTAS_PENDIENTES.md
+- REGLAS_CERRADAS.md
+- REGLAS_PROVISIONALES.md
+- CONTRADICCIONES.md
+- DICCIONARIO_TM.md
+- CRONOLOGIA_MOVIMIENTOS.md
+- REGRESIONES.md
+
+Cada entrada en DECISIONES_EXPERTO.md debe contener:
+
+- ID;
+- fecha y hora;
+- pregunta completa;
+- contexto objetivo;
+- respuesta literal de Javier;
+- regla general extraída;
+- ejemplos;
+- contraejemplos;
+- vocabulario aprobado;
+- tests creados;
+- archivos modificados;
+- versión de implementación;
+- regresiones detectadas;
+- estado: provisional / cerrada / sustituida.
+
+No dependas de recordar el chat. La memoria normativa vive en los archivos del proyecto.
+
+======================================================================
+10. REGLAS TM YA CERRADAS
+======================================================================
+
+Estas reglas no deben volver a preguntarse salvo contradicción objetiva documentada.
+
+10.1 MOVIMIENTOS Y VELAS
+
+- La TM estudia movimientos, no colores de velas.
+- Un cambio de vela no termina automáticamente un movimiento.
+- El orden intravela es obligatorio.
+- Una vela puede contener varios movimientos.
+- Un movimiento puede atravesar varias velas.
+
+10.2 1, 2 Y 3
+
+- Para comparar 1 y 2 se usa desplazamiento direccional del movimiento.
+- Al abrir nueva vela se comprueba primero gap o salida en plano.
+- La salida en plano puede abrir posible 2.
+- 2 se confirma al alcanzar el tamaño de 1.
+- Después se abre posible 3.
+- Si el movimiento contrario supera el 50 %, 3 falla.
+- Posible 3 no se confirma automáticamente dentro de la misma vela solo por nuevo extremo.
+
+10.3 MÓDULO
+
+- Si 3 falla, 1 y 2 pueden formar módulo.
+- La expansión usa High-Low completo de las velas que forman el módulo.
+- Deben conservarse máximo, mínimo, rango, timestamps y movimientos incluidos.
+
+10.4 A GRANDE Y B GRANDE
+
+- Después del módulo puede comenzar A Grande.
+- A Grande puede continuar durante varias velas.
+- Movimiento contrario inicial puede ser B Grande candidata.
+- Si A Grande crea nuevo extremo, B Grande candidata se cancela.
+- B Grande se confirma al alcanzar 100 % de A Grande.
+
+10.5 AUT
+
+- B Grande alcanza 127 % + 0,25 puntos -> AUT inmediato.
+- No existe B_EXCESIVA por superar ese nivel.
+- AUT no confirma definitivamente un nuevo 1.
+- Después de AUT puede mantenerse el movimiento como posible 1.
+
+10.6 TT
+
+- TT requiere módulo válido.
+- AUT activa TT.
+- TT bajista = final de A Grande - rango del módulo.
+- TT alcista = final de A Grande + rango del módulo.
+- AUT y TT pueden confirmarse en la misma vela o tick, respetando orden causal.
+
+10.7 C GRANDE Y CUT
+
+- C Grande solo puede aparecer después de B Grande.
+- Movimiento contrario tras B Grande comienza como C Grande candidata.
+- Si B Grande crea un nuevo extremo, C Grande candidata se cancela.
+- CUT se confirma cuando C Grande alcanza el final de A Grande.
+
+10.8 CONCURRENCIA
+
+- Normalmente pueden coexistir dos lecturas.
+- Máximo operativo: tres lecturas matemáticamente válidas.
+- Una oscilación intravela no ocupa automáticamente una lectura.
+- Una lectura puede confirmarse, reclasificarse, integrarse, invalidarse o finalizarse.
+- Reclasificar no significa borrar.
+
+======================================================================
+11. REGLAS AÚN NO CERRADAS Y QUE DEBEN PREGUNTARSE
+======================================================================
+
+No asumir respuesta para estas cuestiones:
+
+- Tolerancia exacta de salida en plano.
+- Serie de precio exacta para el replay si los datos mezclan Bid, Ask, Last o punto medio.
+- Momento exacto en que un movimiento contrario deja de ser candidato y queda confirmado como A Grande, B Grande o C Grande.
+- Criterios exactos para reclasificar varias velas como módulo o 1 conjunto.
+- Permanencia de una lectura a través de nuevos movimientos.
+- Reglas completas de FT.
+- Cualquier escena en la que el orden de máximos y mínimos no esté auditado.
+
+Estas dudas deben preguntarse mediante escenas de movimientos.
+
+======================================================================
+12. PROTOCOLO ESPECÍFICO PARA VELAS 7 Y 8
+======================================================================
+
+No imponer una lectura previa.
+
+MOVEMENT_RECONSTRUCTOR debe entregar:
+
+VELA 7
+
+- apertura;
+- primer extremo relevante;
+- segundo extremo relevante;
+- orden exacto entre mínimo aproximado 29.712 y máximo aproximado 29.738;
+- timestamps de ambos;
+- movimientos entre los extremos;
+- lecturas activas procedentes de la vela 6;
+- niveles AUT y TT de cada lectura válida.
+
+VELA 8
+
+- apertura;
+- orden exacto entre máximo y mínimo;
+- timestamp del máximo;
+- timestamp del mínimo;
+- movimientos entre apertura, máximo y mínimo;
+- qué lectura alcanza B Grande, AUT o TT;
+- movimientos contrarios posteriores a B Grande;
+- si B Grande vuelve a crear extremo y cancela una C Grande candidata.
+
+El agente no debe preguntar: ¿hay CUT en vela 8?
+
+El agente debe preguntar mostrando escenas, por ejemplo:
+
+- Si la vela 7 sube primero y después baja, ¿el recorrido es A Grande -> B Grande -> AUT?
+- Si la vela 7 baja primero y después sube, ¿continúa el posible 1 y después comienza A Grande?
+- Si la vela 8 sube primero, ¿continúa A Grande antes de comenzar B Grande?
+- Si la vela 8 baja primero, ¿B Grande alcanza AUT antes del movimiento contrario?
+- ¿Qué lectura anterior alcanza AUT o inicia TT al mismo tiempo?
+
+Javier decidirá después de ver la cronología objetiva.
+
+======================================================================
+13. GOLDEN PROVISIONAL Y ANTI-SPOILER
+======================================================================
+
+El golden de velas 1-8 no es una fuente de reglas.
+
+Si una escena no está confirmada por Javier:
+
+- marcar PENDIENTE;
+- no exigirla en tests de aceptación;
+- no implementarla por aproximación;
+- no mover el evento automáticamente a otra vela.
+
+Prohibido en código productivo:
+
+- precios del golden;
+- fecha concreta;
+- símbolo concreto;
+- índice de vela concreto;
+- condiciones escritas para esta muestra;
+- acceso a archivos golden;
+- lectura de ticks futuros;
+- nombres que anticipen el resultado.
+
+======================================================================
+14. ORDEN DE DESARROLLO DESPUÉS DEL APRENDIZAJE
+======================================================================
+
+BLOQUE 1
+
+- 1
+- salida en plano o gap
+- posible 2
+- 2
+- posible 3
+- 3 fallido
+- módulo
+- A Grande
+
+BLOQUE 2
+
+- extensión de A Grande
+- B Grande candidata cancelable
+- B Grande confirmada
+- AUT
+- TT
+
+BLOQUE 3
+
+- posible 1 después de AUT
+- continuidad entre velas
+- nuevas A Grande y B Grande
+- C Grande candidata
+- cancelación de C Grande candidata
+- CUT
+- concurrencia y reclasificación
+
+No avanzar de bloque si existen dudas bloqueantes o regresiones.
+
+Después de cada cambio:
+
+1. Ejecutar tests.
+2. Ejecutar replay desde el primer tick.
+3. Informar primer tick de desviación.
+4. Revisar anti-spoiler.
+5. Revisar vocabulario.
+6. Registrar regresiones.
+
+======================================================================
+15. PRIMERA RESPUESTA OBLIGATORIA DEL ORQUESTADOR
+======================================================================
+
+No programes todavía.
+
+Tu primera respuesta debe contener exclusivamente:
+
+1. CAPACIDAD REAL DE ORQUESTACIÓN
+   - Herramienta utilizada para crear agentes.
+   - Confirmación de que son agentes reales.
+
+2. AGENTES CREADOS
+   - Nombre.
+   - ID o referencia de ejecución.
+   - Tarea asignada.
+   - Estado.
+
+3. PARALELIZACIÓN
+   - Qué agentes se ejecutan en paralelo.
+   - Qué agentes esperan dependencias.
+
+4. ARTEFACTOS ESPERADOS DEL GATE CERO
+   - Ruta de cada archivo.
+
+5. GATES
+   - Estado de cada gate.
+
+6. PLAN DE CONSULTA AL EXPERTO
+   - Cómo se formularán escenas.
+   - Cómo se memorizarán las respuestas.
+
+7. SIGUIENTE ACCIÓN
+   - Lanzar primera oleada multiagente.
+
+No declares Fase 1 o Fase 2 completada antes de mostrar ejecuciones y artefactos reales.
+
+======================================================================
+16. INSTRUCCIÓN FINAL
+======================================================================
+
+Empieza ahora por crear y lanzar realmente la primera oleada multiagente:
+
+- RULES_ANALYST
+- DATA_AUDITOR
+- MOVEMENT_RECONSTRUCTOR
+- GOLDEN_CURATOR
+
+Cuando terminen:
+
+- lanza SCENE_QUESTIONER;
+- revisa las preguntas con TM_VOCABULARY_REVIEWER;
+- presenta a Javier preguntas basadas en movimientos y escenas;
+- espera respuestas expertas antes de programar reglas ambiguas.
+
+El éxito de esta fase no se mide por líneas de código.
+El éxito se mide por la capacidad de los agentes para:
+
+- reconstruir movimientos correctamente;
+- descubrir lo que no saben;
+- preguntar con precisión;
+- aprender reglas generales de Javier;
+- documentarlas;
+- convertirlas en tests;
+- evitar memorizar el caso concreto.

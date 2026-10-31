@@ -1,0 +1,12 @@
+{
+  "engine": "C:\\Users\\profesor\\tm\\Teoria Modular\\TM_TRABAJO_TEMPORAL\\FREEBUFF_AUDIT_V219\\00_INPUTS_REFERENCE\\variants\\R5_AUDITED_9BD1BEDB.py",
+  "engine_sha256": "9BD1BEDB5DEC8C5A1C3A831338503E90CC04EE3CD776CF4E01D27CF8AA0EBEAE",
+  "cases": 21,
+  "ticks_total": 262,
+  "deterministic": 21,
+  "deterministic_state_log": 21,
+  "prefix_checks": 262,
+  "prefix_mismatches": 0,
+  "cases_with_reading": 7,
+  "cases_with_two_three_A_B_C_AUT_CUT_TT": 0
+}

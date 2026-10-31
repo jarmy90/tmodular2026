@@ -1,0 +1,3 @@
+reading_id,generation_exists,structural_new_one,label_status,question,note
+L1-G3,TRUE,1 up 29830.3->29850.8 then A down 29852.6->29829.9,PENDING_Q_B3,extensions_of_3_vs_B_Grande,new 1 at 16:24:44.788 same tick/origin/direction as v005 C trend
+L1-G4,TRUE,1 down 29852.6->29828.1,PENDING_Q_B3,extensions_of_3_vs_B_Grande,result of the 16:23-16:24 transition; label A/C depends on Q-B3

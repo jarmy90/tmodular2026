@@ -1,0 +1,16 @@
+{
+  "reader_module": "tm_reference_interpreter_v1_direct_aut",
+  "reader_path": "C:\\Users\\profesor\\tm\\Teoria Modular\\TM_TRABAJO_TEMPORAL\\LUNA_19B_AUDIT\\05_REFERENCE_ENGINE\\tm_reference_interpreter_v1_direct_aut.py",
+  "reader_sha256": "E12692A409973FC3F72FCCEC830ECF7E9E7136A0CAD439BC4DD3B0F246676350",
+  "core_version": "TM_REFERENCE_INTERPRETER_V1_DIRECT_AUT",
+  "suites": 9,
+  "suites_bound": 9,
+  "tests_total": 169,
+  "pass": 169,
+  "fail": 0,
+  "canonical_pass": 122,
+  "provisional_policy_pass": 44,
+  "open_rule_block": 3,
+  "failed": 0,
+  "authority_source": "CSV classification column (structured)"
+}

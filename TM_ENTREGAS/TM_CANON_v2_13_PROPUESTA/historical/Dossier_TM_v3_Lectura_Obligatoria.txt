@@ -1,0 +1,1361 @@
+================================================================================
+TEORIA MODULAR (TM)
+DOSSIER TECNICO MEJORADO v3
+Normas, vocabulario, patrones, variables y protocolo obligatorio de lectura
+================================================================================
+
+VERSION: 3.0 - Documento de trabajo consolidado (revision de v2.0)
+FECHA: 17 de octubre de 2026
+AUTOR DE LA TEORIA: Javier Armada Lopez
+ESTADO: Documento vivo. Solo contiene reglas expresamente establecidas o
+validadas. Ninguna regla pendiente se completa mediante suposiciones.
+
+================================================================================
+LECTURA PREVIA OBLIGATORIA (PARA CUALQUIER LECTOR: PERSONA O IA)
+================================================================================
+
+Este bloque se lee ANTES que el resto y ANTES de analizar cualquier grafico.
+
+1. Leer el dossier completo. No responder con lo que se recuerda de una
+   conversacion anterior: las unicas reglas validas son las escritas aqui.
+2. La TM es un sistema cerrado. No se importan conceptos de analisis tecnico
+   clasico (ver 1.7). Si una situacion no tiene regla escrita se declara
+   SIN REGLA ESCRITA y la lectura se detiene en ese punto.
+3. Orden de trabajo inamovible: REGLA -> MEDICION -> CLASIFICACION.
+4. Toda respuesta usa el formato de 2.3 y solo los estados de 1.6.
+5. Ante la duda entre improvisar y declarar PENDIENTE, siempre PENDIENTE.
+6. Una lectura incompleta pero correcta vale mas que una completa con datos
+   inventados.
+7. Si el autor corrige una lectura, esta se rehace desde la primera vela
+   afectada, aplicando de nuevo las reglas. No se parchea solo el final.
+8. Antes de entregar la lectura se repasa 18 (errores) y 2.1 (orden de
+   comprobacion).
+
+================================================================================
+0. FINALIDAD Y NORMA DE CONTROL
+================================================================================
+
+La Teoria Modular estudia movimientos matematicos del precio. Las velas
+organizan temporalmente esos movimientos, pero no sustituyen la lectura de los
+movimientos.
+
+Una vela puede contener varios movimientos TM.
+Un movimiento TM puede comenzar en una vela y terminar en otra.
+El color final de una vela no indica necesariamente el orden de sus movimientos.
+Una vela roja puede haber subido primero y una vela verde puede haber bajado
+primero.
+
+NORMA CENTRAL:
+
+    REGLA -> MEDICION -> CLASIFICACION
+
+Nunca se debe clasificar primero y justificar despues.
+Nunca se debe improvisar una regla para completar una lectura.
+Nunca se debe deducir un patron unicamente por el color o la forma visual de una
+vela.
+
+Si una imagen no permite conocer el orden intravela o medir un nivel con
+precision, la lectura debe quedar pendiente de los ticks. No se inventa el dato.
+
+================================================================================
+1. NORMAS OBLIGATORIAS DE VOCABULARIO TM
+================================================================================
+
+1.1. VOCABULARIO MODULAR PERMITIDO
+
+La lectura modular utilizara exclusivamente estas denominaciones:
+
+    1
+    2
+    3
+    A Grande o A
+    B Grande o B
+    C Grande o C
+    AUT
+    CUT
+
+1.2. VOCABULARIO DE PATRONES
+
+Los patrones se denominan exclusivamente:
+
+    TT = Tendencia-Tendencia
+    FT = Fin de Tendencia
+
+1.3. DOS PLANOS DIFERENTES
+
+Siempre deben separarse dos planos:
+
+A) LECTURA MODULAR
+
+    1, 2, 3, A, B, C, AUT y CUT
+
+B) LECTURA DE PATRONES
+
+    TT y FT
+
+Una misma vela puede tener una lectura modular y, simultaneamente, formar parte
+de un patron.
+
+Ejemplo de notacion correcta:
+
+    A, B, AUT
+
+Significa que la estructura ha llegado a AUT, pero TT todavia esta pendiente.
+
+Solo cuando la expansion alcanza el 100 % se escribe:
+
+    A, B, AUT - TT
+
+1.4. EXPRESIONES QUE NO DEBEN USARSE COMO SUSTITUTO DE LA TM
+
+No se deben sustituir las clasificaciones TM por expresiones interpretativas no
+formalizadas.
+
+Antes de usar cualquier descripcion adicional, siempre debe expresarse primero
+la clasificacion TM exacta.
+
+Ejemplo:
+
+Incorrecto:
+
+    "La vela tiene fuerza y probablemente continuara."
+
+Correcto:
+
+    "A, B, AUT. TT pendiente."
+
+Despues, y solo para valorar la operacion, se analizan las variables.
+
+1.5. VOCABULARIO DEBE SER CONSISTENTE
+
+- AUT no significa TT confirmado.
+- CUT no significa TT.
+- B no existe antes de alcanzar su nivel matematico.
+- FT no existe sin TT previo confirmado.
+- Una recuperacion menor del 100 % de A no debe llamarse B Grande.
+- Un movimiento contrario pequeno despues de TT no debe llamarse FT si no es un
+  movimiento claro.
+
+1.6. ESTADOS PERMITIDOS
+
+Cada clasificacion se acompana de uno de estos estados:
+
+    CONFIRMADO        = la regla se ha medido y se cumple.
+    PENDIENTE         = falta un dato (ticks, nivel exacto) o el nivel aun no
+                        se alcanza.
+    NO EXISTE         = la regla se ha medido y no se cumple.
+    FALLIDO           = patron que estuvo activo y se cancelo (TT fallido).
+    SIN REGLA ESCRITA = este dossier no define el caso.
+
+No se usan graduaciones como "probable", "parece", "casi" o "deberia".
+Una posibilidad coherente se expresa como LECTURA ALTERNATIVA (seccion 11),
+con sus propios niveles y estados.
+
+1.7. VOCABULARIO EXTERNO PROHIBIDO
+
+No se emplean como clasificacion, explicacion ni sustituto de la TM terminos del
+analisis tecnico clasico, por ejemplo:
+
+    soporte, resistencia, doji, martillo, envolvente, pin bar, rechazo,
+    impulso, agotamiento, ruptura, pullback, lateral, onda, fuerza, debilidad.
+
+Excepciones:
+
+- "Fibonacci" se usa solo como herramienta de medicion de B (5.2).
+- "cuerpo" y "mecha" pueden usarse para describir donde se ha medido un nivel,
+  nunca para clasificar.
+- "mini-TT" se usa solo como etiqueta operativa (1.8).
+
+1.8. ETIQUETAS OPERATIVAS (NO SON PATRONES)
+
+    principal  = patron superior que abarca el tramo mayor de la lectura.
+    mini-TT    = TT matematicamente valido con modulo pequeno y poco potencial
+                 (ver 7.5 y 12.7).
+
+Una etiqueta operativa nunca sustituye a TT o FT: se escribe despues de ellos.
+
+1.9. GLOSARIO MINIMO
+
+    Modulo             Movimiento o movimientos de referencia a los que se opone
+                       A: 1, 1+2, 1+2+3, o un recorrido reclasificado (7.3 C).
+    Final de A         Extremo donde termina A. Mide B y actua como SL.
+    Franja de B        100 % a 127 % + 0,25 tick del retroceso de A.
+    Salida en plano    Open de un movimiento igual al Close del anterior.
+    Cola de base       Mecha del lado de la apertura (4.2).
+    Gap                Apertura distinta del cierre anterior (seccion 9).
+    Autocorte          Referencia que activa AUT. Su definicion unica esta
+                       pendiente (6.3 y 20).
+
+================================================================================
+2. PROTOCOLO OBLIGATORIO ANTES DE ANALIZAR
+================================================================================
+
+Antes de analizar cualquier captura, secuencia de velas o flujo de ticks se debe:
+
+1. Leer las reglas TM aplicables al caso.
+2. Identificar correctamente las velas o movimientos de referencia.
+3. Numerar las velas de izquierda a derecha si se trabaja con una imagen.
+4. Reconstruir, en la medida posible, el orden real de los movimientos
+   intravela.
+5. No usar el color final de la vela para decidir el orden de los movimientos.
+6. Aplicar una sola regla cada vez y en orden secuencial.
+7. Medir antes de clasificar.
+8. No avanzar a la vela siguiente hasta clasificar la actual o declarar que no
+   puede confirmarse con la informacion disponible.
+9. Mantener normalmente un maximo de dos lecturas coherentes; excepcionalmente tres.
+10. Ignorar los micromovimientos que no alcancen referencias matematicas TM; no se calculan.
+
+FORMULA DE TRABAJO:
+
+    LEER REGLAS
+    -> IDENTIFICAR REFERENCIA
+    -> RECONSTRUIR MOVIMIENTOS
+    -> MEDIR
+    -> CLASIFICAR
+    -> VALORAR VARIABLES
+    -> DECIDIR SI ES OPERABLE
+
+PROHIBIDO:
+
+- Clasificar por apariencia.
+- Anticipar TT antes del 100 %.
+- Anticipar FT sin TT previo.
+- Llamar CUT a C sin comprobar el final de A.
+- Llamar B a una recuperacion inferior al 100 %.
+- Convertir cada micromovimiento en un nuevo A, B o C.
+- Mezclar los niveles de dos lecturas diferentes.
+- Inventar una regla ausente.
+
+2.1. ORDEN DE COMPROBACION DE CADA MOVIMIENTO
+
+Para cada vela o movimiento nuevo, en este orden:
+
+    a) GAP: comparar Open con el Close anterior.
+       - Gap a favor de 1: aplicar 9.1.
+       - Gap contrario a 1: aplicar 9.2.
+       - Si la diferencia es menor que la tolerancia de medicion: PENDIENTE.
+         No se supone plano ni gap.
+    b) Sin gap: comprobar 2 (4.2) condicion por condicion, anotando cada una
+       como cumple / no cumple.
+    c) Si 2 existe: comprobar 3 (4.3) con sus dos reglas.
+    d) Si 2 o 3 no existen: consolidar el modulo y clasificar A (ver 9.3).
+    e) Medir B sobre A desde el final de A (5.2).
+    f) Comprobar AUT, TT, CUT o FT solo si se han cumplido los pasos previos.
+    g) Registrar el estado antes de pasar al movimiento siguiente.
+
+2.2. PROTOCOLO PARA IMAGENES
+
+1. Numerar las velas de izquierda a derecha (c1, c2, ...). Indicar si la
+   primera esta completa y si hay velas cortadas en el borde.
+2. Calibrar. Sin escala de precio solo se miden proporciones. Con Fibonacci o
+   niveles rotulados se usan dos niveles conocidos para convertir pixeles a
+   puntos.
+3. Tolerancia. Una foto de pantalla no resuelve con seguridad menos de 1 tick
+   (en MNQ, 0,25 puntos). Toda decision que dependa de una diferencia menor que
+   la tolerancia (salida en plano, +0,25 tick de la franja de B, una mecha que
+   toca un nivel) se declara PENDIENTE.
+4. Orden intravela. Solo puede deducirse cuando la geometria lo obliga. Nunca
+   por el color. Si no, PENDIENTE de ticks.
+5. Variables M3, M1 y MA7: solo se valoran si son visibles. Una captura de M1
+   sin temporizador ni medias no permite valorarlas.
+6. Datos que se piden cuando faltan: OHLC o ticks de las velas implicadas,
+   niveles de la franja de B y del objetivo TT.
+
+2.3. FORMATO OBLIGATORIO DE RESPUESTA
+
+Orden fijo. No se escribe prosa interpretativa antes de la clasificacion TM.
+
+    A) REFERENCIA Y SUPUESTOS
+       Primera vela, escala usada, tolerancia, datos no visibles.
+    B) FICHA POR VELA O MOVIMIENTO
+       VELA n | Medicion | Regla aplicada (apartado) | Estado | Clasificacion
+    C) LECTURA MODULAR
+       Solo 1, 2, 3, A, B, C, AUT, CUT.
+    D) LECTURA DE PATRONES
+       Solo TT y FT, con su estado.
+    E) LECTURA PRINCIPAL Y ALTERNATIVA
+       Maximo dos. Cada una con sus propios niveles (11.2).
+    F) VARIABLES
+       Solo si hay autocorte o TT confirmado, y solo las visibles.
+    G) PENDIENTES
+       Dato exacto que falta para cerrar cada duda.
+
+================================================================================
+3. MOVIMIENTOS, VELAS Y RUIDO
+================================================================================
+
+3.1. UNIDAD REAL DE LA TM
+
+La unidad estructural de la TM es el movimiento del precio, no la vela.
+
+    1 vela no equivale necesariamente a 1 movimiento.
+
+Una vela puede contener:
+
+    A -> B
+
+O incluso:
+
+    A -> B -> AUT -> TT
+
+Un movimiento tambien puede ocupar varias velas:
+
+    A comienza en una vela y termina en otra.
+    B puede comenzar en una vela y alcanzar el 127 % en la siguiente.
+    C puede comenzar en una vela y continuar en la estela de otra.
+
+3.2. REGLA DE RUIDO
+
+Un cambio de direccion solo crea un nuevo movimiento TM cuando alcanza una
+referencia matematica relevante.
+
+Si el cambio no alcanza ninguna referencia relevante, permanece integrado en el
+movimiento activo.
+
+Referencias relevantes:
+
+- Inicio y final del movimiento.
+- Franja de B: 100 % a 127 % + 0,25 tick.
+- Autocorte y activacion de AUT.
+- Expansion del 100 % para TT.
+- Final de A como SL estructural del TT pendiente.
+- Superacion del final de A por C para CUT.
+- Movimiento contrario claro despues de TT para FT.
+
+Ejemplos:
+
+    Pequeno retroceso dentro de A -> continua siendo A.
+    Pequeno retroceso dentro de B -> continua siendo B.
+    Pequeno retroceso dentro de AUT -> AUT continua activo.
+    Varias velas sin alcanzar TT ni tocar el final de A -> mismo TT pendiente.
+
+3.3. FILTRO PARA CODIGO, TODAVIA PENDIENTE
+
+Para programar con ticks reales sera necesario fijar el umbral que separa:
+
+    movimiento TM relevante
+    frente a
+    micromovimiento o ruido
+
+La definicion definitiva no se inventa en este documento. Debera validarse con
+muestras reales y puede combinar:
+
+- Minimo absoluto en puntos.
+- Minimo relativo al modulo activo.
+- Duracion del movimiento.
+- Numero de ticks.
+- Llegada a una referencia TM.
+
+================================================================================
+4. MODULO REGULAR: 1, 2 Y 3
+================================================================================
+
+4.1. PRIMERO (1)
+
+- Es el movimiento que inicia el modulo.
+- Define la direccion inicial: alcista o bajista.
+- No necesita un rango minimo como regla teorica.
+- Para convertir la lectura en codigo puede establecerse un minimo tecnico, por
+  ejemplo 10 puntos, pero ese minimo es un parametro de implementacion.
+- Su clasificacion puede depender de lo que ocurra despues.
+
+4.2. SEGUNDO (2)
+
+Para que exista 2 deben cumplirse todas las condiciones:
+
+1. Misma direccion que 1.
+2. Rango de 2 igual o mayor que el rango de 1.
+3. Salida en plano respecto al cierre de 1:
+
+       Open(2) = Close(1)
+
+4. Cola de base igual a cero:
+
+       Alcista: Low(2) = Open(2)
+       Bajista: High(2) = Open(2)
+
+Si falla cualquiera de estas condiciones:
+
+    1 pasa a modulo por descarte.
+    El movimiento contrario se clasifica como A Grande.
+
+Una vela en la misma direccion y de mayor tamano no es automaticamente 2. Debe
+cumplir todas las reglas.
+
+4.3. TERCERO (3)
+
+Para que exista 3 deben cumplirse simultaneamente las dos reglas:
+
+1. Retroceso entre el 0 % y el 50 % del rango de 2.
+2. Superacion del extremo de 2:
+
+       Alcista: High(3) > High(2)
+       Bajista: Low(3) < Low(2)
+
+Si retrocede mas del 50 % o no supera el extremo de 2:
+
+    3 no existe.
+    1 + 2 quedan como modulo.
+    El movimiento contrario es A Grande del modulo 1-2.
+
+Secuencia posible:
+
+    1 -> 2 -> 3
+
+O bien:
+
+    1 + 2 = MODULO -> A
+
+================================================================================
+5. A GRANDE, B GRANDE Y C GRANDE
+================================================================================
+
+5.1. A GRANDE
+
+- Es el primer movimiento contrario al modulo.
+- Si el modulo es alcista, A es bajista.
+- Si el modulo es bajista, A es alcista.
+- Los retrocesos internos pequenos pertenecen al mismo A mientras no creen una
+  referencia TM nueva.
+- El final de A es una referencia estructural esencial.
+- El final de A sirve para medir B.
+- El final de A actua como SL estructural del posible TT.
+
+Ejemplo validado:
+
+    1 bajista -> 2 bajista
+    3 falla
+    1 + 2 = modulo bajista
+    Movimiento contrario = A Grande alcista del modulo 1-2
+
+5.2. B GRANDE
+
+- Aparece despues de A.
+- Se mueve en direccion contraria a A.
+- Se mide mediante el retroceso Fibonacci de A.
+- La medicion se realiza desde el final de A hacia el inicio de A.
+- B solo queda confirmado cuando alcanza la franja:
+
+       100 % a 127 % + 0,25 tick
+
+- Si no alcanza el 100 %, todavia no es B Grande.
+- B puede comenzar en una vela y terminar en otra.
+
+Ejemplo:
+
+    A = 5 puntos
+    Recuperacion contraria = 6 puntos
+    Recuperacion = 120 %
+    Resultado = B Grande dentro de su franja
+
+5.3. C GRANDE
+
+- Aparece despues de B.
+- Se mueve en direccion contraria a B.
+- Por tanto, vuelve a moverse en la misma direccion que A.
+- C puede comenzar en una vela y continuar en otra.
+- Si C supera el final de A, se confirma CUT.
+
+Secuencia:
+
+    A -> B -> C
+
+================================================================================
+6. AUT, CUT Y AUTOCORTE
+================================================================================
+
+6.1. AUT
+
+AUT significa A usada como tendencia.
+
+AUT indica que la estructura ha superado la referencia de autocorte y que se ha
+activado un posible TT.
+
+AUT no significa que TT ya este confirmado.
+
+Notacion correcta mientras no se alcance el objetivo:
+
+    A, B, AUT
+
+Solo al alcanzar la expansion del 100 %:
+
+    A, B, AUT - TT
+
+Mientras AUT esta activo:
+
+- Las velas siguientes pueden continuar formando parte del mismo AUT.
+- El patron sigue vivo mientras no alcance el 100 % ni toque el final de A.
+- Los retrocesos pequenos no crean automaticamente una lectura nueva.
+
+6.2. CUT
+
+CUT se confirma cuando:
+
+    C Grande supera el final de A Grande.
+
+Formula:
+
+    A -> B -> C -> C supera final de A = CUT
+
+CUT no debe confirmarse por superar una base cualquiera.
+CUT no debe confirmarse por el color de la vela.
+Debe reconstruirse C y comprobar el final exacto de A.
+
+6.3. AUTOCORTE
+
+El autocorte es la referencia donde se activa la evaluacion del posible TT.
+
+En la estructura A-B:
+
+- B recupera A.
+- B queda confirmado en la franja 100 % a 127 % + 0,25 tick.
+- La superacion del nivel establecido activa AUT y el TT queda pendiente.
+
+Deben distinguirse tres momentos:
+
+    B Grande = recuperacion matematica de A en su franja.
+    AUT = superacion del autocorte y activacion del posible TT.
+    TT = llegada a la expansion del 100 %.
+
+La definicion matematica final y unica del nivel exacto denominado autocorte en
+todos los tipos de modulo debe cerrarse antes del codigo definitivo.
+
+================================================================================
+7. PATRON TENDENCIA-TENDENCIA (TT)
+================================================================================
+
+7.1. FORMACION
+
+Secuencia conceptual:
+
+    1 o MODULO
+    -> A
+    -> B
+    -> AUT
+    -> expansion del 100 %
+    -> TT
+
+Reglas:
+
+- A aparece en direccion contraria al modulo.
+- B recupera A y alcanza su franja matematica.
+- AUT activa el posible TT.
+- TT solo se confirma al alcanzar el 100 % de la expansion del modulo.
+- El objetivo TT es una expansion, no otro retroceso de A.
+
+7.2. OBJETIVO TT
+
+Para TT alcista:
+
+    Objetivo TT = final de A + rango del modulo
+
+Para TT bajista:
+
+    Objetivo TT = final de A - rango del modulo
+
+7.3. ESTADOS
+
+A) ESTRUCTURA ACTIVA
+
+    A, B, AUT
+
+Significado:
+
+    AUT esta activo, pero la expansion no ha alcanzado el 100 %.
+
+B) TT CONFIRMADO
+
+    A, B, AUT - TT
+
+Significado:
+
+    La expansion ha alcanzado el 100 %.
+
+C) TT FALLIDO
+
+    AUT esta activo.
+    No alcanza el 100 %.
+    El precio toca el final de A.
+
+Resultado:
+
+    TT cancelado.
+    Todo el recorrido anterior pasa a considerarse modulo.
+    El movimiento que llega al final de A se clasifica como A Grande del nuevo
+    modulo.
+
+7.4. NUEVO 1 DESPUES DE TT
+
+Cuando TT alcanza el 100 %, el movimiento que completa el objetivo pasa a ser la
+nueva referencia 1 para la lectura posterior.
+
+7.5. MINI-TT
+
+Un mini-TT puede ser matematicamente correcto, pero tener poco potencial
+operativo porque el modulo es pequeno y la expansion ofrece pocos puntos.
+
+Por tanto deben distinguirse:
+
+    patron valido
+    frente a
+    patron operable
+
+================================================================================
+8. PATRON FIN DE TENDENCIA (FT)
+================================================================================
+
+8.1. CONDICION PREVIA
+
+Sin TT confirmado no existe FT.
+
+FT se evalua despues de que TT alcance el 100 %.
+
+8.2. FORMACION
+
+Secuencia conceptual:
+
+    TT confirmado
+    -> bajada de velocidad
+    -> movimiento contrario claro
+    -> FT
+
+Reglas establecidas:
+
+- Debe existir TT previo confirmado.
+- Debe observarse perdida de velocidad despues de TT.
+- Debe aparecer un movimiento contrario claro.
+- Un micromovimiento posterior a TT no es FT.
+- TT y FT pueden producirse dentro de una misma vela porque la TM estudia
+  movimientos.
+
+8.3. DOS PLANOS EN FT
+
+Despues de TT se puede medir, por un lado, la lectura modular de la vela:
+
+    A, B, C, AUT o CUT
+
+Y, por otro lado, valorar si existe el patron:
+
+    FT
+
+La lectura modular y el patron FT deben registrarse por separado.
+
+8.4. DEFINICION PENDIENTE
+
+Antes del codigo definitivo debe fijarse la regla matematica exacta de
+confirmacion de FT, incluyendo:
+
+- Referencia exacta que debe atravesarse.
+- Desplazamiento minimo del movimiento contrario.
+- Caida de velocidad necesaria.
+- Tratamiento cuando TT y FT suceden en la misma vela.
+
+================================================================================
+9. GAPS Y MOVIMIENTOS IMPLICITOS
+================================================================================
+
+9.1. GAP A FAVOR DE 1
+
+Si despues de 1 el precio aparece mediante gap en la misma direccion, la TM
+considera que el intervalo contiene intrinsecamente A y B.
+
+Ejemplo alcista:
+
+    1 alcista
+    -> gap superior
+    -> A implicita
+    -> B implicita
+    -> AUT / TT pendiente
+
+Ejemplo bajista:
+
+    1 bajista
+    -> gap inferior
+    -> A implicita
+    -> B implicita
+    -> AUT / TT pendiente
+
+El gap activa la lectura del posible TT, pero TT solo se confirma al alcanzar la
+expansion del 100 %.
+
+9.2. GAP CONTRARIO A 1
+
+Si despues de 1 aparece un gap en direccion contraria:
+
+    1 alcista + gap bajista = A Grande bajista
+    1 bajista + gap alcista = A Grande alcista
+
+Desde ahi se sigue midiendo A con los ticks posteriores.
+
+9.3. ORDEN ENTRE LA REGLA 4.2 Y LOS GAPS (PROPUESTA, PENDIENTE DE CONFIRMAR)
+
+Hay dos textos que pueden solaparse:
+
+- 4.2: si falla cualquier condicion de 2, el movimiento contrario es A.
+- 9.1: un gap a favor de 1 contiene A y B implicitas.
+
+Para evitar contradiccion se trabaja asi:
+
+    1. Se evalua primero el gap (9.1 o 9.2).
+    2. La regla 4.2 se aplica cuando no hay gap pero falla otra condicion de 2
+       (rango menor o cola de base).
+
+Es coherente con 9.1, 9.2 y con la lectura del ejemplo 16.2, pero debe
+confirmarla el autor (ver 20.13).
+
+================================================================================
+10. TT PENDIENTE, SL Y RECLASIFICACION
+================================================================================
+
+Secuencia:
+
+    1 -> A -> B -> AUT -> TT pendiente
+
+Mientras TT esta pendiente pueden ocurrir dos resoluciones:
+
+A) CONFIRMACION
+
+    Alcanza la expansion del 100 %
+    -> TT confirmado
+
+B) CANCELACION
+
+    No alcanza el 100 %
+    -> regresa al final de A
+    -> toca el SL estructural
+    -> TT cancelado
+    -> todo lo anterior pasa a modulo
+    -> el movimiento de regreso se convierte en A Grande del nuevo modulo
+
+Regla importante:
+
+El movimiento que regresa al final de A no debe llamarse automaticamente C.
+Al producirse la reclasificacion, el recorrido anterior pasa a modulo y el
+movimiento actual pasa a ser A Grande respecto a ese modulo.
+
+================================================================================
+11. DOBLE LECTURA
+================================================================================
+
+11.1. PRINCIPIO
+
+La TM puede mantener dos lecturas matematicas simultaneas.
+
+LECTURA PRINCIPAL:
+
+- Patron superior activo.
+- Puede abarcar varias velas.
+- Conserva su modulo, A, B, AUT, objetivo TT y final de A.
+
+LECTURA ALTERNATIVA:
+
+- Estructura interna coherente.
+- Se mantiene por si la lectura principal falla.
+- Conserva sus propios niveles independientes.
+
+11.2. REGLA DE INDEPENDENCIA
+
+Nunca se deben mezclar los niveles de dos lecturas.
+
+Cada lectura debe guardar:
+
+- Modulo de referencia.
+- Direccion.
+- Inicio y final de A.
+- B y porcentaje alcanzado.
+- Autocorte.
+- AUT o C.
+- Objetivo TT.
+- Final de A como SL.
+- Estado actual.
+
+11.3. LIMITE DE COMPLEJIDAD
+
+Normalmente se mantendran como maximo dos lecturas coherentes.
+
+Una tercera posibilidad solo se observara si existe una estructura matematica
+muy clara. No se abrira una lectura nueva por cada oscilacion.
+
+ACTUALIZACION (DEC-015): la concurrencia es habitual; normalmente dos lecturas y,
+excepcionalmente, tres (maximo operativo). El ruido y los micromovimientos no se
+calculan, no se clasifican y no ocupan lectura; se descartan. La permanencia se
+decide por coherencia de movimiento. Ver Dossier v4 §11.5.
+
+11.4. RESOLUCION
+
+Una lectura permanece activa hasta que ocurra una resolucion matematica:
+
+- Alcanza TT al 100 %.
+- Confirma CUT.
+- Toca su nivel de invalidacion.
+- Queda sustituida por una lectura mas coherente conforme a reglas pendientes de
+  priorizacion.
+
+================================================================================
+12. VARIABLES OPERATIVAS
+================================================================================
+
+Las variables no crean el patron y no cambian su nombre.
+
+El patron habilita una posible entrada.
+Las variables determinan la probabilidad condicionada y si la operacion debe
+realizarse o descartarse.
+
+12.1. PATRON
+
+Es la condicion obligatoria.
+
+Para TT:
+
+    Debe existir A, B, AUT y llegada al autocorte.
+
+Para FT:
+
+    Debe existir TT previamente confirmado.
+
+Sin patron no hay operacion.
+
+12.2. VELOCIDAD
+
+A) PARA TT
+
+Se valora la velocidad previa al autocorte.
+
+Conceptualmente:
+
+    Velocidad = puntos recorridos / tiempo empleado
+
+Conviene comparar:
+
+    V_REF = velocidad de referencia del tramo previo
+    V_SEN = velocidad sensible inmediatamente anterior al autocorte
+
+Posibles relaciones a investigar:
+
+    V_SEN > V_REF
+    V_SEN aproximadamente igual a V_REF
+    V_SEN < V_REF
+
+No se fijan umbrales en este documento.
+
+B) PARA FT
+
+Se valora la bajada de velocidad despues de confirmar TT.
+
+Debe compararse:
+
+    velocidad antes de alcanzar TT
+    frente a
+    velocidad despues de TT
+
+Quedan pendientes los umbrales y ventanas temporales exactas.
+
+12.3. MERCADO SOLAPADO O VERTICAL
+
+Esta variable valora la forma del desplazamiento.
+
+Mercado solapado:
+
+    Mucho recorrido total y poco desplazamiento neto.
+
+Mercado vertical:
+
+    Mayor desplazamiento neto y menor regreso sobre niveles ya recorridos.
+
+Una posible medida a investigar, sin fijarla aun como regla definitiva, es:
+
+    Eficiencia = desplazamiento neto / recorrido total
+
+La clasificacion y los umbrales deben calibrarse con ejemplos validados.
+
+12.4. TIEMPO RESTANTE EN M3
+
+En el tick exacto del autocorte o del evento TT/FT se registra:
+
+    segundos restantes de la vela M3
+
+No se debe esperar al cierre para guardar el dato.
+
+12.5. TIEMPO RESTANTE EN M1
+
+Simultaneamente se registra:
+
+    segundos restantes de la vela M1
+
+Los tiempos M1 y M3 deben analizarse conjuntamente.
+
+12.6. RELACION CON MA7 HIGH Y MA7 LOW DE M3
+
+En el instante del patron se registran:
+
+    precio
+    MA7 High de M3
+    MA7 Low de M3
+
+Estados posibles:
+
+- Precio por encima de MA7 High.
+- Precio tocando MA7 High.
+- Precio dentro de los carriles.
+- Precio tocando MA7 Low.
+- Precio por debajo de MA7 Low.
+
+Tambien se registran las distancias exactas:
+
+    DistanciaHigh = precio - MA7 High M3
+    DistanciaLow  = precio - MA7 Low M3
+
+No se establece aun que posicion sea mejor. Debe demostrarse con datos.
+
+12.7. POTENCIAL DEL PATRON
+
+Debe calcularse la distancia disponible entre el autocorte y el objetivo TT.
+
+    PotencialTT = distancia desde el autocorte hasta el objetivo TT
+
+Un patron puede ser valido y no ser operable si el recorrido esperado es pequeno.
+
+Deben investigarse:
+
+- Potencial minimo en puntos.
+- Relacion entre objetivo y SL.
+- Costes, spread y deslizamiento.
+- Diferencia entre TT principal y mini-TT.
+
+12.8. ORDEN DE EVALUACION EN EL AUTOCORTE
+
+1. Confirmar que existe el patron.
+2. Medir velocidad previa.
+3. Clasificar mercado solapado o vertical.
+4. Medir tiempo restante M3.
+5. Medir tiempo restante M1.
+6. Registrar relacion con MA7 High/Low de M3.
+7. Calcular potencial hasta TT.
+8. Decidir si las variables autorizan la entrada.
+
+12.9. ORDEN DE EVALUACION DESPUES DE TT
+
+1. Confirmar TT al 100 %.
+2. Medir bajada de velocidad.
+3. Detectar movimiento contrario claro.
+4. Clasificar mercado solapado o vertical.
+5. Medir tiempo restante M3.
+6. Medir tiempo restante M1.
+7. Registrar relacion con MA7 High/Low de M3.
+8. Decidir si se autoriza la entrada FT.
+
+================================================================================
+13. PROBABILIDAD CONDICIONADA
+================================================================================
+
+Las variables no deben convertirse de entrada en reglas arbitrarias como:
+
+    velocidad alta = entrar
+    velocidad baja = no entrar
+
+La decision debe investigarse como probabilidad condicionada:
+
+    P(TT alcanza el 100 % |
+      patron,
+      velocidad,
+      solapamiento,
+      tiempo M1,
+      tiempo M3,
+      MA7 High/Low,
+      potencial)
+
+Los porcentajes no se inventan. Deben obtenerse mediante datos reales y ejemplos
+TM correctamente clasificados.
+
+================================================================================
+14. DATOS QUE DEBERA REGISTRAR EL FUTURO SISTEMA
+================================================================================
+
+En cada autocorte, tanto si se opera como si no, se debera registrar:
+
+- Fecha y hora.
+- Simbolo.
+- Direccion.
+- Lectura principal o alternativa.
+- Modulo de referencia.
+- Rango del modulo.
+- Inicio y final de A.
+- Rango de A.
+- Porcentaje alcanzado por B.
+- Precio del autocorte.
+- Estado AUT o CUT.
+- Objetivo TT.
+- Final de A / SL.
+- Potencial en puntos.
+- Velocidad de referencia.
+- Velocidad sensible.
+- Cambio de velocidad.
+- Clasificacion de mercado solapado o vertical.
+- Tiempo restante M1.
+- Tiempo restante M3.
+- MA7 High M3.
+- MA7 Low M3.
+- Posicion respecto a los carriles.
+- TT alcanzado o no.
+- CUT alcanzado o no.
+- FT alcanzado o no.
+- SL alcanzado o no.
+- Tiempo hasta la resolucion.
+- Maxima excursion favorable.
+- Maxima excursion adversa.
+
+================================================================================
+15. LEYENDA EN TIEMPO REAL
+================================================================================
+
+La leyenda debe separar:
+
+A) ESTADO EN DIRECTO
+
+Una sola linea que se actualiza en cada tick.
+
+Ejemplo:
+
+    DIRECTO | A, B, AUT | TT 72 % | SL: final de A
+
+B) HISTORIAL DE VELAS
+
+Maximo de tres lineas:
+
+    ACTUAL | A, B, AUT
+    VELA 1 | TT
+    VELA 2 | FT
+
+Cuando nace una nueva vela:
+
+- La actual pasa a VELA 1.
+- VELA 1 pasa a VELA 2.
+- La linea mas antigua se elimina.
+- Solo se conservan eventos TM relevantes.
+
+Los eventos se registran en el tick exacto en que ocurren, no al cierre de la
+vela.
+
+================================================================================
+16. EJEMPLOS DE LECTURA (CON ESTADO DE VALIDACION)
+================================================================================
+
+16.1. EJEMPLO 1: MODULO 1-2, A, B, C Y CUT
+ESTADO: VALIDADO
+
+Lectura validada:
+
+    Vela 1 = 1 bajista
+    Vela 2 = 2 bajista
+    Vela 3 = A Grande alcista del modulo 1-2
+    Vela 4 + parte inferior de vela 5 = B Grande bajista hasta el 127 %
+    Subida de vela 5 + subida inicial de vela 6 = C Grande alcista
+    C supera el final de A = CUT
+
+Notacion:
+
+    1 -> 2 -> A -> B 127 % -> C -> CUT
+
+Ensenanza principal:
+
+- A ocupa una vela.
+- B comienza en una vela y termina en otra.
+- C comienza en una vela y continua en la siguiente.
+- Una vela roja puede subir primero.
+- El CUT se confirma por el nivel alcanzado por C, no por el color de la vela.
+
+16.2. EJEMPLO 2: TT PRINCIPAL, FT Y MINI-TT
+ESTADO: VALIDADO
+
+Lectura validada:
+
+    Velas 1-2 = TT alcista principal
+    Maximo de vela 3 = TT alcanza el 100 %
+    Vela 3 = FT bajista grande y claro
+    Velas 4-5 = mini-TT bajista
+    Velas 7-8 = mini-TT alcista
+
+Lectura operativa:
+
+- Autocorte de la vela 2: punto principal para valorar TT.
+- FT de la vela 3: segundo punto principal.
+- Los mini-TT son validos, pero pueden tener poco potencial por el pequeno rango
+  del modulo.
+
+16.3. EJEMPLO 3: TT O CUT
+ESTADO: CASO ABIERTO (NO VALIDADO)
+
+NOTA DE REVISION: antes de resolver en TT o CUT debe comprobarse si el precio
+toco el final de A con AUT activo y sin alcanzar el 100 % (7.3 C y seccion 10).
+Si lo hizo, el caso es TT FALLIDO y no CUT. Depende de ticks.
+
+Estructura:
+
+    Vela 6 = A bajista -> B alcista ligeramente superior al 100 %
+
+La vela siguiente puede resolver de dos formas:
+
+A) TT
+
+    B continua
+    -> AUT
+    -> expansion del 100 %
+    -> TT
+
+B) CUT
+
+    Despues de B aparece C bajista
+    -> C supera el final de A
+    -> CUT
+
+La clasificacion depende del nivel que se alcanza primero, no del color final de
+la vela.
+
+================================================================================
+17. PROTOCOLO RESUMIDO DE ANALISIS
+================================================================================
+
+Antes de responder una lectura TM:
+
+1. Leer este dossier.
+2. Identificar la referencia inicial.
+3. Numerar las velas.
+4. Reconstruir el orden intravela.
+5. Comprobar primero el gap respecto al cierre anterior (9.1/9.2) y despues
+   si la vela 2 cumple todas las reglas de 2.
+6. Comprobar si la vela 3 cumple las dos reglas de 3.
+7. Si 3 falla, consolidar 1+2 como modulo y clasificar A.
+8. Confirmar B solo al alcanzar 100-127 % + 0,25 tick.
+9. Confirmar AUT sin escribir TT antes del 100 % de la expansion.
+10. Confirmar C y verificar si supera el final de A para CUT.
+11. Confirmar FT solo despues de TT y con movimiento contrario claro.
+12. Mantener normalmente dos lecturas coherentes (maximo operativo tres).
+13. Eliminar el ruido y los micromovimientos; no se calculan.
+14. Separar lectura modular de patrones.
+15. Valorar variables solo despues de confirmar el patron.
+16. Si faltan ticks o niveles, declarar la lectura pendiente.
+
+================================================================================
+18. ERRORES QUE DEBEN EVITARSE
+================================================================================
+
+ERROR 1:
+Clasificar por color.
+
+CORRECCION:
+Reconstruir el orden de movimientos.
+
+ERROR 2:
+Llamar 2 a una vela por tener la misma direccion.
+
+CORRECCION:
+Comprobar plano, rango y cola de base.
+
+ERROR 3:
+Llamar 3 sin medir retroceso y extremo.
+
+CORRECCION:
+Exigir simultaneamente 0-50 % y superacion del extremo de 2.
+
+ERROR 4:
+Llamar B a cualquier giro contrario a A.
+
+CORRECCION:
+B solo existe desde el 100 % de A.
+
+ERROR 5:
+Escribir TT cuando aparece AUT.
+
+CORRECCION:
+AUT = TT pendiente. TT solo al 100 % de la expansion.
+
+ERROR 6:
+Llamar CUT sin medir el final de A.
+
+CORRECCION:
+CUT solo cuando C supera el final de A.
+
+ERROR 7:
+Llamar FT a cualquier retroceso posterior a TT.
+
+CORRECCION:
+FT requiere TT previo, perdida de velocidad y movimiento contrario claro.
+
+ERROR 8:
+Crear una lectura por cada micromovimiento.
+
+CORRECCION:
+Mantener normalmente dos lecturas y filtrar el ruido.
+
+ERROR 9:
+Mezclar referencias de dos lecturas.
+
+CORRECCION:
+Cada lectura conserva su propio modulo, A, B, SL y objetivo TT.
+
+ERROR 10:
+Improvisar una regla cuando la imagen no permite confirmar el nivel.
+
+CORRECCION:
+Declarar que faltan ticks o medicion exacta.
+
+ERROR 11:
+Ignorar el gap entre el cierre de una vela y la apertura de la siguiente.
+
+CORRECCION:
+Comprobar el gap antes de evaluar 2 (2.1 a).
+
+ERROR 12:
+Tomar el movimiento FT, o cualquier movimiento grande, como modulo del ciclo
+siguiente por su apariencia.
+
+CORRECCION:
+No hay regla escrita para ese caso (20.14). Declarar el modulo PENDIENTE o
+justificarlo con 4.x y 7.4.
+
+ERROR 13:
+Dar por tocado o superado un nivel en imagen cuando la diferencia es menor que
+la tolerancia de medicion.
+
+CORRECCION:
+Declarar PENDIENTE y pedir OHLC o ticks (2.2).
+
+ERROR 14:
+Usar vocabulario externo a la TM.
+
+CORRECCION:
+Reescribir con 1.1, 1.2 y 1.8 (1.7).
+
+ERROR 15:
+Corregir solo el final de una lectura que tenia un error al principio.
+
+CORRECCION:
+Rehacer desde la primera vela afectada (Lectura previa, punto 7).
+
+================================================================================
+19. FASES CORRECTAS PARA LLEVAR TM A MT5
+================================================================================
+
+FASE 1. LECTOR TM
+
+- Reconstruir movimientos tick a tick.
+- Clasificar 1, 2, 3, A, B, C, AUT y CUT.
+- Detectar TT y FT.
+- Mantener normalmente dos lecturas; excepcionalmente tres.
+- Generar cronologia y leyenda.
+- No operar.
+
+FASE 2. RECOLECTOR DE VARIABLES
+
+- Registrar todas las variables en autocortes, TT y FT.
+- Registrar el resultado final.
+- Exportar CSV.
+
+FASE 3. VALIDACION DE LECTURA
+
+- Comparar la lectura automatica con la lectura profesional.
+- Corregir reglas sin ajustar retrospectivamente los ejemplos.
+- Validar primero el lector y despues las entradas.
+
+FASE 4. INVESTIGACION ESTADISTICA
+
+- Determinar que variables favorecen TT.
+- Determinar que variables favorecen FT.
+- Identificar combinaciones que deben descartarse.
+- Determinar potencial minimo y filtro de ruido.
+
+FASE 5. INDICADOR DE DECISION
+
+Mostrar:
+
+- Lectura principal.
+- Lectura alternativa.
+- Patron.
+- Variables.
+- Objetivo.
+- SL.
+- Progreso TT.
+- Probabilidad condicionada calculada con datos.
+
+FASE 6. EJECUCION
+
+Solo despues de validar las fases anteriores:
+
+- Entrada.
+- SL estructural.
+- Objetivo.
+- Gestion.
+- Control de una operacion por lectura.
+
+================================================================================
+20. ASPECTOS PENDIENTES DE DEFINICION
+================================================================================
+
+Este documento no inventa las definiciones siguientes. Deben cerrarse antes del
+codigo definitivo:
+
+1. Definicion matematica unica de la base del modulo en todos los casos.
+2. Nivel exacto y unico del autocorte para cada tipo de estructura.
+3. Relacion formal definitiva entre B, autocorte y AUT.
+4. Regla matematica exacta de confirmacion de FT.
+5. Umbral que separa movimiento TM y ruido.
+6. Prioridad entre dos lecturas cuando ambas alcanzan niveles en el mismo tick.
+7. Reglas completas de C cuando no alcanza CUT.
+8. Tratamiento definitivo del posible 1 dentro de la lectura alternativa.
+9. Ventanas y umbrales exactos de velocidad.
+10. Formula y umbrales de solapamiento/verticalidad.
+11. Potencial minimo para considerar un patron operable.
+12. Tolerancia de "salida en plano" y de "toca un nivel": igualdad exacta en
+    ticks para el codigo y margen de medicion para imagenes.
+13. Prioridad formal entre 4.2 y los gaps de la seccion 9 (ver 9.3).
+14. Referencia 1 del ciclo siguiente despues de TT/FT: movimiento que completa
+    el TT (7.4), movimiento FT, o movimiento posterior. Y como se determina el
+    modulo de un mini-TT que nace dentro del movimiento FT.
+15. Definicion de "rango" de 1, 2 y del modulo (extremo a extremo u
+    apertura-cierre) y desde donde se proyecta el objetivo TT cuando el modulo
+    es 1+2.
+16. Nivel de AUT. HIPOTESIS DE TRABAJO (NO ES REGLA): en las lecturas analizadas,
+    AUT aparece cuando B se pasa de la franja (supera 127 % + 0,25 tick), y un
+    B que solo toca el 127 % y vuelve continua como C -> CUT sin AUT (16.1).
+    Debe confirmarlo el autor antes de incorporarla.
+
+================================================================================
+22. REGISTRO DE CAMBIOS v2.0 -> v3.0
+================================================================================
+
+- Nuevo bloque de LECTURA PREVIA OBLIGATORIA (persona o IA).
+- Nuevos apartados 1.6 (estados), 1.7 (vocabulario externo prohibido),
+  1.8 (etiquetas operativas) y 1.9 (glosario).
+- Nuevos apartados 2.1 (orden de comprobacion con gap primero),
+  2.2 (protocolo para imagenes con tolerancia) y 2.3 (formato de respuesta).
+- Nuevo 9.3 (orden entre 4.2 y gaps, pendiente de confirmar).
+- Seccion 16: cada ejemplo lleva su estado; 16.3 pasa a caso abierto.
+- Seccion 17: paso 5 incluye el gap.
+- Seccion 18: errores 11 a 15.
+- Seccion 20: pendientes 12 a 16, incluida la hipotesis sobre el nivel de AUT.
+- No se ha cambiado ninguna regla matematica de v2.
+
+================================================================================
+21. REGLA FINAL
+================================================================================
+
+La TM debe analizarse con disciplina matematica:
+
+    LEER LAS REGLAS
+    -> NO SUPONER
+    -> RECONSTRUIR MOVIMIENTOS
+    -> MEDIR
+    -> CLASIFICAR EN VOCABULARIO TM
+    -> SEPARAR MOVIMIENTOS Y PATRONES
+    -> MANTENER NORMALMENTE DOS LECTURAS (MAXIMO TRES)
+    -> FILTRAR RUIDO Y MICROMOVIMIENTOS
+    -> VALORAR VARIABLES
+    -> DECIDIR
+
+Una respuesta TM correcta no es la que enumera mas movimientos. Es la que
+identifica las estructuras coherentes, respeta todas las reglas, conserva las
+lecturas validas y elimina el ruido sin inventar nada.
+
+================================================================================
+FIN DEL DOSSIER TM v3.0
+================================================================================

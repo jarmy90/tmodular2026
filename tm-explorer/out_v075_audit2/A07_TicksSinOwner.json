@@ -1,0 +1,11 @@
+{
+  "ticks": 20335,
+  "owner_ok": 19901,
+  "uncovered": 434,
+  "noise": 3927,
+  "reasons": {
+    "PRE_LECTURA": 6,
+    "PRECIO_FUERA_RANGO_ACTIVO": 421,
+    "SIN_LECTURA_ACTIVA": 7
+  }
+}

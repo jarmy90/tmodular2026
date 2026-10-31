@@ -1,0 +1,17 @@
+{
+  "name": "tm-explorer",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Explorer determinista de Teoria Modular (TM): nucleo + replay offline CSV + validacion ciega contra golden.",
+  "type": "commonjs",
+  "main": "src/core/engine.js",
+  "scripts": {
+    "test": "node --test \"tests/**/*.test.js\"",
+    "test:red": "node --test tests/replay.red.test.js",
+    "test:harness": "node --test tests/harness.test.js",
+    "replay": "node src/replay/cli.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

@@ -1,0 +1,18 @@
+test_id,transition,kind,classification,description,pass,detail
+AD-BLOCK,AUT_DIRECT,negative,CANONICAL_PASS,A pendiente cruza la base -> OPEN_RULE_BLOCK sin inventar AUT,True,aut=OPEN_RULE_BLOCK n= conf=0
+AD-01,AUT_DIRECT,boundary,PROVISIONAL_POLICY_PASS,A confirmada toca la base -> no AUT,True,aut= n= a=10000 base=10000
+AD-02,AUT_DIRECT,positive,PROVISIONAL_POLICY_PASS,A confirmada supera la base por 1 cent -> AUT,True,aut=AUT_DIRECT_BY_A n=NEW_ONE_ACTIVE b=
+AD-03,AUT_DIRECT,positive,PROVISIONAL_POLICY_PASS,A salta de debajo a encima de la base en un tick,True,aut=AUT_DIRECT_BY_A n_extreme=10500
+AD-04,AUT_DIRECT,positive,PROVISIONAL_POLICY_PASS,A continua tras el AUT y extiende el nuevo 1 (TT pendiente),True,n=1200/10200 tt=TT_PENDING cycle=0
+AD-05,AUT_DIRECT,negative,PROVISIONAL_POLICY_PASS,no existe B en la via directa,True,b= b_ext= active=NEW_ONE
+AD-06,AUT_DIRECT,negative,PROVISIONAL_POLICY_PASS,"no se aplica 127%+0,25 en la via directa",True,aut_direct=AUT_DIRECT_BY_A aut_b=
+AD-07,AUT_DIRECT,positive,PROVISIONAL_POLICY_PASS,nuevo 1 conserva origen de A,True,n=9000 a=9000
+AD-08,AUT_DIRECT,positive,PROVISIONAL_POLICY_PASS,structural_time nuevo 1 = structural de A,True,n_st=100 a_st=100
+AD-09,AUT_DIRECT,positive,PROVISIONAL_POLICY_PASS,knowledge_time = primer tick de cruce,True,kt=240100 cross=240100
+AD-10,AUT_DIRECT,negative,PROVISIONAL_POLICY_PASS,A archivada sin autoridad activa,True,a_auth=ARCHIVED a=A_CONFIRMED_ARCHIVED
+AD-11,AUT_DIRECT,negative,PROVISIONAL_POLICY_PASS,modulo congelado como referencia,True,mod_auth=FROZEN_REFERENCE
+AD-12,AUT_DIRECT,boundary,PROVISIONAL_POLICY_PASS,tocar la base y retroceder -> no AUT,True,aut= a=A_CONFIRMED
+AD-13,AUT_DIRECT,positive,PROVISIONAL_POLICY_PASS,cruce dentro de la misma vela,True,aut=AUT_DIRECT_BY_A
+AD-14,AUT_DIRECT,positive,PROVISIONAL_POLICY_PASS,cruce entre velas sin reiniciar A,True,aut=AUT_DIRECT_BY_A a_origin=9000
+AD-DET,AUT_DIRECT,determinism,PROVISIONAL_POLICY_PASS,doble ejecucion identica,True,len=14
+AD-PRE,AUT_DIRECT,prefix,PROVISIONAL_POLICY_PASS,prefijo consistente,True,prefix=12 full=14

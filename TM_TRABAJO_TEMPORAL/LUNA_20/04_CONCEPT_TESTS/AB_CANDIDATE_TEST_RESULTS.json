@@ -1,0 +1,11 @@
+{
+  "reader": "TM_REFERENCE_INTERPRETER_V1_DIRECT_AUT",
+  "tests": 32,
+  "passed": 32,
+  "failed": 0,
+  "all_pass": true,
+  "rejected_policy_rewritten": [
+    "A-14",
+    "BG-15"
+  ]
+}

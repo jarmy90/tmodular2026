@@ -1,0 +1,12 @@
+{
+  "prefix_failures": null,
+  "status": "NOT_RUN_FULL_MATRIX",
+  "required": {
+    "physical_bar_closes": 75,
+    "before_after_each_local_confirmation": true,
+    "random_cuts": 500,
+    "seed": 7552,
+    "fresh_process_per_cut": true
+  },
+  "reason": "R2 candidate is already non-conforming in golden/regression/concurrency; full physical matrix remains unexecuted. Reproducer: repro/run_prefix_matrix.py."
+}

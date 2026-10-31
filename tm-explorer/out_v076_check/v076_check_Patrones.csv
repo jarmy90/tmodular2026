@@ -1,0 +1,2 @@
+﻿pattern_id,type,status,final_status,direction,origin_time,origin_price,end_time,end_price,size,reading_id,cycle_id,detail
+P0007,FT,FT_CONFIRMED,FT_CONFIRMED,UP,16:25:55.050,29875.40,16:56:39.164,29600.70,274.70,R0003,C0003,"{""confirmed_price"": ""29869.30"", ""confirmed_time"": ""16:25:59.075"", ""end_price"": ""29600.70"", ""end_time"": ""16:56:39.164"", ""ext"": ""29600.70"", ""ext_time"": ""16:25:55.655"", ""formal"": ""ESTRUCTURAL_2_PUNTOS"", ""origin"": ""29875.40"", ""origin_time"": ""16:25:55.050"", ""size"": ""274.70""}"

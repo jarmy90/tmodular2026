@@ -1,0 +1,37 @@
+{
+  "framework": "TM dynamical movement tree / reference interpreter",
+  "concept_domain": "1  -> 2  -> 3  -> module  -> A (contrary move / direct AUT)  -> B (candidate/Gran/limit)  -> C",
+  "scope_block_traversed": "B Grande / AUT by B / direct AUT by A, iteration P08/P09 (16:15-16:24 anchors + L2 16:19-16:22)",
+  "open_rules_not_closed": ["cycle start/end of 1", "functional autonomy of A", "structural confirmation of FT", "concurrency L1/L2 integration and inter-module behavior", "gap -> new one"],
+  "status_temporary_codes": {
+    "P-AB-01": "SUPERSEDED_EXPERIMENTAL_POLICY",
+    "P-AB-03": "READER_EXPERIMENTAL_POLICY_NOT_CANON",
+    "P-AB-04_RETURN_JUMP_4": "REJECTED_EXPERIMENTAL_ASSUMPTION"
+  },
+  "canonical_rules_active_in_code": [
+    "R-AUTONOMY-01: B@100% evaluated only after A_CONFIRMED",
+    "R-AUTONOMY-02: contrary move can stay PENDING and be ABSORBED if dominant function extends",
+    "R-THREE-50: <=50% preserves possibility of 3, >50% makes 3 impossible (50% exact valid)",
+    "R-GAP-OPEN: nonflat open prohibits 2 in that reading and enters gap functional branch"
+  ],
+  "anchor_1615_1618_expected": {
+    "module": "29877.0 -> 29848.5 = 28.5",
+    "a": "29848.5 -> 29857.6 = 9.1",
+    "b_candidate_from": "29857.6",
+    "b_gran_time_expected": "16:18:34.125",
+    "aut_time_expected": "16:18:34.926",
+    "b_at_aut": 12.3,
+    "aut_limit": "127% of A + 0.25",
+    "new_one_from_aut_by_b": {"origin": 29857.6, "direction": "down", "structural_time": "start of B", "knowledge_time": "AUT tick"},
+    "new_one_extension_after_aut": "up to 29843.0"
+  },
+  "anchor_l2_1619_1622_expected": {
+    "one": 7.5,
+    "two": 12.3,
+    "three_final": "29830.3",
+    "module": 19.7,
+    "a_after_module": 20.5
+  },
+  "tests_consciously_not_finalized_in_code": ["TT", "FT", "C", "CUT", "B Grande -> C -> new one", "concurrency L1/L2 cross-state integration", "gap with new one", "full feed 16:15-17:29 in single canonical reader"],
+  "reason_not_finalized": "iterative parity review is paused per user instruction; only containment, inventory and ZIP parity audit are in scope"
+}

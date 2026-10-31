@@ -1,0 +1,3 @@
+﻿pattern_id,type,status,direction,origin_time,origin_price,end_time,end_price,size,reading_id,cycle_id,detail
+P0001,TT,CONFIRMADO,UP,16:57:19.671,29608.80,16:57:38.948,29623.30,14.50,R0001,C0001,"{""target"": ""29621.90"", ""x"": ""13.10""}"
+P0002,FT,CANDIDATA,UP,16:57:19.671,29608.80,16:57:39.951,29620.30,11.50,R0001,C0001,"{""ext"": ""29620.30"", ""formal"": ""PENDIENTE_POR_REGLA"", ""origin"": ""29623.30"", ""size"": ""3.00""}"

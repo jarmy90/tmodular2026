@@ -1,0 +1,13 @@
+anchor_id,expected,status,actual,authority
+C1,"TT confirma objetivo 29870,5 en 29870,6 (seq 2519)",PASS,obj=2987050 price=2987060 seq=2519,CANONICAL
+C2,"extremo fisico 29875,4 en seq 2532",PASS,ext=2987540 seq=2532,CANONICAL
+C3,"extremo funcional = fisico, CONFIRMED, kt posterior (2535)",PASS,ext=2987540 status=CONFIRMED kt_seq=2535,CANONICAL
+C4,"FT con origen 29875,4; structural 2532 < knowledge 2535",PASS,origin=2987540 st=1792167955050 kt=1792167955655,PROVISIONAL_POLICY
+C5,"candidatos absorbidos >= 1; ningun FT desde 29871,8",PASS,absorbed=2 stale_pattern=False,CANONICAL
+C6,"FT al cierre de 16:26 = 29849,1 (size 26,3) = A principal",PASS,ft_ext=2984910 l1_a=CONTRARY_MOVE_PENDING/2630@2987540,PROVISIONAL_POLICY
+C7,"A principal desde 29875,4 al cierre de 16:26",PASS,a=CONTRARY_MOVE_PENDING/2630@2987540,CANONICAL
+C8,"LOCAL-G1 ARCHIVED: closure 2535, archive 2553",PASS,ARCHIVED closure=2535 closed=2553 reason=TT_FUNCTIONAL_EXTREME_CONFIRMED,CANONICAL
+C9,slot LOCAL libre; patrones historicos; cero escrituras,PASS,slot='' hist=['LOCAL-G1-FT-2987540'] writes=0,CANONICAL
+C10,LOCAL-G2 no abierta; slot local libre; cero modulos locales,PASS,"decision=NOT_OPENED mod_by_bar={986: 450, 987: 450, 988: 450, 989: 450} probe_one_16:26=2982810 (nuevo 1 de LOCAL-G1 heredado)",CANONICAL
+C12,evidencia 16:26-16:29 para LOCAL-G2 queda PENDIENTE de reevaluar,PASS,"mod_by_bar={986: 450, 987: 450, 988: 450, 989: 450} (la sonda con slot sin archivar forma modulo local propio; LOCAL-G2 debe reevaluarse en 16:27)",OPEN_RULE
+C11,CLOSING congela funciones; tras el archivo solo FT,PASS,"freeze=True eventos_funcionales_2535_2553=[] eventos_no_FT_post_archivo=['LOCAL_G1_ARCHIVED', 'PATTERN_LAYER_ONLY']",CANONICAL

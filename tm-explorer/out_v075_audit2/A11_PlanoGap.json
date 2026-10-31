@@ -1,0 +1,130 @@
+{
+  "bars": 75,
+  "expected_gap": 62,
+  "observed_gap": 74,
+  "false_gap": 12,
+  "missed_gap": 0,
+  "match": 63,
+  "failures": [
+    {
+      "bar_time": "16:16",
+      "gap": 10,
+      "abs_gap": 10,
+      "esperado": "PLANO_NO_GAP",
+      "observado": "GAP",
+      "evento": "16:16:00.061",
+      "cumple": 0,
+      "nota": "menor de 0.25 se absorbe como plano"
+    },
+    {
+      "bar_time": "16:20",
+      "gap": -20,
+      "abs_gap": 20,
+      "esperado": "PLANO_NO_GAP",
+      "observado": "GAP",
+      "evento": "16:20:00.145",
+      "cumple": 0,
+      "nota": "menor de 0.25 se absorbe como plano"
+    },
+    {
+      "bar_time": "16:27",
+      "gap": 20,
+      "abs_gap": 20,
+      "esperado": "PLANO_NO_GAP",
+      "observado": "GAP",
+      "evento": "16:27:00.074",
+      "cumple": 0,
+      "nota": "menor de 0.25 se absorbe como plano"
+    },
+    {
+      "bar_time": "16:39",
+      "gap": 20,
+      "abs_gap": 20,
+      "esperado": "PLANO_NO_GAP",
+      "observado": "GAP",
+      "evento": "16:39:00.113",
+      "cumple": 0,
+      "nota": "menor de 0.25 se absorbe como plano"
+    },
+    {
+      "bar_time": "16:45",
+      "gap": 10,
+      "abs_gap": 10,
+      "esperado": "PLANO_NO_GAP",
+      "observado": "GAP",
+      "evento": "16:45:00.015",
+      "cumple": 0,
+      "nota": "menor de 0.25 se absorbe como plano"
+    },
+    {
+      "bar_time": "17:04",
+      "gap": 10,
+      "abs_gap": 10,
+      "esperado": "PLANO_NO_GAP",
+      "observado": "GAP",
+      "evento": "17:04:00.189",
+      "cumple": 0,
+      "nota": "menor de 0.25 se absorbe como plano"
+    },
+    {
+      "bar_time": "17:07",
+      "gap": -20,
+      "abs_gap": 20,
+      "esperado": "PLANO_NO_GAP",
+      "observado": "GAP",
+      "evento": "17:07:00.042",
+      "cumple": 0,
+      "nota": "menor de 0.25 se absorbe como plano"
+    },
+    {
+      "bar_time": "17:08",
+      "gap": -10,
+      "abs_gap": 10,
+      "esperado": "PLANO_NO_GAP",
+      "observado": "GAP",
+      "evento": "17:08:00.199",
+      "cumple": 0,
+      "nota": "menor de 0.25 se absorbe como plano"
+    },
+    {
+      "bar_time": "17:14",
+      "gap": -10,
+      "abs_gap": 10,
+      "esperado": "PLANO_NO_GAP",
+      "observado": "GAP",
+      "evento": "17:14:00.011",
+      "cumple": 0,
+      "nota": "menor de 0.25 se absorbe como plano"
+    },
+    {
+      "bar_time": "17:17",
+      "gap": 20,
+      "abs_gap": 20,
+      "esperado": "PLANO_NO_GAP",
+      "observado": "GAP",
+      "evento": "17:17:00.191",
+      "cumple": 0,
+      "nota": "menor de 0.25 se absorbe como plano"
+    },
+    {
+      "bar_time": "17:19",
+      "gap": -10,
+      "abs_gap": 10,
+      "esperado": "PLANO_NO_GAP",
+      "observado": "GAP",
+      "evento": "17:19:00.146",
+      "cumple": 0,
+      "nota": "menor de 0.25 se absorbe como plano"
+    },
+    {
+      "bar_time": "17:23",
+      "gap": 20,
+      "abs_gap": 20,
+      "esperado": "PLANO_NO_GAP",
+      "observado": "GAP",
+      "evento": "17:23:00.037",
+      "cumple": 0,
+      "nota": "menor de 0.25 se absorbe como plano"
+    }
+  ]
+}

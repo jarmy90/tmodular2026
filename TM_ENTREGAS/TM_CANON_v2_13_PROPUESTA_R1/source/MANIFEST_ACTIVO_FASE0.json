@@ -1,0 +1,227 @@
+{
+  "date": "2026-10-28",
+  "status": "ORGANIZACION_FASE0_COMPLETADA_PENDIENTE_APROBACION_JAVIER",
+  "active_files": [
+    {
+      "stable_name": "TM_ARBOL_ACTIVO.md",
+      "versioned_name": "TM_ARBOL_MAESTRO_CANONICO_COMPLETO_v2_12.md",
+      "version": "2.12",
+      "relative_path": "01_ARBOL/TM_ARBOL_MAESTRO_CANONICO_COMPLETO_v2_12.md",
+      "size_bytes": 548810,
+      "sha256": "07880B12EE0A40FC09821D2248CD01071B9AE8C3EF4147130049B3EB39F997A8",
+      "status": "BASE_A_ACTUALIZAR_NO_PLENAMENTE_VIGENTE",
+      "authority": "autoridad base indicada por Javier",
+      "replaced_file": "",
+      "reason": "Base de partida; no se declara plenamente vigente.",
+      "dependencies": [],
+      "source_zip": "",
+      "associated_audit": ""
+    },
+    {
+      "stable_name": "TM_ARBOL_ACTIVO.md",
+      "versioned_name": "TM_ARBOL_MAESTRO_CANONICO_COMPLETO_v2_12.md",
+      "version": "2.12",
+      "relative_path": "01_ARBOL/TM_ARBOL_ACTIVO.md",
+      "size_bytes": 548810,
+      "sha256": "07880B12EE0A40FC09821D2248CD01071B9AE8C3EF4147130049B3EB39F997A8",
+      "status": "BASE_A_ACTUALIZAR_NO_PLENAMENTE_VIGENTE",
+      "authority": "autoridad base indicada por Javier",
+      "replaced_file": "",
+      "reason": "Base de partida; no se declara plenamente vigente.",
+      "dependencies": [
+        "01_ARBOL/TM_ARBOL_MAESTRO_CANONICO_COMPLETO_v2_12.md"
+      ],
+      "source_zip": "",
+      "associated_audit": "",
+      "byte_identical_to": "01_ARBOL/TM_ARBOL_MAESTRO_CANONICO_COMPLETO_v2_12.md"
+    },
+    {
+      "stable_name": "TM_TICKFEED_ACTIVO.csv",
+      "versioned_name": "TM_TICKFEED_1615_1730.csv",
+      "version": "maestro 1615-1730",
+      "relative_path": "02_TICKS/TM_TICKFEED_1615_1730.csv",
+      "size_bytes": 3496855,
+      "sha256": "5F701BE2307352CB559ABBD7BB856A6FD2A1F91E5D269A93DCC9AE2992E2C9FF",
+      "status": "ACTIVO",
+      "authority": "Javier; fuente maestra indicada",
+      "replaced_file": "",
+      "reason": "Tickfeed maestro de partida.",
+      "dependencies": [],
+      "source_zip": "",
+      "associated_audit": ""
+    },
+    {
+      "stable_name": "TM_TICKFEED_ACTIVO.csv",
+      "versioned_name": "TM_TICKFEED_1615_1730.csv",
+      "version": "maestro 1615-1730",
+      "relative_path": "02_TICKS/TM_TICKFEED_ACTIVO.csv",
+      "size_bytes": 3496855,
+      "sha256": "5F701BE2307352CB559ABBD7BB856A6FD2A1F91E5D269A93DCC9AE2992E2C9FF",
+      "status": "ACTIVO",
+      "authority": "Javier; fuente maestra indicada",
+      "replaced_file": "",
+      "reason": "Tickfeed maestro de partida.",
+      "dependencies": [
+        "02_TICKS/TM_TICKFEED_1615_1730.csv"
+      ],
+      "source_zip": "",
+      "associated_audit": "",
+      "byte_identical_to": "02_TICKS/TM_TICKFEED_1615_1730.csv"
+    },
+    {
+      "stable_name": "TM_LECTURAS_HUMANAS_ACTIVAS.txt",
+      "versioned_name": "TM_LECTURAS_CONFIRMADAS_16OCT_1615_1730_v003.txt",
+      "version": "v003",
+      "relative_path": "03_LECTURAS_HUMANAS/TM_LECTURAS_CONFIRMADAS_16OCT_1615_1730_v003.txt",
+      "size_bytes": 20709,
+      "sha256": "1E634EBB6C004D297E0ACB6B0D378DE5CFBBE7BBEC82FE26363E47C762104E5B",
+      "status": "CONFIRMADO_VIGENTE",
+      "authority": "Golden humano vigente indicado por Javier",
+      "replaced_file": "v002",
+      "reason": "Sustitución de referencia según instrucción; original v002 preservado en entregables históricos si se localiza.",
+      "dependencies": [],
+      "source_zip": "",
+      "associated_audit": ""
+    },
+    {
+      "stable_name": "TM_LECTURAS_HUMANAS_ACTIVAS.txt",
+      "versioned_name": "TM_LECTURAS_CONFIRMADAS_16OCT_1615_1730_v003.txt",
+      "version": "v003",
+      "relative_path": "03_LECTURAS_HUMANAS/TM_LECTURAS_HUMANAS_ACTIVAS.txt",
+      "size_bytes": 20709,
+      "sha256": "1E634EBB6C004D297E0ACB6B0D378DE5CFBBE7BBEC82FE26363E47C762104E5B",
+      "status": "CONFIRMADO_VIGENTE",
+      "authority": "Golden humano vigente indicado por Javier",
+      "replaced_file": "v002",
+      "reason": "Sustitución de referencia según instrucción; original v002 preservado en entregables históricos si se localiza.",
+      "dependencies": [
+        "03_LECTURAS_HUMANAS/TM_LECTURAS_CONFIRMADAS_16OCT_1615_1730_v003.txt"
+      ],
+      "source_zip": "",
+      "associated_audit": "",
+      "byte_identical_to": "03_LECTURAS_HUMANAS/TM_LECTURAS_CONFIRMADAS_16OCT_1615_1730_v003.txt"
+    },
+    {
+      "stable_name": "TM_REGISTRO_GOLDEN_DERIVADO_v003.json",
+      "versioned_name": "TM_REGISTRO_GOLDEN_DERIVADO_v003.json",
+      "version": "v003 derivado",
+      "relative_path": "03_LECTURAS_HUMANAS/TM_REGISTRO_GOLDEN_DERIVADO_v003.json",
+      "size_bytes": 3712,
+      "sha256": "9012F21801E97F7F4935E925834C49D3B33A87F435A8AC99BC1A6CFEC12B201C",
+      "status": "DERIVADO_NO_AUTORIDAD",
+      "authority": "Derivado de comparación v0.7.5.1",
+      "replaced_file": "",
+      "reason": "Registro de auditoría; el texto humano v003 conserva autoridad.",
+      "dependencies": [
+        "03_LECTURAS_HUMANAS/TM_LECTURAS_CONFIRMADAS_16OCT_1615_1730_v003.txt"
+      ],
+      "source_zip": "deliverables_v0751_corrected_COMPLETE.zip",
+      "associated_audit": "deliverables_v0751/A00_Resumen.json"
+    },
+    {
+      "stable_name": "TM_MOTOR_ACTIVO.py",
+      "versioned_name": "TM_CORE_PYTHON_v0751_STREAMING.py",
+      "version": "0.7.5.1",
+      "relative_path": "04_MOTOR_PYTHON/TM_CORE_PYTHON_v0751_STREAMING.py",
+      "size_bytes": 93635,
+      "sha256": "4A2877CC7F47E0565D6D788BA20D198486CDDEBA718F6A8F8498222B38DDEFE2",
+      "status": "PARCHE_INTERMEDIO_NO_DEFINITIVO",
+      "authority": "candidato técnico; no autoridad teórica",
+      "replaced_file": "v0.7.5",
+      "reason": "Parche intermedio; motor legacy preservado por separado en histórico.",
+      "dependencies": [
+        "tickfeed activo",
+        "golden v003 para validación solamente"
+      ],
+      "source_zip": "deliverables_v0751_corrected_COMPLETE.zip",
+      "associated_audit": "audit_v0751"
+    },
+    {
+      "stable_name": "TM_MOTOR_ACTIVO.py",
+      "versioned_name": "TM_CORE_PYTHON_v0751_STREAMING.py",
+      "version": "0.7.5.1",
+      "relative_path": "04_MOTOR_PYTHON/TM_MOTOR_ACTIVO.py",
+      "size_bytes": 93635,
+      "sha256": "4A2877CC7F47E0565D6D788BA20D198486CDDEBA718F6A8F8498222B38DDEFE2",
+      "status": "PARCHE_INTERMEDIO_NO_DEFINITIVO",
+      "authority": "candidato técnico; no autoridad teórica",
+      "replaced_file": "v0.7.5",
+      "reason": "Parche intermedio; motor legacy preservado por separado en histórico.",
+      "dependencies": [
+        "04_MOTOR_PYTHON/TM_CORE_PYTHON_v0751_STREAMING.py"
+      ],
+      "source_zip": "deliverables_v0751_corrected_COMPLETE.zip",
+      "associated_audit": "audit_v0751",
+      "byte_identical_to": "04_MOTOR_PYTHON/TM_CORE_PYTHON_v0751_STREAMING.py"
+    },
+    {
+      "stable_name": "TM_TESTS_ACTIVOS.py",
+      "versioned_name": "audit_v0751_tests.py",
+      "version": "0.7.5.1",
+      "relative_path": "05_TESTS/audit_v0751_tests.py",
+      "size_bytes": 3793,
+      "sha256": "F5F6F77E27E5E19E6464E73B79861D5AC8A1D055597D09E742E5683158A34F25",
+      "status": "SUITE_CORRECTIVA_CANDIDATA",
+      "authority": "pruebas; no autoridad teórica",
+      "replaced_file": "suite legacy v0.7.5",
+      "reason": "Suite correctiva del motor candidato; no se altera.",
+      "dependencies": [
+        "04_MOTOR_PYTHON/TM_CORE_PYTHON_v0751_STREAMING.py"
+      ],
+      "source_zip": "deliverables_v0751_corrected_COMPLETE.zip",
+      "associated_audit": "audit_v0751"
+    },
+    {
+      "stable_name": "TM_TESTS_ACTIVOS.py",
+      "versioned_name": "audit_v0751_tests.py",
+      "version": "0.7.5.1",
+      "relative_path": "05_TESTS/TM_TESTS_ACTIVOS.py",
+      "size_bytes": 3793,
+      "sha256": "F5F6F77E27E5E19E6464E73B79861D5AC8A1D055597D09E742E5683158A34F25",
+      "status": "SUITE_CORRECTIVA_CANDIDATA",
+      "authority": "pruebas; no autoridad teórica",
+      "replaced_file": "suite legacy v0.7.5",
+      "reason": "Suite correctiva del motor candidato; no se altera.",
+      "dependencies": [
+        "05_TESTS/audit_v0751_tests.py"
+      ],
+      "source_zip": "deliverables_v0751_corrected_COMPLETE.zip",
+      "associated_audit": "audit_v0751",
+      "byte_identical_to": "05_TESTS/audit_v0751_tests.py"
+    }
+  ],
+  "tree_active": "v2.12 — BASE_A_ACTUALIZAR_NO_PLENAMENTE_VIGENTE",
+  "tickfeed_active": "TM_TICKFEED_1615_1730.csv",
+  "golden_active": "TM_LECTURAS_CONFIRMADAS_16OCT_1615_1730_v003.txt",
+  "engine_active": "v0.7.5.1 — PARCHE_INTERMEDIO_NO_DEFINITIVO",
+  "suite_active": "audit_v0751_tests.py",
+  "open_rules": [
+    "AFS2 readiness",
+    "R0086",
+    "post-TT/FT operating details",
+    "see audit and source pending-question documents"
+  ],
+  "next_action": "Esperar ORGANIZACION_APROBADA; no iniciar Fase 1 antes de autorización.",
+  "source_inventory": "../../TM_TRABAJO_TEMPORAL/INVENTARIO_FUENTES.json",
+  "version_inventory": "INVENTARIO_VERSIONES_ARBOL.json",
+  "duplicates_inventory": "INVENTARIO_DUPLICADOS.json",
+  "approved_tree_remains": "v2.12 — BASE_A_ACTUALIZAR_NO_PLENAMENTE_VIGENTE; TM_ARBOL_ACTIVO.md no se sustituye",
+  "proposal_candidate": {
+    "version": "v2.13 PROPUESTA",
+    "status": "CANDIDATO_PENDIENTE_APROBACION",
+    "relative_path": "01_ARBOL/TM_ARBOL_MAESTRO_CANONICO_COMPLETO_v2_13_PROPUESTA.md",
+    "approval_gate": "ARBOL_v2_13_APROBADO_POR_JAVIER",
+    "size_bytes": 12663,
+    "sha256": "D385FFDFE931CFDCCC99976E9A69C502658642385D7BF381979861DC559887B7"
+  },
+  "previous_corrected_zip_count_note": {
+    "archive": "deliverables_v0751_corrected_COMPLETE.zip",
+    "manifest_declared_file_count": 46,
+    "physical_archive_entry_count": 48,
+    "additional_control_files": [
+      "manifest.json",
+      "SHA256SUMS.txt"
+    ],
+    "explanation": "file_count 46 enumera los payloads; el ZIP tiene además su manifest.json y SHA256SUMS.txt como dos controles físicos. No se alteró el ZIP corrected ni el paquete legacy."
+  }
+}

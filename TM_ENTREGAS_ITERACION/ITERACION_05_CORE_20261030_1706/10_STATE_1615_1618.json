@@ -1,0 +1,34 @@
+{
+  "reader": "TM_REFERENCE_INTERPRETER_V1_CORE",
+  "reading_id": "L1",
+  "ticks": 937,
+  "phase": "CORE_MODULE_DONE_A_NOT_IMPLEMENTED",
+  "one": {
+    "dir": -1,
+    "origin": 2987700,
+    "extreme": 2986080,
+    "size": 1620,
+    "status": "CONFIRMED"
+  },
+  "two": {
+    "origin": 2986110,
+    "extreme": 2984850,
+    "size": 1260,
+    "status": "IMPOSSIBLE_CLOSE"
+  },
+  "three": {
+    "extreme": 0,
+    "status": "IMPOSSIBLE",
+    "kt": ""
+  },
+  "module": {
+    "origin": 2987700,
+    "extreme": 2984850,
+    "size": 2850,
+    "status": "BY_DISCARD_1_2",
+    "owner": "2"
+  },
+  "a_status": "NOT_IMPLEMENTED_CORE",
+  "first_tick": 1,
+  "last_tick": 937
+}

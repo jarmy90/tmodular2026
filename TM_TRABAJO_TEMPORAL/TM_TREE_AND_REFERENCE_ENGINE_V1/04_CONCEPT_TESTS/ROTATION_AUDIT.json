@@ -1,0 +1,22 @@
+{
+  "ticks": 20335,
+  "cycle_rotations": 37,
+  "cycles_closed_by_tt": 2,
+  "cycles_started_by_gap": 30,
+  "cycles_started_by_c_trend": 5,
+  "initial_cycles": 1,
+  "incomplete_or_archived_cycles": true,
+  "terminal_archived_cycles": 37,
+  "consecutive_rotations_no_closure": 0,
+  "zero_size_new_one_deferrals": 5,
+  "a_confirmed": 7,
+  "b_candidate": 15,
+  "b_grande": 1,
+  "aut": 2,
+  "tt_confirmed": 2,
+  "tt_failed": 0,
+  "ft_confirmed": 1,
+  "cut": 3,
+  "modules": 8,
+  "note": "son rotaciones internas, NO ciclos TM completos validados"
+}

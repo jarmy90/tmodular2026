@@ -1,0 +1,86 @@
+{
+  "version": 1,
+  "meta": {
+    "simbolo": "USTEC",
+    "fecha": "2026-10-16",
+    "sesion": "16:30",
+    "fuente": "lectura profesional validada (REGLAS_CERRADAS seccion E)",
+    "notas": "Golden oficial inicial. Validacion limitada a velas 1-9. Sin precios ni numeros de vela en la logica del motor.",
+    "referencias_medicion": {
+      "medida_1": 9.00,
+      "medida_2_confirmada": 9.70,
+      "modulo_min": 29760.30,
+      "modulo_max": 29838.20,
+      "modulo_rango": 77.90,
+      "a_grande_final": 29820.80,
+      "objetivo_tt_bajista": 29742.90,
+      "aut_extra_puntos": 0.25
+    }
+  },
+  "validationRange": [1, 9],
+  "candles": [
+    {
+      "n": 1,
+      "dir": "BAJISTA",
+      "modular": ["1"],
+      "patrones": [],
+      "eventos": ["1"]
+    },
+    {
+      "n": 2,
+      "dir": "BAJISTA",
+      "modular": ["1", "2"],
+      "patrones": [],
+      "eventos": ["SALIDA_EN_PLANO", "POSIBLE_2", "2", "POSIBLE_3"]
+    },
+    {
+      "n": 3,
+      "dir": "ALCISTA",
+      "modular": ["MODULO", "A"],
+      "patrones": [],
+      "eventos": ["MOVIMIENTO_CONTRARIO_MAYOR_50", "3_FALLIDO", "MODULO", "A"]
+    },
+    {
+      "n": 4,
+      "dir": "BAJISTA",
+      "modular": ["MODULO", "A", "B"],
+      "patrones": [],
+      "eventos": ["A_MAXIMO", "B"]
+    },
+    {
+      "n": 5,
+      "dir": "BAJISTA",
+      "modular": ["MODULO", "A", "B"],
+      "patrones": [],
+      "eventos": ["B"]
+    },
+    {
+      "n": 6,
+      "dir": "BAJISTA",
+      "modular": ["MODULO", "A", "B", "AUT"],
+      "patrones": ["TT"],
+      "eventos": ["B_100", "B_127_0_25", "AUT", "TT_PENDIENTE", "TT", "POSIBLE_1"]
+    },
+    {
+      "n": 7,
+      "dir": "ALCISTA",
+      "modular": ["MODULO", "A", "B", "AUT"],
+      "patrones": ["TT"],
+      "eventos": ["POSIBLE_1_FIN", "A"]
+    },
+    {
+      "n": 8,
+      "dir": "BAJISTA",
+      "modular": ["MODULO", "A", "B", "AUT", "C"],
+      "patrones": ["TT"],
+      "eventos": ["B_127_0_25", "AUT", "C", "CUT"]
+    },
+    {
+      "n": 9,
+      "dir": "BAJISTA",
+      "modular": ["MODULO", "A", "B", "AUT", "C"],
+      "patrones": ["TT"],
+      "eventos": ["LECTURA_ACTUALIZADA"]
+    }
+  ]
+}

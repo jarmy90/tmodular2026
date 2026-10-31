@@ -1,0 +1,40 @@
+{
+  "generated_by": "audit_v219/build_index.py",
+  "authority": "Javier Armada Lopez (unica autoridad TM)",
+  "inputs": {
+    "arbol_v2_19": {
+      "path": "C:\\Users\\profesor\\OpenBot\\Shared\\Transfers\\33606e95-df67-429a-a10a-1cefe599632c\\TM_ARBOL_MAESTRO_CANONICO_COMPLETO_v2_19_ACUMULADO-3-.md",
+      "bytes": 562639,
+      "sha256": "94A1408A6123ED66948988334E7D540C2A2692C36EEA3CB736DBFF0DA2346B17"
+    },
+    "lecturas_v005": {
+      "path": "C:\\Users\\profesor\\tm\\Teoria Modular\\TM_CANON_ACTIVO\\03_LECTURAS_HUMANAS\\TM_LECTURAS_CONFIRMADAS_16OCT_1615_1730_v005.txt",
+      "bytes": 26713,
+      "sha256": "F5D7550C42C90897D833E6C2A3FAF772753A129640FD4411DE4190CB2CF94226"
+    },
+    "tickfeed_maestro": {
+      "path": "C:\\Users\\profesor\\OpenBot\\Agents\\agent-ece275c8-821a-43f3-b05f-6cdf123b7ade\\deliverables_R5\\data\\TM_TICKFEED_1615_1730.csv",
+      "bytes": 3496855,
+      "sha256": "5F701BE2307352CB559ABBD7BB856A6FD2A1F91E5D269A93DCC9AE2992E2C9FF"
+    },
+    "engine_R5": {
+      "path": "C:\\Users\\profesor\\OpenBot\\Agents\\agent-ece275c8-821a-43f3-b05f-6cdf123b7ade\\deliverables_R5\\python\\TM_CORE_PYTHON_v0752_CANONICAL_R5.py",
+      "bytes": 158090,
+      "sha256": "9BD1BEDB5DEC8C5A1C3A831338503E90CC04EE3CD776CF4E01D27CF8AA0EBEAE"
+    },
+    "engine_R3": {
+      "path": "C:\\Users\\profesor\\tm\\Teoria Modular\\tm-explorer\\python\\TM_CORE_PYTHON_v0752_CANONICAL_R3.py",
+      "bytes": 119657,
+      "sha256": "71D9A97AC2C49848D152A790DB0C70D20B30643782BFEE0AC030D19110330B08"
+    }
+  },
+  "tree": {
+    "headings": 949
+  },
+  "symbols": {
+    "R5": 114,
+    "R3": 102
+  },
+  "engine_modified": false,
+  "tree_frozen": false
+}

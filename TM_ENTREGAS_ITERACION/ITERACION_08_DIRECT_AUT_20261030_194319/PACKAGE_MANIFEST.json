@@ -1,0 +1,163 @@
+{
+  "iteration_id": "ITERACION_08_DIRECT_AUT",
+  "created_utc": "2026-10-30T19:43:19.611818+00:00",
+  "engine": "TM_REFERENCE_INTERPRETER_V1_DIRECT_AUT",
+  "engine_version": "iteration 08",
+  "objective": "retirar P-AB-04 (cuatro puntos) e implementar AUT directo por A",
+  "files": [
+    {
+      "original_relative_path": "10_REPORTS/CHECKPOINT_8_DIRECT_AUT.md",
+      "package_name": "01_CHECKPOINT_8.md",
+      "size": 3802,
+      "sha256": "4a8afec57256f9ea268788ade4c36c52efb183577d498bc6b6d45b0c63cdb605",
+      "reason": "entregable esencial de la iteracion 08"
+    },
+    {
+      "original_relative_path": "09_OPEN_RULES/OPEN_RULES_DIRECT_AUT_V1.md",
+      "package_name": "02_OPEN_RULES.md",
+      "size": 2461,
+      "sha256": "71b2ffe91235e09b6807347c0df5abfa2f22e5dc82a912fe501e8d94696728f0",
+      "reason": "entregable esencial de la iteracion 08"
+    },
+    {
+      "original_relative_path": "02_EXECUTABLE_TREE/TM_TREE_EXECUTABLE_DIRECT_AUT_V1.md",
+      "package_name": "03_TREE_EXECUTABLE.md",
+      "size": 2634,
+      "sha256": "b90c74dd1b6d19b6275712683b4c71f7fdb0ad88cf48a546f8dadf445ff5865f",
+      "reason": "entregable esencial de la iteracion 08"
+    },
+    {
+      "original_relative_path": "03_TRANSITION_SPECS/TM_TREE_TRANSITIONS_DIRECT_AUT_V1.csv",
+      "package_name": "04_TRANSITIONS.csv",
+      "size": 2380,
+      "sha256": "6ab2c5c9dda11a5168708c9f615df8356fb781721f44e143e3dd878d21e8091a",
+      "reason": "entregable esencial de la iteracion 08"
+    },
+    {
+      "original_relative_path": "04_CONCEPT_TESTS/CONCEPT_TEST_MATRIX_DIRECT_AUT_V1.csv",
+      "package_name": "05_TEST_MATRIX.csv",
+      "size": 7385,
+      "sha256": "221b48e60e00d5070b549b0fdb553e3382ff8f9ecffecf762c336f7eef0f862a",
+      "reason": "entregable esencial de la iteracion 08"
+    },
+    {
+      "original_relative_path": "04_CONCEPT_TESTS/ITERATION_08_TEST_RESULTS.json",
+      "package_name": "06_TEST_RESULTS_CONSOLIDATED.json",
+      "size": 686,
+      "sha256": "cde5f79717a1e8e6da773ebab649d0a7dd45d1ef2cf94f15af9c7effd278f4f2",
+      "reason": "entregable esencial de la iteracion 08"
+    },
+    {
+      "original_relative_path": "04_CONCEPT_TESTS/CORE_TEST_RESULTS.csv",
+      "package_name": "07_CORE_TEST_RESULTS.csv",
+      "size": 1649,
+      "sha256": "19a405447fbd97627a1d5c243f2a115d253ca671e58630814ac0f0fdd8531038",
+      "reason": "entregable esencial de la iteracion 08"
+    },
+    {
+      "original_relative_path": "04_CONCEPT_TESTS/AB_CANDIDATE_TEST_RESULTS.csv",
+      "package_name": "08_AB_BG_TEST_RESULTS.csv",
+      "size": 3309,
+      "sha256": "345d1210807ed1983e587b067b2f71780f08f6682b11be507ed553c329821236",
+      "reason": "entregable esencial de la iteracion 08"
+    },
+    {
+      "original_relative_path": "04_CONCEPT_TESTS/DIRECT_AUT_TEST_RESULTS.csv",
+      "package_name": "09_DIRECT_AUT_TEST_RESULTS.csv",
+      "size": 1879,
+      "sha256": "c15943018d5e3b39e434339a44aace123c2d2d1b57c1baa151c3f0ec0c90b5ef",
+      "reason": "entregable esencial de la iteracion 08"
+    },
+    {
+      "original_relative_path": "05_REFERENCE_ENGINE/tm_reference_interpreter_v1_direct_aut.py",
+      "package_name": "10_INTERPRETER_DIRECT_AUT.py",
+      "size": 38589,
+      "sha256": "0a47ab3c6b1c0e4d64bba7bf7530cfeaf8054719c3cfc79273bc06f181d5fba4",
+      "reason": "entregable esencial de la iteracion 08"
+    },
+    {
+      "original_relative_path": "04_CONCEPT_TESTS/run_direct_aut_tests.py",
+      "package_name": "11_RUNNER_DIRECT_AUT.py",
+      "size": 11668,
+      "sha256": "c4700f75ace766875d81d72394e359d66aecaefde151afdcf2ef26d92aa342c8",
+      "reason": "entregable esencial de la iteracion 08"
+    },
+    {
+      "original_relative_path": "04_CONCEPT_TESTS/run_iteration_08_replays.py",
+      "package_name": "12_RUNNER_REPLAYS.py",
+      "size": 2697,
+      "sha256": "ff62df14d9b1e9c345f9f11011d1ced01c8d7c86ca79925835e2c77fb865d823",
+      "reason": "entregable esencial de la iteracion 08"
+    },
+    {
+      "original_relative_path": "07_REAL_REPLAYS/direct_aut_state_L1_1615_1618.json",
+      "package_name": "13_STATE_L1.json",
+      "size": 1898,
+      "sha256": "0c765e89ceda8d6774dff7ca7cb4b88cb2b295fafdb74486cf99bb7599ce5c73",
+      "reason": "entregable esencial de la iteracion 08"
+    },
+    {
+      "original_relative_path": "07_REAL_REPLAYS/direct_aut_events_L1_1615_1618.csv",
+      "package_name": "14_EVENTS_L1.csv",
+      "size": 1944,
+      "sha256": "d47d4ac4d4388891d536c1acd1eb9a40eec010196b7d11920df969386125130d",
+      "reason": "entregable esencial de la iteracion 08"
+    },
+    {
+      "original_relative_path": "07_REAL_REPLAYS/direct_aut_state_L2_1619_1622.json",
+      "package_name": "15_STATE_L2.json",
+      "size": 1902,
+      "sha256": "2ac02f00f0885d7d372b925222a9fd6521b4855e2fd18e5e2c8ba47c9c1318b0",
+      "reason": "entregable esencial de la iteracion 08"
+    },
+    {
+      "original_relative_path": "07_REAL_REPLAYS/direct_aut_events_L2_1619_1622.csv",
+      "package_name": "16_EVENTS_L2.csv",
+      "size": 3426,
+      "sha256": "07340e1bcf892e5dc7c416b86aa5ce76aea8bf5dd624b1d4c55396b28318f775",
+      "reason": "entregable esencial de la iteracion 08"
+    },
+    {
+      "original_relative_path": "08_TREE_PYTHON_COMPARISON/DIRECT_AUT_TREE_PYTHON_MATRIX_V1.csv",
+      "package_name": "17_TREE_PYTHON_MATRIX.csv",
+      "size": 3224,
+      "sha256": "0b7ab5affd2be845d16a975359a239b40187638b351561a45bffbe218c2dcd43",
+      "reason": "entregable esencial de la iteracion 08"
+    },
+    {
+      "original_relative_path": "05_REFERENCE_ENGINE/tm_reference_interpreter_v1_bg_aut.py",
+      "package_name": "18_EVIDENCE_INTERPRETER_BG_AUT.py",
+      "size": 35683,
+      "sha256": "8b94e35d29e884788b3f3e72695d854307b3d42ddb77759f4c3867c24b2f1ff1",
+      "reason": "entregable esencial de la iteracion 08"
+    }
+  ],
+  "full_traces_referenced": [
+    {
+      "original_relative_path": "07_REAL_REPLAYS/direct_aut_trace_L1_1615_1618.jsonl",
+      "size": 764565,
+      "sha256": "abb89cf1eb2cd93fc589b2b996fd0a0311584fac1221bf527346c126240df5de",
+      "note": "traza completa conservada en el proyecto; no incluida integra"
+    },
+    {
+      "original_relative_path": "07_REAL_REPLAYS/direct_aut_trace_L2_1619_1622.jsonl",
+      "size": 721398,
+      "sha256": "2ccf76c92bd26bd65492e6c887fd33d62e68f26fbbe637728bda7b3d1c8e5b3e",
+      "note": "traza completa conservada en el proyecto; no incluida integra"
+    }
+  ],
+  "originals_modified": false,
+  "tree_modified": false,
+  "official_engine_modified": false,
+  "goldens_modified": false,
+  "open_rule_blocks": [
+    "C",
+    "CUT",
+    "TT",
+    "FT",
+    "gap new-1",
+    "concurrency"
+  ],
+  "gate": "GATE_AUT_DIRECT_BY_A_PASS",
+  "status": "NOT_READY_TO_FREEZE_TREE / REFERENCE_ENGINE_INCOMPLETE"
+}

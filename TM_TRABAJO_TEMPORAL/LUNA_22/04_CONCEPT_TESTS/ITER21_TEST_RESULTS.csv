@@ -1,0 +1,51 @@
+test_id,expected,status,actual,authority
+A1,movimiento < minimo crea OBSERVED y no PHYSICAL,PASS,status=OBSERVED,CANONICAL
+A2,2 puntos -> PHYSICAL; no CONFIRMED ni funcion,PASS,status=PHYSICAL commits=0,CANONICAL
+A3,mutar candidatos no altera el estado confirmado,PASS,state_version=1 state_igual=True,CANONICAL
+A4,escritura directa aborta con CANDIDATE_STATE_WRITE_VIOLATION,PASS,aborta=True contador=1,CANONICAL
+A5,CONFIRM en el tick de alta aborta y cuenta same_tick_confirmation,PASS,aborta=True contador=1,CANONICAL
+A6,CONFIRM sin retencion aborta (CONFIRM_WITHOUT_RETENTION),PASS,aborta=True msg=CONFIRM_WITHOUT_RETENTION,CANONICAL
+A7,CONFIRM con retencion escribe estado y confirma el candidato,PASS,a_status=A_CONFIRMED version=2,CANONICAL
+A8,lectura fuera de consumes cuenta consumes_violations,PASS,aborta=True contador=1,CANONICAL
+A9,referencia de otra rama cuenta cross_owner_reference_reads,PASS,aborta=True contador=1,CANONICAL
+A10,commit de otra generacion aborta (CROSS_GENERATION_COMMIT),PASS,aborta=True msg=CROSS_GENERATION_COMMIT,CANONICAL
+A11,rol no permitido aborta (COMMIT_ROLE_NOT_ALLOWED),PASS,aborta=True msg=COMMIT_ROLE_NOT_ALLOWED,CANONICAL
+A12,sombra convierte en DISCARDED la recreacion equivalente,PASS,status=DISCARDED intentos=1,CANONICAL
+A13,extremo que supera la sombra no se bloquea (PHYSICAL),PASS,status=PHYSICAL,CANONICAL
+A14,absorption_level distingue PHYSICAL y STRUCTURAL,PASS,"levels={'AT_PHYSICAL': 1, 'AT_STRUCTURAL': 1}",CANONICAL
+A15,no se confirma sobre pregunta respondida NO,PASS,aborta=True msg=COMMIT_ON_CLOSED_QUESTION,CANONICAL
+B1,cero violaciones de arquitectura en el tramo real,PASS,"total=0 counts={'candidate_state_writes': 0, 'cross_owner_reference_reads': 0, 'consumes_violations': 0, 'unowned_candidates': 0, 'same_tick_confirmation': 0, 'third_branch_attempts': 0, 'shadow_recreations_blocked': 0, 'archived_generation_writes': 0, 'legacy_preemptions': 0}",CANONICAL
+B2,hay commits reales: ADMIT y CONFIRM,PASS,"commits=46 kinds=['ADMIT', 'CONFIRM', 'EXTEND']",CANONICAL
+B3,ningun candidato sin propietario ni rama,PASS,total=6 branches=['L1'],CANONICAL
+B4,archivo de LOCAL-G1 y slot liberado se mantienen,PASS,"gens=[('PRIMARY-G1', 'ACTIVE'), ('LOCAL-G1', 'ARCHIVED')]",CANONICAL
+B5,IMPLICIT_MODULE_ORIGIN declarada con alternativa conservada,PASS,preguntas=1 con_alternativa=1 alt=800,CANONICAL
+B6,maximo dos ramas activas (MAIN + LOCAL),PASS,ramas=2,CANONICAL
+B7,dos ejecuciones producen identico snapshot de arquitectura,PASS,commits=46,CANONICAL
+B8,prefijo: los commits hasta 16:26 coinciden,PASS,full=41 pre=41,CANONICAL
+B9,el ultimo commit refleja el estado confirmado del lector,PASS,state=A_CONFIRMED reading=A_CONFIRMED,CANONICAL
+B10,recreaciones bloqueadas por sombra < candidatos absorbidos,PASS,intentos=0 absorbidos=0,CANONICAL
+C1,2 puntos absorbidos no escriben estado confirmado,PASS,status=ABSORBED version=0 commits=0,CANONICAL
+C2,el mismo desplazamiento puede terminar siendo A confirmada,PASS,status=CONFIRMED a=A_CONFIRMED,CANONICAL
+C3,movimiento de 6 puntos absorbido queda sin funcion,PASS,status=ABSORBED nivel=AT_PHYSICAL,CANONICAL
+C4,"<2 puntos: OBSERVED, nunca PHYSICAL ni funcion",PASS,aborta=True status=OBSERVED msg=ADMIT_BELOW_PHYSICAL_MINIMUM,CANONICAL
+C5,extender en su direccion actualiza extremo y tamano,PASS,extreme=700 size=300,CANONICAL
+C6,un precio contrario no recorta el extremo del candidato,PASS,extreme=700 status=PHYSICAL,CANONICAL
+C7,retencion sin pregunta resuelta no escribe estado,PASS,status=STRUCTURAL version=0,CANONICAL
+C8,extender sin funcion deja el candidato en PHYSICAL,PASS,status=PHYSICAL extreme=650 version=0,CANONICAL
+C9,"plano y gap se deciden con el umbral 0,25 fisico",PASS,flat=FLAT gap=GAP diff=40,CANONICAL
+C10,la cola inicial se congela con el primer tick contrario,PASS,tail=100 cerrada=True,CANONICAL
+C11,el primer toque se registra una sola vez con su seq,PASS,first=True second=False seq=5,CANONICAL
+C12,el ledger rechaza reescribir un tick,PASS,aborta=True msg=LEDGER_REWRITE:1,CANONICAL
+C13,el ultimo tick de la vela queda marcado al abrir la siguiente,PASS,prev_last=True new_first=True,CANONICAL
+C14,dos ramas procesan el mismo tick sin interferirse,PASS,v1=0 v2=1 c1=PHYSICAL,CANONICAL
+C15,un TT confirma y otro falla con propietarios separados,PASS,tt1=TT_CONFIRMED tt2=TT_FAILED,CANONICAL
+C16,una tercera rama es rechazada y contada,PASS,aborta=True intentos=1,CANONICAL
+C17,una lectura cruzada entre propietarios queda registrada,PASS,ok=False fugas=1,CANONICAL
+C18,la lectura es invariante a traslado e inversion de precio,PASS,base=2700 trasl=2700 inv=2700,CANONICAL
+C19,al duplicar la escala los tamanos se duplican y nada mas cambia,PASS,escala=5400 esperado=5400,CANONICAL
+C20,cambiar timestamps y sequence_id no altera la estructura,PASS,moved=C_LIVE base=C_LIVE,CANONICAL
+C21,el trazador es determinista y cubre todos los ticks,PASS,filas=4400 ticks=4400,CANONICAL
+C22,prefijo: la traza hasta 16:30 coincide con la corrida completa,PASS,full=3829 pre=3829,CANONICAL
+C23,el clasificador distingue las nueve categorias,PASS,casos=9 mal={},CANONICAL
+C24,"el motor no contiene precios, horas ni atajos del caso",PASS,hallazgos=[],CANONICAL
+C25,todo patron y generacion tiene propietario y slot,PASS,patrones=2 generaciones=2,CANONICAL

@@ -1,0 +1,187 @@
+﻿SELFTEST:
+SELFTEST OK v0.7.5.2-R3: 8 comprobaciones
+UNIVERSAL_B_AUT_TESTS:
+python.exe : test_01_9999_percent_is_candidate_only 
+(__main__.UniversalBigBTests.test_01_9999_percent_is_candidate_only) ... ok
+En línea: 1 Carácter: 124
++ ... opwatch]::StartNew(); $out = & python "repro\run_all.py" 2>&1 | Out-S ...
++                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (test_01_9999_pe...te_only) ... ok:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+test_02_exact_100_confirms_on_that_tick (__main__.UniversalBigBTests.test_02_exact_100_confirms_on_that_tick) ... ok
+test_03_120_percent_remains_big_b (__main__.UniversalBigBTests.test_03_120_percent_remains_big_b) ... ok
+test_04_exact_127_percent_plus_025_is_still_big_b 
+(__main__.UniversalBigBTests.test_04_exact_127_percent_plus_025_is_still_big_b) ... ok
+test_05_first_increment_above_limit_is_immediate_aut 
+(__main__.UniversalBigBTests.test_05_first_increment_above_limit_is_immediate_aut) ... ok
+test_06_first_contrary_tick_after_big_b_starts_c_directly 
+(__main__.UniversalBigBTests.test_06_first_contrary_tick_after_big_b_starts_c_directly) ... ok
+test_07_touching_a_base_is_not_crossing (__main__.UniversalBigBTests.test_07_touching_a_base_is_not_crossing) ... ok
+test_08_crossing_a_base_confirms_direct_aut_route 
+(__main__.UniversalBigBTests.test_08_crossing_a_base_confirms_direct_aut_route) ... ok
+test_09_internal_retraces_do_not_reset_b_extreme 
+(__main__.UniversalBigBTests.test_09_internal_retraces_do_not_reset_b_extreme) ... ok
+test_10_state_survives_bar_boundary_and_serialization 
+(__main__.UniversalBigBTests.test_10_state_survives_bar_boundary_and_serialization) ... ok
+test_11_gap_blocks_two_before_other_two_conditions 
+(__main__.UniversalBigBTests.test_11_gap_blocks_two_before_other_two_conditions) ... ok
+test_12_flat_no_tail_direction_and_size_allow_two 
+(__main__.UniversalBigBTests.test_12_flat_no_tail_direction_and_size_allow_two) ... ok
+test_13_live_engine_emits_b100_and_b_aut_on_exact_ticks_across_bars 
+(__main__.UniversalBigBTests.test_13_live_engine_emits_b100_and_b_aut_on_exact_ticks_across_bars) ... ok
+test_14_live_engine_a_direct_aut_has_no_fictitious_b 
+(__main__.UniversalBigBTests.test_14_live_engine_a_direct_aut_has_no_fictitious_b) ... ok
+test_15_real_feed_emits_both_aut_causes_with_tick_knowledge 
+(__main__.UniversalBigBTests.test_15_real_feed_emits_both_aut_causes_with_tick_knowledge) ... ok
+test_16_post_aut_contrary_move_remains_c_grande 
+(__main__.UniversalBigBTests.test_16_post_aut_contrary_move_remains_c_grande) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 3.295s
+
+OK
+LEGACY_20_TESTS:
+....................                                                     [100%]
+20 passed in 95.08s (0:01:35)
+TRANSFORMATION_TESTS:
+{
+  "status": "PASS",
+  "chunk_serialize_restore": "PASS",
+  "shifted_prices_timestamps": "PASS",
+  "inverted_direction": "PASS",
+  "engine_hardcodes": [],
+  "feed_points": 2297
+}
+CORE: C:\Users\profesor\AppData\Local\Programs\Python\Python312\python.exe C:\Users\profesor\tm\Teoria Modular\TM_ENTREGAS\TM_CORE_v0753_FASE0\python\TM_CORE_PYTHON_v0752_CANONICAL.py --feed C:\Users\profesor\tm\Teoria Modular\TM_ENTREGAS\TM_CORE_v0753_FASE0\data\TM_TICKFEED_1615_1730.csv --out C:\Users\profesor\tm\Teoria Modular\TM_ENTREGAS\TM_CORE_v0753_FASE0\out
+v0.7.5.2-R3 readings=88 events=1266 movements=439
+coverage geometric=True functional=True
+outputs=C:\Users\profesor\tm\Teoria Modular\TM_ENTREGAS\TM_CORE_v0753_FASE0\out
+  CORE_RAW_OUTPUT.json
+PHYSICAL_TRANSITION_PREFIXES:
+{
+  "method": "physical CSV truncation; fresh Python subprocess per cut; compare emitted knowledge prefix only",
+  "transition_seeds": [
+    850,
+    1809,
+    1867,
+    2298
+  ],
+  "cuts": 12,
+  "prefix_failures": 0
+}
+COMPARISON:
+{
+  "artifact": "GOLDEN_COMPARISON",
+  "input": "out/CORE_RAW_OUTPUT.json",
+  "raw_sha256_before": "32daa8b1aa56946b3bdde6267cbe677ae3d57a8c2c05505a6b89bba07de05129",
+  "checks": [
+    {
+      "expectation": "16:19 local 1 bajista",
+      "passed": true
+    },
+    {
+      "expectation": "16:20 2 bajista",
+      "passed": true
+    },
+    {
+      "expectation": "16:21 3 bajista",
+      "passed": true
+    },
+    {
+      "expectation": "16:22 A alcista",
+      "passed": true
+    },
+    {
+      "expectation": "16:22 AUT alcista",
+      "passed": true
+    },
+    {
+      "expectation": "16:23 A bajista",
+      "passed": true
+    },
+    {
+      "expectation": "16:23 AUT alcista seg·n v003",
+      "passed": false
+    },
+    {
+      "expectation": "16:23 AUT bajista",
+      "passed": false
+    },
+    {
+      "expectation": "16:24 A alcista y B/AUT bajistas",
+      "passed": false
+    }
+  ],
+  "passed": 6,
+  "total": 9,
+  "first_failure": "16:23 AUT alcista seg·n v003",
+  "first_16_23_aut_core_event": null,
+  "rule_conflict": {
+    "classification": "REGLA_VIGENTE_VS_GOLDEN_INCOMPATIBLE",
+    "golden_reference_sequence_id": 1879,
+    "golden_reference_is": "mßximo B, no primer cruce",
+    "first_causal_crossing_feed_sequence_id": 1876,
+    "prior_state": "A bajista confirmada; B alcista supera 100% de A, pero no 127% + 0,25",
+    "output_obtained": {
+      "A_size_price_units": 750,
+      "B_size_price_units": 600,
+      "required_AUT_excess_price_units": 977,
+      "aut_emitted": false
+    },
+    "rule_status": "La regla universal B Grande exige superar 127% + 0,25; v003 afirma AUT al superar solo el inicio de A. No se modifica el golden."
+  },
+  "raw_sha256_after": "32daa8b1aa56946b3bdde6267cbe677ae3d57a8c2c05505a6b89bba07de05129",
+  "raw_unchanged": true,
+  "status": "LECTURA_NO_REPRODUCIDA",
+  "note": "Comparaci¾n posterior de solo lectura; no escribe ni adapta el n·cleo ni el golden."
+}
+Created three unified diffs.
+{
+  "core_raw_sha256": "32daa8b1aa56946b3bdde6267cbe677ae3d57a8c2c05505a6b89bba07de05129",
+  "feed_points": 20335,
+  "events": 1266,
+  "readings": 88,
+  "local_sequences": 1,
+  "local_events": 41,
+  "R0062_R0064": [
+    {
+      "reading_id": "R0062",
+      "state": "DONE",
+      "module_origin": 2970080,
+      "module_extreme": 2966330,
+      "tt_target": 2963860,
+      "tt_hit": true,
+      "ft": true,
+      "ft_price": 2963610
+    },
+    {
+      "reading_id": "R0064",
+      "state": "DONE",
+      "module_origin": 2966730,
+      "module_extreme": 2960210,
+      "tt_target": 2961520,
+      "tt_hit": true,
+      "ft": true,
+      "ft_price": 2962110
+    }
+  ],
+  "comparison_exit": 2,
+  "transition_prefixes": 12,
+  "prefix_failures": 0,
+  "aut_causes": [
+    "A_CROSSES_STRUCTURE_BASE",
+    "B_EXCEEDS_127_PLUS_0_25"
+  ]
+}
+BUILD_FROZEN_PACKAGE:
+{
+  "zip": "C:\\Users\\profesor\\tm\\Teoria Modular\\TM_ENTREGAS\\TM_CORE_v0752_R3_B_AUT.zip",
+  "size_bytes": 1677900,
+  "sha256": "53606da1b660ce6d34463b5303cf35ee49e42a70dc269a037fab40d12ec63cf7",
+  "file_count": 69,
+  "payload_files": 67,
+  "manifest_files_missing": 0,
+  "invalid_paths": 0
+}
+

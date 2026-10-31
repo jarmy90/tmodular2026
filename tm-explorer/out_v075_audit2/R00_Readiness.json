@@ -1,0 +1,164 @@
+{
+  "audit": "v075_audit2",
+  "motor_version": "0.7.5",
+  "overall": "AUDITORIA_COMPLETA_NO_APTO_AFS2_PRODUCCION",
+  "verdicts": {
+    "PACKAGE_READY": true,
+    "PREFIX_INVARIANCE_READY": true,
+    "CAUSAL_ENGINE_READY": true,
+    "GEOMETRY_REGRESSION_READY": true,
+    "CANONICAL_GOLDEN_READY": false,
+    "PLANO_GAP_READY": false,
+    "FT_FINAL_STATE_READY": false,
+    "END_FEED_INTEGRITY_READY": false,
+    "FUNCTIONAL_COVERAGE_COMPLETE": false,
+    "OWNER_COVERAGE_COMPLETE": false,
+    "OPEN_RULES_PRESENT": true,
+    "AFS2_EXPERIMENTAL_READY": false,
+    "AFS2_PRODUCTION_READY": false
+  },
+  "headline": {
+    "feed_ticks": 20335,
+    "readings": 86,
+    "events": 1411,
+    "movements": 439,
+    "prefix_cutoffs": 3327,
+    "prefix_failures": 0,
+    "r0062_cutoffs": 1782,
+    "r0062_failures": 0,
+    "golden_match": "1/8",
+    "gap_false": 12,
+    "ft_canonical": "0/37",
+    "unexplained": 72,
+    "functional_coverage": "2166/2238",
+    "owner_uncovered": 434
+  },
+  "blocking_findings": [
+    {
+      "id": "GOLDEN",
+      "severity": "ALTA",
+      "bars": [
+        "16:15",
+        "16:16",
+        "16:17",
+        "16:19",
+        "16:20",
+        "16:21",
+        "16:22"
+      ],
+      "detail": "El motor no reproduce 7 de 8 lecturas humanas 16:15-16:22.",
+      "evidence": "A08_LecturasGolden.json"
+    },
+    {
+      "id": "GAP",
+      "severity": "ALTA",
+      "bars": [
+        "16:16",
+        "16:20",
+        "16:27",
+        "16:39",
+        "16:45",
+        "17:04",
+        "17:07",
+        "17:08",
+        "17:14",
+        "17:17",
+        "17:19",
+        "17:23"
+      ],
+      "detail": "12 GAP espurios con |gap| < 0.25.",
+      "evidence": "A11_PlanoGap.json"
+    },
+    {
+      "id": "FIN_FEED",
+      "severity": "ALTA",
+      "count": 72,
+      "detail": "Movimientos estructurales no explicados sin PENDIENTE_POR_REGLA.",
+      "evidence": "A13_Invariantes.json"
+    },
+    {
+      "id": "FT",
+      "severity": "ALTA",
+      "canonical": 0,
+      "total": 37,
+      "detail": "Estados finales FT no canonicos; el motor usa CONFIRMADO.",
+      "evidence": "A22_FTEstados.json"
+    },
+    {
+      "id": "CLI_BARRAS",
+      "severity": "MEDIA",
+      "events": 874,
+      "expected": 873,
+      "detail": "Con barras completas el CLI produce GAP espurio en 16:20 y 874 eventos.",
+      "evidence": "A02_RegresionTramoComun.json"
+    },
+    {
+      "id": "COBERTURA_FUNCIONAL",
+      "severity": "MEDIA",
+      "covered": 2166,
+      "total": 2238,
+      "detail": "Cobertura funcional causal incompleta.",
+      "evidence": "A15_ResumenCobertura.json"
+    },
+    {
+      "id": "OWNER",
+      "severity": "MEDIA",
+      "uncovered": 434,
+      "total": 20335,
+      "detail": "Ticks sin owner funcional.",
+      "evidence": "A15_ResumenCobertura.json"
+    },
+    {
+      "id": "REGLAS_ABIERTAS",
+      "severity": "MEDIA",
+      "rules": [
+        "post_tt_fallido_no_definido",
+        "ft_expiracion_no_definida",
+        "entrada_tardia_ft_no_definida",
+        "a_mayor_que_modulo_guardia_provisional",
+        "aut_extra_tick_unidad_cerrada_0_25",
+        "cobertura_estructural_definicion_por_confirmar",
+        "functional_coverage_causal_parcial",
+        "geometric_coverage_causal_parcial",
+        "lectura_abierta_al_final:R0086"
+      ],
+      "detail": "Reglas TM abiertas; no cerrar por inferencia.",
+      "evidence": "A13_Invariantes.json"
+    }
+  ],
+  "invariants": {
+    "feed_carga_ok": true,
+    "event_id_append_only": true,
+    "sequence_id_real": true,
+    "knowledge_time_valido": true,
+    "tt_despues_b_grande": true,
+    "tt_target_formula": true,
+    "gap_primero_en_su_tick": true,
+    "vocabulario_limpio": true,
+    "owner_audit_completo": true,
+    "owner_reading_conocida": true,
+    "regresion_tramo_comun_exacta": true,
+    "r0062_geometria_exacta": true,
+    "golden_16_15_16_22_completo": false,
+    "plano_gap_regla_canonica": false,
+    "ft_estados_finales_canonicos": false,
+    "integridad_fin_feed": false
+  },
+  "rule_freezes": {
+    "motor_immutable": true,
+    "tests_immutable": true,
+    "no_new_version": true,
+    "no_afs2_development": true
+  },
+  "evidence": {
+    "feed": "A01_FeedAuditoria.json",
+    "regression": "A02_RegresionTramoComun.json",
+    "r0062": "A09_R0062.json",
+    "prefixes": "P00_PrefijosResumen.json",
+    "golden": "A08_LecturasGolden.json",
+    "gap": "A11_PlanoGap.json",
+    "coverage": "A15_ResumenCobertura.json",
+    "ft": "A22_FTEstados.json",
+    "invariants": "A13_Invariantes.json"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "version": "0.7.4",
+  "generated_at": "2026-10-27T08:09:15.769911+00:00",
+  "feed_points": 11120,
+  "bars": 41,
+  "movements": 264,
+  "readings": 67,
+  "events": 870,
+  "patterns": 183,
+  "active_readings": 3,
+  "coverage": {
+    "structural_swing_count": 1335,
+    "geometric_count": 1335,
+    "functional_count": 1335,
+    "geometric_ok": true,
+    "functional_ok": true,
+    "movement_count": 264,
+    "functional_movement_count": 264,
+    "movement_coverage_ok": true
+  },
+  "coverage_uncovered_samples": {
+    "geometric": [],
+    "functional": []
+  },
+  "pending": [
+    "post_tt_fallido_no_definido",
+    "ft_expiracion_no_definida",
+    "entrada_tardia_ft_no_definida",
+    "a_mayor_que_modulo_guardia_provisional",
+    "lectura_abierta_al_final:R0063"
+  ],
+  "implementation_pending": [
+    "post_tt_fallido",
+    "ft_expiration_semantics",
+    "late_ft_entry_semantics",
+    "A>module_guard_is_provisional_2x",
+    "macro_stream_40_points_not_separate_scale"
+  ],
+  "constants": {
+    "MOVE": 600,
+    "STRUCTURAL_MOVE": 200,
+    "RETRACE_NUM": 25,
+    "RETRACE_DEN": 100,
+    "MIN_MODULE": 1000,
+    "A_MAX_MODULE_MULTIPLE": 2.0,
+    "MAX_ACTIVE": 3,
+    "CUT_BUFFER": 200,
+    "A_SIGNIFICANT_NUM": 75,
+    "A_SIGNIFICANT_DEN": 100
+  }
+}

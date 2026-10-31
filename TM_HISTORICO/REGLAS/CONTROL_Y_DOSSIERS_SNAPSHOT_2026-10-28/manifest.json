@@ -1,0 +1,40 @@
+{
+  "fecha": "2026-10-28",
+  "motivo_sustitucion": "Snapshot documental de organización; no implica consolidación ni aprobación.",
+  "estado": "HISTORICA_NO_APROBADA",
+  "autoridad": "Autoridad individual de cada documento original",
+  "dependencias": [],
+  "archivos": [
+    {
+      "path": "DECISIONES_EXPERTO.md",
+      "size_bytes": 68634,
+      "sha256": "A3B3B053DD5AB01CE96F6F606FFAE9917BDC8640A3D41464FF0E5AF922ADD6EC"
+    },
+    {
+      "path": "REGLAS_CERRADAS.md",
+      "size_bytes": 24204,
+      "sha256": "B5FDBB3E19D95B78841F140E5952CE397FA2AEC533D2F6D0D2D1AA5AB086C1F2"
+    },
+    {
+      "path": "PREGUNTAS_PENDIENTES.md",
+      "size_bytes": 42411,
+      "sha256": "62FFE3D17ABC22A859C730536A3D726A761A3745DC1676FE40391D5D3CABEF2F"
+    },
+    {
+      "path": "REGLAS_PROVISIONALES.md",
+      "size_bytes": 9639,
+      "sha256": "BB992BDDC47EC78F3DF5340328F1C48BEDC1EFF0765405AEC74F22A2DE3AD536"
+    },
+    {
+      "path": "Dossier_TM_v3_Lectura_Obligatoria.txt",
+      "size_bytes": 40543,
+      "sha256": "9A043FB0C6BA07AA4B3E94C4ACF7A53534BDED6BC0B106DE00202BCF43AF907A"
+    },
+    {
+      "path": "Dossier_TM_v4_Concurrencia_Reclasificacion.txt",
+      "size_bytes": 34024,
+      "sha256": "E2E80DD9D67AF80E80F58F81A08A48F14B867D02624B702976E3C0291418DBFF"
+    }
+  ],
+  "nota": "Copia histórica verificada; los originales se conservaron sin cambios."
+}

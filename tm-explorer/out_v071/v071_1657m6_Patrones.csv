@@ -1,0 +1,5 @@
+﻿pattern_id,type,status,direction,origin_time,origin_price,end_time,end_price,size,reading_id,cycle_id,detail
+P0001,TT,ABSORBIDO,UP,16:57:12.450,29607.60,16:57:22.685,29617.60,10.00,R0001,C0001,"{""absorbed_by_reading_id"": ""R0002"", ""absorbed_time"": ""16:57:23.688"", ""scale"": 1, ""target"": ""29617.10"", ""x"": ""9.50""}"
+P0002,TT,CONFIRMADO,UP,16:58:23.100,29615.80,16:59:56.180,29641.10,25.30,R0003,C0003,"{""scale"": 1, ""target"": ""29640.70"", ""x"": ""24.90""}"
+P0003,FT,CANDIDATA,UP,16:58:23.100,29615.80,16:59:56.987,29638.70,22.90,R0003,C0003,"{""ext"": ""29638.70"", ""formal"": ""PENDIENTE_POR_REGLA"", ""origin"": ""29641.10"", ""size"": ""2.40""}"
+P0004,TT,CONFIRMADO,DOWN,16:59:58.188,29639.10,16:59:59.390,29632.60,6.50,R0004,C0004,"{""scale"": 2, ""target"": ""29633.90"", ""x"": ""5.20""}"

@@ -1,0 +1,61 @@
+{
+  "reader": "TM_REFERENCE_INTERPRETER_V1_AB_CANDIDATE",
+  "reading_id": "L2",
+  "ticks": 898,
+  "phase": "AUT_DIRECT_REACHED_NOT_IMPLEMENTED",
+  "one": {
+    "dir": -1,
+    "origin": 2985000,
+    "extreme": 2984250,
+    "size": 750,
+    "status": "CONFIRMED"
+  },
+  "two": {
+    "origin": 2984480,
+    "extreme": 2983250,
+    "size": 1230,
+    "status": "CONFIRMED"
+  },
+  "three": {
+    "extreme": 2983030,
+    "status": "CONFIRMED",
+    "kt": "16:21:14.734"
+  },
+  "module": {
+    "origin": 2985000,
+    "extreme": 2983030,
+    "size": 1970,
+    "status": "REGULAR_1_2_3",
+    "owner": "3"
+  },
+  "a": {
+    "status": "A_CONFIRMED",
+    "dir": 1,
+    "origin": 2983030,
+    "extreme": 2985080,
+    "size": 2050,
+    "structural_time": "16:21:54.482",
+    "knowledge_time": "16:22:19.155",
+    "confirmations": 1,
+    "aut_direct": "AUT_DIRECT_BY_A_NOT_IMPLEMENTED"
+  },
+  "return_move": {
+    "status": "CONFIRMED_RETURN",
+    "origin": 2984480,
+    "extreme": 2984180,
+    "size": 800,
+    "structural_time": "16:22:18.551",
+    "absorbed": 0
+  },
+  "b": {
+    "status": "ABSORBED_IN_A",
+    "origin": 2984480,
+    "extreme": 2984150,
+    "size": 330,
+    "structural_time": "16:22:18.551",
+    "knowledge_time": "16:22:19.155",
+    "flags": ""
+  },
+  "first_tick": 938,
+  "last_tick": 1835
+}

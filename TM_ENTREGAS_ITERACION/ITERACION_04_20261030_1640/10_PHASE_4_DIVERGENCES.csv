@@ -1,0 +1,7 @@
+id,time,reading,generation,expected,observed_v4,first_causal_tick,cause,classification,question
+D4-01,16:18:34.926,L1,L1-G1,"v005: A=9.1; B=12.3=135% -> B Grande/AUT; nuevo 1 bajista","A=9.1 < midpoint modulo 14.25; B=12.3 hace nuevo extremo del modulo -> absorbido; 1 sigue a 29828.1",16:18:34.926,"A autonomy reference: 1 (56%) vs module 1+2 (32%)","Q_AUT_REF","OPEN"
+D4-02,16:20:24.611,L2,L2-G1,"v005: 3=29830.3; module=19.7; A=20.5","3=29830.3; module=19.7; A=20.5",16:20:24.611,"A 4.1 absorbed; 3 extends; A confirmed at module midpoint","MATCH","NONE"
+D4-03,16:23:00.013,L2,L2-G2,"v005: B Grande/C trend inside 16:23","non-flat open 0.3 -> gap branch; new 1 from open 29846.8",16:23:00.013,"R-GAP-OPEN: any non-flat opening forbids 2 and enters gap","GAP_SUPERSEDES_B_C","NONE"
+D4-04,16:24:00.098,L2,L2-G3,"v005: C trend new 1 at 29852.6","non-flat open -> gap branch; new 1 from open 29836.0",16:24:00.098,"R-GAP-OPEN","GAP_SUPERSEDES_C_ORIGIN","NONE"
+D4-05,full,L1,all,"v3: 51 generations","v4 classic: 4; v4 all: 44",16:18:34.926,"P-A-B100 removed (51->4, -47); GAP_MIN removed (+40, 4->44)","COUNT_CHANGE","Q_AUT_REF"
+D4-06,16:19-16:24,L2,L2-G1..G4,"v3 L2: 4 (2 unique, 2 duplicates)","v4 L2: 4 (1 primary, 2 duplicates, 1 pending)",16:20:24.611,"gap rule + A autonomy","AUDIT_METHOD","NONE"

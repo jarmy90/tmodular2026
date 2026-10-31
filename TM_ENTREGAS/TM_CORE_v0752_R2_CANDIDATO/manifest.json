@@ -1,0 +1,217 @@
+{
+  "package": "TM_CORE_v0752_R2_CANDIDATO",
+  "version": "0.7.5.2-R2",
+  "status": "CANDIDATO_NO_CONFORME_PENDIENTE_AUDITORIA",
+  "file_count": 41,
+  "payload_file_count": 39,
+  "files": [
+    {
+      "path": ".pytest_cache/.gitignore",
+      "size_bytes": 37,
+      "sha256": "3ed731b65d06150c138e2dadb0be0697550888a6b47eb8c45ecc9adba8b8e9bd"
+    },
+    {
+      "path": ".pytest_cache/CACHEDIR.TAG",
+      "size_bytes": 191,
+      "sha256": "37dc88ef9a0abeddbe81053a6dd8fdfb13afb613045ea1eb4a5c815a74a3bde4"
+    },
+    {
+      "path": ".pytest_cache/README.md",
+      "size_bytes": 302,
+      "sha256": "73fd6fccdd802c419a6b2d983d6c3173b7da97558ac4b589edec2dfe443db9ad"
+    },
+    {
+      "path": ".pytest_cache/v/cache/nodeids",
+      "size_bytes": 1923,
+      "sha256": "69d36268e754b39ed541050874db0974449314d39321c54d0967d00edaa5ccca"
+    },
+    {
+      "path": "authority/TM_ARBOL_MAESTRO_CANONICO_COMPLETO_v2_13_PROPUESTA_R1.md",
+      "size_bytes": 13008,
+      "sha256": "465886e3671e21a4b7c962a61cb4aa54c8ac8d4359c10fce6b20e89d13c3ebc5"
+    },
+    {
+      "path": "data/TM_LECTURAS_CONFIRMADAS_16OCT_1615_1730_v003.txt",
+      "size_bytes": 20709,
+      "sha256": "1e634ebb6c004d297e0acb6b0d378de5cfbbe7bbec82fe26363e47c762104e5b"
+    },
+    {
+      "path": "data/TM_TICKFEED_1615_1730.csv",
+      "size_bytes": 3496855,
+      "sha256": "5f701be2307352cb559abbd7bb856a6fd2a1f91e5d269a93dcc9ae2992e2c9ff"
+    },
+    {
+      "path": "diff_v0751_to_v0752.diff",
+      "size_bytes": 47235,
+      "sha256": "02180b908846f5b858a3464ae4b381f3f27183894d2959248d3252d5b03176b7"
+    },
+    {
+      "path": "HANDOFF_DS_TO_AUDITORS.md",
+      "size_bytes": 3027,
+      "sha256": "e310fd9f1ee20cd024adde8b48d5d950797a57b1bcf8794b15d4ac884b725a72"
+    },
+    {
+      "path": "legacy_frozen/TM_CORE_PYTHON_v0751_STREAMING.py",
+      "size_bytes": 93635,
+      "sha256": "4a2877cc7f47e0565d6d788ba20d198486cddeba718f6a8f8498222b38ddefe2"
+    },
+    {
+      "path": "legacy_frozen/TM_CORE_PYTHON_v075_TESTS.py",
+      "size_bytes": 13299,
+      "sha256": "93005a2f0dcc0202a397ac09ad11d720b3c5d579cf5620fe6edab8a09f71c789"
+    },
+    {
+      "path": "out/CORE_RAW_OUTPUT.json",
+      "size_bytes": 3419320,
+      "sha256": "4f5394d9a97679dfa4fece0660adbf1d050b0639942cf57b55e692ca19371003"
+    },
+    {
+      "path": "out/GOLDEN_COMPARISON.json",
+      "size_bytes": 1982,
+      "sha256": "6f53425d1d31d02b15ab7c013ec8918a33a3c3f580d6834866bd845f8e9f8aef"
+    },
+    {
+      "path": "out/HARDCODE_SCAN.json",
+      "size_bytes": 141,
+      "sha256": "5607249c678dcd770632febea0fae468e3a6128acf823f1dca0e24b687b03490"
+    },
+    {
+      "path": "out/LECTURA_NO_REPRODUCIDA.md",
+      "size_bytes": 1316,
+      "sha256": "506662c9938858a3a97cfbe6a7eaed65de8724062ba197865812679feebf226e"
+    },
+    {
+      "path": "out/legacy_reference/legacy_v0751_BarNarrative.csv",
+      "size_bytes": 18805,
+      "sha256": "f50eb43a253f9a39ae5d01d1e9347fdccf0bf9940698306f80a684441b87b858"
+    },
+    {
+      "path": "out/legacy_reference/legacy_v0751_Comparacion_1652_1700.csv",
+      "size_bytes": 602,
+      "sha256": "361e1007c490883f809ec8acb93802833d8368381528e2827f2ad86555be2bb5"
+    },
+    {
+      "path": "out/legacy_reference/legacy_v0751_Eventos.csv",
+      "size_bytes": 569886,
+      "sha256": "f171e99e9068256e4154cddea9cc7242cc699400eaaf93bd26a8746ea6f9699e"
+    },
+    {
+      "path": "out/legacy_reference/legacy_v0751_FunctionalAudit.csv",
+      "size_bytes": 4296753,
+      "sha256": "dfb2ae27c7a551d5bfd4d1b5958c1825269caa4b7eee60723b0118803d4a3d22"
+    },
+    {
+      "path": "out/legacy_reference/legacy_v0751_Informe.json",
+      "size_bytes": 31670,
+      "sha256": "6c50b9c8eb4d7ba70fb4651894830b01c65ab9d25652d2f1930deb6d1cb3735b"
+    },
+    {
+      "path": "out/legacy_reference/legacy_v0751_Lecturas.csv",
+      "size_bytes": 42224,
+      "sha256": "80b22427795c539e5941f6389d3f97f74d755e5262a5a734b8b7ef4bb570101a"
+    },
+    {
+      "path": "out/legacy_reference/legacy_v0751_LocalEventos.csv",
+      "size_bytes": 18512,
+      "sha256": "878967f0c767572d0ad185250bd3c7f122dcc57c91eebc108114d2920d263447"
+    },
+    {
+      "path": "out/legacy_reference/legacy_v0751_LocalSecuencias.csv",
+      "size_bytes": 2228,
+      "sha256": "694a54cee3667b839dd4d6bcf53ae928caf4a7d5c02f3f1dfbaa8d6c40479846"
+    },
+    {
+      "path": "out/legacy_reference/legacy_v0751_Patrones.csv",
+      "size_bytes": 35757,
+      "sha256": "3349e537aa6ade6a999341f47ac362e337b8f218542775d378ba5de791759d30"
+    },
+    {
+      "path": "out/PREFIX_REPORT.json",
+      "size_bytes": 422,
+      "sha256": "951914ac51cff82541919f1cdbbf6aa4dc513276bf5dfe295a32926f9b673967"
+    },
+    {
+      "path": "out/R0062_R0064.json",
+      "size_bytes": 917,
+      "sha256": "f4f69907b16b16803587995dfb6ae297ac341d0fdf2e6e4ed332b3312e0bdb2c"
+    },
+    {
+      "path": "out/RUN_SUMMARY.json",
+      "size_bytes": 724,
+      "sha256": "f49f0e4c972ae618794ef9b7113b343034ebc2097997cb83a372194ecb9b3d0a"
+    },
+    {
+      "path": "out/SELFTEST.json",
+      "size_bytes": 113,
+      "sha256": "bea891d08cd354c520d9e75e6bb95c4df9f63309755f7912a8ebcd63c90f1627"
+    },
+    {
+      "path": "out/TRANSFORMATION_TESTS.json",
+      "size_bytes": 186,
+      "sha256": "f82be6af91ee3384057725c8cfe968fec61265546235faa29259ff78f094db13"
+    },
+    {
+      "path": "python/TM_CORE_PYTHON_v0752_CANONICAL.py",
+      "size_bytes": 111311,
+      "sha256": "639530e32af234de64232802bf7e0a76dee323284f04c2624e90fcb2a4a1d050"
+    },
+    {
+      "path": "README_REPRODUCCION.md",
+      "size_bytes": 1653,
+      "sha256": "c3e7fc57064eb37a159b1e37033848d65ddb3d93c4e4ce04af7d21bc9cdcde10"
+    },
+    {
+      "path": "repro/build_package.py",
+      "size_bytes": 3061,
+      "sha256": "a6a8dfdbb196e63a5d74bba73f91f0ed8f90d31683103ccd49309b6e22fccc99"
+    },
+    {
+      "path": "repro/compare_golden.py",
+      "size_bytes": 4075,
+      "sha256": "827cae4508153c352d3aec888c38e71f3eef211841b610241b2a9e33133fd245"
+    },
+    {
+      "path": "repro/run_all.py",
+      "size_bytes": 1663,
+      "sha256": "c801833ed7d40c36a0dda9e06dddf2e98a76edaeb82a00d92ef88e69d067f3be"
+    },
+    {
+      "path": "repro/run_prefix_matrix.py",
+      "size_bytes": 3608,
+      "sha256": "5edd62a4ddbd6452c9549eb9322e2c94e07e7a424fc260219ab86d13912651cb"
+    },
+    {
+      "path": "requirements.txt",
+      "size_bytes": 38,
+      "sha256": "236431effb741c8099ccca33592c84b5fc46b90ade5dff1e91738171700e91d2"
+    },
+    {
+      "path": "tests/legacy_v075/TM_CORE_PYTHON_v075_STREAMING.py",
+      "size_bytes": 76198,
+      "sha256": "45a467252c45a0da437029fe7360e0ac029f195ae194791cb6ba7837bd34fd28"
+    },
+    {
+      "path": "tests/legacy_v075/TM_CORE_PYTHON_v075_TESTS.py",
+      "size_bytes": 13299,
+      "sha256": "93005a2f0dcc0202a397ac09ad11d720b3c5d579cf5620fe6edab8a09f71c789"
+    },
+    {
+      "path": "tests/test_transformations.py",
+      "size_bytes": 2842,
+      "sha256": "f019566a8f0831694f67371a6dcf750938c21bbd7973671f906860789aaa8bf7"
+    }
+  ],
+  "authorities": {
+    "tree": "TM_ARBOL_MAESTRO_CANONICO_COMPLETO_v2_13_PROPUESTA_R1.md (candidate; not Javier-approved)",
+    "feed": "data/TM_TICKFEED_1615_1730.csv",
+    "golden": "data/TM_LECTURAS_CONFIRMADAS_16OCT_1615_1730_v003.txt"
+  },
+  "reproduction": "python repro/run_all.py",
+  "verdict": "LECTURA_NO_REPRODUCIDA",
+  "known_failures": [
+    "golden 16:23 AUT conflicts with universal 127%+0.25 B rule",
+    "R0062/R0064 exact regression mismatch",
+    "global max-3 concurrency exceeded",
+    "full physical prefix matrix not run"
+  ]
+}

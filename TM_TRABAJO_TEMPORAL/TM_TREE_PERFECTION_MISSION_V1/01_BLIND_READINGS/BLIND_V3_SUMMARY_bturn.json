@@ -1,0 +1,14 @@
+{
+  "a_mode": "bturn",
+  "ticks": 20335,
+  "generations": 26,
+  "end_reasons": {
+    "AUT_B": 4,
+    "A_USED_AS_TREND": 15,
+    "GAP": 6,
+    "OPEN_AT_FEED_END": 1
+  },
+  "trace_sha256": "8a8d1da95b4800edcc5a5805060835d0f3f81760c175d412477115cfc81d980d",
+  "first_tick": 1,
+  "last_tick": 20335
+}

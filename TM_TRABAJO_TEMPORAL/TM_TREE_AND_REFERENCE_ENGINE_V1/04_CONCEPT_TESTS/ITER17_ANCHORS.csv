@@ -1,0 +1,20 @@
+segment_id,bar,expected_state,status,detail
+B1-1,16:16,"1 inicial 29877,0->29860,8",PASS,L1_one=1620
+B1-2,16:17,"2 no confirma; modulo 28,5",PASS,L1_mod=2850
+B1-3,16:18,"A 9,1",PASS,L1_a=A_CONFIRMED/910
+B1-4,16:19,"AUT + TT 29829,1",PASS,L1_b=AUT tt=2982910
+B2-1,16:20,"L2 1 = 7,5",PASS,L2_one=750
+B2-2,16:21,"L2 2 = 12,3",PASS,L2_two=1230
+B2-3,16:22,"L2 3 = 29830,3; modulo 19,7",PASS,L2_mod=1970
+B2-4,16:22,"L2 AUT directo; nuevo 1 hasta 29850,8",PASS,L2_n=2983030->2985080
+B3-1,16:23,"L2 nuevo 1 29852,6->29837,3",PASS,L2_n=2985260->2983730
+B3-2,16:24,"TT alcista L2 pendiente; nuevo 1 a 29828,1",PASS,L2_tt=TT_PENDING/2987050
+B4-1,16:25,"TT L2 confirmado/extendido a 29875,4",PASS,L2_tt=TT_EXTENDED/2987050
+B4-2,16:25,"nuevo 1 L1 desde la apertura 29848,5",PASS,L1_n=2984850
+B4-3,16:26,"A principal desde 29875,4",PASS,L1_a=CONTRARY_MOVE_PENDING/2630@2987540
+B4-4,16:27,A/B/A-tendencia; TT pendiente,FAIL,L1=B_LIVE/A_CONFIRMED/CANDIDATE tt=TT_EXTENDED
+B4-5,16:28,dos TT pendientes (L1 y L2),FAIL,L1_tt=TT_EXTENDED L2_tt=TT_EXTENDED
+B4-6,16:29,dos TT confirmados; nuevo 1 bajista,FAIL,no alcanzado
+B4-7,16:30,"modulo 53,6; A iniciada",FAIL,L1_mod=0
+B4-8,16:31,"final_A 29810,8; TT 29757,2 pendiente",FAIL,L1_tt=TT_EXTENDED/2982910
+B4-9,16:32,TT falla por final_A; modulo conjunto,FAIL,L1_tt=TT_EXTENDED

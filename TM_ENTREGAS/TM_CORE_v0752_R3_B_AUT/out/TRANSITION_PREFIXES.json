@@ -1,0 +1,109 @@
+{
+  "method": "physical CSV truncation; fresh Python subprocess per cut; compare emitted knowledge prefix only",
+  "transition_seeds": [
+    850,
+    1809,
+    1867,
+    2298
+  ],
+  "cuts": 12,
+  "prefix_failures": 0,
+  "results": [
+    {
+      "cut_sequence_id": 849,
+      "ticks": 849,
+      "physical_feed_sha256": "e70d1d66a2bb06dc568dceb5071acf48716700e5ca30ea2fb13e0fe21287bbb7",
+      "expected_events": 9,
+      "observed_events": 9,
+      "passed": true
+    },
+    {
+      "cut_sequence_id": 850,
+      "ticks": 850,
+      "physical_feed_sha256": "394b1e753871c3ff7610af8e823f998d2c71889a7927446076084a5b0007797d",
+      "expected_events": 10,
+      "observed_events": 10,
+      "passed": true
+    },
+    {
+      "cut_sequence_id": 851,
+      "ticks": 851,
+      "physical_feed_sha256": "ba3de36fbaa320e68ccee1a099e934cc08dd7b82f22f8de5fb9039416a030db6",
+      "expected_events": 10,
+      "observed_events": 10,
+      "passed": true
+    },
+    {
+      "cut_sequence_id": 1808,
+      "ticks": 1808,
+      "physical_feed_sha256": "18171f89e9691b9daae9d4a6bc80bea711cbab73cd62b4203542acbb0b768a4f",
+      "expected_events": 40,
+      "observed_events": 40,
+      "passed": true
+    },
+    {
+      "cut_sequence_id": 1809,
+      "ticks": 1809,
+      "physical_feed_sha256": "8fea2703109bd15568f3421e16a2a6268e46bb7422e2953181eca2ddab7c0851",
+      "expected_events": 46,
+      "observed_events": 46,
+      "passed": true
+    },
+    {
+      "cut_sequence_id": 1810,
+      "ticks": 1810,
+      "physical_feed_sha256": "0c72842f5116dfac1bf5925eb7d20f527252720b545e7144ed7036b17f3e414c",
+      "expected_events": 46,
+      "observed_events": 46,
+      "passed": true
+    },
+    {
+      "cut_sequence_id": 1866,
+      "ticks": 1866,
+      "physical_feed_sha256": "079991418a949bdc5cd9e701726d4877e1f5fd5f8f6b3c3a2b0d6ee815fa74b5",
+      "expected_events": 50,
+      "observed_events": 50,
+      "passed": true
+    },
+    {
+      "cut_sequence_id": 1867,
+      "ticks": 1867,
+      "physical_feed_sha256": "4d8e598fad3198a9a9aca17508d6dc0b9bb86396d5b28f2c7faca9b887981e67",
+      "expected_events": 52,
+      "observed_events": 52,
+      "passed": true
+    },
+    {
+      "cut_sequence_id": 1868,
+      "ticks": 1868,
+      "physical_feed_sha256": "37eb5355189ab45213f75a4e07caceb913900a5aba13a6ab6958f240e7f164f2",
+      "expected_events": 52,
+      "observed_events": 52,
+      "passed": true
+    },
+    {
+      "cut_sequence_id": 2297,
+      "ticks": 2297,
+      "physical_feed_sha256": "e85e92b729dc6a096096a9ff9b969f1809a707e0709b4bd889722a771dee3b70",
+      "expected_events": 69,
+      "observed_events": 69,
+      "passed": true
+    },
+    {
+      "cut_sequence_id": 2298,
+      "ticks": 2298,
+      "physical_feed_sha256": "f8d87ddec08e019fc35830064122e7bf2517ccd5d994e0f46058709b352d2a0c",
+      "expected_events": 71,
+      "observed_events": 71,
+      "passed": true
+    },
+    {
+      "cut_sequence_id": 2299,
+      "ticks": 2299,
+      "physical_feed_sha256": "4c2262a7fe1c0fd196922bc9d14883fbee92adf4f5ee63c2fc4cffed0c0c4dad",
+      "expected_events": 72,
+      "observed_events": 72,
+      "passed": true
+    }
+  ]
+}

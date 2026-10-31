@@ -1,0 +1,20 @@
+test_id,transition,kind,description,pass,detail,classification
+T-001,1,positive,1 inicial 10000->9800 confirmada,True,status=CONFIRMED size=200,CANONICAL_PASS
+T-002,2,positive,2 candidata tras apertura plana,True,status=CANDIDATE,CANONICAL_PASS
+T-003,2,positive,2 confirmada al 100% de 1,True,status=CONFIRMED size=200,CANONICAL_PASS
+T-004,2,negative,2 imposible al cierre sin 100%,True,two=IMPOSSIBLE_CLOSE mod=250,CANONICAL_PASS
+T-005,2,negative,"2 imposible por cola inicial > 0,25",True,two=IMPOSSIBLE_TAIL mod=200,CANONICAL_PASS
+T-015,opening,boundary,"0,25 exacto no es plano, prohibe 2 y abre nuevo 1 desde la apertura",True,"two=IMPOSSIBLE_NO_FLAT one=NEW_ONE_ACTIVE origin=9825 dir=1 events=['ONE_CANDIDATE_INITIAL', 'INITIAL_BAR_CLOSED', 'ONE_CONFIRMED_AT_CLOSE', 'NON_FLAT_OPEN_OBSERVED', 'NO_TWO_BY_NON_FLAT_OPEN', 'TWO_IMPOSSIBLE_NO_FLAT', 'GAP_IMPLICIT_SEQUENCE', 'GAP_IMPLICIT_NEW_ONE', 'CORE_END']",CANONICAL_PASS
+T-016,opening,boundary,"0,10 es plano y permite 2 candidata",True,two=CANDIDATE,CANONICAL_PASS
+T-017,opening,negative,apertura no plana prohibe 2,True,two=IMPOSSIBLE_NO_FLAT,CANONICAL_PASS
+T-006,3,pending,3 pendiente con retroceso valido,True,phase=CORE_WAIT_THREE_A_NOT_IMPLEMENTED three=,CANONICAL_PASS
+T-007,3,positive,3 confirmada al superar el extremo de 2,True,three=CONFIRMED extreme=9100,CANONICAL_PASS
+T-008,3,boundary,50% exacto conserva 3,True,event=True three=CONFIRMED,CANONICAL_PASS
+T-009,3,negative,retroceso > 50% imposibilita 3,True,three=IMPOSSIBLE mod=800,CANONICAL_PASS
+T-010,module,positive,modulo regular 1+2+3,True,status=REGULAR_1_2_3 size=900,CANONICAL_PASS
+T-018,2/3,negative,vibracion interna no abre 3 en la vela de 2,True,three= two=9400/400,CANONICAL_PASS
+T-019,3,positive,3 se abre en la vela siguiente tras retroceso valido,True,three=CONFIRMED/9350 mod=650,CANONICAL_PASS
+T-011,global,determinism,doble ejecucion identica,True,lines=9,CANONICAL_PASS
+T-012,global,prefix,prefijo consistente,True,prefix=6 full=9,CANONICAL_PASS
+T-013,1/2/module,real,ancla 16:15-16:18,True,one=1620 two=IMPOSSIBLE_CLOSE/1260 mod=2850/BY_DISCARD_1_2,CANONICAL_PASS
+T-014,1/2/3/module,real,ancla L2 16:19-16:22,True,one=750 two=1230 three=2983030 mod=1970,CANONICAL_PASS

@@ -1,0 +1,205 @@
+{
+  "iteration_id": "ITERACION_07_BG_AUT",
+  "date": "2026-10-30T17:34:41",
+  "objective": "B Grande, AUT and new one; corrections to A birth and return",
+  "folder": "C:\\Users\\profesor\\tm\\Teoria Modular\\TM_ENTREGAS_ITERACION\\ITERACION_07_BG_AUT_20261030_1734",
+  "zip_path": "C:\\Users\\profesor\\tm\\Teoria Modular\\TM_ENTREGAS_ITERACION\\TM_ITERATION_07_REVIEW.zip",
+  "members": [
+    {
+      "path": "01_CHECKPOINT_BG_AUT.md",
+      "original_path": "TM_TRABAJO_TEMPORAL\\TM_TREE_AND_REFERENCE_ENGINE_V1\\10_REPORTS\\CHECKPOINT_7_B_GRANDE_AUT.md",
+      "size": 3325,
+      "sha256": "ea469d9eaa2d25ae81bd7fa5bd83a03bbf86bc38be6221b3c43b7d803ce35949",
+      "reason": "checkpoint"
+    },
+    {
+      "path": "02_EXECUTABLE_TREE_BG_AUT.md",
+      "original_path": "TM_TRABAJO_TEMPORAL\\TM_TREE_AND_REFERENCE_ENGINE_V1\\02_EXECUTABLE_TREE\\TM_TREE_EXECUTABLE_B_GRANDE_AUT_V1.md",
+      "size": 2600,
+      "sha256": "fd8534c26ae721f32d6aca026749fa290fd2f4c36ddf6e5b574d85c7ec966a8b",
+      "reason": "B Grande/AUT tree"
+    },
+    {
+      "path": "03_TRANSITIONS_BG_AUT.csv",
+      "original_path": "TM_TRABAJO_TEMPORAL\\TM_TREE_AND_REFERENCE_ENGINE_V1\\03_TRANSITION_SPECS\\TM_TREE_TRANSITIONS_B_GRANDE_AUT_V1.csv",
+      "size": 2133,
+      "sha256": "5ef9f8a3da658c4e110e2c0e747d50868ceee728f101a7c5bec7d8a078640e32",
+      "reason": "B Grande/AUT transitions"
+    },
+    {
+      "path": "04_TEST_MATRIX_BG_AUT.csv",
+      "original_path": "TM_TRABAJO_TEMPORAL\\TM_TREE_AND_REFERENCE_ENGINE_V1\\04_CONCEPT_TESTS\\CONCEPT_TEST_MATRIX_B_GRANDE_AUT_V1.csv",
+      "size": 2358,
+      "sha256": "cb6606fb39793f25f62c4625a7730a0c4c8045282354975a1bbc5e9e55effc8a",
+      "reason": "test matrix"
+    },
+    {
+      "path": "05_TEST_RESULTS_BG_AUT.csv",
+      "original_path": "TM_TRABAJO_TEMPORAL\\TM_TREE_AND_REFERENCE_ENGINE_V1\\04_CONCEPT_TESTS\\AB_CANDIDATE_TEST_RESULTS.csv",
+      "size": 3175,
+      "sha256": "dc445f954aa9ba3053149eea167800d4a9f469a62ef9d922da8fe8948bbeedf8",
+      "reason": "32 A/B/BG/AUT tests"
+    },
+    {
+      "path": "06_TEST_SUMMARY_BG_AUT.json",
+      "original_path": "TM_TRABAJO_TEMPORAL\\TM_TREE_AND_REFERENCE_ENGINE_V1\\04_CONCEPT_TESTS\\AB_CANDIDATE_TEST_RESULTS.json",
+      "size": 126,
+      "sha256": "38091f0e1902d578c4f5ce073ab6eaca5457498ce53c4941918bbd9527fbc7ac",
+      "reason": "test summary"
+    },
+    {
+      "path": "07_CORE_TEST_RESULTS.csv",
+      "original_path": "TM_TRABAJO_TEMPORAL\\TM_TREE_AND_REFERENCE_ENGINE_V1\\04_CONCEPT_TESTS\\CORE_TEST_RESULTS.csv",
+      "size": 1649,
+      "sha256": "19a405447fbd97627a1d5c243f2a115d253ca671e58630814ac0f0fdd8531038",
+      "reason": "core 19/19"
+    },
+    {
+      "path": "08_CORE_TEST_SUMMARY.json",
+      "original_path": "TM_TRABAJO_TEMPORAL\\TM_TREE_AND_REFERENCE_ENGINE_V1\\04_CONCEPT_TESTS\\CORE_TEST_RESULTS.json",
+      "size": 180,
+      "sha256": "c8b034d3417d42656fdc9630a5d9a3dec6030cfe2a6c029c2fd6a02fd4a9f033",
+      "reason": "core summary"
+    },
+    {
+      "path": "09_CORE_REPLAY_CHECKS.json",
+      "original_path": "TM_TRABAJO_TEMPORAL\\TM_TREE_AND_REFERENCE_ENGINE_V1\\04_CONCEPT_TESTS\\CORE_REPLAY_CHECKS.json",
+      "size": 451,
+      "sha256": "0bc828f360c0122f226063d0525d6704b7ca072e4632e4957244062674b8fa7c",
+      "reason": "core replay checks"
+    },
+    {
+      "path": "10_T001_CORRECTION.md",
+      "original_path": "TM_TRABAJO_TEMPORAL\\TM_TREE_AND_REFERENCE_ENGINE_V1\\04_CONCEPT_TESTS\\T001_CORRECTION.md",
+      "size": 814,
+      "sha256": "ebde69b685b4fd01d667b754c5ea25b7cced7864c9a59f7718603857aee6c7af",
+      "reason": "T-001 correction"
+    },
+    {
+      "path": "11_REFERENCE_INTERPRETER_BG_AUT.py",
+      "original_path": "TM_TRABAJO_TEMPORAL\\TM_TREE_AND_REFERENCE_ENGINE_V1\\05_REFERENCE_ENGINE\\tm_reference_interpreter_v1_bg_aut.py",
+      "size": 35683,
+      "sha256": "8b94e35d29e884788b3f3e72695d854307b3d42ddb77759f4c3867c24b2f1ff1",
+      "reason": "B Grande/AUT interpreter"
+    },
+    {
+      "path": "12_REFERENCE_INTERPRETER_AB.py",
+      "original_path": "TM_TRABAJO_TEMPORAL\\TM_TREE_AND_REFERENCE_ENGINE_V1\\05_REFERENCE_ENGINE\\tm_reference_interpreter_v1_ab_candidate.py",
+      "size": 30520,
+      "sha256": "09a16f9ca1386855e26f4d49593e6c4171a67fe72f9494cb5bd98a4626cbaa71",
+      "reason": "A/B baseline"
+    },
+    {
+      "path": "13_REFERENCE_INTERPRETER_CORE.py",
+      "original_path": "TM_TRABAJO_TEMPORAL\\TM_TREE_AND_REFERENCE_ENGINE_V1\\05_REFERENCE_ENGINE\\tm_reference_interpreter_v1.py",
+      "size": 20485,
+      "sha256": "ef3a4a56ff56591497b6f478adcabf945077d518c174c8d604595a54ad5edcc6",
+      "reason": "core baseline"
+    },
+    {
+      "path": "14_STATE_L1_1615_1618.json",
+      "original_path": "TM_TRABAJO_TEMPORAL\\TM_TREE_AND_REFERENCE_ENGINE_V1\\06_SYNTHETIC_REPLAYS\\bg_state_1615_1618.json",
+      "size": 1816,
+      "sha256": "56f1c4a1ab489d25ae2e2364086b66e8d3dad41fda7b83c4eac5e206d511d005",
+      "reason": "L1 state"
+    },
+    {
+      "path": "15_EVENTS_L1_1615_1618.csv",
+      "original_path": "TM_TRABAJO_TEMPORAL\\TM_TREE_AND_REFERENCE_ENGINE_V1\\06_SYNTHETIC_REPLAYS\\bg_events_1615_1618.csv",
+      "size": 1974,
+      "sha256": "4ee5200fe8310bfb803e0229061fe9f685e6afd916ce054a8ce5447c6bdd4141",
+      "reason": "L1 events"
+    },
+    {
+      "path": "16_STATE_L2_1619_1622.json",
+      "original_path": "TM_TRABAJO_TEMPORAL\\TM_TREE_AND_REFERENCE_ENGINE_V1\\07_REAL_REPLAYS\\bg_state_L2_1619_1622.json",
+      "size": 1793,
+      "sha256": "9fb471ab3a4b8c7b24d0325f67a86487557d6d6db53273a8a2f29dda3b11d9cd",
+      "reason": "L2 state"
+    },
+    {
+      "path": "17_EVENTS_L2_1619_1622.csv",
+      "original_path": "TM_TRABAJO_TEMPORAL\\TM_TREE_AND_REFERENCE_ENGINE_V1\\07_REAL_REPLAYS\\bg_events_L2_1619_1622.csv",
+      "size": 3324,
+      "sha256": "77d3f6eb1449100b917d9a8ad0d75338df9b115ed8baf97f7238618b23bdc42c",
+      "reason": "L2 events"
+    },
+    {
+      "path": "18_TREE_PYTHON_MATRIX_BG.csv",
+      "original_path": "TM_TRABAJO_TEMPORAL\\TM_TREE_AND_REFERENCE_ENGINE_V1\\08_TREE_PYTHON_COMPARISON\\BG_TREE_PYTHON_MATRIX_V1.csv",
+      "size": 1976,
+      "sha256": "04b2b50e3be4135b6e0bec2a41a9aaf638fc21af8cfd53a0c9497fae75343874",
+      "reason": "tree-Python comparison"
+    },
+    {
+      "path": "19_OPEN_RULES_BG_AUT.md",
+      "original_path": "TM_TRABAJO_TEMPORAL\\TM_TREE_AND_REFERENCE_ENGINE_V1\\09_OPEN_RULES\\OPEN_RULES_B_GRANDE_AUT_V1.md",
+      "size": 2047,
+      "sha256": "91907ef7e8d2bab312727969a2193a95f0591269aca6ac3a1b1a69727e0cdaf5",
+      "reason": "open rules"
+    },
+    {
+      "path": "20_BG_AUT_MANIFEST.json",
+      "original_path": "TM_TRABAJO_TEMPORAL\\TM_TREE_AND_REFERENCE_ENGINE_V1\\11_MANIFEST\\BG_AUT_MANIFEST.json",
+      "size": 7845,
+      "sha256": "cc96766b51ba221db00d0cb2c1e544c2cb35a3b6d57df4ff4de4b9cc232ccb6b",
+      "reason": "manifest"
+    },
+    {
+      "path": "21_TRACE_INDEX.json",
+      "original_path": "TM_TRABAJO_TEMPORAL/TM_TREE_AND_REFERENCE_ENGINE_V1",
+      "size": 689,
+      "sha256": "3024264135c5cd446a20d73ee058991c407dc9d3e9a0ef715c04307e1076eafe",
+      "reason": "full trace hashes and paths"
+    },
+    {
+      "path": "22_TRACE_SAMPLE.jsonl",
+      "original_path": "TM_TRABAJO_TEMPORAL/TM_TREE_AND_REFERENCE_ENGINE_V1",
+      "size": 11308,
+      "sha256": "99c99710675980293586b99626d15850689d7af9b67a0f9a08b1e3c70e954d32",
+      "reason": "focal trace sample"
+    },
+    {
+      "path": "SHA256SUMS.txt",
+      "original_path": "TM_ENTREGAS_ITERACION\\ITERACION_07_BG_AUT_20261030_1734\\SHA256SUMS.txt",
+      "size": 2060,
+      "sha256": "1870fad8006d7f3e918b8b52e38529091c56b758ceedeafd81725d0957eddd13",
+      "reason": "hashes of the package members"
+    }
+  ],
+  "member_count": 23,
+  "metadata_not_self_hashed": [
+    "PACKAGE_MANIFEST.json"
+  ],
+  "originals_modified": false,
+  "tree_modified": false,
+  "engine_modified": false,
+  "golden_modified": false,
+  "tests": {
+    "core": 19,
+    "a_bg_aut": 32,
+    "total": 51,
+    "failed": 0
+  },
+  "anchors": {
+    "L1": {
+      "B_grande_time": "16:18:34.125",
+      "B_grande": 910,
+      "AUT_time": "16:18:34.926",
+      "B_aut": 1230,
+      "new_one_origin": 2985760,
+      "new_one_extension": 2984300
+    },
+    "L2": {
+      "one": 750,
+      "two": 1230,
+      "three": 2983030,
+      "module": 1970,
+      "A": 2050
+    }
+  },
+  "gate_core": "PASS",
+  "gate_bg_aut": "GATE_B_GRANDE_AUT_PASS",
+  "tree_gate": "NOT_READY_TO_FREEZE_TREE",
+  "engine_status": "REFERENCE_ENGINE_INCOMPLETE"
+}

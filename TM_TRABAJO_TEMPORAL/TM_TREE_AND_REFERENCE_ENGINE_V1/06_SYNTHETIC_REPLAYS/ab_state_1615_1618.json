@@ -1,0 +1,61 @@
+{
+  "reader": "TM_REFERENCE_INTERPRETER_V1_AB_CANDIDATE",
+  "reading_id": "L1",
+  "ticks": 937,
+  "phase": "B_LIVE",
+  "one": {
+    "dir": -1,
+    "origin": 2987700,
+    "extreme": 2986080,
+    "size": 1620,
+    "status": "CONFIRMED"
+  },
+  "two": {
+    "origin": 2986110,
+    "extreme": 2984850,
+    "size": 1260,
+    "status": "IMPOSSIBLE_CLOSE"
+  },
+  "three": {
+    "extreme": 0,
+    "status": "IMPOSSIBLE",
+    "kt": ""
+  },
+  "module": {
+    "origin": 2987700,
+    "extreme": 2984850,
+    "size": 2850,
+    "status": "BY_DISCARD_1_2",
+    "owner": "2"
+  },
+  "a": {
+    "status": "A_CONFIRMED",
+    "dir": 1,
+    "origin": 2984850,
+    "extreme": 2985760,
+    "size": 910,
+    "structural_time": "16:16:17.809",
+    "knowledge_time": "16:17:05.621",
+    "confirmations": 1,
+    "aut_direct": ""
+  },
+  "return_move": {
+    "status": "CONFIRMED_RETURN",
+    "origin": 2985760,
+    "extreme": 2985500,
+    "size": 260,
+    "structural_time": "16:17:05.425",
+    "absorbed": 0
+  },
+  "b": {
+    "status": "CANDIDATE",
+    "origin": 2985760,
+    "extreme": 2984300,
+    "size": 1460,
+    "structural_time": "16:17:05.425",
+    "knowledge_time": "16:17:05.621",
+    "flags": "B_100_REACHED_NOT_IMPLEMENTED,B_AUT_LIMIT_REACHED_NOT_IMPLEMENTED"
+  },
+  "first_tick": 1,
+  "last_tick": 937
+}

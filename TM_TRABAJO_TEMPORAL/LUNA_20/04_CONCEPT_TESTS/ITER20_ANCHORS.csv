@@ -1,0 +1,11 @@
+anchor_id,expected,status,actual,authority
+D1,"A 29875,4 -> 29849,1 (26,3) al cierre de 16:26",PASS,16:26 a=CONTRARY_MOVE_PENDING/2630@2987540 mod=0 | 16:27 a=A_CONFIRMED/2630@2987540 mod=2630,CANONICAL
+D2,"TT objetivo 29822,8 = final_A 29849,1 - modulo 26,3",PASS,PRIMARY-G1-TT-2982280 obj=2982280 final_A=2984910 mod=2630 inval=A_ORIGIN@2987540,CANONICAL
+D3,TT PENDING en 16:27 y 16:28 sin cambio de objetivo,PASS,16:27=TT_PENDING@2982280 16:28=TT_PENDING@2982280,CANONICAL
+D4,la propiedad del TT impide reescribir sus referencias,PASS,trend_owner=True aut_direct_events=0 inval=A_ORIGIN@2987540,CANONICAL
+D5,TT confirmado durante 16:29,PASS,16:29=TT_CONFIRMED confirmed_at=989,CANONICAL
+D6,"el TT cierra el ciclo y el nuevo 1 alcanza 29784,6 en 16:30",PASS,16:30 tt=TT_CONFIRMED cycle=2 n=2982060->2978460,CANONICAL
+D7,"trasladar +1.000 puntos conserva modulo, final_A y objetivo",PASS,"base=(2630,2984910,2982280) shifted=[(2630, 2984910, 2982280)]",CANONICAL
+D8,inversion vertical conserva modulo e invierte direccion,PASS,"base_dir=-1 inv=[(2630, 1)]",CANONICAL
+D9,determinismo y consistencia de prefijo,PASS,det=True prefix=True,CANONICAL
+D10,16:30-16:32 declarado tramo abierto (no se finge cerrado),PASS,16:32 phase=C_LIVE tt=TT_CONFIRMED mod=2630,OPEN_RULE

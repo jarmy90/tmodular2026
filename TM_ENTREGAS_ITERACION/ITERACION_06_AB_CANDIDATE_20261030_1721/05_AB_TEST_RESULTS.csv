@@ -1,0 +1,15 @@
+test_id,area,kind,description,pass,detail
+A-01,absorption,negative,extension del modulo absorbe A,True,a=ABSORBED_IN_ACTIVE_FUNCTION b= mod=1100
+A-02,A/B,positive,retorno autonomo confirma A y abre B,True,a=A_CONFIRMED/500 b=CANDIDATE/9500/250
+A-03,return,negative,retorno provisional absorbido en A,True,a=CONTRARY_MOVE_PENDING return=ABSORBED_IN_A b=
+A-04,AUT direct,negative,A supera la base antes de B,True,a=A_CONFIRMED conf=1 aut=AUT_DIRECT_BY_A_NOT_IMPLEMENTED b=
+A-05,continuity,positive,A cruza velas sin cambiar origen,True,a=A_CONFIRMED/9000/9500
+A-06,A,positive,"ancla L1 A=9,1 y una sola confirmacion",True,a=910 conf=1 events=1
+A-07,B,positive,B conserva origen en el extremo de A,True,b=CANDIDATE/2985760/2984300
+A-08,times,positive,structural_time != knowledge_time,True,a_st=1792167377809 a_kt=1792167425621 b_st=1792167425425 b_kt=1792167425621
+A-09,invariant,negative,no existe B antes de A confirmada,True,a=CONTRARY_MOVE_PENDING b=
+A-10,A,positive,"L2 A confirmada una vez desde 29830,3",True,a=1/2983030 three=2983030 mod=1970
+A-11,B,flag,B 100 y 127% se registran sin clasificar,True,"flags=B_100_REACHED_NOT_IMPLEMENTED,B_AUT_LIMIT_REACHED_NOT_IMPLEMENTED"
+A-12,core,real,L2 mantiene 1/2/3/modulo,True,1=750 2=1230 3=2983030 mod=1970
+A-13,determinism,global,doble ejecucion y prefijo L1,True,trace=937 prefix=717
+A-14,return,boundary,el retorno se confirma con continuidad,True,ticks=2 b_st=120200 b_kt=120300

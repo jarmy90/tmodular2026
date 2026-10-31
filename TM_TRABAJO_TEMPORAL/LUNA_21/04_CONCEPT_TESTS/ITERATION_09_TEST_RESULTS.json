@@ -1,0 +1,42 @@
+{
+  "reader": "TM_REFERENCE_INTERPRETER_V1_DIRECT_AUT",
+  "reader_file": "tm_reference_interpreter_v1_direct_aut.py",
+  "iteration": "09",
+  "tests_total": 86,
+  "tests_passed": 86,
+  "tests_failed": 0,
+  "all_pass": true,
+  "classification": {
+    "CANONICAL_PASS": {
+      "tests": 23,
+      "passed": 23,
+      "all_pass": true
+    },
+    "PROVISIONAL_POLICY_PASS": {
+      "tests": 62,
+      "passed": 62,
+      "all_pass": true
+    },
+    "OPEN_RULE_BLOCK": {
+      "tests": 1,
+      "passed": 1,
+      "all_pass": true
+    }
+  },
+  "blocks": {
+    "core": 19,
+    "b_grande_aut_by_b": 32,
+    "aut_direct_by_a": 17,
+    "c_grande_trend": 18
+  },
+  "provisional_policies": [
+    "return autonomy: contrary + own extension"
+  ],
+  "open_rule_blocks": [
+    "CUT",
+    "FT",
+    "gap new-1",
+    "concurrency",
+    "AUT direct with A pending"
+  ]
+}

@@ -1,0 +1,12 @@
+ITERACION_08_DIRECT_AUT
+fecha emision: 2026-10-30
+estado: empaquetado sin integridad verificada en esta llamada
+total_tests_informados: 65
+gate_direct_aut: GATE_AUT_DIRECT_BY_A_PASS
+tree_gate: NOT_READY_TO_FREEZE_TREE
+engine_status: REFERENCE_ENGINE_INCOMPLETE
+ruta_documental: TM_TRABAJO_TEMPORAL/TM_TREE_AND_REFERENCE_ENGINE_V1/13_ITERATION_PACKAGES/build_iteration_08.py
+ruta_estimada_entrega: TM_ENTREGAS_ITERACION/ITERACION_08_DIRECT_AUT_20261030_1826
+ruta_estimada_zip: TM_ENTREGAS_ITERACION/TM_ITERATION_08_REVIEW.zip
+observacion: el ZIP no aparecio en el inventario visible al final del ciclo
+accion_siguiente_prioritaria: verificar existencia y limpiar estado de construccion

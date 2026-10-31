@@ -1,0 +1,887 @@
+--- v0751/TM_CORE_PYTHON_v0751_STREAMING.py
++++ v0752/TM_CORE_PYTHON_v0752_CANONICAL.py
+@@ -1,4 +1,4 @@
+-﻿"""TM Core v0.7.5.1 - lector funcional streaming, causal y auditable."""
++"""TM Core v0.7.5.2 - lector causal con funciones locales en el estado principal."""
+ 
+ from __future__ import annotations
+ 
+@@ -7,6 +7,7 @@
+ import hashlib
+ import json
+ import math
++import pickle
+ import sys
+ import tempfile
+ from collections import defaultdict
+@@ -15,7 +16,7 @@
+ from pathlib import Path
+ from typing import Any, Callable, Iterable, Optional
+ 
+-VERSION = "0.7.5.1"
++VERSION = "0.7.5.2-R2"
+ PRICE_SCALE = 100
+ MOVE = 600
+ STRUCTURAL_MOVE = 200
+@@ -31,11 +32,11 @@
+ A_SIGNIFICANT_DEN = 100
+ A_MAX_MODULE_MULTIPLE = 2.0
+ MAX_ACTIVE = 3
+-WINDOW_START = "16:52:00"
+-WINDOW_END = "17:01:00"
+ 
+ FUNCTION_LABELS = {
+     "1",
++    "2",
++    "3",
+     "A",
+     "B",
+     "C",
+@@ -190,6 +191,7 @@
+     c_knowledge_time: int = 0
+     aut_time: int = 0
+     aut_price: int = 0
++    aut_source: str = ""
+     tt_target: int = 0
+     tt_hit: bool = False
+     tt_time: int = 0
+@@ -490,226 +492,6 @@
+             note=note,
+         )
+     )
+-
+-
+-def detect_local_sequences(engine: "Engine") -> list[LocalSequence]:
+-    """Detecta la secuencia local 1-2-3 y su jerarquia A/B/AUT por barra.
+-
+-    La regla 1-2-3 se evalua con barras completas: 1 con recorrido >= MOVE,
+-    2 con apertura en plano, sin cola inicial y tamano >= 1, 3 con nuevo
+-    extremo. La jerarquia posterior usa los movimientos causales del motor.
+-    """
+-    last_time = engine.points[-1].time_ms if engine.points else 0
+-    bars = [
+-        bar
+-        for bar in sorted(engine.bars.values(), key=lambda item: item.idx)
+-        if bar.open.time_ms <= last_time
+-    ]
+-    sequences: list[LocalSequence] = []
+-    for i in range(len(bars) - 2):
+-        b1, b2, b3 = bars[i], bars[i + 1], bars[i + 2]
+-        if b2.idx != b1.idx + 1 or b3.idx != b2.idx + 1:
+-            continue
+-        found = _local_123(b1, b2, b3)
+-        if found is None:
+-            continue
+-        direction = found["direction"]
+-        leg_data = found["legs"]
+-        seq = LocalSequence(
+-            sequence_id=f"LS{len(sequences) + 1:04d}",
+-            direction=direction,
+-            bars="/".join(found["bars"]),
+-            module_origin=found["module_origin"],
+-            module_extreme=found["module_extreme"],
+-            module_origin_time=leg_data[0][0].time_ms,
+-            module_extreme_time=leg_data[2][1].time_ms,
+-            module_origin_seq=leg_data[0][0].seq,
+-            module_extreme_seq=leg_data[2][1].seq,
+-        )
+-        _add_local_leg(
+-            seq, "1", direction, leg_data[0][0].price, leg_data[0][1].price,
+-            leg_data[0][0].time_ms, leg_data[0][1].time_ms, leg_data[1][1].time_ms,
+-            "1 local",
+-        )
+-        _add_local_leg(
+-            seq, "2", direction, leg_data[1][0].price, leg_data[1][1].price,
+-            leg_data[1][0].time_ms, leg_data[1][1].time_ms, leg_data[1][1].time_ms,
+-            "2 confirmado: plano, sin cola inicial y tamano >= 1",
+-        )
+-        _add_local_leg(
+-            seq, "3", direction, leg_data[2][0].price, leg_data[2][1].price,
+-            leg_data[2][0].time_ms, leg_data[2][1].time_ms, leg_data[2][1].time_ms,
+-            "3 confirmado: nuevo extremo",
+-        )
+-        a_index = None
+-        a_movement = None
+-        for index, movement in enumerate(engine.movements):
+-            origin_point = engine.points[movement.origin_index]
+-            if (
+-                movement.direction == -direction
+-                and movement.origin == seq.module_extreme
+-                and origin_point.time_ms >= seq.module_extreme_time
+-            ):
+-                a_index = index
+-                a_movement = movement
+-                break
+-        if a_movement is None:
+-            sequences.append(seq)
+-            continue
+-        a_origin_pt = engine.points[a_movement.origin_index]
+-        a_extreme_pt = engine.points[a_movement.extreme_index]
+-        a_confirm_pt = engine.points[a_movement.confirm_index]
+-        _add_local_leg(
+-            seq, "A", a_movement.direction, a_movement.origin, a_movement.extreme,
+-            a_origin_pt.time_ms, a_extreme_pt.time_ms, a_confirm_pt.time_ms,
+-            "A Grande contraria al modulo local",
+-        )
+-        cross = _first_cross(
+-            engine.points,
+-            a_movement.origin_index,
+-            a_movement.extreme_index,
+-            seq.module_origin,
+-            a_movement.direction,
+-        )
+-        if cross is None:
+-            sequences.append(seq)
+-            continue
+-        local_confirm = max(cross.time_ms, a_confirm_pt.time_ms)
+-        _add_local_leg(
+-            seq, "AUT", a_movement.direction, seq.module_origin, a_movement.extreme,
+-            seq.module_origin_time, a_extreme_pt.time_ms, local_confirm,
+-            "AUT local: A Grande supera el origen del modulo 1-2-3",
+-        )
+-        _add_local_leg(
+-            seq, "1", a_movement.direction, seq.module_extreme, a_movement.extreme,
+-            seq.module_extreme_time, a_extreme_pt.time_ms, local_confirm,
+-            "nuevo 1 dominante",
+-        )
+-        dominant_direction = a_movement.direction
+-        dominant_extreme = a_movement.extreme
+-        guard_base = 0
+-        a_leg: LocalLeg | None = None
+-        for movement in engine.movements[a_index + 1 :]:
+-            origin_pt = engine.points[movement.origin_index]
+-            extreme_pt = engine.points[movement.extreme_index]
+-            confirm_pt = engine.points[movement.confirm_index]
+-            if movement.direction == dominant_direction:
+-                if a_leg is None:
+-                    if (
+-                        (dominant_direction > 0 and movement.extreme > dominant_extreme)
+-                        or (dominant_direction < 0 and movement.extreme < dominant_extreme)
+-                    ):
+-                        dominant_extreme = movement.extreme
+-                    continue
+-                b_cross = _first_cross(
+-                    engine.points,
+-                    movement.origin_index,
+-                    movement.extreme_index,
+-                    a_leg.origin,
+-                    movement.direction,
+-                )
+-                if b_cross is None or movement.size < a_leg.size:
+-                    if (
+-                        movement.direction > 0
+-                        and movement.extreme > a_leg.extreme
+-                    ) or (
+-                        movement.direction < 0
+-                        and movement.extreme < a_leg.extreme
+-                    ):
+-                        a_leg = LocalLeg(
+-                            "A", a_leg.direction, a_leg.origin, movement.extreme,
+-                            a_leg.origin_time, extreme_pt.time_ms, confirm_pt.time_ms,
+-                            _bar_time(extreme_pt.time_ms), "A se extiende",
+-                        )
+-                    continue
+-                b_confirm = max(b_cross.time_ms, confirm_pt.time_ms)
+-                _add_local_leg(
+-                    seq, "B", movement.direction, a_leg.extreme, movement.extreme,
+-                    a_leg.extreme_time, extreme_pt.time_ms, b_confirm,
+-                    "B supera el 100 % del A local",
+-                )
+-                _add_local_leg(
+-                    seq, "AUT", movement.direction, a_leg.origin, movement.extreme,
+-                    a_leg.origin_time, extreme_pt.time_ms, b_confirm,
+-                    "AUT local: B supera el origen de A",
+-                )
+-                guard_base = a_leg.extreme
+-                dominant_extreme = movement.extreme
+-                a_leg = None
+-                continue
+-            if guard_base and _first_cross(
+-                engine.points,
+-                movement.origin_index,
+-                movement.extreme_index,
+-                guard_base,
+-                movement.direction,
+-            ) is not None:
+-                guard_cross = _first_cross(
+-                    engine.points,
+-                    movement.origin_index,
+-                    movement.extreme_index,
+-                    guard_base,
+-                    movement.direction,
+-                )
+-                guard_bar = guard_cross.bar
+-                in_guard_bar = [
+-                    point
+-                    for point in engine.points[
+-                        movement.origin_index : movement.extreme_index + 1
+-                    ]
+-                    if point.bar == guard_bar
+-                ]
+-                if movement.direction < 0:
+-                    local_extreme_pt = min(in_guard_bar, key=lambda point: point.price)
+-                else:
+-                    local_extreme_pt = max(in_guard_bar, key=lambda point: point.price)
+-                local_confirm = max(guard_cross.time_ms, local_extreme_pt.time_ms)
+-                _add_local_leg(
+-                    seq, "AUT", movement.direction, dominant_extreme,
+-                    local_extreme_pt.price, origin_pt.time_ms,
+-                    local_extreme_pt.time_ms, local_confirm,
+-                    "AUT local: nuevo recorrido supera la base del modulo AUT",
+-                )
+-                _add_local_leg(
+-                    seq, "1", movement.direction, dominant_extreme,
+-                    local_extreme_pt.price, origin_pt.time_ms,
+-                    local_extreme_pt.time_ms, local_confirm,
+-                    "nuevo 1 dominante",
+-                )
+-                if local_extreme_pt.price != movement.extreme:
+-                    _add_local_leg(
+-                        seq, "1", movement.direction, dominant_extreme,
+-                        movement.extreme, origin_pt.time_ms,
+-                        extreme_pt.time_ms, extreme_pt.time_ms,
+-                        "nuevo 1 dominante extendido",
+-                    )
+-                dominant_direction = movement.direction
+-                dominant_extreme = movement.extreme
+-                guard_base = 0
+-                a_leg = None
+-                continue
+-            if a_leg is None:
+-                a_leg = LocalLeg(
+-                    "A", movement.direction, movement.origin, movement.extreme,
+-                    origin_pt.time_ms, extreme_pt.time_ms, confirm_pt.time_ms,
+-                    _bar_time(extreme_pt.time_ms), "A contraria al 1 dominante",
+-                )
+-                _add_local_leg(
+-                    seq, "A", movement.direction, movement.origin, movement.extreme,
+-                    origin_pt.time_ms, extreme_pt.time_ms, confirm_pt.time_ms,
+-                    "A contraria al 1 dominante",
+-                )
+-            elif (
+-                (movement.direction > 0 and movement.extreme > a_leg.extreme)
+-                or (movement.direction < 0 and movement.extreme < a_leg.extreme)
+-            ):
+-                a_leg = LocalLeg(
+-                    "A", a_leg.direction, a_leg.origin, movement.extreme,
+-                    a_leg.origin_time, extreme_pt.time_ms, confirm_pt.time_ms,
+-                    _bar_time(extreme_pt.time_ms), "A se extiende",
+-                )
+-        sequences.append(seq)
+-    return sequences
+ 
+ 
+ class TickScheduler:
+@@ -862,6 +644,7 @@
+             "tt_100": reading.tt_price if reading and reading.tt_hit else 0,
+             "tt_real_extreme": reading.tt_extreme if reading else 0,
+             "ft": int(reading.ft) if reading else 0,
++            "aut_source": reading.aut_source if reading else "",
+             "structural_valid": int(reading.structural_valid) if reading else 1,
+             "operational_valid": int(reading.operational_valid) if reading else 0,
+             "operational_rejection_reason": reading.operational_rejection_reason if reading else "",
+@@ -956,6 +739,7 @@
+     def _maybe_aut(self, r: Reading, pt: Pt, ep: Pt, movement: Movement) -> None:
+         if r.aut_reclassified or r.b_size <= self._aut_limit(r):
+             return
++        r.aut_source = "B_EXCEEDS_BIG_B_RANGE"
+         r.aut_time = pt.time_ms
+         r.aut_price = ep.price
+         r.aut_reclassified = True
+@@ -967,6 +751,7 @@
+             "AUT",
+             "AUT",
+             "SUPERA_127_MAS_025",
++            detail=f"AUT_SOURCE={r.aut_source}",
+             structural_pt=ep,
+             confirmation_pt=pt,
+         )
+@@ -1283,7 +1068,14 @@
+         movement: Movement,
+         snapshots: list[tuple[Reading, str, int, int, int, int, bool]],
+     ) -> tuple[str, Reading | None, int, int, int, int, int, int] | None:
+-        if not self.active:
++        # A primary reading may have been closed by the just-processed movement.
++        # Decide whether FIRST is needed from the live primary set after updates;
++        # pre-update snapshots are only for transition rules. Local readings do
++        # not suppress a new primary reading.
++        if not any(
++            r.state != "DONE" and not getattr(r, "local_sequence_id", "")
++            for r in self.active
++        ):
+             p = self.points[movement.origin_index]
+             e = self.points[movement.extreme_index]
+             return (
+@@ -1377,12 +1169,12 @@
+ 
+     def _process_movement(self, movement: Movement) -> None:
+         cp = self.points[movement.confirm_index]
++        primary_active = [r for r in self.active if r.state != "DONE" and not getattr(r, "local_sequence_id", "")]
+         snapshots = [
+             (r, r.state, r.a_size, r.x_size, r.direction, r.a_end, r.a_sig_opened)
+-            for r in list(self.active)
+-            if r.state != "DONE"
++            for r in primary_active
+         ]
+-        for r in list(self.active):
++        for r in primary_active:
+             self._update(r, movement)
+         self.active = [r for r in self.active if r.state != "DONE"]
+         candidate = self._open_candidate(movement, snapshots)
+@@ -1403,17 +1195,18 @@
+             )
+             if parent is not None and reason == "A_SIGNIFICATIVA":
+                 parent.a_sig_opened = True
+-            if len(self.active) > MAX_ACTIVE:
+-                keep = {r.reading_id for r in sorted(self.active, key=lambda item: (-item.x_size, -item.created_time))[:MAX_ACTIVE]}
+-                for old in list(self.active):
++            primary_live = [r for r in self.active if r.state != "DONE" and not getattr(r, "local_sequence_id", "")]
++            if len(primary_live) > MAX_ACTIVE:
++                keep = {r.reading_id for r in sorted(primary_live, key=lambda item: (-item.x_size, -item.created_time))[:MAX_ACTIVE]}
++                for old in list(primary_live):
+                     if old.reading_id not in keep:
+                         self._done(old, cp, "DONE", "ARCHIVADA_POR_CAPACIDAD")
+                         old.labels.append((movement.confirm_index, "ARCHIVADA"))
+-                        self._emit("ARCHIVADA", cp, old, "ARCHIVADA", "DONE", "MAX_3_ACTIVAS")
++                        self._emit("ARCHIVADA", cp, old, "ARCHIVADA", "DONE", "MAX_3_LECTURAS_ACTIVAS")
+                         if old in self.active:
+                             self.active.remove(old)
+         for r in list(self.active):
+-            if r.a_sig_opened and r.a_size > A_MAX_MODULE_MULTIPLE * r.x_size:
++            if not getattr(r, "local_sequence_id", "") and r.a_sig_opened and r.a_size > A_MAX_MODULE_MULTIPLE * r.x_size:
+                 self._done(r, cp, "DONE", "A_DESPROPORCIONADA_MODULO")
+                 r.labels.append((movement.confirm_index, "A_DESPROPORCIONADA_MODULO"))
+                 self._emit("A_DESPROPORCIONADA_MODULO", cp, r, "A_DESPROPORCIONADA_MODULO", "DONE", "A_MAYOR_2X_MODULO")
+@@ -1543,7 +1336,7 @@
+             if r.state != "DONE":
+                 self.pending.append(f"lectura_abierta_al_final:{r.reading_id}")
+                 break
+-        self.local_sequences = detect_local_sequences(self)
++        self.local_sequences = []  # Retrospective local detector removed in v0.7.5.2.
+         known_time = self.points[-1].time_ms if self.points else 0
+         for sequence in self.local_sequences:
+             for leg in sequence.legs:
+@@ -2211,25 +2004,6 @@
+     }
+     paths["info"].write_text(json.dumps(info, ensure_ascii=False, indent=2), encoding="utf-8")
+     comparison_rows = []
+-    window_start = parse_hms(WINDOW_START, engine.start_time)
+-    window_end = parse_hms(WINDOW_END, engine.start_time)
+-    for r in engine.readings:
+-        if window_start <= r.created_time <= window_end:
+-            comparison_rows.append(
+-                {
+-                    "reading_id": r.reading_id,
+-                    "module_origin": r.module_origin,
+-                    "module_extreme": r.module_extreme,
+-                    "module_size": r.module_size,
+-                    "a_end": r.a_end,
+-                    "b_extreme": r.b_extreme,
+-                    "tt_target": r.tt_target,
+-                    "tt_hit": int(r.tt_hit),
+-                    "ft": int(r.ft),
+-                    "state": r.state,
+-                    "origin_reason": r.origin_reason,
+-                }
+-            )
+     with paths["comparison"].open("w", newline="", encoding="utf-8-sig") as fh:
+         fields = [
+             "reading_id",
+@@ -2452,9 +2226,464 @@
+     }
+ 
+ 
++
++
++class CanonicalEngine(Engine):
++    """Sequential adapter. Only consumed ticks are stored in the engine state."""
++    def __init__(self, points: list[Pt] | None = None, bars: dict[int, Bar] | None = None):
++        source=list(points or [])
++        super().__init__(source, {})
++        self._pending_points=source
++        self.points=[]
++        self.bars={}
++        self.builder=None
++        self.start_time=0
++        self.end_time=0
++        self._last_bar=None
++        self._prev_price=None
++        self._local={"cursor":0,"armed":False,"aut_bar":None,"candidate_bar":None,
++                     "candidate_direction":0,"state":None,"last_bar":None,
++                     "last_price":None,"two_bar":None,"two_extreme":None,
++                     "a_origin":None,"a_extreme":None,"b_origin":None,
++                     "phase":"IDLE","rejected":False}
++        self._finalized=False
++
++    def _emit(self, *args, **kwargs):
++        event=super()._emit(*args, **kwargs)
++        reading=args[2] if len(args)>2 else kwargs.get("reading")
++        local_id=getattr(reading,"local_sequence_id","") if reading else ""
++        event["local_sequence_id"]=local_id
++        event["dominant"]=int(bool(getattr(reading,"dominant",False))) if reading else 0
++        if local_id:
++            event["local_event_id"]=f"L{len(self.local_events)+1:05d}"
++        return event
++
++    def _bar_for_tick(self,p:Pt)->tuple[Bar,bool]:
++        old=self.bars.get(p.bar)
++        if old is None:
++            prior=self.bars[max(self.bars)].last.price if self.bars else None
++            gap=p.price-prior if prior is not None else 0
++            bar=Bar(p.bar,ms_to_hms(p.bar*60000)[:5],p,p,p,p,prior,gap)
++            self.bars[p.bar]=bar
++            return bar,True
++        if p.price>old.high.price:old.high=p
++        if p.price<old.low.price:old.low=p
++        old.last=p
++        return old,False
++
++    def _dominant_parent(self)->Reading|None:
++        chosen=[r for r in self.active if r.state!="DONE" and getattr(r,"dominant",False)]
++        return chosen[-1] if chosen else (self.active[-1] if self.active else None)
++
++    def _make_local_reading(self,p:Pt,direction:int,origin:Pt,extreme:Pt,parent:Reading|None,seq_id:str,reason:str)->Reading:
++        live=[r for r in self.active if r.state!="DONE"]
++        for old in live:setattr(old,"dominant",False)
++        while len(live)>=MAX_ACTIVE:
++            archive=min(live,key=lambda item:(item.module_size,item.created_time,item.reading_id))
++            self._done(archive,p,"DONE","INTEGRADA_POR_LIMITE_GLOBAL_3")
++            archive.labels.append((len(self.points)-1,"INTEGRADA"))
++            self._emit("INTEGRADA",p,archive,"INTEGRADA","DONE","MAX_3_LECTURAS_ACTIVAS")
++            if archive in self.active:self.active.remove(archive)
++            live.remove(archive)
++        self._local_reading_seq=getattr(self,"_local_reading_seq",0)+1
++        r=Reading(reading_id=f"LR{self._local_reading_seq:04d}",direction=direction,state="LOCAL_MODULE",
++            created_time=p.time_ms,created_seq=p.seq,created_bar=p.bar,origin_reason=reason,
++            module_origin=origin.price,module_extreme=extreme.price,module_origin_time=origin.time_ms,
++            module_extreme_time=extreme.time_ms,module_origin_seq=origin.seq,module_extreme_seq=extreme.seq,
++            parent_reading_id=parent.reading_id if parent else "")
++        r.local_sequence_id=seq_id;r.dominant=True
++        r.labels.append((len(self.points)-1,"1"));r.leg_indices.append(len(self.points)-1)
++        self.readings.append(r);self.by_id[r.reading_id]=r;self.active.append(r)
++        self._pattern("LECTURA_FUNCIONAL","ACTIVA",r,origin.price,extreme.price,reason,p.time_ms)
++        self._emit("LECTURA_CREADA",p,r,"1","LOCAL_MODULE",reason,
++                   structural_pt=origin,confirmation_pt=extreme)
++        return r
++
++    def _local_leg(self,p:Pt,function:str,reading:Reading,origin:Pt,extreme:Pt,reason:str,state:str,
++                   function_direction:int|None=None)->dict|None:
++        local=self._local["state"]
++        if local is None:return None
++        size=abs(extreme.price-origin.price)
++        # A-source AUT confirms by crossing the contradicted module base; the
++        # excess beyond that base can be sub-2 points and is not a module size.
++        if function in {"A","B","C"} and size<MOVE:return None
++        if function_direction is None:
++            function_direction = -reading.direction if function=="A" or (function=="AUT" and reason.startswith("A_")) else reading.direction
++        _add_local_leg(local["sequence"],function,function_direction,origin.price,extreme.price,
++                       origin.time_ms,extreme.time_ms,p.time_ms,reason)
++        reading.labels.append((len(self.points)-1,function));reading.leg_indices.append(len(self.points)-1)
++        event=self._emit("LOCAL_FUNCTION",p,reading,function,state,reason,
++                         structural_pt=origin,confirmation_pt=p)
++        # The enclosing reading can still have its prior direction at the AUT
++        # instant. Report the emitted function's causal direction explicitly.
++        event["direction"]=function_direction
++        event["aut_source"]=reading.aut_source if function=="AUT" else ""
++        self.local_events.append({"local_event_id":event["local_event_id"],
++            "sequence_id":local["sequence"].sequence_id,"function":function,
++            "direction":"UP" if function_direction>0 else "DOWN","origin":origin.price,
++            "extreme":extreme.price,"size":abs(extreme.price-origin.price),
++            "bar_time":_bar_time(extreme.time_ms),"origin_time":ms_to_text(origin.time_ms),
++            "extreme_time":ms_to_text(extreme.time_ms),"confirmation_time":ms_to_text(p.time_ms),
++            "knowledge_time":ms_to_text(p.time_ms),"origin_time_ms":origin.time_ms,
++            "extreme_time_ms":extreme.time_ms,"confirmation_time_ms":p.time_ms,
++            "knowledge_time_ms":p.time_ms,"module_origin":reading.module_origin,
++            "module_extreme":reading.module_extreme,"module_size":reading.module_size,"note":reason})
++        self.local_events[-1]["aut_source"]=reading.aut_source if function=="AUT" else ""
++        return event
++
++    def _local_gate_event(self,p:Pt,reading:Reading,reason:str)->None:
++        self._emit("LOCAL_2_GATE",p,reading,"","MODULE",reason,detail=reason)
++
++    def _observe_core_aut(self,p:Pt)->None:
++        local=self._local
++        for event in self.events[local["cursor"]:]:
++            if event.get("kind")=="AUT" and not event.get("local_sequence_id") and local["state"] is None:
++                local["armed"]=True;local["aut_bar"]=p.bar
++                local["candidate_direction"]=int(event.get("direction") or 0)
++        local["cursor"]=len(self.events)
++
++    def _close_candidate_bar(self,bar:Bar,knowledge:Pt)->None:
++        local=self._local
++        if local["candidate_bar"]!=bar.idx or local["state"] is not None:return
++        direction=1 if bar.last.price>bar.open.price else -1 if bar.last.price<bar.open.price else 0
++        span=bar.high.price-bar.low.price
++        if direction==0 or direction!=local["candidate_direction"] or span<MOVE:
++            local["candidate_bar"]=None
++            return
++        origin,extreme=(bar.high,bar.low) if direction<0 else (bar.low,bar.high)
++        seq=LocalSequence(sequence_id=f"LS{len(self.local_sequences)+1:04d}",direction=direction,
++            bars=bar.name,module_origin=origin.price,module_extreme=extreme.price,
++            module_origin_time=origin.time_ms,module_extreme_time=extreme.time_ms,
++            module_origin_seq=origin.seq,module_extreme_seq=extreme.seq)
++        self.local_sequences.append(seq)
++        parent=self._dominant_parent()
++        reading=self._make_local_reading(knowledge,direction,origin,extreme,parent,seq.sequence_id,
++                                         "LOCAL_1_CAUSAL_POR_AUT_PREVIO")
++        _add_local_leg(seq,"1",direction,origin.price,extreme.price,origin.time_ms,extreme.time_ms,
++                       knowledge.time_ms,"1 local confirmado al cerrar el tramo observable")
++        event=self.events[-1]
++        self.local_events.append({"local_event_id":event["local_event_id"],"sequence_id":seq.sequence_id,
++            "function":"1","direction":"UP" if direction>0 else "DOWN","origin":origin.price,
++            "extreme":extreme.price,"size":span,"bar_time":bar.name,
++            "origin_time":ms_to_text(origin.time_ms),"extreme_time":ms_to_text(extreme.time_ms),
++            "confirmation_time":ms_to_text(bar.last.time_ms),"knowledge_time":ms_to_text(knowledge.time_ms),
++            "origin_time_ms":origin.time_ms,"extreme_time_ms":extreme.time_ms,
++            "confirmation_time_ms":bar.last.time_ms,"knowledge_time_ms":knowledge.time_ms,
++            "module_origin":origin.price,"module_extreme":extreme.price,"module_size":span,
++            "note":"1 local confirmado causalmente desde ticks de la vela cerrada"})
++        local["state"]={"sequence":seq,"reading":reading,"direction":direction,
++            "module_origin":origin,"module_extreme":extreme,"one_size":span,
++            # Keep the contradicted module's functional base distinct from the
++            # geometry of a new dominant 1 created by AUT.
++            "aut_base":origin,
++            "aut_count":0,
++            "bar1":bar.idx,"bar2":None,"two_open":None,"two_confirmed":False,
++            "requires_base":True}
++        local["phase"]="WAIT_TWO";local["candidate_bar"]=None
++
++    def _new_local_reading_after_aut(self,p:Pt,old:Reading,direction:int,origin:Pt,extreme:Pt,reason:str,aut_source:str,
++                                     new1_origin:Pt|None=None)->None:
++        local=self._local;state=local["state"]
++        if state is None:return
++        new1_origin=new1_origin or origin
++        old.aut_reclassified=True;old.aut_time=p.time_ms;old.aut_price=p.price
++        old.aut_source=aut_source
++        event_reason=f"{aut_source}:{reason}"
++        self._local_leg(p,"AUT",old,origin,extreme,event_reason,"AUT_LOCAL_CONFIRMADO",
++                        function_direction=direction)
++        self._emit("LECTURA_INTEGRADA",p,old,"","LOCAL_INTEGRADA","AUT_NUEVO_1_DOMINANTE",
++                   detail=f"AUT_SOURCE={aut_source}; genealogia conservada en la lectura vigente")
++        old.dominant=False
++        self._done(old,p,"DONE","INTEGRADA_POR_AUT_NUEVO_1")
++        old.labels.append((len(self.points)-1,"INTEGRADA"))
++        self._emit("LECTURA_CERRADA",p,old,"INTEGRADA","DONE","INTEGRADA_POR_AUT_NUEVO_1")
++        if old in self.active:self.active.remove(old)
++        new=self._make_local_reading(p,direction,new1_origin,extreme,old,state["sequence"].sequence_id,
++                                     "AUT_NUEVO_1_DOMINANTE")
++        new.aut_source=aut_source
++        state["reading"]=new;state["direction"]=direction
++        state["module_origin"]=new1_origin;state["module_extreme"]=extreme
++        state["sequence"].direction=direction
++        state["sequence"].module_origin=new1_origin.price;state["sequence"].module_extreme=extreme.price
++        state["sequence"].module_origin_time=new1_origin.time_ms;state["sequence"].module_extreme_time=extreme.time_ms
++        state["sequence"].module_origin_seq=new1_origin.seq;state["sequence"].module_extreme_seq=extreme.seq
++        prior_aut_count=state.get("aut_count",0)
++        # Once AUT transfers dominance, the next A-source test belongs to
++        # the new 1's own functional base, never to the contradicted base again.
++        state["aut_base"]=new1_origin
++        state["aut_count"]=prior_aut_count+1
++        pending_module=abs(extreme.price-new1_origin.price)<STRUCTURAL_MOVE
++        if not pending_module:
++            state["sequence"].module_origin=new1_origin.price;state["sequence"].module_extreme=extreme.price
++            state["sequence"].module_origin_time=new1_origin.time_ms;state["sequence"].module_extreme_time=extreme.time_ms
++            state["sequence"].module_origin_seq=new1_origin.seq;state["sequence"].module_extreme_seq=extreme.seq
++        state["pending_module"]=pending_module
++        state["requires_base"]=False
++        state["a_emitted"]=False
++        local["phase"]="AFTER_AUT";local["a_origin"]=None;local["a_extreme"]=None;local["b_origin"]=None
++        self._local_leg(p,"1",new,new1_origin,extreme,"nuevo 1 dominante tras AUT","LOCAL_NUEVO_1",
++                        function_direction=direction)
++
++    def _process_local_sequence(self,p:Pt,index:int,bar:Bar,newbar:bool)->None:
++        local=self._local;st=local["state"]
++        if st is None:return
++        d=st["direction"];r=st["reading"]
++        if local["phase"]=="WAIT_TWO":
++            if local["candidate_bar"] is None and newbar and bar.idx>st["bar1"]:
++                st["bar2"]=bar.idx;st["two_open"]=bar.open
++                prev=bar.prev_close
++                gap=bar.open.price-prev if prev is not None else 0
++                if abs(gap)>=PLANO_TICK:
++                    local["phase"]="NO_TWO";local["rejected"]=True
++                    self._local_gate_event(p,r,"GAP_NO_HAY_2")
++                else:local["phase"]="POSSIBLE_TWO"
++            return
++        if local["phase"]=="POSSIBLE_TWO" and bar.idx==st["bar2"]:
++            op=st["two_open"]
++            tail=(bar.high.price-op.price) if d<0 else (op.price-bar.low.price)
++            dist=(op.price-p.price) if d<0 else (p.price-op.price)
++            if tail>PLANO_TICK:
++                local["phase"]="NO_TWO";local["rejected"]=True
++                self._local_gate_event(p,r,"COLA_INICIAL_CONTRARIA_EXCEDE_025")
++                return
++            if dist>=st["one_size"]:
++                st["two_confirmed"]=True;st["two_extreme"]=p
++                r.state="LOCAL_2_CONFIRMADO"
++                r.module_extreme=p.price;r.module_extreme_time=p.time_ms;r.module_extreme_seq=p.seq
++                st["module_extreme"]=p;st["sequence"].module_extreme=p.price
++                self._local_leg(p,"2",r,op,p,"2 confirmado: plano, cola inicial permitida y recorrido direccional >= 1","LOCAL_2_CONFIRMADO")
++                local["phase"]="TWO_CONFIRMED"
++            return
++        if local["phase"]=="TWO_CONFIRMED":
++            if bar.idx==st["bar2"]:
++                ext=st["two_extreme"]
++                if (d<0 and p.price<ext.price) or (d>0 and p.price>ext.price):
++                    st["two_extreme"]=p;st["module_extreme"]=p;st["sequence"].module_extreme=p.price
++                    r.module_extreme=p.price;r.module_extreme_time=p.time_ms;r.module_extreme_seq=p.seq
++                    self._emit("MODULO_EXT",p,r,"1","LOCAL_MODULE","2_EXTIENDE_MODULO",structural_pt=p,confirmation_pt=p)
++            return
++        if local["phase"]=="WAIT_THREE":
++            ext=st["two_extreme"]
++            new_extreme=(d<0 and p.price<ext.price) or (d>0 and p.price>ext.price)
++            if new_extreme and abs(p.price-ext.price)>=STRUCTURAL_MOVE:
++                st["module_extreme"]=p;st["sequence"].module_extreme=p.price
++                r.module_extreme=p.price;r.module_extreme_time=p.time_ms;r.module_extreme_seq=p.seq
++                r.state="LOCAL_3_CONFIRMADO"
++                self._local_leg(p,"3",r,ext,p,"3 confirmado despues del 2: nuevo extremo","LOCAL_3_CONFIRMADO")
++                local["phase"]="WAIT_A_BAR";local["three_bar"]=bar.idx
++            return
++        if local["phase"]=="WAIT_A_BAR":
++            if bar.idx==local.get("three_bar"):
++                ext=st["module_extreme"]
++                if (d<0 and p.price<ext.price) or (d>0 and p.price>ext.price):
++                    st["module_extreme"]=p;st["sequence"].module_extreme=p.price
++                    r.module_extreme=p.price;r.module_extreme_time=p.time_ms;r.module_extreme_seq=p.seq
++                    self._emit("MODULO_EXT",p,r,"3","LOCAL_MODULE","3_EXTIENDE_MODULO",
++                               structural_pt=p,confirmation_pt=p)
++                return
++            if newbar and bar.idx>local.get("three_bar",bar.idx):
++                local["phase"]="AFTER_3"
++            else:
++                return
++        if local["phase"]=="AFTER_3":
++            ext=st["module_extreme"]
++            contrary=(d<0 and p.price>ext.price) or (d>0 and p.price<ext.price)
++            if contrary:
++                local["phase"]="A_ACTIVE";local["a_origin"]=ext;local["a_extreme"]=p
++                st["a_emitted"]=False
++                r.state="LOCAL_A"
++                self._local_leg(p,"A",r,ext,p,"A Grande contraria al modulo local","LOCAL_A")
++            return
++        if local["phase"]=="AFTER_AUT":
++            ext=st["module_extreme"]
++            contrary=(d<0 and p.price>ext.price) or (d>0 and p.price<ext.price)
++            if not contrary:
++                if (d<0 and p.price<ext.price) or (d>0 and p.price>ext.price):
++                    st["module_extreme"]=p;st["sequence"].module_extreme=p.price
++                    if not st.get("pending_module",False) or abs(p.price-st["module_origin"].price)>=STRUCTURAL_MOVE:
++                        st["pending_module"]=False
++                        st["sequence"].module_origin=st["module_origin"].price
++                        st["sequence"].module_extreme=p.price
++                        st["sequence"].module_origin_time=st["module_origin"].time_ms
++                        st["sequence"].module_extreme_time=p.time_ms
++                        st["sequence"].module_origin_seq=st["module_origin"].seq
++                        st["sequence"].module_extreme_seq=p.seq
++                        r.module_origin=st["module_origin"].price;r.module_extreme=p.price
++                        r.module_origin_time=st["module_origin"].time_ms;r.module_extreme_time=p.time_ms
++                        r.module_origin_seq=st["module_origin"].seq;r.module_extreme_seq=p.seq
++                return
++            local["a_origin"]=ext;local["a_extreme"]=p;local["phase"]="A_CANDIDATE"
++            return
++        if local["phase"]=="A_CANDIDATE":
++            a0=local["a_origin"];ae=local["a_extreme"]
++            contrary_ext=(d<0 and p.price>ae.price) or (d>0 and p.price<ae.price)
++            if contrary_ext:
++                local["a_extreme"]=p;ae=p
++            if abs(ae.price-a0.price)>=MOVE:
++                local["phase"]="A_ACTIVE";st["a_emitted"]=True
++                r.state="LOCAL_A";r.a_origin=a0.price;r.a_end=ae.price
++                r.a_origin_time=a0.time_ms;r.a_end_time=ae.time_ms
++                r.a_origin_seq=a0.seq;r.a_end_seq=ae.seq
++                r.a_knowledge_time=p.time_ms
++                self._local_leg(p,"A",r,a0,ae,"A Grande confirmada por movimiento estructural","LOCAL_A")
++            elif (d<0 and p.price<a0.price) or (d>0 and p.price>a0.price):
++                # The contrary excursion did not confirm A; absorb it into the
++                # dominant 1 and keep the more extreme point causally.
++                if (d<0 and p.price<st["module_extreme"].price) or (d>0 and p.price>st["module_extreme"].price):
++                    st["module_extreme"]=p;st["sequence"].module_extreme=p.price
++                    r.module_extreme=p.price;r.module_extreme_time=p.time_ms;r.module_extreme_seq=p.seq
++                local["phase"]="AFTER_AUT";local["a_origin"]=None;local["a_extreme"]=None
++            return
++        if local["phase"]=="A_ACTIVE":
++            a0=local["a_origin"];ae=local["a_extreme"]
++            if (d<0 and p.price>ae.price) or (d>0 and p.price<ae.price):
++                local["a_extreme"]=p;ae=p
++            if not st.get("a_emitted",False) and abs(ae.price-a0.price)>=MOVE:
++                r.a_origin=a0.price;r.a_end=ae.price;r.a_origin_time=a0.time_ms;r.a_end_time=ae.time_ms
++                r.a_origin_seq=a0.seq;r.a_end_seq=ae.seq
++                self._local_leg(p,"A",r,a0,ae,"A Grande contraria al modulo confirmada por movimiento estructural","LOCAL_A")
++                st["a_emitted"]=True
++            # A crossing the module base replaces the local reading and transfers dominance.
++            a_is_structural=abs(ae.price-a0.price)>=MOVE
++            # The second AUT genealogy is carried by the A Grande's own
++            # directional extreme. A pullback after that extreme cannot create
++            # an A-source AUT merely by crossing the module base.
++            aut_base=st.get("aut_base",st["module_origin"])
++            cross_base=a_is_structural and ((d<0 and ae.price>aut_base.price) or (d>0 and ae.price<aut_base.price))
++            if cross_base:
++                next_one_origin=st["module_extreme"]
++                self._new_local_reading_after_aut(p,r,-d,aut_base,ae,
++                    "A_LOCAL_SUPERA_BASE_MODULO","A_EXCEEDS_MODULE_BASE",new1_origin=next_one_origin)
++                return
++            # A return through its own origin confirms B and a same-direction AUT.
++            counter_size=abs(p.price-ae.price)
++            resumed=counter_size>=MOVE and (not st.get("requires_base",False) or cross_base) and ((d<0 and p.price<ae.price) or (d>0 and p.price>ae.price))
++            if resumed:
++                local["phase"]="B_ACTIVE";local["b_origin"]=ae
++                local["b_extreme"]=p
++            return
++        if local["phase"]=="B_ACTIVE":
++            b0=local["b_origin"]
++            a_ext=local["a_extreme"]
++            be=local["b_extreme"]
++            extends_b=(d<0 and p.price<be.price) or (d>0 and p.price>be.price)
++            if extends_b:
++                local["b_extreme"]=p
++                a0=local["a_origin"];a_end=local["a_extreme"]
++                r.a_origin=a0.price;r.a_end=a_end.price;r.a_origin_time=a0.time_ms;r.a_end_time=a_end.time_ms
++                r.a_origin_seq=a0.seq;r.a_end_seq=a_end.seq
++                r.b_origin=b0.price;r.b_extreme=p.price;r.b_origin_time=b0.time_ms;r.b_extreme_time=p.time_ms
++                r.b_origin_seq=b0.seq;r.b_extreme_seq=p.seq
++                r.b_knowledge_time=p.time_ms
++                if r.a_size>=MOVE and r.b_size>=r.a_size:
++                    if not r.b_grande_time:
++                        r.b_grande_time=p.time_ms;r.tt_target=r.a_end+d*r.module_size;r.state="TT_PENDING"
++                        self._local_leg(p,"B",r,b0,p,"B Grande alcanza 100 % de A Grande; TT queda pendiente","LOCAL_B_GRANDE")
++                    if r.b_size>self._aut_limit(r):
++                        r.aut_source="B_EXCEEDS_BIG_B_RANGE"
++                        self._new_local_reading_after_aut(p,r,d,a_end,p,"B_GRANDE_SUPERA_127_MAS_025",
++                            "B_EXCEEDS_BIG_B_RANGE")
++                return
++            # A resumes only after a confirmed 2-point reversal from B's real extreme.
++            reversal=(p.price-be.price) if d<0 else (be.price-p.price)
++            resumed_a=reversal>=MOVE and ((d<0 and p.price>a_ext.price) or (d>0 and p.price<a_ext.price))
++            if resumed_a:
++                local["a_extreme"]=p;local["phase"]="A_ACTIVE";local["b_origin"]=None
++                return
++            return
++
++    def feed_chunk(self,chunk:list[Pt])->None:
++        if self._finalized:raise RuntimeError("cannot feed a finalized engine")
++        for p in chunk:
++            if self.points and (p.seq<=self.points[-1].seq or p.time_ms<self.points[-1].time_ms):
++                raise ValueError("ticks must be strictly ordered by sequence and time")
++            self._tick_before={r.reading_id:r.state for r in self.active if r.state!="DONE"}
++            self.points.append(p)
++            if self.start_time==0:self.start_time=p.time_ms
++            self.end_time=p.time_ms
++            bar,newbar=self._bar_for_tick(p)
++            self._current_pt=p
++            if newbar:self._schedule_gap(p)
++            self.scheduler.run_due(p)
++            index=len(self.points)-1
++            if self.builder is None:self.builder=MovementBuilder(p)
++            elif index:
++                movement=self.builder.feed(p,index)
++                if movement is not None:
++                    self.movements.append(movement);self._process_movement(movement)
++            if self._local["last_bar"] is not None and newbar:
++                closed=self.bars[self._local["last_bar"]]
++                self._close_candidate_bar(closed,p)
++                if self._local["phase"]=="TWO_CONFIRMED":
++                    st=self._local["state"]
++                    if st is not None and closed.idx==st["bar2"]:
++                        st["two_extreme"]=closed.low if st["direction"]<0 else closed.high
++                        st["module_extreme"]=st["two_extreme"]
++                        st["sequence"].module_extreme=st["two_extreme"].price
++                        st["reading"].module_extreme=st["two_extreme"].price
++                        st["reading"].module_extreme_time=st["two_extreme"].time_ms
++                        st["reading"].module_extreme_seq=st["two_extreme"].seq
++                        self._local["phase"]="WAIT_THREE"
++            if newbar:
++                if self._local["armed"] and self._local["state"] is None and p.bar!=self._local["aut_bar"]:
++                    self._local["candidate_bar"]=p.bar;self._local["armed"]=False
++            self._observe_core_aut(p)
++            self._process_local_sequence(p,index,bar,newbar)
++            self._record_knowledge(p)
++            self._prev_price=p.price;self._last_bar=p.bar;self._local["last_bar"]=p.bar
++            self._local["last_price"]=p.price
++
++    def run(self)->"CanonicalEngine":
++        pending=self._pending_points;self._pending_points=[]
++        for p in pending:self.feed_chunk([p])
++        return self.finalize_stream()
++
++    def finalize_stream(self)->"CanonicalEngine":
++        if self._finalized:return self
++        last=self.points[-1] if self.points else Pt(0,0,0,0)
++        self._emit("FIN_FEED",last,None,"","END","END_OF_FEED","end of feed")
++        self.coverage=evaluate_coverage(self);self.audit=build_audit(self);self.narrative=build_narrative(self)
++        self.pending=["post_tt_fallido_no_definido","ft_expiracion_no_definida","lectura_local_reglas_abiertas_preservadas"]
++        if not self.coverage.get("causal_functional_ok",False):self.pending.append("functional_coverage_causal_parcial")
++        if not self.coverage.get("causal_geometric_ok",False):self.pending.append("geometric_coverage_causal_parcial")
++        for r in self.readings:
++            if r.state!="DONE":self.pending.append(f"lectura_abierta_al_final:{r.reading_id}");break
++        self.afs2={"AFS2_READY":False,"status":"NO DESARROLLADO EN v0.7.5.2"}
++        self._finalized=True
++        return self
++
++    def serialize_state(self)->bytes:
++        return pickle.dumps(self,protocol=5)
++
++    @classmethod
++    def restore_state(cls,payload:bytes)->"CanonicalEngine":
++        obj=pickle.loads(payload)
++        if not isinstance(obj,cls) or obj._finalized:raise ValueError("checkpoint version/state mismatch")
++        return obj
++
++
++Engine=CanonicalEngine
++
+ def run_engine(points: list[Pt], bars: dict[int, Bar]) -> Engine:
+     return Engine(points, bars).run()
+ 
++
++
++def write_core_raw_output(engine:CanonicalEngine,path:Path|str)->Path:
++    path=Path(path);path.parent.mkdir(parents=True,exist_ok=True)
++    def clean(v):
++        if hasattr(v,"__dict__"):return {k:clean(x) for k,x in v.__dict__.items()}
++        if isinstance(v,dict):return {k:clean(x) for k,x in v.items()}
++        if isinstance(v,(list,tuple)):return [clean(x) for x in v]
++        return v
++    data={"artifact":"CORE_RAW_OUTPUT","version":VERSION,"source":"sequential core only",
++      "feed_points":len(engine.points),"events":clean(engine.events),
++      "readings":[clean(r) for r in engine.readings],"patterns":clean(engine.patterns),
++      "local_sequences":clean(engine.local_sequences),"local_events":clean(engine.local_events),
++      "active_readings":[r.reading_id for r in engine.active if r.state!="DONE"],
++      "pending":engine.pending,"coverage":engine.coverage,"afs2":{"AFS2_READY":False}}
++    path.write_text(json.dumps(data,ensure_ascii=False,indent=2),encoding="utf-8")
++    return path
+ 
+ def _synthetic_engine(prices: list[float], start_ms: int) -> Engine:
+     points = [Pt(price_i(p), i + 1, start_ms + i * 1000, (start_ms + i * 1000) // 60000) for i, p in enumerate(prices)]
+@@ -2475,7 +2704,7 @@
+ 
+ 
+ def selftest() -> None:
+-    base = 1_792_169_100_000
++    base = 0
+     engine = _synthetic_engine([100.00, 94.00, 100.00, 94.00, 100.00, 94.00, 100.00], base)
+     assert engine.readings
+     assert any(r.tt_hit for r in engine.readings)
+@@ -2493,12 +2722,10 @@
+ def main(argv: Optional[list[str]] = None) -> int:
+     parser = argparse.ArgumentParser(description=f"TM core v{VERSION} functional reader")
+     parser.add_argument("--feed", type=Path)
+-    parser.add_argument("--out", type=Path, default=Path("out_v075"))
++    parser.add_argument("--out", type=Path, default=Path("out_v0752"))
+     parser.add_argument("--stem", default="v075")
+     parser.add_argument("--start")
+     parser.add_argument("--end")
+-    parser.add_argument("--window-start", default=WINDOW_START)
+-    parser.add_argument("--window-end", default=WINDOW_END)
+     parser.add_argument("--selftest", action="store_true")
+     args = parser.parse_args(argv)
+     if args.selftest:
+@@ -2512,7 +2739,8 @@
+     end = parse_hms(args.end, base) if args.end else None
+     points = filter_points(points, start, end)
+     engine = run_engine(points, bars)
+-    paths = write_outputs(engine, args.out, args.stem)
++    raw_path = write_core_raw_output(engine, args.out / "CORE_RAW_OUTPUT.json")
++    paths = [raw_path]
+     print(f"v{VERSION} readings={len(engine.readings)} events={len(engine.events)} movements={len(engine.movements)}")
+     print(f"coverage geometric={engine.coverage['geometric_ok']} functional={engine.coverage['functional_ok']}")
+     print(f"outputs={args.out}")

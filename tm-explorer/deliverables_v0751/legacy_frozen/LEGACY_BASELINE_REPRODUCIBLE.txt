@@ -1,0 +1,3 @@
+﻿LEGACY_BASELINE_REPRODUCIBLE
+v0.7.5 congelado. No editar motor, tests, golden antiguo ni resultados.
+La rama corregida vive fuera de esta carpeta.

@@ -1,0 +1,12 @@
+test_id,area,kind,classification,description,pass,detail
+GAP-01,gap,positive,CANONICAL_PASS,apertura no plana registrada con sus estados,True,"ev=['NON_FLAT_OPEN_OBSERVED', 'NO_TWO_BY_NON_FLAT_OPEN', 'TWO_IMPOSSIBLE_NO_FLAT', 'GAP_IMPLICIT_TRANSITION']"
+GAP-02,gap,negative,CANONICAL_PASS,2 prohibido por apertura no plana,True,two=IMPOSSIBLE_NO_FLAT
+GAP-03,gap,positive,CANONICAL_PASS,gap abre A implicita por descarte sin inventar precios,True,a=CONTRARY_MOVE_PENDING a_origin=9800 mod_extreme=9800
+GAP-04,gap,negative,CANONICAL_PASS,gap no inventa ticks ni precios internos,True,trace=5 ticks=5
+GAP-05,gap,positive,CANONICAL_PASS,funcion viva no se divide al cambiar de vela,True,cont=True a_origin=9800 mod_extreme=9800
+CONC-01,concurrency,positive,CANONICAL_PASS,L1 aislada == L1 en composicion (sin interferencia),True,equal=True
+CONC-02,concurrency,positive,CANONICAL_PASS,L2 aislada == L2 en composicion (sin interferencia),True,equal=True
+CONC-03,concurrency,negative,CANONICAL_PASS,"ids propios y parent correcto, sin tercera escala",True,"ids=['L1', 'L2'] parent=L1"
+CONC-04,concurrency,negative,CANONICAL_PASS,cero fugas entre lecturas,True,leaks=[]
+CONC-05,concurrency,determinism,CANONICAL_PASS,doble composicion identica,True,deterministic
+CONC-06,concurrency,negative,CANONICAL_PASS,tercera escala prohibida sin regla expresa,True,blocked=True

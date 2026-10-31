@@ -1,0 +1,110 @@
+{
+  "iteration_id": "ITERACION_03_20261030_1623",
+  "date": "2026-10-30T16:23:17",
+  "objective": "Corregir propiedad de estados, invalidar 3 sin 2 y releer 16:15-17:29",
+  "files": [
+    {
+      "zip_path": "ITERACION_03_20261030_1623/01_CHECKPOINT_3_REPORT.md",
+      "original_path": "TM_TRABAJO_TEMPORAL\\TM_TREE_PERFECTION_MISSION_V1\\09_REPORTS\\CHECKPOINT_3_REPORT.md",
+      "size": 8059,
+      "sha256": "BC413BD786BEE843DA9A324AC25286AAB4CB05D3E1AE038BEABE157201BE3861",
+      "reason": "checkpoint y resumen"
+    },
+    {
+      "zip_path": "ITERACION_03_20261030_1623/02_PHASE_3_QUESTIONS.md",
+      "original_path": "TM_TRABAJO_TEMPORAL\\TM_TREE_PERFECTION_MISSION_V1\\04_EXPERT_QUESTIONS\\PHASE_3_QUESTIONS.md",
+      "size": 2429,
+      "sha256": "75330F239697D677D624B122C05D31E6E82B30016CF4AAC746812F014EEDF19B",
+      "reason": "preguntas expertas"
+    },
+    {
+      "zip_path": "ITERACION_03_20261030_1623/03_blind_reader_v3_owned_states.py",
+      "original_path": "TM_TRABAJO_TEMPORAL\\TM_TREE_PERFECTION_MISSION_V1\\01_BLIND_READINGS\\blind_reader_v3_owned_states.py",
+      "size": 46417,
+      "sha256": "AE559A31AAB3222A6F04029999102DCA6347D83201F2009888557CED60C1029F",
+      "reason": "lector experimental"
+    },
+    {
+      "zip_path": "ITERACION_03_20261030_1623/04_PHASE_3_GENERATIONS_L1.csv",
+      "original_path": "TM_TRABAJO_TEMPORAL\\TM_TREE_PERFECTION_MISSION_V1\\01_BLIND_READINGS\\V3_FULL_GENERATIONS.csv",
+      "size": 17632,
+      "sha256": "68B96EC6B2138B7890415B222EA33EEEF6B6660DF9B0BE635010224788089775",
+      "reason": "generaciones L1"
+    },
+    {
+      "zip_path": "ITERACION_03_20261030_1623/05_PHASE_3_GENERATIONS_L2.csv",
+      "original_path": "TM_TRABAJO_TEMPORAL\\TM_TREE_PERFECTION_MISSION_V1\\01_BLIND_READINGS\\V3_L2_1619_1624_GENERATIONS.csv",
+      "size": 1860,
+      "sha256": "C8B3E03BF2F115A905AC2D617B5EF69F82B369535E323ACE5A8619A83F68670B",
+      "reason": "generaciones L2"
+    },
+    {
+      "zip_path": "ITERACION_03_20261030_1623/07_PHASE_3_L1_L2_MAP.csv",
+      "original_path": "TM_TRABAJO_TEMPORAL\\TM_TREE_PERFECTION_MISSION_V1\\06_REGRESSION\\PHASE_3_L1_L2_MAP.csv",
+      "size": 10048,
+      "sha256": "090BB152500BD4258DBA01B1B8B41F055C815AAC8DFBEBE450ABCAA98EF5D266",
+      "reason": "mapa L1/L2"
+    },
+    {
+      "zip_path": "ITERACION_03_20261030_1623/08_PHASE_3_DIVERGENCES.csv",
+      "original_path": "TM_TRABAJO_TEMPORAL\\TM_TREE_PERFECTION_MISSION_V1\\02_MOVEMENT_ANALYSIS\\PHASE_3_DIVERGENCES.csv",
+      "size": 1125,
+      "sha256": "A5A295622477A215220B2A6A7A5030780E028E289744B71CF59696EB1BCE74C9",
+      "reason": "divergencias"
+    },
+    {
+      "zip_path": "ITERACION_03_20261030_1623/09_EXPERIMENTAL_POLICIES_V3.md",
+      "original_path": "TM_TRABAJO_TEMPORAL\\TM_TREE_PERFECTION_MISSION_V1\\05_TREE_REVISIONS\\EXPERIMENTAL_POLICIES_V3.md",
+      "size": 2457,
+      "sha256": "A9E421439424AE9C5D1CEA681B9A4560EC9C19BE46678F8156A5AB21F7BCE66B",
+      "reason": "políticas experimentales"
+    },
+    {
+      "zip_path": "ITERACION_03_20261030_1623/10_PHASE_3_DETERMINISM.json",
+      "original_path": "TM_TRABAJO_TEMPORAL\\TM_TREE_PERFECTION_MISSION_V1\\06_REGRESSION\\PHASE_3_DETERMINISM.json",
+      "size": 711,
+      "sha256": "C8FC9A3CB66426A8BA37D13550FB7E32F52F2CD7B1350B9284CDE65570E99037",
+      "reason": "regresión y determinismo"
+    },
+    {
+      "zip_path": "ITERACION_03_20261030_1623/11_PHASE_3_SUMMARY.json",
+      "original_path": "TM_TRABAJO_TEMPORAL\\TM_TREE_PERFECTION_MISSION_V1\\06_REGRESSION\\PHASE_3_SUMMARY.json",
+      "size": 700,
+      "sha256": "E6BCB051C147DF21A6249FD0D141B32474021629435F418AD4022E09E39334DE",
+      "reason": "resumen de auditoría"
+    },
+    {
+      "zip_path": "ITERACION_03_20261030_1623/12_PHASE_3_GENERATION_AUDIT.csv",
+      "original_path": "TM_TRABAJO_TEMPORAL\\TM_TREE_PERFECTION_MISSION_V1\\06_REGRESSION\\PHASE_3_GENERATION_AUDIT.csv",
+      "size": 10048,
+      "sha256": "090BB152500BD4258DBA01B1B8B41F055C815AAC8DFBEBE450ABCAA98EF5D266",
+      "reason": "auditoría por generación"
+    },
+    {
+      "zip_path": "ITERACION_03_20261030_1623/06_PHASE_3_EVENTS_FOCAL.csv",
+      "original_path": "TM_TRABAJO_TEMPORAL\\TM_TREE_PERFECTION_MISSION_V1\\01_BLIND_READINGS\\V3_FULL_EVENTS.csv",
+      "size": 4128,
+      "sha256": "D3C985794F44DD7C9456A24CD78E0A63AC789A7AC4CD0A6FE81EDED712C8C672",
+      "reason": "muestra focal 16:19-16:25 (46 eventos); el log completo queda en el proyecto"
+    },
+    {
+      "zip_path": "ITERACION_03_20261030_1623/06b_EVENTS_NOTE.txt",
+      "original_path": "TM_TRABAJO_TEMPORAL\\TM_TREE_PERFECTION_MISSION_V1\\01_BLIND_READINGS\\V3_FULL_EVENTS.csv",
+      "size": 307,
+      "sha256": "041449B28C7418738DE6226E33F70BB75EBCBF4CB617FE4DDF23739C835D1098",
+      "reason": "índice y hash del log completo de eventos"
+    },
+    {
+      "zip_path": "ITERACION_03_20261030_1623/13_ITERATION_MANIFEST.json",
+      "original_path": "TM_ENTREGAS_ITERACION\\ITERACION_03_20261030_1623\\13_ITERATION_MANIFEST.json",
+      "size": 1852,
+      "sha256": "749089012A035D6C6B0568860DDFAC24B197776D269C1215E03C631EC8C57A60",
+      "reason": "manifiesto de la iteración"
+    }
+  ],
+  "originals_modified": false,
+  "tree_modified": false,
+  "engine_modified": false,
+  "golden_modified": false,
+  "note": "PACKAGE_MANIFEST.json no se lista a sí mismo; su hash está en SHA256SUMS.txt."
+}

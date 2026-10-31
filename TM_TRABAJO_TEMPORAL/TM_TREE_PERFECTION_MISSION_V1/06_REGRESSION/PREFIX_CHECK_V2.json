@@ -1,0 +1,44 @@
+{
+  "reader": "blind_reader_v2.py",
+  "a_mode": "b100",
+  "full_ticks": 20335,
+  "full_trace_sha256": "19eb22002c84bc2453c7faad6e03c12c44f7a5868c424a4a303797c80679f876",
+  "all_prefixes_pass": true,
+  "checks": [
+    {
+      "prefix_bar": "16:20",
+      "ticks": 1389,
+      "rows_compared": 1389,
+      "mismatch_index": null,
+      "pass": true
+    },
+    {
+      "prefix_bar": "16:30",
+      "ticks": 3829,
+      "rows_compared": 3829,
+      "mismatch_index": null,
+      "pass": true
+    },
+    {
+      "prefix_bar": "16:49",
+      "ticks": 9201,
+      "rows_compared": 9201,
+      "mismatch_index": null,
+      "pass": true
+    },
+    {
+      "prefix_bar": "17:00",
+      "ticks": 12265,
+      "rows_compared": 12265,
+      "mismatch_index": null,
+      "pass": true
+    },
+    {
+      "prefix_bar": "17:15",
+      "ticks": 16454,
+      "rows_compared": 16454,
+      "mismatch_index": null,
+      "pass": true
+    }
+  ]
+}

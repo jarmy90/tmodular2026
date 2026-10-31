@@ -1,0 +1,242 @@
+{
+  "artifact": "FREEBUFF_INPUTS_MANIFEST_v219",
+  "document_version": "1.0",
+  "generated_utc": "2026-10-30T12:21:24.277226+00:00",
+  "workspace_root": "C:\\Users\\profesor\\tm\\Teoria Modular",
+  "audit_root": "C:\\Users\\profesor\\tm\\Teoria Modular\\TM_TRABAJO_TEMPORAL\\FREEBUFF_AUDIT_V219",
+  "outside_workspace_reads": "C:\\Users\\profesor\\OpenBot\\Agents\\agent-ece275c8-821a-43f3-b05f-6cdf123b7ade",
+  "engine_analyzed": "R5 9BD1BEDB5DEC8C5A1C3A831338503E90CC04EE3CD776CF4E01D27CF8AA0EBEAE",
+  "tree_analyzed": "94A1408A6123ED66948988334E7D540C2A2692C36EEA3CB736DBFF0DA2346B17",
+  "baseline_rule": "R5 audited variant is the provisional baseline because it is the engine cited by CE reports and INPUTS_MANIFEST; it is not declared official or frozen.",
+  "tree_modified": false,
+  "engine_modified": false,
+  "goldens_modified": false,
+  "tests_modified": false,
+  "observational_only": true,
+  "inputs": [
+    {
+      "role": "tree_working_canon",
+      "absolute_path": "C:\\Users\\profesor\\tm\\Teoria Modular\\TM_CANON_ACTIVO\\01_ARBOL\\TM_ARBOL_MAESTRO_CANONICO_COMPLETO_v2_19_ACUMULADO.md",
+      "file_name": "TM_ARBOL_MAESTRO_CANONICO_COMPLETO_v2_19_ACUMULADO.md",
+      "size_bytes": 562639,
+      "mtime_utc": "2026-10-30T08:17:04.256015+00:00",
+      "sha256": "94A1408A6123ED66948988334E7D540C2A2692C36EEA3CB736DBFF0DA2346B17",
+      "state": "WORKING_CANON_NOT_FROZEN"
+    },
+    {
+      "role": "tree_certificate",
+      "absolute_path": "C:\\Users\\profesor\\tm\\Teoria Modular\\TM_CANON_ACTIVO\\01_ARBOL\\TM_ARBOL_v2_19_CERTIFICADO.json",
+      "file_name": "TM_ARBOL_v2_19_CERTIFICADO.json",
+      "size_bytes": 1028,
+      "mtime_utc": "2026-10-30T08:31:47.873317+00:00",
+      "sha256": "995951E54A1F20FB41479569FD320B45C74A22DB400DBDECA6877337F5697168",
+      "state": "WORKING_CANON_NOT_FROZEN"
+    },
+    {
+      "role": "human_readings_v005",
+      "absolute_path": "C:\\Users\\profesor\\tm\\Teoria Modular\\TM_CANON_ACTIVO\\03_LECTURAS_HUMANAS\\TM_LECTURAS_CONFIRMADAS_16OCT_1615_1730_v005.txt",
+      "file_name": "TM_LECTURAS_CONFIRMADAS_16OCT_1615_1730_v005.txt",
+      "size_bytes": 26713,
+      "mtime_utc": "2026-10-29T08:29:20.935202+00:00",
+      "sha256": "F5D7550C42C90897D833E6C2A3FAF772753A129640FD4411DE4190CB2CF94226",
+      "state": "PARTIAL_A_TO_16_39_AND_D_PENDING_16_49_17_29"
+    },
+    {
+      "role": "master_tickfeed",
+      "absolute_path": "C:\\Users\\profesor\\tm\\Teoria Modular\\TM_CANON_ACTIVO\\02_TICKS\\TM_TICKFEED_1615_1730.csv",
+      "file_name": "TM_TICKFEED_1615_1730.csv",
+      "size_bytes": 3496855,
+      "mtime_utc": "2026-10-27T11:37:21.386620+00:00",
+      "sha256": "5F701BE2307352CB559ABBD7BB856A6FD2A1F91E5D269A93DCC9AE2992E2C9FF",
+      "state": "VERIFIED_20335_TICKS"
+    },
+    {
+      "role": "engine_R3_frozen",
+      "absolute_path": "C:\\Users\\profesor\\tm\\Teoria Modular\\TM_CANON_ACTIVO\\04_MOTOR_PYTHON\\CANDIDATO_v0752_R3\\TM_CORE_PYTHON_v0752_CANONICAL_R3.py",
+      "file_name": "TM_CORE_PYTHON_v0752_CANONICAL_R3.py",
+      "size_bytes": 119657,
+      "mtime_utc": "2026-10-28T16:53:06.862138+00:00",
+      "sha256": "71D9A97AC2C49848D152A790DB0C70D20B30643782BFEE0AC030D19110330B08",
+      "state": "FROZEN"
+    },
+    {
+      "role": "engine_R5_audited",
+      "absolute_path": "C:\\Users\\profesor\\OpenBot\\Agents\\agent-ece275c8-821a-43f3-b05f-6cdf123b7ade\\deliverables_R5\\python\\TM_CORE_PYTHON_v0752_CANONICAL_R5.py",
+      "file_name": "TM_CORE_PYTHON_v0752_CANONICAL_R5.py",
+      "size_bytes": 158090,
+      "mtime_utc": "2026-10-30T08:16:14.410577+00:00",
+      "sha256": "9BD1BEDB5DEC8C5A1C3A831338503E90CC04EE3CD776CF4E01D27CF8AA0EBEAE",
+      "state": "BASELINE_PROVISIONAL_NOT_FROZEN"
+    },
+    {
+      "role": "engine_R5_packaged",
+      "absolute_path": "C:\\Users\\profesor\\tm\\Teoria Modular\\TM_TRABAJO_TEMPORAL\\FREEBUFF_AUDIT_V219\\00_INPUTS_REFERENCE\\variants\\R5_PACKAGED_19A847C0.py",
+      "file_name": "R5_PACKAGED_19A847C0.py",
+      "size_bytes": 144357,
+      "mtime_utc": "2026-10-29T10:40:52+00:00",
+      "sha256": "19A847C078E124616495E85A832F9D2FA12A371413046CBAEB7E9644D47C6A36",
+      "state": "PACKAGED_VARIANT_DO_NOT_SUBSTITUTE"
+    },
+    {
+      "role": "R5_zip_lectura",
+      "absolute_path": "C:\\Users\\profesor\\OpenBot\\Agents\\agent-ece275c8-821a-43f3-b05f-6cdf123b7ade\\TM_CORE_v0752_R5_LECTURA_1615_1629.zip",
+      "file_name": "TM_CORE_v0752_R5_LECTURA_1615_1629.zip",
+      "size_bytes": 1910921,
+      "mtime_utc": "2026-10-29T10:52:38.770474+00:00",
+      "sha256": "DDC6AE2FFA9854FD6DE1B9B058BB12DF19E8542F309BD9C8693B823A60785A9F",
+      "state": "PACKAGED_ORIGINAL"
+    },
+    {
+      "role": "R5_zip_post_cut",
+      "absolute_path": "C:\\Users\\profesor\\OpenBot\\Agents\\agent-ece275c8-821a-43f3-b05f-6cdf123b7ade\\TM_CORE_v0752_R5_POST_CUT.zip",
+      "file_name": "TM_CORE_v0752_R5_POST_CUT.zip",
+      "size_bytes": 1909791,
+      "mtime_utc": "2026-10-29T10:49:33.075501+00:00",
+      "sha256": "4238D0E1FD6ECC9E136856ED49E03958C3151F628318444077ECA7440494A72C",
+      "state": "PACKAGED_ORIGINAL"
+    },
+    {
+      "role": "R3_zip_frozen",
+      "absolute_path": "C:\\Users\\profesor\\tm\\Teoria Modular\\TM_ENTREGAS\\TM_CORE_v0752_R3_B_AUT.zip",
+      "file_name": "TM_CORE_v0752_R3_B_AUT.zip",
+      "size_bytes": 1677900,
+      "mtime_utc": "2026-10-28T16:55:51.720856+00:00",
+      "sha256": "450379BD5F1E22380614E6112E3FB52C2A653EE8358BF7E5238995AF99D3B7DB",
+      "state": "FROZEN"
+    },
+    {
+      "role": "test_big_b_aut",
+      "absolute_path": "C:\\Users\\profesor\\OpenBot\\Agents\\agent-ece275c8-821a-43f3-b05f-6cdf123b7ade\\deliverables_R5\\tests\\test_big_b_aut.py",
+      "file_name": "test_big_b_aut.py",
+      "size_bytes": 8260,
+      "mtime_utc": "2026-10-29T07:38:55.308227+00:00",
+      "sha256": "4094A0FE8D110C890EFBCA666497A8B2B7B7515D0765A5D24CECF5DA2F8EEACA",
+      "state": "UNMODIFIED"
+    },
+    {
+      "role": "test_anchor_gates",
+      "absolute_path": "C:\\Users\\profesor\\OpenBot\\Agents\\agent-ece275c8-821a-43f3-b05f-6cdf123b7ade\\deliverables_R5\\tests\\test_anchor_gates.py",
+      "file_name": "test_anchor_gates.py",
+      "size_bytes": 6635,
+      "mtime_utc": "2026-10-29T07:40:47.457733+00:00",
+      "sha256": "DB66A3FBF5DEB0B97AAA69939D9370BFB22908FD84D1DD858DFA3F6FD7D4CFD9",
+      "state": "UNMODIFIED"
+    },
+    {
+      "role": "test_post_cut_gates",
+      "absolute_path": "C:\\Users\\profesor\\OpenBot\\Agents\\agent-ece275c8-821a-43f3-b05f-6cdf123b7ade\\deliverables_R5\\tests\\test_post_cut_gates.py",
+      "file_name": "test_post_cut_gates.py",
+      "size_bytes": 4806,
+      "mtime_utc": "2026-10-29T07:58:40.189846+00:00",
+      "sha256": "B873897A0D252D71AA4883FF0DA4F74A94AE39C78AFC5BD910C09B8D501B4BAF",
+      "state": "UNMODIFIED"
+    },
+    {
+      "role": "test_transformations",
+      "absolute_path": "C:\\Users\\profesor\\OpenBot\\Agents\\agent-ece275c8-821a-43f3-b05f-6cdf123b7ade\\deliverables_R5\\tests\\test_transformations.py",
+      "file_name": "test_transformations.py",
+      "size_bytes": 2875,
+      "mtime_utc": "2026-10-29T07:38:55.311233+00:00",
+      "sha256": "019FF1E76307D8EF94379CF9CB1F8458B0D2A9CC878D4DE261A6D53A86F2A2DD",
+      "state": "UNMODIFIED"
+    },
+    {
+      "role": "comparator_v005",
+      "absolute_path": "C:\\Users\\profesor\\OpenBot\\Agents\\agent-ece275c8-821a-43f3-b05f-6cdf123b7ade\\deliverables_R5\\repro\\compare_v005.py",
+      "file_name": "compare_v005.py",
+      "size_bytes": 23628,
+      "mtime_utc": "2026-10-29T10:46:55.979762+00:00",
+      "sha256": "EDBA4EE6A721943E681D4A6AE851611E8A688BBE0C0AF7F393EE4D060FED5B39",
+      "state": "UNMODIFIED"
+    },
+    {
+      "role": "comparator_golden",
+      "absolute_path": "C:\\Users\\profesor\\OpenBot\\Agents\\agent-ece275c8-821a-43f3-b05f-6cdf123b7ade\\deliverables_R5\\repro\\compare_golden.py",
+      "file_name": "compare_golden.py",
+      "size_bytes": 4075,
+      "mtime_utc": "2026-10-28T15:35:09.938646+00:00",
+      "sha256": "827CAE4508153C352D3AEC888C38E71F3EEF211841B610241B2A9E33133FD245",
+      "state": "UNMODIFIED"
+    },
+    {
+      "role": "replay_run_all",
+      "absolute_path": "C:\\Users\\profesor\\OpenBot\\Agents\\agent-ece275c8-821a-43f3-b05f-6cdf123b7ade\\deliverables_R5\\repro\\run_all.py",
+      "file_name": "run_all.py",
+      "size_bytes": 2684,
+      "mtime_utc": "2026-10-29T08:22:58.695312+00:00",
+      "sha256": "7C228DB3D9A17BE3EBB67389F17EC8D399FC634122BDEAF7BF98B01EAFC881AB",
+      "state": "UNMODIFIED"
+    },
+    {
+      "role": "R5_package_manifest",
+      "absolute_path": "C:\\Users\\profesor\\OpenBot\\Agents\\agent-ece275c8-821a-43f3-b05f-6cdf123b7ade\\deliverables_R5\\manifest.json",
+      "file_name": "manifest.json",
+      "size_bytes": 19350,
+      "mtime_utc": "2026-10-29T10:52:35.254045+00:00",
+      "sha256": "87BB77911D763696AECDE5860D9ABE4815FF21E44CCE99D7A944E131137825CD",
+      "state": "INCONSISTENT_WITH_DISK_ENGINE"
+    }
+  ],
+  "third_party_evidence": [
+    {
+      "role": "external_audit_evidence",
+      "absolute_path": "C:\\Users\\profesor\\tm\\Teoria Modular\\TM_TRABAJO_TEMPORAL\\FREEBUFF_AUDIT_V219\\00_INPUTS_REFERENCE\\external_audit_evidence\\CE_TESTS_v219.md",
+      "file_name": "CE_TESTS_v219.md",
+      "size_bytes": 15808,
+      "mtime_utc": "2026-10-30T09:11:00.337852+00:00",
+      "sha256": "DA697ADA79B8F25E95A67A1E7835441EC53135A72D6DC22605F34686ECE3DDF3",
+      "state": "EXTERNAL_AUDIT_EVIDENCE",
+      "original_path": "C:\\Users\\profesor\\OpenBot\\Agents\\agent-ece275c8-821a-43f3-b05f-6cdf123b7ade\\deliverables_R5\\audit_v219\\CE_TESTS_v219.md"
+    },
+    {
+      "role": "external_audit_evidence",
+      "absolute_path": "C:\\Users\\profesor\\tm\\Teoria Modular\\TM_TRABAJO_TEMPORAL\\FREEBUFF_AUDIT_V219\\00_INPUTS_REFERENCE\\external_audit_evidence\\CE_OBSERVATION_RESULTS_v219.md",
+      "file_name": "CE_OBSERVATION_RESULTS_v219.md",
+      "size_bytes": 10511,
+      "mtime_utc": "2026-10-30T09:26:37.765578+00:00",
+      "sha256": "FD45CE5A81CFCF629BD118C97626DB0AEBAE0AE9D2116160CC41DC01AA119272",
+      "state": "EXTERNAL_AUDIT_EVIDENCE",
+      "original_path": "C:\\Users\\profesor\\OpenBot\\Agents\\agent-ece275c8-821a-43f3-b05f-6cdf123b7ade\\deliverables_R5\\audit_v219\\CE_OBSERVATION_RESULTS_v219.md"
+    },
+    {
+      "role": "external_audit_evidence",
+      "absolute_path": "C:\\Users\\profesor\\tm\\Teoria Modular\\TM_TRABAJO_TEMPORAL\\FREEBUFF_AUDIT_V219\\00_INPUTS_REFERENCE\\external_audit_evidence\\CONCEPTUAL_MOVEMENT_ERRORS_v219.md",
+      "file_name": "CONCEPTUAL_MOVEMENT_ERRORS_v219.md",
+      "size_bytes": 46551,
+      "mtime_utc": "2026-10-30T09:08:58.341450+00:00",
+      "sha256": "C7B69D6716FEC2EA8FBD99DDF607972031B355621984B4F76DACAE5E32BEA456",
+      "state": "EXTERNAL_AUDIT_EVIDENCE",
+      "original_path": "C:\\Users\\profesor\\OpenBot\\Agents\\agent-ece275c8-821a-43f3-b05f-6cdf123b7ade\\deliverables_R5\\audit_v219\\CONCEPTUAL_MOVEMENT_ERRORS_v219.md"
+    },
+    {
+      "role": "external_audit_evidence",
+      "absolute_path": "C:\\Users\\profesor\\tm\\Teoria Modular\\TM_TRABAJO_TEMPORAL\\FREEBUFF_AUDIT_V219\\00_INPUTS_REFERENCE\\external_audit_evidence\\NODE_MAP.csv",
+      "file_name": "NODE_MAP.csv",
+      "size_bytes": 58567,
+      "mtime_utc": "2026-10-30T09:05:38.649601+00:00",
+      "sha256": "53755B28D45EE00AA2F0637F20D2B6F279F05C9FEC75D3E6540ADF5F0953A1EC",
+      "state": "EXTERNAL_AUDIT_EVIDENCE",
+      "original_path": "C:\\Users\\profesor\\OpenBot\\Agents\\agent-ece275c8-821a-43f3-b05f-6cdf123b7ade\\deliverables_R5\\audit_v219\\NODE_MAP.csv"
+    },
+    {
+      "role": "external_audit_evidence",
+      "absolute_path": "C:\\Users\\profesor\\tm\\Teoria Modular\\TM_TRABAJO_TEMPORAL\\FREEBUFF_AUDIT_V219\\00_INPUTS_REFERENCE\\external_audit_evidence\\INPUTS_MANIFEST.json",
+      "file_name": "INPUTS_MANIFEST.json",
+      "size_bytes": 1707,
+      "mtime_utc": "2026-10-30T08:25:54.898741+00:00",
+      "sha256": "4E7432539E7609D4A398883A1252B49C704181CAC10B9B2C087C3748E17349AA",
+      "state": "EXTERNAL_AUDIT_EVIDENCE",
+      "original_path": "C:\\Users\\profesor\\OpenBot\\Agents\\agent-ece275c8-821a-43f3-b05f-6cdf123b7ade\\deliverables_R5\\audit_v219\\INPUTS_MANIFEST.json"
+    },
+    {
+      "role": "external_audit_evidence",
+      "absolute_path": "C:\\Users\\profesor\\tm\\Teoria Modular\\TM_TRABAJO_TEMPORAL\\FREEBUFF_AUDIT_V219\\00_INPUTS_REFERENCE\\external_audit_evidence\\RC_BOOTSTRAP_ONE_DESIGN_v219.md",
+      "file_name": "RC_BOOTSTRAP_ONE_DESIGN_v219.md",
+      "size_bytes": 8230,
+      "mtime_utc": "2026-10-30T09:47:40.097854+00:00",
+      "sha256": "3BEAA851D6C69C5E0DB0CFEE5D6222B007EF863BB34BF606C17EC7C9E2CB71B8",
+      "state": "EXTERNAL_AUDIT_EVIDENCE",
+      "original_path": "C:\\Users\\profesor\\OpenBot\\Agents\\agent-ece275c8-821a-43f3-b05f-6cdf123b7ade\\deliverables_R5\\audit_v219\\RC_BOOTSTRAP_ONE_DESIGN_v219.md"
+    }
+  ]
+}

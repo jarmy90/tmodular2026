@@ -1,0 +1,4 @@
+tt_id,owner_slot,owner_generation,module_id,module_size,final_A,objective,direction,status,pattern_status,confirmed_price,physical_extreme,functional_extreme,functional_extreme_knowledge_seq,confirmed_at,opened_at,closed_at,invalidation_rule
+PRIMARY-G1-TT-2982910,PRIMARY,PRIMARY-G1,PRIMARY-G1-MOD-2850,2850,2985760,2982910,-1,TT_EXTENDED,ACTIVE,0,0,0,0,1792167884990,1792167514926,0,final_A_cruce
+LOCAL-G1-TT-2987050,LOCAL,LOCAL-G1,LOCAL-G1-MOD-1970,1970,2985080,2987050,1,TT_EXTENDED,HISTORICAL,2987060,2987540,2987540,2535,1792167952041,1792167772576,1792167960081,solo_objetivo_local
+PRIMARY-G1-TT-2982280,PRIMARY,PRIMARY-G1,PRIMARY-G1-MOD-2630,2630,2984910,2982280,-1,TT_CONFIRMED,ACTIVE,0,0,0,0,1792168199827,1792168020074,0,solo_objetivo_local

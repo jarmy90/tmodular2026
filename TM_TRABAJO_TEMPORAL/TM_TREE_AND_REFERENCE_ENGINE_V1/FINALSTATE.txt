@@ -1,0 +1,8 @@
+# FINALSTATE
+
+WRITE_OPERATIONS_STOPPED = TRUE
+BACKGROUND_TASKS_RUNNING = FALSE
+
+No se crearon ni se ejecutaron scripts nuevos de árbol, motor, tests ni ZIP en esta respuesta.
+La única operación nueva fue una auditoría defensiva textual y un JSON de contexto de paridad.
+Los originales protegidos no fueron tocados en esta respuesta, pero no se pudo emitir un JSON de integridad final completo con todos los hashes verificados, por lo que el entregable definitivo completo queda abierto y pendiente de cierre.

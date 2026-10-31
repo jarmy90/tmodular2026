@@ -1,0 +1,84 @@
+﻿{
+    "package":  "TM_CORE_v0753",
+    "phase":  "FASE0",
+    "created":  "2026-10-29",
+    "status":  "frozen_baseline_only",
+    "source_package":  "TM_CORE_v0752_R3_B_AUT",
+    "source_zip_sha256":  "450379bd5f1e22380614e6112e3fb52c2a653ee8358bf7e5238995af99d3b7db",
+    "source_manifest_files":  67,
+    "source_manifest_mismatches":  0,
+    "rollback":  [
+                     "TM_ENTREGAS\\ROLLBACK\\TM_CORE_v0752_R3_B_AUT_450379bd.zip",
+                     "TM_ENTREGAS\\ROLLBACK\\v0752_R3_450379bd"
+                 ],
+    "baseline":  {
+                     "selftest":  "8 OK",
+                     "run_all_elapsed_s":  111.6,
+                     "big_b_aut":  "16/16",
+                     "run_all_exit":  2,
+                     "golden_passed":  6,
+                     "transformations":  "PASS",
+                     "replay_engine_seq":  1590,
+                     "legacy":  "20/20",
+                     "t3_passed":  3,
+                     "golden_total":  9,
+                     "prefixes_cuts":  12,
+                     "t3_failed":  9,
+                     "prefix_failures":  0,
+                     "core_raw_sha256":  "32daa8b1aa56946b3bdde6267cbe677ae3d57a8c2c05505a6b89bba07de05129",
+                     "raw_reproducible":  true,
+                     "replay_canonical_seq":  1446
+                 },
+    "files":  [
+                  {
+                      "path":  "python\\TM_CORE_PYTHON_v0752_CANONICAL.py",
+                      "size":  119657,
+                      "sha256":  "71d9a97ac2c49848d152a790db0c70d20b30643782bfee0ac030d19110330b08"
+                  },
+                  {
+                      "path":  "repro\\run_all_safe.py",
+                      "size":  3355,
+                      "sha256":  "1b264856bcb823c323c87c2d5ed72f44b63daebf0f225bf1c65d9b1ce9d838bf"
+                  },
+                  {
+                      "path":  "data\\TM_TICKFEED_1615_1730.csv",
+                      "size":  3496855,
+                      "sha256":  "5f701be2307352cb559abbd7bb856a6fd2a1f91e5d269a93dcc9ae2992e2c9ff"
+                  },
+                  {
+                      "path":  "out\\CORE_RAW_OUTPUT.json",
+                      "size":  2493845,
+                      "sha256":  "32daa8b1aa56946b3bdde6267cbe677ae3d57a8c2c05505a6b89bba07de05129"
+                  },
+                  {
+                      "path":  "out\\GOLDEN_COMPARISON.json",
+                      "size":  1982,
+                      "sha256":  "80f1675b31e0c9a09035c7c1a4e659cb54bb6cd6844be33dbe2fc9125ec81622"
+                  },
+                  {
+                      "path":  "out\\RUN_SUMMARY.json",
+                      "size":  866,
+                      "sha256":  "2246cadda88720c035b1983598952f49b02c97870226641089008ec210817200"
+                  },
+                  {
+                      "path":  "PHASE0_FREEZE.md",
+                      "size":  6699,
+                      "sha256":  "4f7888596dc5ba73d282098705a9f591fcb35decf8b1be3ecb62dfb06d41702b"
+                  },
+                  {
+                      "path":  "TM_READING_FAILURES_v0753.md",
+                      "size":  3000,
+                      "sha256":  "4d4ed9e16cef2b4f7748be6b97f8e27c68c09109e6073a47acb0c99ab71b875c"
+                  }
+              ],
+    "open_rules":  [
+                       "Q-005",
+                       "TM-3-004"
+                   ],
+    "closed_by_javier":  [
+                             "Q-006 estricto",
+                             "yardstick funcional",
+                             "intravela condicionada",
+                             "plano \u003c0.25"
+                         ]
+}

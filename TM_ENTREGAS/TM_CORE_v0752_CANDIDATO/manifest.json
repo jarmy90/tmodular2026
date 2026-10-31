@@ -1,0 +1,131 @@
+{
+  "package": "TM_CORE_v0752_CANONICAL",
+  "version": "0.7.5.2",
+  "status": "CANDIDATO_PENDIENTE_READER_VALIDATOR_Y_MIMO",
+  "file_count": 25,
+  "payload_file_count": 23,
+  "files": [
+    {
+      "path": "authority/TM_ARBOL_MAESTRO_CANONICO_COMPLETO_v2_13_PROPUESTA_R1.md",
+      "size_bytes": 13008,
+      "sha256": "465886e3671e21a4b7c962a61cb4aa54c8ac8d4359c10fce6b20e89d13c3ebc5"
+    },
+    {
+      "path": "data/TM_LECTURAS_CONFIRMADAS_16OCT_1615_1730_v003.txt",
+      "size_bytes": 20709,
+      "sha256": "1e634ebb6c004d297e0acb6b0d378de5cfbbe7bbec82fe26363e47c762104e5b"
+    },
+    {
+      "path": "data/TM_TICKFEED_1615_1730.csv",
+      "size_bytes": 3496855,
+      "sha256": "5f701be2307352cb559abbd7bb856a6fd2a1f91e5d269a93dcc9ae2992e2c9ff"
+    },
+    {
+      "path": "diff_v0751_to_v0752.diff",
+      "size_bytes": 38239,
+      "sha256": "0a4c7b14a1953659cb9b5febf6c3524f18af68bc64c1d4265423124b71d9603f"
+    },
+    {
+      "path": "HANDOFF_DS_TO_AUDITORS.md",
+      "size_bytes": 2816,
+      "sha256": "6c62bbd5f0b9f1a1f55823dc4bae6e8b514f06b4575a0f1ef48bd8928eef3b23"
+    },
+    {
+      "path": "legacy_frozen/TM_CORE_PYTHON_v0751_STREAMING.py",
+      "size_bytes": 93635,
+      "sha256": "4a2877cc7f47e0565d6d788ba20d198486cddeba718f6a8f8498222b38ddefe2"
+    },
+    {
+      "path": "legacy_frozen/TM_CORE_PYTHON_v075_TESTS.py",
+      "size_bytes": 13299,
+      "sha256": "93005a2f0dcc0202a397ac09ad11d720b3c5d579cf5620fe6edab8a09f71c789"
+    },
+    {
+      "path": "out/CORE_RAW_OUTPUT.json",
+      "size_bytes": 20964900,
+      "sha256": "cd5c6feb858dbdd6d31fd39ee7c3085e8d56d93f82b5e8d8ba39a81c9d1f31d7"
+    },
+    {
+      "path": "out/GOLDEN_COMPARISON.json",
+      "size_bytes": 4762,
+      "sha256": "2dbe4526778830e0213c76986039a4943303d0e58453f8e717e93244f0348ee2"
+    },
+    {
+      "path": "out/HARDCODE_SCAN.json",
+      "size_bytes": 141,
+      "sha256": "5607249c678dcd770632febea0fae468e3a6128acf823f1dca0e24b687b03490"
+    },
+    {
+      "path": "out/PREFIX_REPORT.json",
+      "size_bytes": 402,
+      "sha256": "904ac2be01cac70af3af9b32810b89262e21d2a328ca3fdac4859dd07b006c11"
+    },
+    {
+      "path": "out/R0062_R0064.json",
+      "size_bytes": 249,
+      "sha256": "7e7d6fa548dbbd7f2f7394e6ee79db160a2d82944cb48e9cfb61d1bdb9f72c25"
+    },
+    {
+      "path": "out/RUN_SUMMARY.json",
+      "size_bytes": 255,
+      "sha256": "558dc918a647a5c72705020985e729fd7b7b3a6933fb66167838071287b58250"
+    },
+    {
+      "path": "out/SELFTEST.json",
+      "size_bytes": 113,
+      "sha256": "bea891d08cd354c520d9e75e6bb95c4df9f63309755f7912a8ebcd63c90f1627"
+    },
+    {
+      "path": "out/TRANSFORMATION_TESTS.json",
+      "size_bytes": 186,
+      "sha256": "f82be6af91ee3384057725c8cfe968fec61265546235faa29259ff78f094db13"
+    },
+    {
+      "path": "python/TM_CORE_PYTHON_v0752_CANONICAL.py",
+      "size_bytes": 104102,
+      "sha256": "01658c10890e0d75ea2f146c30f59fce386423e66c174769221384d026b0db51"
+    },
+    {
+      "path": "README_REPRODUCCION.md",
+      "size_bytes": 2155,
+      "sha256": "fb271d882db9b3d49e124a388c40972c31cabda526b1357a77e413dcedba43b3"
+    },
+    {
+      "path": "repro/build_package.py",
+      "size_bytes": 2849,
+      "sha256": "3356cfd07416e33ef1ce9fb99c67645399dd63ca68cb633e8af8cf2c5325763e"
+    },
+    {
+      "path": "repro/compare_golden.py",
+      "size_bytes": 3609,
+      "sha256": "098a7f79e950e5b7e5922a017f70e02f31526aeec99a72333ab574d6f1577ba6"
+    },
+    {
+      "path": "repro/run_all.py",
+      "size_bytes": 1663,
+      "sha256": "c801833ed7d40c36a0dda9e06dddf2e98a76edaeb82a00d92ef88e69d067f3be"
+    },
+    {
+      "path": "repro/run_prefix_matrix.py",
+      "size_bytes": 3608,
+      "sha256": "5edd62a4ddbd6452c9549eb9322e2c94e07e7a424fc260219ab86d13912651cb"
+    },
+    {
+      "path": "requirements.txt",
+      "size_bytes": 38,
+      "sha256": "236431effb741c8099ccca33592c84b5fc46b90ade5dff1e91738171700e91d2"
+    },
+    {
+      "path": "tests/test_transformations.py",
+      "size_bytes": 2842,
+      "sha256": "f019566a8f0831694f67371a6dcf750938c21bbd7973671f906860789aaa8bf7"
+    }
+  ],
+  "authorities": {
+    "tree": "TM_ARBOL_MAESTRO_CANONICO_COMPLETO_v2_13_PROPUESTA_R1.md (candidate; not Javier-approved)",
+    "feed": "data/TM_TICKFEED_1615_1730.csv",
+    "golden": "data/TM_LECTURAS_CONFIRMADAS_16OCT_1615_1730_v003.txt"
+  },
+  "reproduction": "python repro/run_all.py",
+  "verdict": "LECTURA_NO_REPRODUCIDA"
+}

@@ -1,0 +1,191 @@
+{
+  "base": "R0062",
+  "full": "R0064",
+  "mapeo_por_geometria_y_tiempo": true,
+  "campos": [
+    {
+      "criterio": "direction",
+      "esperado": -1,
+      "observado": -1,
+      "cumple": 1,
+      "nota": "secuencia/tiempo estructural"
+    },
+    {
+      "criterio": "state",
+      "esperado": "DONE",
+      "observado": "DONE",
+      "cumple": 1,
+      "nota": "secuencia/tiempo estructural"
+    },
+    {
+      "criterio": "created_time",
+      "esperado": 1792169568559,
+      "observado": 1792169568559,
+      "cumple": 1,
+      "nota": "secuencia/tiempo estructural"
+    },
+    {
+      "criterio": "closed_time",
+      "esperado": 1792169854937,
+      "observado": 1792169854937,
+      "cumple": 1,
+      "nota": "secuencia/tiempo estructural"
+    },
+    {
+      "criterio": "module_origin",
+      "esperado": 2966730,
+      "observado": 2966730,
+      "cumple": 1,
+      "nota": "secuencia/tiempo estructural"
+    },
+    {
+      "criterio": "module_extreme",
+      "esperado": 2960210,
+      "observado": 2960210,
+      "cumple": 1,
+      "nota": "secuencia/tiempo estructural"
+    },
+    {
+      "criterio": "module_size",
+      "esperado": 6520,
+      "observado": 6520,
+      "cumple": 1,
+      "nota": "secuencia/tiempo estructural"
+    },
+    {
+      "criterio": "a_origin",
+      "esperado": 2960210,
+      "observado": 2960210,
+      "cumple": 1,
+      "nota": "secuencia/tiempo estructural"
+    },
+    {
+      "criterio": "a_end",
+      "esperado": 2968040,
+      "observado": 2968040,
+      "cumple": 1,
+      "nota": "secuencia/tiempo estructural"
+    },
+    {
+      "criterio": "a_size",
+      "esperado": 7830,
+      "observado": 7830,
+      "cumple": 1,
+      "nota": "secuencia/tiempo estructural"
+    },
+    {
+      "criterio": "b_origin",
+      "esperado": 2968040,
+      "observado": 2968040,
+      "cumple": 1,
+      "nota": "secuencia/tiempo estructural"
+    },
+    {
+      "criterio": "b_extreme",
+      "esperado": 2960020,
+      "observado": 2960020,
+      "cumple": 1,
+      "nota": "secuencia/tiempo estructural"
+    },
+    {
+      "criterio": "b_size",
+      "esperado": 8020,
+      "observado": 8020,
+      "cumple": 1,
+      "nota": "secuencia/tiempo estructural"
+    },
+    {
+      "criterio": "tt_target",
+      "esperado": 2961520,
+      "observado": 2961520,
+      "cumple": 1,
+      "nota": "secuencia/tiempo estructural"
+    },
+    {
+      "criterio": "tt_time",
+      "esperado": 1792169792145,
+      "observado": 1792169792145,
+      "cumple": 1,
+      "nota": "secuencia/tiempo estructural"
+    },
+    {
+      "criterio": "tt_price",
+      "esperado": 2961420,
+      "observado": 2961420,
+      "cumple": 1,
+      "nota": "secuencia/tiempo estructural"
+    },
+    {
+      "criterio": "tt_confirmation_time",
+      "esperado": 1792169836859,
+      "observado": 1792169836859,
+      "cumple": 1,
+      "nota": "secuencia/tiempo estructural"
+    },
+    {
+      "criterio": "tt_knowledge_time",
+      "esperado": 1792169836859,
+      "observado": 1792169836859,
+      "cumple": 1,
+      "nota": "secuencia/tiempo estructural"
+    },
+    {
+      "criterio": "tt_extreme",
+      "esperado": 2960020,
+      "observado": 2960020,
+      "cumple": 1,
+      "nota": "secuencia/tiempo estructural"
+    },
+    {
+      "criterio": "ft",
+      "esperado": true,
+      "observado": true,
+      "cumple": 1,
+      "nota": "secuencia/tiempo estructural"
+    },
+    {
+      "criterio": "ft_time",
+      "esperado": 1792169854937,
+      "observado": 1792169854937,
+      "cumple": 1,
+      "nota": "secuencia/tiempo estructural"
+    },
+    {
+      "criterio": "ft_price",
+      "esperado": 2962110,
+      "observado": 2962110,
+      "cumple": 1,
+      "nota": "secuencia/tiempo estructural"
+    },
+    {
+      "criterio": "ft_structural_time",
+      "esperado": 1792169846302,
+      "observado": 1792169846302,
+      "cumple": 1,
+      "nota": "secuencia/tiempo estructural"
+    }
+  ],
+  "campos_ok": true,
+  "eventos_base": 26,
+  "eventos_full": 26,
+  "eventos_diff": [],
+  "eventos_ok": true,
+  "critico": {
+    "tt_100_time": "2026-10-16 16:56:32.145",
+    "tt_100_price": "29614.20",
+    "b_grande_time": "2026-10-16 16:57:16.859",
+    "tt_knowledge_time": "2026-10-16 16:57:16.859",
+    "ft_structural_time": "2026-10-16 16:57:26.302",
+    "ft_time": "2026-10-16 16:57:34.937",
+    "module": "29667.30->29602.10 X=65.20",
+    "a": "29602.10->29680.40 A=78.30",
+    "b": "29680.40->29600.20 B=80.20",
+    "tt_target": "29615.20",
+    "full_reading_id": "R0064",
+    "full_module_time": "2026-10-16 16:52:48.559",
+    "full_tt_100_time": "2026-10-16 16:56:32.145",
+    "full_b_grande_time": "2026-10-16 16:57:16.859",
+    "full_ft_time": "2026-10-16 16:57:34.937"
+  },
+  "pass": true
+}

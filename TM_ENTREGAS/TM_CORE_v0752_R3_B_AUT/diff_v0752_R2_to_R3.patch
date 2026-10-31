@@ -1,0 +1,429 @@
+--- v0.7.5.2-R2.py
++++ v0.7.5.2-R3.py
+@@ -1,4 +1,4 @@
+-"""TM Core v0.7.5.2 - lector causal con funciones locales en el estado principal."""
++"""TM Core v0.7.5.2-R3 - universal B Grande and dual AUT genealogy."""
+ 
+ from __future__ import annotations
+ 
+@@ -16,7 +16,7 @@
+ from pathlib import Path
+ from typing import Any, Callable, Iterable, Optional
+ 
+-VERSION = "0.7.5.2-R2"
++VERSION = "0.7.5.2-R3"
+ PRICE_SCALE = 100
+ MOVE = 600
+ STRUCTURAL_MOVE = 200
+@@ -32,6 +32,9 @@
+ A_SIGNIFICANT_DEN = 100
+ A_MAX_MODULE_MULTIPLE = 2.0
+ MAX_ACTIVE = 3
++
++AUT_CAUSE_B = "B_EXCEEDS_127_PLUS_0_25"
++AUT_CAUSE_A = "A_CROSSES_STRUCTURE_BASE"
+ 
+ FUNCTION_LABELS = {
+     "1",
+@@ -192,6 +195,10 @@
+     aut_time: int = 0
+     aut_price: int = 0
+     aut_source: str = ""
++    b_tick_active: bool = False
++    b_candidate_emitted: bool = False
++    c_tick_started: bool = False
++    active_function: str = ""
+     tt_target: int = 0
+     tt_hit: bool = False
+     tt_time: int = 0
+@@ -410,6 +417,67 @@
+     @property
+     def module_size(self) -> int:
+         return abs(self.module_extreme - self.module_origin)
++
++
++@dataclass
++class BigBTracker:
++    """Tick-causal B range. Prices are integer hundredths; AUT extra is one quarter point."""
++    direction: int
++    anchor: int
++    a_size: int
++    extreme: int
++    confirmed: bool = False
++    aut: bool = False
++    c_started: bool = False
++    c_extreme: int = 0
++
++    @property
++    def limit(self) -> int:
++        return (AUT_NUM * self.a_size) // AUT_DEN + AUT_EXTRA
++
++    @property
++    def b_size(self) -> int:
++        return abs(self.extreme - self.anchor)
++
++    def feed(self, price: int) -> list[str]:
++        """Return transitions caused by this tick; equality confirms B100, AUT is strict >."""
++        transitions: list[str] = []
++        extends_b = (self.direction > 0 and price > self.extreme) or (self.direction < 0 and price < self.extreme)
++        if extends_b:
++            self.extreme = price
++        if self.c_started:
++            contrary = (self.direction > 0 and price < self.extreme) or (self.direction < 0 and price > self.extreme)
++            if contrary:
++                self.c_extreme = price
++            return transitions
++        if not self.confirmed and self.b_size >= self.a_size:
++            self.confirmed = True
++            transitions.append("B_GRANDE")
++        if self.confirmed and not self.aut and self.b_size > self.limit:
++            self.aut = True
++            transitions.append("AUT_B")
++        return transitions
++
++    def begin_c(self, price: int) -> bool:
++        """A post-confirmation contrary tick starts C Grande directly, never C candidata."""
++        if not self.confirmed:
++            return False
++        contrary = (self.direction > 0 and price < self.extreme) or (self.direction < 0 and price > self.extreme)
++        if contrary and not self.c_started:
++            self.c_started = True
++            self.c_extreme = price
++            return True
++        return False
++
++
++def strict_crosses(direction: int, price: int, base: int) -> bool:
++    """Strictly crosses a structural base; touching equality is not a crossing."""
++    return price > base if direction > 0 else price < base
++
++
++def local_two_gate(*, gap: int, tail: int, direction_ok: bool, size_ok: bool) -> bool:
++    """Ordered 2 gate: no gap (strictly below 0.25), permitted initial tail, direction, size."""
++    return abs(gap) < PLANO_TICK and tail <= PLANO_TICK and direction_ok and size_ok
+ 
+ 
+ def _bar_time(ms: int) -> str:
+@@ -645,6 +713,7 @@
+             "tt_real_extreme": reading.tt_extreme if reading else 0,
+             "ft": int(reading.ft) if reading else 0,
+             "aut_source": reading.aut_source if reading else "",
++            "active_function": reading.active_function if reading else "",
+             "structural_valid": int(reading.structural_valid) if reading else 1,
+             "operational_valid": int(reading.operational_valid) if reading else 0,
+             "operational_rejection_reason": reading.operational_rejection_reason if reading else "",
+@@ -739,10 +808,11 @@
+     def _maybe_aut(self, r: Reading, pt: Pt, ep: Pt, movement: Movement) -> None:
+         if r.aut_reclassified or r.b_size <= self._aut_limit(r):
+             return
+-        r.aut_source = "B_EXCEEDS_BIG_B_RANGE"
++        r.aut_source = AUT_CAUSE_B
+         r.aut_time = pt.time_ms
+         r.aut_price = ep.price
+         r.aut_reclassified = True
++        r.active_function = "AUT"
+         r.labels.append((movement.confirm_index, "AUT"))
+         self._emit(
+             "AUT",
+@@ -750,7 +820,7 @@
+             r,
+             "AUT",
+             "AUT",
+-            "SUPERA_127_MAS_025",
++            f"SUPERA_127_MAS_025; AUT_CAUSE={AUT_CAUSE_B}",
+             detail=f"AUT_SOURCE={r.aut_source}",
+             structural_pt=ep,
+             confirmation_pt=pt,
+@@ -758,25 +828,29 @@
+         self._pattern("AUT", "CONFIRMADO", r, r.b_origin, r.b_extreme, "B_SUPERA_AUT", pt.time_ms)
+ 
+     def _b_grande(self, r: Reading, pt: Pt, ep: Pt, movement: Movement) -> None:
++        already_confirmed = bool(r.b_grande_time)
+         r.b_extreme = movement.extreme
+         r.b_extreme_time = ep.time_ms
+         r.b_extreme_seq = ep.seq
+-        r.b_grande_time = pt.time_ms
++        if not already_confirmed:
++            r.b_grande_time = pt.time_ms
+         r.b_knowledge_time = pt.time_ms
+         r.tt_target = r.a_end + r.direction * r.module_size
+         r.state = "TT_PENDING"
+-        r.labels.append((movement.confirm_index, "B_GRANDE"))
+-        self._emit(
+-            "B_GRANDE",
+-            pt,
+-            r,
+-            "B_GRANDE",
+-            "TT_PENDING",
+-            "B_100_A",
+-            structural_pt=ep,
+-            confirmation_pt=pt,
+-        )
+-        self._pattern("B_GRANDE", "CONFIRMADO", r, r.b_origin, r.b_extreme, "B>=A", pt.time_ms)
++        r.active_function = "AUT" if r.aut_reclassified else "B_GRANDE"
++        if not already_confirmed:
++            r.labels.append((movement.confirm_index, "B_GRANDE"))
++            self._emit(
++                "B_GRANDE",
++                pt,
++                r,
++                "B_GRANDE",
++                "TT_PENDING",
++                "B_100_A",
++                structural_pt=ep,
++                confirmation_pt=pt,
++            )
++            self._pattern("B_GRANDE", "CONFIRMADO", r, r.b_origin, r.b_extreme, "B>=A", pt.time_ms)
+         self._maybe_aut(r, pt, ep, movement)
+         self._check_tt(r, movement, pt)
+ 
+@@ -975,7 +1049,7 @@
+                     )
+                     r.c_origin = 0
+                     r.c_extreme = 0
+-                if old_b != r.b_extreme:
++                if old_b != r.b_extreme and not r.aut_reclassified:
+                     r.labels.append((movement.confirm_index, "B"))
+                     self._emit(
+                         "B_EXT",
+@@ -990,22 +1064,27 @@
+                 self._maybe_aut(r, cp, ep, movement)
+                 self._check_tt(r, movement, cp)
+             else:
+-                r.c_origin = r.b_extreme
+-                r.c_origin_time = r.b_extreme_time
+-                r.c_extreme = movement.extreme
+-                r.c_extreme_time = ep.time_ms
+-                r.c_knowledge_time = cp.time_ms
+-                r.labels.append((movement.confirm_index, "C"))
+-                self._emit(
+-                    "C",
+-                    cp,
+-                    r,
+-                    "C",
+-                    "TT_PENDING",
+-                    "CONTRARIO_A_B",
+-                    structural_pt=ep,
+-                    confirmation_pt=cp,
+-                )
++                if r.c_tick_started:
++                    r.c_extreme = movement.extreme
++                    r.c_extreme_time = ep.time_ms
++                    r.c_knowledge_time = cp.time_ms
++                else:
++                    r.c_origin = r.b_extreme
++                    r.c_origin_time = r.b_extreme_time
++                    r.c_extreme = movement.extreme
++                    r.c_extreme_time = ep.time_ms
++                    r.c_knowledge_time = cp.time_ms
++                    r.labels.append((movement.confirm_index, "C"))
++                    self._emit(
++                        "C",
++                        cp,
++                        r,
++                        "C",
++                        "TT_PENDING",
++                        "CONTRARIO_A_B",
++                        structural_pt=ep,
++                        confirmation_pt=cp,
++                    )
+                 if (r.direction > 0 and movement.extreme <= r.a_end - CUT_BUFFER) or (
+                     r.direction < 0 and movement.extreme >= r.a_end + CUT_BUFFER
+                 ):
+@@ -2303,6 +2382,7 @@
+                    function_direction:int|None=None)->dict|None:
+         local=self._local["state"]
+         if local is None:return None
++        reading.active_function="B_GRANDE" if state=="LOCAL_B_GRANDE" else ("C" if function=="C" else function)
+         size=abs(extreme.price-origin.price)
+         # A-source AUT confirms by crossing the contradicted module base; the
+         # excess beyond that base can be sub-2 points and is not a module size.
+@@ -2424,6 +2504,24 @@
+         self._local_leg(p,"1",new,new1_origin,extreme,"nuevo 1 dominante tras AUT","LOCAL_NUEVO_1",
+                         function_direction=direction)
+ 
++    def _apply_local_b_transitions(self,p:Pt,transitions:list[str],tracker:BigBTracker,
++                                   reading:Reading,local:dict)->None:
++        b0=local["b_origin"];a_end=local["a_extreme"];d=tracker.direction
++        if "B_GRANDE" in transitions:
++            reading.active_function="B_GRANDE"
++            reading.b_grande_time=p.time_ms;reading.state="TT_PENDING"
++            reading.b_origin=tracker.anchor;reading.b_extreme=tracker.extreme
++            reading.b_origin_time=b0.time_ms;reading.b_extreme_time=local["b_extreme"].time_ms
++            reading.b_origin_seq=b0.seq;reading.b_extreme_seq=local["b_extreme"].seq
++            reading.tt_target=reading.a_end+d*reading.module_size
++            self._local_leg(p,"B",reading,b0,local["b_extreme"],
++                "B Grande confirmada en el primer tick que alcanza 100 % de A Grande","LOCAL_B_GRANDE")
++        if "AUT_B" in transitions:
++            reading.aut_source=AUT_CAUSE_B
++            reading.active_function="AUT"
++            self._new_local_reading_after_aut(p,reading,d,a_end,p,
++                "B_GRANDE_SUPERA_127_MAS_025",AUT_CAUSE_B)
++
+     def _process_local_sequence(self,p:Pt,index:int,bar:Bar,newbar:bool)->None:
+         local=self._local;st=local["state"]
+         if st is None:return
+@@ -2433,6 +2531,7 @@
+                 st["bar2"]=bar.idx;st["two_open"]=bar.open
+                 prev=bar.prev_close
+                 gap=bar.open.price-prev if prev is not None else 0
++                st["two_gap"]=gap
+                 if abs(gap)>=PLANO_TICK:
+                     local["phase"]="NO_TWO";local["rejected"]=True
+                     self._local_gate_event(p,r,"GAP_NO_HAY_2")
+@@ -2446,7 +2545,8 @@
+                 local["phase"]="NO_TWO";local["rejected"]=True
+                 self._local_gate_event(p,r,"COLA_INICIAL_CONTRARIA_EXCEDE_025")
+                 return
+-            if dist>=st["one_size"]:
++            if local_two_gate(gap=st.get("two_gap",0),tail=tail,
++                              direction_ok=dist>=0,size_ok=dist>=st["one_size"]):
+                 st["two_confirmed"]=True;st["two_extreme"]=p
+                 r.state="LOCAL_2_CONFIRMADO"
+                 r.module_extreme=p.price;r.module_extreme_time=p.time_ms;r.module_extreme_seq=p.seq
+@@ -2549,48 +2649,109 @@
+             # directional extreme. A pullback after that extreme cannot create
+             # an A-source AUT merely by crossing the module base.
+             aut_base=st.get("aut_base",st["module_origin"])
+-            cross_base=a_is_structural and ((d<0 and ae.price>aut_base.price) or (d>0 and ae.price<aut_base.price))
++            a_direction=-d
++            cross_base=a_is_structural and strict_crosses(a_direction,ae.price,aut_base.price)
+             if cross_base:
+                 next_one_origin=st["module_extreme"]
+                 self._new_local_reading_after_aut(p,r,-d,aut_base,ae,
+-                    "A_LOCAL_SUPERA_BASE_MODULO","A_EXCEEDS_MODULE_BASE",new1_origin=next_one_origin)
++                    "A_LOCAL_SUPERA_BASE_MODULO",AUT_CAUSE_A,new1_origin=next_one_origin)
+                 return
+             # A return through its own origin confirms B and a same-direction AUT.
+             counter_size=abs(p.price-ae.price)
+             resumed=counter_size>=MOVE and (not st.get("requires_base",False) or cross_base) and ((d<0 and p.price<ae.price) or (d>0 and p.price>ae.price))
+             if resumed:
+                 local["phase"]="B_ACTIVE";local["b_origin"]=ae
+-                local["b_extreme"]=p
++                local["b_extreme"]=ae
++                st["big_b_tracker"]=BigBTracker(direction=d,anchor=ae.price,
++                    a_size=abs(ae.price-a0.price),extreme=ae.price)
++                self._local_leg(p,"B",r,ae,p,"B candidata desde el final de A Grande","LOCAL_B_CANDIDATA")
++                transitions=st["big_b_tracker"].feed(p.price)
++                if st["big_b_tracker"].extreme!=ae.price:local["b_extreme"]=p
++                self._apply_local_b_transitions(p,transitions,st["big_b_tracker"],r,local)
+             return
+         if local["phase"]=="B_ACTIVE":
+             b0=local["b_origin"]
+-            a_ext=local["a_extreme"]
+-            be=local["b_extreme"]
+-            extends_b=(d<0 and p.price<be.price) or (d>0 and p.price>be.price)
+-            if extends_b:
++            tracker=st.get("big_b_tracker")
++            if tracker is None:
++                a0=local["a_origin"]
++                tracker=BigBTracker(direction=d,anchor=b0.price,
++                    a_size=abs(local["a_extreme"].price-a0.price),extreme=b0.price)
++                st["big_b_tracker"]=tracker
++            previous_extreme=tracker.extreme
++            if tracker.begin_c(p.price):
++                tracker.feed(p.price)
++                self._local_leg(p,"C",r,Pt(previous_extreme,p.seq-1,p.time_ms,p.bar),p,
++                    "C Grande inicia después de B Grande confirmada","LOCAL_C_GRANDE")
++                local["phase"]="C_ACTIVE"
++                return
++            transitions=tracker.feed(p.price)
++            if tracker.extreme!=previous_extreme:
+                 local["b_extreme"]=p
+-                a0=local["a_origin"];a_end=local["a_extreme"]
+-                r.a_origin=a0.price;r.a_end=a_end.price;r.a_origin_time=a0.time_ms;r.a_end_time=a_end.time_ms
+-                r.a_origin_seq=a0.seq;r.a_end_seq=a_end.seq
+-                r.b_origin=b0.price;r.b_extreme=p.price;r.b_origin_time=b0.time_ms;r.b_extreme_time=p.time_ms
+-                r.b_origin_seq=b0.seq;r.b_extreme_seq=p.seq
++            a0=local["a_origin"];a_end=local["a_extreme"]
++            r.a_origin=a0.price;r.a_end=a_end.price;r.a_origin_time=a0.time_ms;r.a_end_time=a_end.time_ms
++            r.a_origin_seq=a0.seq;r.a_end_seq=a_end.seq
++            r.b_origin=tracker.anchor;r.b_extreme=tracker.extreme
++            r.b_origin_time=b0.time_ms;r.b_extreme_time=local["b_extreme"].time_ms
++            r.b_origin_seq=b0.seq;r.b_extreme_seq=local["b_extreme"].seq
++            r.b_knowledge_time=p.time_ms
++            self._apply_local_b_transitions(p,transitions,tracker,r,local)
++            return
++        if local["phase"]=="C_ACTIVE":
++            tracker=st.get("big_b_tracker")
++            if tracker is not None:
++                old_c=tracker.c_extreme
++                tracker.feed(p.price)
++                if tracker.c_extreme!=old_c:
++                    self._local_leg(p,"C",r,Pt(old_c,p.seq-1,p.time_ms,p.bar),p,
++                        "C Grande extiende su extremo","LOCAL_C_GRANDE")
++            return
++
++    def _track_primary_b_aut(self,p:Pt)->None:
++        """Advance the primary reading's B/AUT state on this physical tick only."""
++        for r in list(self.active):
++            if r.state=="DONE":continue
++            if r.state=="A" and not r.b_tick_active and p.time_ms>r.a_knowledge_time:
++                starts_b=(r.direction>0 and p.price>r.a_end) or (r.direction<0 and p.price<r.a_end)
++                if not starts_b:continue
++                r.b_tick_active=True;r.b_candidate_emitted=True;r.active_function="B_CANDIDATA"
++                r.b_origin=r.a_end;r.b_extreme=p.price
++                r.b_origin_time=r.a_end_time;r.b_extreme_time=p.time_ms
++                r.b_origin_seq=r.a_end_seq;r.b_extreme_seq=p.seq
++                self._emit("B_CANDIDATA",p,r,"B","B_CAND","ANTES_100_A",structural_pt=p,confirmation_pt=p)
++            if not r.b_tick_active:
++                continue
++            extends=(r.direction>0 and p.price>r.b_extreme) or (r.direction<0 and p.price<r.b_extreme)
++            if extends:
++                r.b_extreme=p.price;r.b_extreme_time=p.time_ms;r.b_extreme_seq=p.seq
+                 r.b_knowledge_time=p.time_ms
+-                if r.a_size>=MOVE and r.b_size>=r.a_size:
+-                    if not r.b_grande_time:
+-                        r.b_grande_time=p.time_ms;r.tt_target=r.a_end+d*r.module_size;r.state="TT_PENDING"
+-                        self._local_leg(p,"B",r,b0,p,"B Grande alcanza 100 % de A Grande; TT queda pendiente","LOCAL_B_GRANDE")
+-                    if r.b_size>self._aut_limit(r):
+-                        r.aut_source="B_EXCEEDS_BIG_B_RANGE"
+-                        self._new_local_reading_after_aut(p,r,d,a_end,p,"B_GRANDE_SUPERA_127_MAS_025",
+-                            "B_EXCEEDS_BIG_B_RANGE")
+-                return
+-            # A resumes only after a confirmed 2-point reversal from B's real extreme.
+-            reversal=(p.price-be.price) if d<0 else (be.price-p.price)
+-            resumed_a=reversal>=MOVE and ((d<0 and p.price>a_ext.price) or (d>0 and p.price<a_ext.price))
+-            if resumed_a:
+-                local["a_extreme"]=p;local["phase"]="A_ACTIVE";local["b_origin"]=None
+-                return
+-            return
++            if not r.b_grande_time and r.b_size>=r.a_size:
++                r.b_grande_time=p.time_ms
++                r.active_function="B_GRANDE"
++                r.tt_target=r.a_end+r.direction*r.module_size
++                r.labels.append((len(self.points)-1,"B_GRANDE"))
++                self._emit("B_GRANDE",p,r,"B","TT_PENDING","B100_TICK_EXACTO",structural_pt=p,confirmation_pt=p)
++                self._pattern("B_GRANDE","CONFIRMADO",r,r.b_origin,r.b_extreme,"B100_TICK_EXACTO",p.time_ms)
++            if r.b_grande_time and not r.aut_reclassified and r.b_size>self._aut_limit(r):
++                r.aut_time=p.time_ms;r.aut_price=p.price;r.aut_reclassified=True
++                r.aut_source=AUT_CAUSE_B
++                r.active_function="AUT"
++                r.labels.append((len(self.points)-1,"AUT"))
++                self._emit("AUT",p,r,"AUT","AUT","SUPERA_127_MAS_025; AUT_CAUSE="+AUT_CAUSE_B,
++                           structural_pt=p,confirmation_pt=p)
++                self._pattern("AUT","CONFIRMADO",r,r.b_origin,r.b_extreme,AUT_CAUSE_B,p.time_ms)
++            if r.b_grande_time and r.c_tick_started:
++                extends_c=(r.direction>0 and p.price<r.c_extreme) or (r.direction<0 and p.price>r.c_extreme)
++                if extends_c:
++                    r.c_extreme=p.price;r.c_extreme_time=p.time_ms;r.c_knowledge_time=p.time_ms
++            elif r.b_grande_time:
++                contrary=(r.direction>0 and p.price<r.b_extreme) or (r.direction<0 and p.price>r.b_extreme)
++                if contrary and p.seq>r.b_extreme_seq:
++                    r.c_tick_started=True;r.c_origin=r.b_extreme;r.c_extreme=p.price
++                    r.active_function="C"
++                    r.c_origin_time=r.b_extreme_time;r.c_extreme_time=p.time_ms;r.c_knowledge_time=p.time_ms
++                    r.labels.append((len(self.points)-1,"C"))
++                    self._emit("C",p,r,"C",r.state,"CONTRARIO_POST_B_GRANDE_SIN_C_CANDIDATA",
++                               structural_pt=p,confirmation_pt=p)
+ 
+     def feed_chunk(self,chunk:list[Pt])->None:
+         if self._finalized:raise RuntimeError("cannot feed a finalized engine")
+@@ -2611,6 +2772,7 @@
+                 movement=self.builder.feed(p,index)
+                 if movement is not None:
+                     self.movements.append(movement);self._process_movement(movement)
++            self._track_primary_b_aut(p)
+             if self._local["last_bar"] is not None and newbar:
+                 closed=self.bars[self._local["last_bar"]]
+                 self._close_candidate_bar(closed,p)

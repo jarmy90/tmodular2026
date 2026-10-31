@@ -1,0 +1,24 @@
+{
+  "archive": "C:\\Users\\profesor\\tm\\Teoria Modular\\TM_ENTREGAS\\TM_CANON_v2_13_PROPUESTA.zip",
+  "size_bytes": 306875,
+  "sha256": "A42274932680493CFEA99F0D8587258B11C61E7B7EC8C9FDB49322403FC01E3F",
+  "entries": 23,
+  "manifest_payload_files": 21,
+  "archive_control_files": [
+    "manifest.json",
+    "SHA256SUMS.txt"
+  ],
+  "superseded_plane_formula_rows": 17,
+  "golden_states": {
+    "A": 14,
+    "B": 13,
+    "C": 0,
+    "D": 48
+  },
+  "zip_path_errors": 0,
+  "missing_payloads": 0,
+  "payload_hash_errors": 0,
+  "internal_checksum_errors": 0,
+  "active_v2_12_sha256": "07880B12EE0A40FC09821D2248CD01071B9AE8C3EF4147130049B3EB39F997A8",
+  "candidate_sha256": "D385FFDFE931CFDCCC99976E9A69C502658642385D7BF381979861DC559887B7"
+}

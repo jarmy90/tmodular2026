@@ -1,0 +1,21 @@
+{
+  "source": "TM_TICKFEED_1615_1730.csv",
+  "source_sha256": "5F701BE2307352CB559ABBD7BB856A6FD2A1F91E5D269A93DCC9AE2992E2C9FF",
+  "size_bytes": 3496855,
+  "rows_excluding_header": 20335,
+  "header": [
+    "exporter_version;sequence_id;time_msc;server_time_msc;server_time_s;bar_time_m1;symbol;bid;ask;last;spread;volume;volume_real;flags;flags_text;tick_change;source"
+  ],
+  "field_count_distribution": {
+    "1": 20335
+  },
+  "first_data_row": [
+    "2.00;1;1792167300016;2026.10.16 16:15:00.016;2026.10.16 16:15:00;2026.10.16 16:15;USTEC;29877.00;29878.00;0.00;1.00;0;0.00;134;BID|ASK;0.00;STRATEGY_TESTER_REAL_TICKS"
+  ],
+  "last_data_row": [
+    "2.00;20335;1792171799897;2026.10.16 17:29:59.897;2026.10.16 17:29:59;2026.10.16 17:29;USTEC;29612.40;29613.30;0.00;0.90;0;0.00;134;BID|ASK;-0.90;STRATEGY_TESTER_REAL_TICKS"
+  ],
+  "encoding": "UTF-8 legible",
+  "analysis_date": "2026-10-28",
+  "authority": "calidad descriptiva; no autoridad teórica"
+}

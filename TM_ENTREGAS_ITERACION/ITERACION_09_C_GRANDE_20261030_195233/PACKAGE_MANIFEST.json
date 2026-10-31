@@ -1,0 +1,152 @@
+{
+  "iteration_id": "ITERACION_09_C_GRANDE",
+  "created_utc": "2026-10-30T19:52:33.819096+00:00",
+  "engine": "TM_REFERENCE_INTERPRETER_V1_DIRECT_AUT (revision 09)",
+  "objective": "endurecer baseline (AUT directo exige A_CONFIRMED) e implementar C Grande y C usada como tendencia",
+  "files": [
+    {
+      "original": "10_REPORTS/CHECKPOINT_9_C_GRANDE.md",
+      "package_name": "01_CHECKPOINT_9.md",
+      "size": 3283,
+      "sha256": "6428a52e0f20267e80825235a41bc71ddcb5956a798772e6d5c9db09256f4c87"
+    },
+    {
+      "original": "09_OPEN_RULES/OPEN_RULES_C_GRANDE_V1.md",
+      "package_name": "02_OPEN_RULES.md",
+      "size": 2665,
+      "sha256": "9e1be0b1bfcd49a3ad38fa2a10dfca97929b253173a3af61357a494e7f4dd0d0"
+    },
+    {
+      "original": "02_EXECUTABLE_TREE/TM_TREE_EXECUTABLE_C_GRANDE_V1.md",
+      "package_name": "03_TREE_EXECUTABLE.md",
+      "size": 2402,
+      "sha256": "d917d44ba22dd15b0b4b903934b95455633616c9307390f0997023168fc6f024"
+    },
+    {
+      "original": "03_TRANSITION_SPECS/TM_TREE_TRANSITIONS_C_GRANDE_V1.csv",
+      "package_name": "04_TRANSITIONS_C.csv",
+      "size": 1747,
+      "sha256": "b8a8a54faf878f5d7a6561e0e89907079ff2d663d65cb6c6335ce4c6b1eb8fd0"
+    },
+    {
+      "original": "04_CONCEPT_TESTS/C_TEST_RESULTS.csv",
+      "package_name": "05_TEST_RESULTS_C.csv",
+      "size": 1699,
+      "sha256": "ddca0c811b2a1dc560dfad57a1a3e7677d506684ac0f7dc45c8e614f6dbf33ad"
+    },
+    {
+      "original": "04_CONCEPT_TESTS/ITERATION_09_TEST_RESULTS.json",
+      "package_name": "06_TEST_RESULTS.json",
+      "size": 894,
+      "sha256": "99a8601d0cd75e13c22faa577dfaa1905ff3572077d9ba7087a9e556703b4883"
+    },
+    {
+      "original": "04_CONCEPT_TESTS/DIRECT_AUT_TEST_RESULTS.csv",
+      "package_name": "07_TEST_RESULTS_AD.csv",
+      "size": 2085,
+      "sha256": "383ed274c3519f2abd60dc973a68cb686a92499e2fef54d972bbfd366e354c6c"
+    },
+    {
+      "original": "04_CONCEPT_TESTS/AB_CANDIDATE_TEST_RESULTS.csv",
+      "package_name": "08_TEST_RESULTS_AB_BG.csv",
+      "size": 3332,
+      "sha256": "e9214fb097923c31e54628bb6fc1029e5130e209d9cee75ad4f37569de479c46"
+    },
+    {
+      "original": "04_CONCEPT_TESTS/CORE_TEST_RESULTS.csv",
+      "package_name": "09_TEST_RESULTS_CORE.csv",
+      "size": 1649,
+      "sha256": "19a405447fbd97627a1d5c243f2a115d253ca671e58630814ac0f0fdd8531038"
+    },
+    {
+      "original": "05_REFERENCE_ENGINE/tm_reference_interpreter_v1_direct_aut.py",
+      "package_name": "10_INTERPRETER.py",
+      "size": 43050,
+      "sha256": "8aac5ee70fdaab27cabdb3136bcc54cbd193248ae3e0cb2937f32bf2d14eb4bf"
+    },
+    {
+      "original": "04_CONCEPT_TESTS/run_iteration_09_tests.py",
+      "package_name": "11_RUNNER_TESTS.py",
+      "size": 10177,
+      "sha256": "afdd3b8e7bb782ce54fd2a81fb4fda76cacfc31385c9b6c2da641d46e230446b"
+    },
+    {
+      "original": "04_CONCEPT_TESTS/run_iteration_08_replays.py",
+      "package_name": "12_RUNNER_REPLAYS.py",
+      "size": 2697,
+      "sha256": "ff62df14d9b1e9c345f9f11011d1ced01c8d7c86ca79925835e2c77fb865d823"
+    },
+    {
+      "original": "07_REAL_REPLAYS/direct_aut_state_L1_1615_1618.json",
+      "package_name": "13_STATE_L1.json",
+      "size": 2198,
+      "sha256": "6f887d7b96884c7072e9a519f0aad33c52150a9edef84b5fa81fca63f17622ac"
+    },
+    {
+      "original": "07_REAL_REPLAYS/direct_aut_events_L1_1615_1618.csv",
+      "package_name": "14_EVENTS_L1.csv",
+      "size": 1944,
+      "sha256": "d47d4ac4d4388891d536c1acd1eb9a40eec010196b7d11920df969386125130d"
+    },
+    {
+      "original": "07_REAL_REPLAYS/direct_aut_state_L2_1619_1622.json",
+      "package_name": "15_STATE_L2.json",
+      "size": 2217,
+      "sha256": "b09bee16aa0cad3cf8fca5e3c0b181a15dc73ad7d7e0907ee5346bcb0fbea709"
+    },
+    {
+      "original": "07_REAL_REPLAYS/direct_aut_events_L2_1619_1622.csv",
+      "package_name": "16_EVENTS_L2.csv",
+      "size": 3426,
+      "sha256": "07340e1bcf892e5dc7c416b86aa5ce76aea8bf5dd624b1d4c55396b28318f775"
+    },
+    {
+      "original": "08_TREE_PYTHON_COMPARISON/C_GRANDE_TREE_PYTHON_MATRIX_V1.csv",
+      "package_name": "17_MATRIX_C.csv",
+      "size": 1713,
+      "sha256": "420208bc73d3c03d073d6ac18d599227439a4df6307f8887452dc47031002747"
+    },
+    {
+      "original": "05_REFERENCE_ENGINE/tm_reference_interpreter_v1_bg_aut.py",
+      "package_name": "18_EVIDENCE_BASELINE_PREV.py",
+      "size": 35683,
+      "sha256": "8b94e35d29e884788b3f3e72695d854307b3d42ddb77759f4c3867c24b2f1ff1"
+    }
+  ],
+  "full_traces_referenced": [
+    {
+      "original": "07_REAL_REPLAYS/direct_aut_trace_L1_1615_1618.jsonl",
+      "size": 836714,
+      "sha256": "658361f5c18a99d660736e475001b2f5a9b154eb8f3634b9491aad4114aa6822",
+      "note": "traza completa en el proyecto; no incluida integra"
+    },
+    {
+      "original": "07_REAL_REPLAYS/direct_aut_trace_L2_1619_1622.jsonl",
+      "size": 790949,
+      "sha256": "98852f52eb4da1e3f85851bcb9cc65507f503c0c982062ddb41c333e1e9ca496",
+      "note": "traza completa en el proyecto; no incluida integra"
+    }
+  ],
+  "gate": "GATE_C_GRANDE_TREND_PASS",
+  "tests": {
+    "total": 82,
+    "passed": 82,
+    "canonical": 23,
+    "provisional": 58,
+    "open_rule_block": 1
+  },
+  "open_rule_blocks": [
+    "CUT",
+    "FT",
+    "gap new-1",
+    "concurrency",
+    "AUT direct with A pending"
+  ],
+  "originals_modified": false,
+  "tree_modified": false,
+  "official_engine_modified": false,
+  "goldens_modified": false,
+  "TREE_STATUS": "NOT_READY_TO_FREEZE_TREE",
+  "REFERENCE_ENGINE_STATUS": "REFERENCE_ENGINE_INCOMPLETE",
+  "PATTERN_ENGINE_STATUS": "PATTERN_ENGINE_BLOCKED"
+}

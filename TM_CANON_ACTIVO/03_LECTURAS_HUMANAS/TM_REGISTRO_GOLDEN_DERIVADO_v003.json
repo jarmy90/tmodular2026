@@ -1,0 +1,116 @@
+{
+  "passed": 22,
+  "total": 22,
+  "checks": [
+    {
+      "check": "v003_presente",
+      "ok": true,
+      "detail": "golden v003 leido y contiene los hitos locales"
+    },
+    {
+      "check": "16:15_modulo",
+      "ok": true,
+      "detail": "OHLC 16:15 29877.00/29877.00/29860.80/29861.00"
+    },
+    {
+      "check": "16:16_plano_no_2",
+      "ok": true,
+      "detail": "gap=10 rango=1260"
+    },
+    {
+      "check": "16:15_16:18_estructura",
+      "ok": true,
+      "detail": "R0001 modulo 29877.0->29848.5; A 29848.5->29857.6; TT 29829.1"
+    },
+    {
+      "check": "16:18_AUT_bajista",
+      "ok": true,
+      "detail": "AUT bajista 16:18: 1 evento(s)"
+    },
+    {
+      "check": "16:18_TT_pendiente",
+      "ok": true,
+      "detail": "TT 29829.1 alcanzado despues de 16:18: 2026-10-16 16:24:44.990"
+    },
+    {
+      "check": "local_01_1_16:19",
+      "ok": true,
+      "detail": "esperado=('16:19', '1', -1, 29850.0, 29842.5) obtenido=('16:19', '1', -1, 29850.0, 29842.5)"
+    },
+    {
+      "check": "local_02_2_16:20",
+      "ok": true,
+      "detail": "esperado=('16:20', '2', -1, 29844.8, 29832.5) obtenido=('16:20', '2', -1, 29844.8, 29832.5)"
+    },
+    {
+      "check": "local_03_3_16:21",
+      "ok": true,
+      "detail": "esperado=('16:21', '3', -1, 29835.0, 29830.3) obtenido=('16:21', '3', -1, 29835.0, 29830.3)"
+    },
+    {
+      "check": "local_04_A_16:22",
+      "ok": true,
+      "detail": "esperado=('16:22', 'A', 1, 29830.3, 29850.8) obtenido=('16:22', 'A', 1, 29830.3, 29850.8)"
+    },
+    {
+      "check": "local_05_AUT_16:22",
+      "ok": true,
+      "detail": "esperado=('16:22', 'AUT', 1, 29850.0, 29850.8) obtenido=('16:22', 'AUT', 1, 29850.0, 29850.8)"
+    },
+    {
+      "check": "local_06_1_16:22",
+      "ok": true,
+      "detail": "esperado=('16:22', '1', 1, 29830.3, 29850.8) obtenido=('16:22', '1', 1, 29830.3, 29850.8)"
+    },
+    {
+      "check": "local_07_A_16:23",
+      "ok": true,
+      "detail": "esperado=('16:23', 'A', -1, 29850.8, 29842.8) obtenido=('16:23', 'A', -1, 29850.8, 29842.8)"
+    },
+    {
+      "check": "local_08_B_16:23",
+      "ok": true,
+      "detail": "esperado=('16:23', 'B', 1, 29842.8, 29852.6) obtenido=('16:23', 'B', 1, 29842.8, 29852.6)"
+    },
+    {
+      "check": "local_09_AUT_16:23",
+      "ok": true,
+      "detail": "esperado=('16:23', 'AUT', 1, 29850.8, 29852.6) obtenido=('16:23', 'AUT', 1, 29850.8, 29852.6)"
+    },
+    {
+      "check": "local_10_AUT_16:23",
+      "ok": true,
+      "detail": "esperado=('16:23', 'AUT', -1, 29852.6, 29837.3) obtenido=('16:23', 'AUT', -1, 29852.6, 29837.3)"
+    },
+    {
+      "check": "local_11_1_16:23",
+      "ok": true,
+      "detail": "esperado=('16:23', '1', -1, 29852.6, 29837.3) obtenido=('16:23', '1', -1, 29852.6, 29837.3)"
+    },
+    {
+      "check": "local_12_1_16:24",
+      "ok": true,
+      "detail": "esperado=('16:24', '1', -1, 29852.6, 29833.3) obtenido=('16:24', '1', -1, 29852.6, 29833.3)"
+    },
+    {
+      "check": "local_13_A_16:24",
+      "ok": true,
+      "detail": "esperado=('16:24', 'A', 1, 29833.3, 29840.6) obtenido=('16:24', 'A', 1, 29833.3, 29840.6)"
+    },
+    {
+      "check": "local_14_B_16:24",
+      "ok": true,
+      "detail": "esperado=('16:24', 'B', -1, 29840.6, 29828.1) obtenido=('16:24', 'B', -1, 29840.6, 29828.1)"
+    },
+    {
+      "check": "local_15_AUT_16:24",
+      "ok": true,
+      "detail": "esperado=('16:24', 'AUT', -1, 29833.3, 29828.1) obtenido=('16:24', 'AUT', -1, 29833.3, 29828.1)"
+    },
+    {
+      "check": "local_sin_faltantes",
+      "ok": true,
+      "detail": "eventos locales=71 esperados>=15"
+    }
+  ]
+}

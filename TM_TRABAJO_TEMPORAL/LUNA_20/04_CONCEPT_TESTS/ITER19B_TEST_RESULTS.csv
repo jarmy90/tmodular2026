@@ -1,0 +1,24 @@
+test_id,area,kind,classification,description,pass,detail
+FT-19B-01,ft,positive,CANONICAL_PASS,TT confirmado sin extension: FT nace del extremo funcional,True,origin=2987540 status=FT_POSSIBLE
+FT-19B-02,ft,positive,PROVISIONAL_POLICY_PASS,TT extendido absorbe el FT nacido del extremo anterior,True,ft='' absorbed=1 ext=2988000
+FT-19B-03,ft,positive,PROVISIONAL_POLICY_PASS,extensiones multiples: FT final desde el ultimo extremo,True,origin=2987900 absorbed=2
+FT-19B-04,ft,negative,CANONICAL_PASS,retroceso interno absorbido deja evento trazable,True,"absorbed_events=1 events=['FT_POSSIBLE', 'FT_ABSORBED_BY_TT_EXTENSION', 'TT_EXTENDED']"
+FT-19B-05,ft,negative,CANONICAL_PASS,ningun FT confirmado sobrevive al nuevo extremo del TT,True,antes=True despues='' origin=0
+FT-19B-06,ft,boundary,PROVISIONAL_POLICY_PASS,"FT exige recorrido contrario >= 2,0 puntos",True,"1,9->FT_POSSIBLE 2,0->FT_CONFIRMED"
+FT-19B-07,ft,positive,PROVISIONAL_POLICY_PASS,structural_time del FT = tick del extremo funcional,True,st=1792167950000 kt=1792167952400 extreme_st=1792167950000
+FT-19B-08,ft,positive,CANONICAL_PASS,knowledge_time del extremo funcional posterior al structural,True,status=CONFIRMED st=1792167950000 kt=1792167952400
+FT-19B-11,lifecycle,positive,CANONICAL_PASS,generacion CLOSING: el TT puede extenderse y reabre el extremo,True,antes=CONFIRMED ext=2988100 status=REOPENED
+FT-19B-16,adversarial,translation,CANONICAL_PASS,secuencia trasladada 1.000 puntos conserva estructura,True,"base=('FT_POSSIBLE', 340, 2987540) shifted=('FT_POSSIBLE', 340, 2987540)"
+FT-19B-17,adversarial,inversion,CANONICAL_PASS,secuencia invertida conserva tamanos y estados,True,up=340/FT_POSSIBLE dn=340/FT_POSSIBLE
+FT-19B-18,adversarial,scale,CANONICAL_PASS,otra escala conserva la clasificacion estructural,True,status=FT_CONFIRMED origin=2988540
+FT-19B-19,adversarial,timestamps,CANONICAL_PASS,desplazar timestamps no cambia la clasificacion,True,status=FT_POSSIBLE
+FT-19B-09,real,positive,PROVISIONAL_POLICY_PASS,"FT real nace del extremo funcional 29875,4",True,ft_origin=2987540 ft_st=1792167955050 tt_st=1792167955050
+FT-19B-10,real,positive,CANONICAL_PASS,A principal y FT comparten origen con propietarios distintos,True,A_origin=2987540 ft_owner=LOCAL-G1 A_owner=PRIMARY-G1
+FT-19B-12,lifecycle,negative,CANONICAL_PASS,generacion ARCHIVED no crea funciones nuevas,True,pattern_only=True writes=0
+FT-19B-13,lifecycle,positive,CANONICAL_PASS,slot LOCAL liberado tras el archivo,True,"slot={'slot_id': 'LOCAL', 'active_generation_id': ''}"
+FT-19B-14,lifecycle,positive,CANONICAL_PASS,LOCAL-G1 archivada con motivo funcional propio,True,status=ARCHIVED reason=TT_FUNCTIONAL_EXTREME_CONFIRMED closure=2535 closed=2553
+FT-19B-15,lifecycle,negative,CANONICAL_PASS,no se abre LOCAL-G2 heredando referencias de LOCAL-G1,True,decision=NOT_OPENED evidence=3
+FT-19B-20,human,correction,CANONICAL_PASS,"origen FT corregido por ticks: 29871,8 -> 29875,4",True,"stale=2987180 derived=2987540 diff=360 (3,6 puntos)"
+FT-19B-21,determinism,prefix,CANONICAL_PASS,el estado de 16:26 no depende de ticks posteriores,True,"prefix=['CONTRARY_MOVE_PENDING/2630@2987540', 2987540, 2984910, 'ARCHIVED'] full=['CONTRARY_MOVE_PENDING/2630@2987540', 2987540, 2984910, 'ARCHIVED']"
+FT-19B-22,determinism,positive,CANONICAL_PASS,dos ejecuciones producen el mismo estado,True,identical=True
+FT-19B-23,identity,registry,CANONICAL_PASS,tablas exportadas coherentes con GenerationRecord/PatternRecord,True,gen=ARCHIVED/2553 tt=HISTORICAL/2987540

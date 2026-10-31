@@ -1,0 +1,8 @@
+{
+  "status": "FAIL",
+  "R0062": "not found in candidate output",
+  "R0064": "not found in candidate output",
+  "actual_primary_readings": 12,
+  "event_count": 6559,
+  "scope": "IDs checked in CORE_RAW_OUTPUT; no test or expectation was changed."
+}

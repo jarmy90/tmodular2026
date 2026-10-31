@@ -1,0 +1,422 @@
+--- R5_PACKAGED_19A847C0.py
++++ R5_AUDITED_9BD1BEDB.py
+@@ -3,6 +3,7 @@
+ from __future__ import annotations
+ 
+ import argparse
++import copy
+ import csv
+ import hashlib
+ import json
+@@ -247,6 +248,7 @@
+     post_tt: bool = False
+     parent_tt_id: str = ""
+     generation: int = 1
++    question: dict[str, Any] = field(default_factory=dict)
+ 
+     @property
+     def module_size(self) -> int:
+@@ -553,6 +555,24 @@
+ def local_two_gate(*, gap: int, tail: int, direction_ok: bool, size_ok: bool) -> bool:
+     """Ordered 2 gate: no gap (strictly below 0.25), permitted initial tail, direction, size."""
+     return abs(gap) < PLANO_TICK and tail <= PLANO_TICK and direction_ok and size_ok
++
++
++QUESTION_KEYS = (
++    "current_function",
++    "expected_function",
++    "active_question",
++    "candidate_function",
++    "candidate_status",
++    "pending_condition",
++    "confirmation_condition",
++    "impossibility_condition",
++    "selected_branch",
++    "transition_reason",
++    "module_kind",
++    "source_tick",
++    "source_seq",
++    "machine",
++)
+ 
+ 
+ def _bar_time(ms: int) -> str:
+@@ -742,6 +762,8 @@
+         structural_pt: Pt | None = None,
+         confirmation_pt: Pt | None = None,
+     ) -> dict:
++        if getattr(self, "_shadow_mode", False):
++            return {}
+         self._event_seq += 1
+         sp = structural_pt or knowledge_pt
+         cp = confirmation_pt or knowledge_pt
+@@ -795,6 +817,9 @@
+             "reason": reason,
+             "detail": detail,
+         }
++        if reading is not None and reading.question:
++            event["question"] = {k: reading.question.get(k, "") for k in QUESTION_KEYS}
++            event["question_active"] = reading.question.get("active_question", "")
+         if event["knowledge_time_ms"] < event["confirmation_time_ms"]:
+             raise AssertionError(f"event {event['event_id']} known before confirmation")
+         self.events.append(event)
+@@ -2547,6 +2572,7 @@
+                      "a_origin":None,"a_extreme":None,"b_origin":None,
+                      "phase":"IDLE","rejected":False}
+         self._finalized=False
++        self._shadow_mode=False
+         self.trace_states=False
+         self.state_log=[]
+ 
+@@ -2644,6 +2670,7 @@
+                 "confirmation_time":p.time_ms,
+                 "knowledge_time":p.time_ms,
+                 "lifecycle_state":r.state,
++                "question":{k:r.question.get(k,"") for k in QUESTION_KEYS},
+             })
+         self.state_log.append({"sequence_id":p.seq,"time_ms":p.time_ms,
+                                "bar":p.bar,"price":p.price,"active":items})
+@@ -2739,6 +2766,20 @@
+ 
+     def _local_gate_event(self,p:Pt,reading:Reading,reason:str)->None:
+         self._emit("LOCAL_2_GATE",p,reading,"","MODULE",reason,detail=reason)
++
++    def _q(self,p:Pt,reading:Reading|None,**updates:Any)->None:
++        """Single question authority: one record per reading, appended on change."""
++        if reading is None:return
++        q=reading.question
++        for key in QUESTION_KEYS:
++            q.setdefault(key,"")
++        changed={k:v for k,v in updates.items() if q.get(k)!=v}
++        if not changed:return
++        q.update(changed)
++        q["source_tick"]=p.time_ms;q["source_seq"]=p.seq
++        detail=";".join(f"{k}={q.get(k)}" for k in QUESTION_KEYS if q.get(k)!="")
++        self._emit("QUESTION",p,reading,q.get("current_function","") or q.get("candidate_function",""),
++                   q.get("candidate_status",""),q.get("transition_reason",""),detail=detail)
+ 
+     def _observe_core_aut(self,p:Pt)->None:
+         local=self._local
+@@ -2786,6 +2827,12 @@
+             "bar1":bar.idx,"bar2":None,"two_open":None,"two_confirmed":False,
+             "requires_base":True}
+         local["phase"]="WAIT_TWO";local["candidate_bar"]=None
++        self._q(knowledge,reading,machine="LOCAL",current_function="1",expected_function="2",
++                active_question="PUEDE_EXISTIR_2",candidate_function="2",
++                candidate_status="PENDING",pending_condition="plano_valido_y_recorrido_100_de_1",
++                confirmation_condition="plano+sin_cola+recorrido>=100%_de_1",
++                impossibility_condition="gap_abertura_o_cola_inicial>0.25",
++                selected_branch="",transition_reason="1_CONFIRMADO",module_kind="REGULAR")
+ 
+     def _new_local_reading_after_aut(self,p:Pt,old:Reading,direction:int,origin:Pt,extreme:Pt,reason:str,aut_source:str,
+                                      new1_origin:Pt|None=None)->None:
+@@ -2829,6 +2876,12 @@
+         local["phase"]="AFTER_AUT";local["a_origin"]=None;local["a_extreme"]=None;local["b_origin"]=None
+         self._local_leg(p,"1",new,new1_origin,extreme,"nuevo 1 dominante tras AUT","LOCAL_NUEVO_1",
+                         function_direction=direction)
++        self._q(p,new,machine="LOCAL",current_function="1",expected_function="A",
++                active_question="DONDE_NACE_A",candidate_function="A",
++                candidate_status="PENDING",pending_condition="movimiento_contrario_estructural",
++                confirmation_condition="A_Grande_por_movimiento_estructural",
++                impossibility_condition="",selected_branch="AUT_CONFIRMADO",
++                transition_reason="NUEVO_1_TRAS_AUT",module_kind="POR_DESCARTE")
+ 
+     def _apply_local_b_transitions(self,p:Pt,transitions:list[str],tracker:BigBTracker,
+                                    reading:Reading,local:dict)->None:
+@@ -2857,6 +2910,12 @@
+             reading.tt_target=reading.a_end+d*reading.module_size
+             self._local_leg(p,"B",reading,b0,local["b_extreme"],
+                 "B Grande confirmada en el primer tick que alcanza 100 % de A Grande","LOCAL_B_GRANDE")
++            self._q(p,reading,current_function="B",expected_function="AUT",
++                    active_question="B_SUPERA_127",candidate_function="AUT",
++                    candidate_status="PENDING",pending_condition="b_size>127%_de_A+0.25",
++                    confirmation_condition="AUT_por_B_estricto",impossibility_condition="",
++                    selected_branch="",transition_reason="B_GRANDE_CONFIRMADO",
++                    module_kind=reading.question.get("module_kind","REGULAR"))
+         if "AUT_B" in transitions:
+             reading.aut_source=AUT_CAUSE_B
+             reading.active_function="AUT"
+@@ -2914,10 +2973,34 @@
+             # becomes AUT by crossing the new 1's own structural origin.
+             st["aut_base"]=origin_pt;st["aut_count"]=0;st["requires_base"]=False
+             st["one_size"]=abs(tracker.c_extreme-c_origin)
++        self._q(p,new,machine="LOCAL",current_function="1",expected_function="2",
++                active_question="PUEDE_EXISTIR_2",candidate_function="2",
++                candidate_status="PENDING",pending_condition="plano_valido_y_recorrido_100_de_1",
++                confirmation_condition="plano+sin_cola+recorrido>=100%_de_1",
++                impossibility_condition="gap_abertura_o_cola_inicial>0.25",
++                selected_branch="CUT_NUEVO_1",transition_reason="C_RECLASSIFIED_AS_NEW_1",
++                module_kind="REGULAR")
+         local["phase"]="AFTER_3"
+         local["a_origin"]=None;local["a_extreme"]=None;local["b_origin"]=None
+         local["c_origin"]=None
+         return new
++
++    def _two_impossible(self,p:Pt,r:Reading,local:dict,st:dict,reason:str)->None:
++        """Regularity rupture: the expected 2 cannot exist, so the module is
++        delimited by discard and the active question becomes A Grande."""
++        local["phase"]="AFTER_3"
++        local["rejected"]=True
++        local["a_origin"]=None;local["a_extreme"]=None
++        st["module_kind"]="POR_DESCARTE"
++        st["descarte_reason"]=reason
++        st["descarte_module"]=(st["module_origin"].price,st["module_extreme"].price)
++        st["descarte_origin"]=st["module_origin"]
++        st["descarte_extreme"]=st["module_extreme"]
++        self._q(p,r,expected_function="A",active_question="DONDE_NACE_A",
++                candidate_function="2",candidate_status="IMPOSSIBLE",
++                impossibility_condition=reason,selected_branch="MODULO_POR_DESCARTE",
++                module_kind="POR_DESCARTE",transition_reason=reason)
++        self._local_gate_event(p,r,reason)
+ 
+     def _process_local_sequence(self,p:Pt,index:int,bar:Bar,newbar:bool)->None:
+         local=self._local;st=local["state"]
+@@ -2935,8 +3018,8 @@
+                 gap=bar.open.price-prev if prev is not None else 0
+                 st["two_gap"]=gap
+                 if abs(gap)>=PLANO_TICK:
+-                    local["phase"]="NO_TWO";local["rejected"]=True
+-                    self._local_gate_event(p,r,"GAP_NO_HAY_2")
++                    local["rejected"]=True
++                    self._two_impossible(p,r,local,st,"GAP_NO_HAY_2")
+                 else:local["phase"]="POSSIBLE_TWO"
+             return
+         if local["phase"]=="POSSIBLE_TWO" and bar.idx==st["bar2"]:
+@@ -2944,8 +3027,8 @@
+             tail=(bar.high.price-op.price) if d<0 else (op.price-bar.low.price)
+             dist=(op.price-p.price) if d<0 else (p.price-op.price)
+             if tail>PLANO_TICK:
+-                local["phase"]="NO_TWO";local["rejected"]=True
+-                self._local_gate_event(p,r,"COLA_INICIAL_CONTRARIA_EXCEDE_025")
++                local["rejected"]=True
++                self._two_impossible(p,r,local,st,"COLA_INICIAL_CONTRARIA_EXCEDE_025")
+                 return
+             if local_two_gate(gap=st.get("two_gap",0),tail=tail,
+                               direction_ok=dist>=0,size_ok=dist>=st["one_size"]):
+@@ -2954,7 +3037,37 @@
+                 r.module_extreme=p.price;r.module_extreme_time=p.time_ms;r.module_extreme_seq=p.seq
+                 st["module_extreme"]=p;st["sequence"].module_extreme=p.price
+                 self._local_leg(p,"2",r,op,p,"2 confirmado: plano, cola inicial permitida y recorrido direccional >= 1","LOCAL_2_CONFIRMADO")
++                self._q(p,r,current_function="2",expected_function="3",
++                        active_question="CONFIRMA_3",candidate_function="3",
++                        candidate_status="PENDING",pending_condition="nuevo_extremo_tras_2",
++                        confirmation_condition="3_confirmado_por_nuevo_extremo",
++                        impossibility_condition="",selected_branch="",
++                        transition_reason="2_CONFIRMADO")
+                 local["phase"]="TWO_CONFIRMED"
++            return
++        if local["phase"]=="POSSIBLE_TWO" and st.get("bar2") is not None and bar.idx>st["bar2"]:
++            # 2 stays pending across bars until it reaches its minimum (100 % of 1)
++            # or the regularity breaks with a contrary structural move that can
++            # only be A Grande.
++            op=st["two_open"]
++            dist=(op.price-p.price) if d<0 else (p.price-op.price)
++            if dist>=st["one_size"]:
++                st["two_confirmed"]=True;st["two_extreme"]=p
++                r.state="LOCAL_2_CONFIRMADO"
++                r.module_extreme=p.price;r.module_extreme_time=p.time_ms;r.module_extreme_seq=p.seq
++                st["module_extreme"]=p;st["sequence"].module_extreme=p.price
++                self._local_leg(p,"2",r,op,p,"2 confirmado fuera de su vela: recorrido direccional >= 1","LOCAL_2_CONFIRMADO")
++                self._q(p,r,current_function="2",expected_function="3",
++                        active_question="CONFIRMA_3",candidate_function="3",
++                        candidate_status="PENDING",pending_condition="nuevo_extremo_tras_2",
++                        confirmation_condition="3_confirmado_por_nuevo_extremo",
++                        impossibility_condition="",selected_branch="",
++                        transition_reason="2_CONFIRMADO_FUERA_DE_VELA")
++                local["phase"]="TWO_CONFIRMED"
++            else:
++                contrarian=(p.price-st["module_extreme"].price) if d<0 else (st["module_extreme"].price-p.price)
++                if contrarian>=MOVE:
++                    self._two_impossible(p,r,local,st,"RUPTURA_CONTRARIA_SIN_2")
+             return
+         if local["phase"]=="TWO_CONFIRMED":
+             if bar.idx==st["bar2"]:
+@@ -2972,6 +3085,13 @@
+                 r.module_extreme=p.price;r.module_extreme_time=p.time_ms;r.module_extreme_seq=p.seq
+                 r.state="LOCAL_3_CONFIRMADO"
+                 self._local_leg(p,"3",r,ext,p,"3 confirmado despues del 2: nuevo extremo","LOCAL_3_CONFIRMADO")
++                self._q(p,r,current_function="3",expected_function="A",
++                        active_question="DONDE_NACE_A",candidate_function="A",
++                        candidate_status="PENDING",pending_condition="movimiento_contrario_estructural",
++                        confirmation_condition="A_Grande_por_movimiento_estructural",
++                        impossibility_condition="",selected_branch="",
++                        transition_reason="3_CONFIRMADO_PROVISIONAL")
++                r.question["provisional_rule"]="medida_de_3_no_definida"
+                 local["phase"]="WAIT_A_BAR";local["three_bar"]=bar.idx
+             return
+         if local["phase"]=="WAIT_A_BAR":
+@@ -3026,6 +3146,12 @@
+                 r.a_origin_seq=a0.seq;r.a_end_seq=ae.seq
+                 r.a_knowledge_time=p.time_ms
+                 self._local_leg(p,"A",r,a0,ae,"A Grande confirmada por movimiento estructural","LOCAL_A")
++                self._q(p,r,current_function="A",expected_function="B",
++                        active_question="B_CANDIDATA",candidate_function="B",
++                        candidate_status="PENDING",pending_condition="contrario_desde_a_end",
++                        confirmation_condition="B_Grande_al_100%_de_A",
++                        impossibility_condition="precio_vuelve_mas_alla_de_a_end_antes_de_100%",
++                        selected_branch="",transition_reason="A_CONFIRMADO")
+             elif (d<0 and p.price<a0.price) or (d>0 and p.price>a0.price):
+                 # The contrary excursion did not confirm A; absorb it into the
+                 # dominant 1 and keep the more extreme point causally.
+@@ -3088,6 +3214,11 @@
+                 self._local_leg(p,"C",r,Pt(previous_extreme,local["c_origin_seq"],
+                     local["c_origin_time"],p.bar),p,
+                     "C Grande inicia después de B Grande confirmada","LOCAL_C_GRANDE")
++                self._q(p,r,current_function="C",expected_function="CUT",
++                        active_question="C_SUPERA_A_END",candidate_function="CUT",
++                        candidate_status="PENDING",pending_condition="c_supera_a_end_congelado",
++                        confirmation_condition="CUT_estricto",impossibility_condition="",
++                        selected_branch="C_TRAS_B_GRANDE",transition_reason="C_INICIA")
+                 local["phase"]="C_ACTIVE"
+                 return
+             transitions=tracker.feed(p.price)
+@@ -3139,24 +3270,83 @@
+                 self._emit("CUT",p,r,"CUT","DONE","CUT_CRUZA_A_END_CONGELADO",
+                     structural_pt=p,confirmation_pt=p)
+                 self._pattern("CUT","CONFIRMADO",r,c_origin,tracker.c_extreme,"C_SUPERA_A_END",p.time_ms)
++                self._q(p,r,current_function="CUT",expected_function="A",
++                        active_question="DONDE_NACE_A",candidate_function="A",
++                        candidate_status="PENDING",pending_condition="movimiento_contrario_estructural",
++                        confirmation_condition="A_Grande_por_movimiento_estructural",
++                        impossibility_condition="",selected_branch="CUT_CONFIRMADO",
++                        transition_reason="CUT_CONFIRMADO")
+                 self._reclassify_c_as_new_1(p,r,tracker,local)
+             return
+ 
+-    def _track_primary_b_aut(self,p:Pt)->None:
+-        """Advance the primary reading's B/AUT state on this physical tick only."""
++    def _advance_primary_question(self,p:Pt)->None:
++        """Single tick authority for readings whose question is PRIMARY.
++
++        Local readings are decided by _process_local_sequence; for them the
++        legacy B/AUT/C rules run on a clone only and the difference is logged,
++        never applied.
++        """
+         for r in list(self.active):
+             if r.state=="DONE":continue
++            machine=r.question.get("machine","")
++            if machine=="LOCAL":
++                self._shadow_compare(p,r)
++                continue
++            if not r.question:
++                if r.state=="MODULE":
++                    self._q(p,r,machine="PRIMARY",current_function="1",expected_function="A",
++                            active_question="DONDE_NACE_A",candidate_function="A",
++                            candidate_status="PENDING",pending_condition="movimiento_contrario_estructural",
++                            confirmation_condition="A_Grande_por_movimiento_estructural",
++                            impossibility_condition="",selected_branch="",
++                            transition_reason="MODULO_CONSOLIDADO_CONFIRMADO",module_kind="REGULAR")
++                    self._legacy_tick_decision(p,r)
++                    continue
++                if r.state!="A":continue
++                self._q(p,r,machine="PRIMARY",current_function="A",expected_function="B",
++                        active_question="B_CANDIDATA",candidate_function="B",
++                        candidate_status="PENDING",pending_condition="contrario_desde_a_end",
++                        confirmation_condition="B_Grande_al_100%_de_A",
++                        impossibility_condition="precio_vuelve_mas_alla_de_a_end_antes_de_100%",
++                        selected_branch="",transition_reason="A_HANDOFF_TICK")
++            self._legacy_tick_decision(p,r)
++
++    def _shadow_compare(self,p:Pt,r:Reading)->None:
++        clone=copy.deepcopy(r)
++        clone.question["machine"]="SHADOW"
++        previous=self._shadow_mode
++        self._shadow_mode=True
++        try:
++            self._legacy_tick_decision(p,clone)
++        finally:
++            self._shadow_mode=previous
++        diffs=[]
++        for field_name in ("b_tick_active","b_grande_time","aut_time","c_tick_started","a_end"):
++            if getattr(clone,field_name)!=getattr(r,field_name):
++                diffs.append(f"{field_name}:{getattr(r,field_name)}!={getattr(clone,field_name)}")
++        if diffs:
++            self._emit("SHADOW_DIVERGENCE",p,r,"","SHADOW",";".join(diffs),detail="legacy_rules_not_applied")
++
++    def _legacy_tick_decision(self,p:Pt,r:Reading)->None:
++        """Frozen legacy B/AUT/C decision rules (oracle and PRIMARY executor)."""
++        if True:
+             if r.state=="A" and not r.b_tick_active and p.time_ms>r.a_knowledge_time:
+-                if r.a_size<MOVE:continue
++                if r.a_size<MOVE:return
+                 starts_b=(r.direction>0 and p.price>r.a_end) or (r.direction<0 and p.price<r.a_end)
+-                if not starts_b:continue
++                if not starts_b:return
+                 r.b_tick_active=True;r.b_candidate_emitted=True;r.active_function="B_CANDIDATA"
+                 r.b_origin=r.a_end;r.b_extreme=p.price
+                 r.b_origin_time=r.a_end_time;r.b_extreme_time=p.time_ms
+                 r.b_origin_seq=r.a_end_seq;r.b_extreme_seq=p.seq
+                 self._emit("B_CANDIDATA",p,r,"B","B_CAND","ANTES_100_A",structural_pt=p,confirmation_pt=p)
++                self._q(p,r,machine=r.question.get("machine","PRIMARY"),current_function="A",
++                        expected_function="B",active_question="B_CANDIDATA",candidate_function="B",
++                        candidate_status="PENDING",pending_condition="B_supera_100%_de_A",
++                        confirmation_condition="B_Grande_al_100%_de_A",
++                        impossibility_condition="precio_vuelve_mas_alla_de_a_end_antes_de_100%",
++                        selected_branch="",transition_reason="B_CANDIDATA")
+             if not r.b_tick_active:
+-                continue
++                return
+             a_extends=(r.direction<0 and p.price>r.a_end) or (r.direction>0 and p.price<r.a_end)
+             if a_extends and not r.b_grande_time:
+                 # B candidata fallida: el nuevo extremo pertenece a A Grande.
+@@ -3169,7 +3359,13 @@
+                 r.labels.append((len(self.points)-1,"A"))
+                 self._emit("B_FALLIDA",p,r,"B_FALLIDA","A","B_NO_LLEGO_A_100_A_EXTIENDE",
+                            structural_pt=p,confirmation_pt=p)
+-                continue
++                self._q(p,r,current_function="A",expected_function="B",
++                        active_question="B_CANDIDATA",candidate_function="B",
++                        candidate_status="PENDING",pending_condition="nuevo_intento_de_B_desde_a_end",
++                        confirmation_condition="B_Grande_al_100%_de_A",
++                        impossibility_condition="precio_vuelve_mas_alla_de_a_end_antes_de_100%",
++                        selected_branch="A_EXTIENDE",transition_reason="B_CANDIDATA_FALLIDA_A_EXTIENDE")
++                return
+             extends=(r.direction>0 and p.price>r.b_extreme) or (r.direction<0 and p.price<r.b_extreme)
+             if extends:
+                 r.b_extreme=p.price;r.b_extreme_time=p.time_ms;r.b_extreme_seq=p.seq
+@@ -3181,6 +3377,11 @@
+                 r.labels.append((len(self.points)-1,"B_GRANDE"))
+                 self._emit("B_GRANDE",p,r,"B","TT_PENDING","B100_TICK_EXACTO",structural_pt=p,confirmation_pt=p)
+                 self._pattern("B_GRANDE","CONFIRMADO",r,r.b_origin,r.b_extreme,"B100_TICK_EXACTO",p.time_ms)
++                self._q(p,r,current_function="B",expected_function="AUT",
++                        active_question="B_SUPERA_127",candidate_function="AUT",
++                        candidate_status="PENDING",pending_condition="b_size>127%_de_A+0.25",
++                        confirmation_condition="AUT_por_B_estricto",impossibility_condition="",
++                        selected_branch="",transition_reason="B_GRANDE_CONFIRMADO",module_kind=r.question.get("module_kind","REGULAR"))
+             if r.b_grande_time and not r.aut_reclassified and r.b_size>self._aut_limit(r):
+                 r.aut_time=p.time_ms;r.aut_price=p.price;r.aut_reclassified=True
+                 r.aut_source=AUT_CAUSE_B
+@@ -3189,6 +3390,12 @@
+                 self._emit("AUT",p,r,"AUT","AUT","SUPERA_127_MAS_025; AUT_CAUSE="+AUT_CAUSE_B,
+                            structural_pt=p,confirmation_pt=p)
+                 self._pattern("AUT","CONFIRMADO",r,r.b_origin,r.b_extreme,AUT_CAUSE_B,p.time_ms)
++                self._q(p,r,current_function="AUT",expected_function="C",
++                        active_question="C_TRAS_B_GRANDE",candidate_function="C",
++                        candidate_status="PENDING",pending_condition="movimiento_contrario_estructural",
++                        confirmation_condition="C_Grande_por_movimiento_contrario",
++                        impossibility_condition="",selected_branch="AUT_POR_B",
++                        transition_reason="AUT_POR_B")
+             if r.b_grande_time and r.c_tick_started:
+                 extends_c=(r.direction>0 and p.price<r.c_extreme) or (r.direction<0 and p.price>r.c_extreme)
+                 if extends_c:
+@@ -3202,6 +3409,11 @@
+                     r.labels.append((len(self.points)-1,"C"))
+                     self._emit("C",p,r,"C",r.state,"CONTRARIO_POST_B_GRANDE_SIN_C_CANDIDATA",
+                                structural_pt=p,confirmation_pt=p)
++                    self._q(p,r,current_function="C",expected_function="CUT",
++                            active_question="C_SUPERA_A_END",candidate_function="CUT",
++                            candidate_status="PENDING",pending_condition="c_supera_a_end_congelado",
++                            confirmation_condition="CUT_estricto",impossibility_condition="",
++                            selected_branch="C_TRAS_B_GRANDE",transition_reason="C_INICIA")
+ 
+     def feed_chunk(self,chunk:list[Pt])->None:
+         if self._finalized:raise RuntimeError("cannot feed a finalized engine")
+@@ -3222,7 +3434,7 @@
+                 movement=self.builder.feed(p,index)
+                 if movement is not None:
+                     self.movements.append(movement);self._process_movement(movement)
+-            self._track_primary_b_aut(p)
++            self._advance_primary_question(p)
+             if self._local["last_bar"] is not None and newbar:
+                 closed=self.bars[self._local["last_bar"]]
+                 self._close_candidate_bar(closed,p)

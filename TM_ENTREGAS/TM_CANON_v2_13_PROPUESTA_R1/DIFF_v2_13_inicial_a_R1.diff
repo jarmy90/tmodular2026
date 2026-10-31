@@ -1,0 +1,43 @@
+--- a/TM_ARBOL_MAESTRO_CANONICO_COMPLETO_v2_13_PROPUESTA.md
++++ b/TM_ARBOL_MAESTRO_CANONICO_COMPLETO_v2_13_PROPUESTA.md
+@@ -1,11 +1,11 @@
+-# TM — ÁRBOL MAESTRO CANÓNICO COMPLETO v2.13 (PROPUESTA)
++# TM — ÁRBOL MAESTRO CANÓNICO COMPLETO v2.13 R1 (PROPUESTA)
+ 
+-- **Estado:** `CANDIDATO_PENDIENTE_APROBACION`
++- **Estado:** `CANDIDATO_PENDIENTE_AUDITORIA_MIMO_Y_APROBACION_JAVIER`
+ - **Fecha:** 2026-10-28
+ - **Base documental:** `TM_ARBOL_MAESTRO_CANONICO_COMPLETO_v2_12.md` (histórica, preservada íntegra en `historical/`).
+ - **Golden humano vigente:** `TM_LECTURAS_CONFIRMADAS_16OCT_1615_1730_v003.txt`.
+ - **Árbol activo aprobado antes de esta propuesta:** v2.12. Esta propuesta no lo sustituye.
+-- **Autoridad:** Javier. Las instrucciones expresas de esta fase gobiernan las correcciones señaladas abajo.
++- **Autoridad:** Javier. Las instrucciones expresas de Javier gobiernan las correcciones señaladas abajo. La decisión de autoridad sobre plano/gap está anexada en `DECISION_AUTORIDAD_PLANO_GAP_JAVIER.md`.
+ 
+ ## 0. Estado y precedencia de esta propuesta
+ 
+@@ -59,7 +59,7 @@
+ GAP    ⇔ |Δ| ≥ 0,25 puntos
+ ```
+ 
+-La igualdad exacta de 0,25 es **no plano** y corresponde a gap. Por tanto, 0,10, 0,20 y 0,24 son plano; 0,25 o más no son plano. Esta regla sustituye globalmente las antiguas fórmulas inclusivas `≤ 0,25` para plano.
++La igualdad exacta de 0,25 es **no plano** y corresponde a gap. Por tanto, 0,10, 0,20 y 0,24 son plano; 0,25 o más no son plano. Esta regla sustituye globalmente las antiguas fórmulas inclusivas `≤ 0,25` para plano. La decisión de autoridad reproducida en el anexo citado respalda esta frontera.
+ 
+ Si hay gap, no hay posible 2 ni 2. Si hay plano, se comprueban causalmente:
+ 
+@@ -118,7 +118,7 @@
+ 
+ **Confirmadas completas A:** 16:15–16:24, 16:30–16:32 y 16:37. Esto conserva el bloque 16:15–16:24 íntegro como golden completo conforme a v003.
+ 
+-**Parciales B:** 16:33–16:36 (estado del resumen; la sección 5 describe referencia física y deja abierta la función), 16:38–16:39, y 16:42–16:48. 16:38–16:39 se mantienen parciales; no son golden completo.
++**Parciales B:** 16:33–16:36 (estado del resumen; la sección 5 describe referencia física y deja abierta la función), 16:38–16:39 (etiqueta literal `[A/B]` conservada de v003; clasificación parcial según la instrucción expresa de Javier), y 16:42–16:48. 16:38–16:39 se mantienen parciales; no son golden completo.
+ 
+ **Pendientes D:** 16:25–16:29, 16:40–16:41 y 16:49–17:29. No hay filas C expresamente declaradas en el resumen v003.
+ 
+@@ -127,6 +127,7 @@
+ - 16:16: diferencia +0,1, plano, sin cola inicial en contra y recorrido menor que 16:15; módulo por descarte.
+ - 16:19: 1 bajista; 16:20: 2 bajista confirmado; 16:21: 3 confirmado.
+ - 16:22: A Grande alcista; supera la referencia del módulo de la secuencia 1-2-3 de 16:19-16:21 en 0,8 puntos; confirma AUT alcista y nuevo 1 alcista dominante. 29850,0 es referencia física de esa lectura, no regla hardcodeable; no se exige 29877,0.
++- 16:23: apertura +0,3 respecto del cierre anterior; según v003, `|Δ| >= 0,25`, por tanto NO PLANO y no abre en plano. Es un contraejemplo de la frontera, no un ejemplo de plano.
+ - 16:23–16:24: se conservan las lecturas completas y el orden causal descrito por v003.
+ 
+ ## 10. Clasificación del contenido recibido de v2.12

@@ -1,0 +1,10 @@
+{
+  "human_anchors_total": 19,
+  "human_anchors_passed": 6,
+  "trace_rows_generated": 4400,
+  "human_segments_validated": 6,
+  "ticks_with_independent_human_label": 0,
+  "blocks_total": 4,
+  "blocks_passed": 1,
+  "note": "Las anclas son por vela; no existe etiqueta humana por tick. trace_rows_generated NO es una metrica de fidelidad."
+}

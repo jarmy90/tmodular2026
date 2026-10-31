@@ -1,0 +1,54 @@
+{
+  "motor": {
+    "structural_swing_count": 2238,
+    "geometric_count": 2238,
+    "functional_count": 2238,
+    "causal_geometric_count": 2225,
+    "causal_functional_count": 2166,
+    "movement_count": 439,
+    "causal_functional_movement_count": 436,
+    "owner_tick_count": 19901,
+    "uncovered_tick_count": 434,
+    "tick_count": 20335
+  },
+  "swings": {
+    "swings": 2238,
+    "geometric": 2238,
+    "functional": 2238,
+    "causal_geometric": 2225,
+    "causal_functional": 2166,
+    "causal_geometric_uncovered": 13,
+    "causal_functional_uncovered": 72,
+    "functional_applicable": 696,
+    "functional_applicable_causal": 671,
+    "reasons": {
+      "SWING_MENOR_6_SIN_FUNCION": 47,
+      "LECTURA_CONOCIDA_TARDE": 3,
+      "A_CONOCIDA_TARDE": 22,
+      "CUBIERTO": 2166
+    }
+  },
+  "movements": {
+    "movements": 439,
+    "geometric": 439,
+    "causal_geometric": 439,
+    "causal_functional": 436
+  },
+  "owner": {
+    "ticks": 20335,
+    "owner_ok": 19901,
+    "uncovered": 434,
+    "noise": 3927,
+    "reasons": {
+      "PRE_LECTURA": 6,
+      "PRECIO_FUERA_RANGO_ACTIVO": 421,
+      "SIN_LECTURA_ACTIVA": 7
+    }
+  },
+  "uncovered_swing_reasons": {
+    "SWING_MENOR_6_SIN_FUNCION": 47,
+    "LECTURA_CONOCIDA_TARDE": 3,
+    "A_CONOCIDA_TARDE": 22,
+    "CUBIERTO": 2166
+  }
+}

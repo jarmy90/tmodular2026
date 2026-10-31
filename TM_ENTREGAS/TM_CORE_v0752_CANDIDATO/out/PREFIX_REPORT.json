@@ -1,0 +1,12 @@
+{
+  "prefix_failures": null,
+  "status": "NOT_RUN_FULL_MATRIX",
+  "required": {
+    "physical_bar_closes": 75,
+    "before_after_each_local_confirmation": true,
+    "random_cuts": 500,
+    "seed": 7552,
+    "fresh_process_per_cut": true
+  },
+  "reason": "Candidate fails first exact golden AUT tick and emits repeated local AUTs; no prefix pass is claimed. Reproducer is repro/run_prefix_matrix.py."
+}

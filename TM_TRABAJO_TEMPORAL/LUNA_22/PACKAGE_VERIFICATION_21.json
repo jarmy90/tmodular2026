@@ -1,0 +1,68 @@
+{
+  "zip": "TM_ITERATION_21_REVIEW.zip",
+  "zip_sha256": "45955EB23AB57A409DDC1AA2502EF2A31C99A92936A4B2DFC4A0D9D7F472BC44",
+  "zip_bytes": 341359,
+  "entries": 79,
+  "engine_sha256": "99046BB3387E1A9ADFCBF8FF786A7577BB448B6EE7CD5BCCB7E4801AAA0D343E",
+  "verification": "OK",
+  "problems": [],
+  "runs_from_extracted": {
+    "run_iteration_16_all.py": {
+      "returncode": 0,
+      "tail": [
+        "  \"failed\": 0,",
+        "  \"authority_source\": \"CSV classification column (structured)\"",
+        "}"
+      ]
+    },
+    "run_iteration_17_anchors.py": {
+      "returncode": 0,
+      "tail": [
+        "    \"CONTINUATION_ACROSS_BAR\"",
+        "  ]",
+        "}"
+      ]
+    },
+    "run_iteration_19b_tests.py": {
+      "returncode": 0,
+      "tail": [
+        "PASS FT-19B-22 dos ejecuciones producen el mismo estado | identical=True",
+        "PASS FT-19B-23 tablas exportadas coherentes con GenerationRecord/PatternRecord | gen=ARCHIVED/2553 tt=HISTORICAL/2987540",
+        "TOTAL 23 PASS 23"
+      ]
+    },
+    "run_iteration_19b_anchors.py": {
+      "returncode": 0,
+      "tail": [
+        "  \"anchors_total\": 12,",
+        "  \"anchors_passed\": 12",
+        "}"
+      ]
+    },
+    "run_iteration_20_anchors.py": {
+      "returncode": 0,
+      "tail": [
+        "  \"anchors_total\": 10,",
+        "  \"anchors_passed\": 10",
+        "}"
+      ]
+    },
+    "run_iteration_21_tests.py": {
+      "returncode": 0,
+      "tail": [
+        "PASS C24 el motor no contiene precios, horas ni atajos del caso | hallazgos=[]",
+        "PASS C25 todo patron y generacion tiene propietario y slot | patrones=2 generaciones=2",
+        "TOTAL 50 PASS 50 FAIL 0"
+      ]
+    },
+    "run_iteration_21_gate.py": {
+      "returncode": 0,
+      "tail": [
+        " \"reason\": \"OWNER_ERROR: la B del tramo local se esta midiendo con la A de PRIMARY-G1. La lectura humana exige una A local propia (LOCAL-G2 limpia), no la A principal.\",",
+        " \"open_question\": \"AB_DELIMITATION_IN_NOISY_BAR\"",
+        "}"
+      ]
+    }
+  },
+  "feed": "C:\\Users\\profesor\\tm\\Teoria Modular\\TM_CANON_ACTIVO\\02_TICKS\\TM_TICKFEED_1615_1730.csv"
+}

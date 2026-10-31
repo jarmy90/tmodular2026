@@ -1,0 +1,137 @@
+{
+  "failures": 0,
+  "rows": [
+    {
+      "cutoff": "16:21:54.482",
+      "cutoff_ms": 1792167714482,
+      "points": 1601,
+      "events_expected": 14,
+      "events_observed": 14,
+      "local_expected": 3,
+      "local_observed": 3,
+      "events_ok": true,
+      "local_ok": true,
+      "pass": true
+    },
+    {
+      "cutoff": "16:22:52.576",
+      "cutoff_ms": 1792167772576,
+      "points": 1809,
+      "events_expected": 22,
+      "events_observed": 22,
+      "local_expected": 3,
+      "local_observed": 3,
+      "events_ok": true,
+      "local_ok": true,
+      "pass": true
+    },
+    {
+      "cutoff": "16:23:01.216",
+      "cutoff_ms": 1792167781216,
+      "points": 1842,
+      "events_expected": 26,
+      "events_observed": 26,
+      "local_expected": 6,
+      "local_observed": 6,
+      "events_ok": true,
+      "local_ok": true,
+      "pass": true
+    },
+    {
+      "cutoff": "16:24:58.066",
+      "cutoff_ms": 1792167898066,
+      "points": 2290,
+      "events_expected": 49,
+      "events_observed": 49,
+      "local_expected": 15,
+      "local_observed": 15,
+      "events_ok": true,
+      "local_ok": true,
+      "pass": true
+    },
+    {
+      "cutoff": "16:25:00.000",
+      "cutoff_ms": 1792167899676,
+      "points": 2297,
+      "events_expected": 49,
+      "events_observed": 49,
+      "local_expected": 15,
+      "local_observed": 15,
+      "events_ok": true,
+      "local_ok": true,
+      "pass": true
+    },
+    {
+      "cutoff": "16:30:00.000",
+      "cutoff_ms": 1792168199827,
+      "points": 3543,
+      "events_expected": 90,
+      "events_observed": 90,
+      "local_expected": 27,
+      "local_observed": 27,
+      "events_ok": true,
+      "local_ok": true,
+      "pass": true
+    },
+    {
+      "cutoff": "16:45:00.000",
+      "cutoff_ms": 1792169099815,
+      "points": 7815,
+      "events_expected": 547,
+      "events_observed": 547,
+      "local_expected": 71,
+      "local_observed": 71,
+      "events_ok": true,
+      "local_ok": true,
+      "pass": true
+    },
+    {
+      "cutoff": "17:00:00.000",
+      "cutoff_ms": 1792169999791,
+      "points": 11984,
+      "events_expected": 864,
+      "events_observed": 864,
+      "local_expected": 71,
+      "local_observed": 71,
+      "events_ok": true,
+      "local_ok": true,
+      "pass": true
+    },
+    {
+      "cutoff": "17:02:00.082",
+      "cutoff_ms": 1792170120082,
+      "points": 12550,
+      "events_expected": 930,
+      "events_observed": 930,
+      "local_expected": 71,
+      "local_observed": 71,
+      "events_ok": true,
+      "local_ok": true,
+      "pass": true
+    },
+    {
+      "cutoff": "17:15:00.000",
+      "cutoff_ms": 1792170899961,
+      "points": 16203,
+      "events_expected": 1195,
+      "events_observed": 1195,
+      "local_expected": 71,
+      "local_observed": 71,
+      "events_ok": true,
+      "local_ok": true,
+      "pass": true
+    },
+    {
+      "cutoff": "17:29:59.897",
+      "cutoff_ms": 1792171799897,
+      "points": 20335,
+      "events_expected": 1398,
+      "events_observed": 1398,
+      "local_expected": 71,
+      "local_observed": 71,
+      "events_ok": true,
+      "local_ok": true,
+      "pass": true
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+﻿{
+  "version": "0.7.2",
+  "mode": "multi_scale",
+  "ticks": 1106,
+  "seed": "tt_confirmed",
+  "readings": 6,
+  "events": 116,
+  "patterns": 8,
+  "a_invalidated": 0,
+  "minor_tt_absorbed": 0,
+  "active_operational": 2,
+  "max_scale": 1,
+  "validation": "OK",
+  "pending": [],
+  "TM_COVERAGE_OK": true,
+  "coverage_unresolved": [],
+  "outputs": [
+    "v072_regression_1642_1648\\v072_1645_Eventos.csv",
+    "v072_regression_1642_1648\\v072_1645_Lecturas.csv",
+    "v072_regression_1642_1648\\v072_1645_Patrones.csv"
+  ]
+}

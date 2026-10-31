@@ -1,0 +1,37 @@
+{
+  "core_raw_sha256": "32daa8b1aa56946b3bdde6267cbe677ae3d57a8c2c05505a6b89bba07de05129",
+  "feed_points": 20335,
+  "events": 1266,
+  "readings": 88,
+  "local_sequences": 1,
+  "local_events": 41,
+  "R0062_R0064": [
+    {
+      "reading_id": "R0062",
+      "state": "DONE",
+      "module_origin": 2970080,
+      "module_extreme": 2966330,
+      "tt_target": 2963860,
+      "tt_hit": true,
+      "ft": true,
+      "ft_price": 2963610
+    },
+    {
+      "reading_id": "R0064",
+      "state": "DONE",
+      "module_origin": 2966730,
+      "module_extreme": 2960210,
+      "tt_target": 2961520,
+      "tt_hit": true,
+      "ft": true,
+      "ft_price": 2962110
+    }
+  ],
+  "comparison_exit": 2,
+  "transition_prefixes": 12,
+  "prefix_failures": 0,
+  "aut_causes": [
+    "A_CROSSES_STRUCTURE_BASE",
+    "B_EXCEEDS_127_PLUS_0_25"
+  ]
+}

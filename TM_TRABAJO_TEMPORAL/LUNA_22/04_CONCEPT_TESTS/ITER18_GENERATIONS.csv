@@ -1,0 +1,3 @@
+generation_id,slot,opened_at,status,functional_closure_at_seq,closed_at,closed_at_seq,close_reason,owner_module,n_origin
+PRIMARY-G1,PRIMARY,1792167300016,ACTIVE,0,0,0,,0,0
+LOCAL-G1,LOCAL,1792167600145,ARCHIVED,2535,1792167960081,2553,TT_FUNCTIONAL_EXTREME_CONFIRMED,0,0

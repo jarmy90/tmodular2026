@@ -1,0 +1,195 @@
+{
+  "ft_patterns": 37,
+  "canonical": 0,
+  "non_canonical": [
+    {
+      "pattern_id": "P0009",
+      "reading_id": "R0002",
+      "status": "CONFIRMADO",
+      "final_status": "CONFIRMADO",
+      "direction": -1,
+      "size": 2050,
+      "canonical": 0
+    },
+    {
+      "pattern_id": "P0015",
+      "reading_id": "R0001",
+      "status": "CONFIRMADO",
+      "final_status": "CONFIRMADO",
+      "direction": -1,
+      "size": 3200,
+      "canonical": 0
+    },
+    {
+      "pattern_id": "P0020",
+      "reading_id": "R0004",
+      "status": "CONFIRMADO",
+      "final_status": "CONFIRMADO",
+      "direction": 1,
+      "size": 1110,
+      "canonical": 0
+    },
+    {
+      "pattern_id": "P0033",
+      "reading_id": "R0005",
+      "status": "CONFIRMADO",
+      "final_status": "CONFIRMADO",
+      "direction": -1,
+      "size": 1790,
+      "canonical": 0
+    },
+    {
+      "pattern_id": "P0040",
+      "reading_id": "R0010",
+      "status": "CONFIRMADO",
+      "final_status": "CONFIRMADO",
+      "direction": -1,
+      "size": 1700,
+      "canonical": 0
+    },
+    {
+      "pattern_id": "P0060",
+      "reading_id": "R0017",
+      "status": "CONFIRMADO",
+      "final_status": "CONFIRMADO",
+      "direction": -1,
+      "size": 1460,
+      "canonical": 0
+    },
+    {
+      "pattern_id": "P0061",
+      "reading_id": "R0018",
+      "status": "CONFIRMADO",
+      "final_status": "CONFIRMADO",
+      "direction": -1,
+      "size": 1460,
+      "canonical": 0
+    },
+    {
+      "pattern_id": "P0079",
+      "reading_id": "R0024",
+      "status": "CONFIRMADO",
+      "final_status": "CONFIRMADO",
+      "direction": 1,
+      "size": 1080,
+      "canonical": 0
+    },
+    {
+      "pattern_id": "P0088",
+      "reading_id": "R0027",
+      "status": "CONFIRMADO",
+      "final_status": "CONFIRMADO",
+      "direction": -1,
+      "size": 1930,
+      "canonical": 0
+    },
+    {
+      "pattern_id": "P0090",
+      "reading_id": "R0025",
+      "status": "CONFIRMADO",
+      "final_status": "CONFIRMADO",
+      "direction": 1,
+      "size": 2680,
+      "canonical": 0
+    },
+    {
+      "pattern_id": "P0091",
+      "reading_id": "R0026",
+      "status": "CONFIRMADO",
+      "final_status": "CONFIRMADO",
+      "direction": 1,
+      "size": 2680,
+      "canonical": 0
+    },
+    {
+      "pattern_id": "P0100",
+      "reading_id": "R0030",
+      "status": "CONFIRMADO",
+      "final_status": "CONFIRMADO",
+      "direction": -1,
+      "size": 1440,
+      "canonical": 0
+    },
+    {
+      "pattern_id": "P0102",
+      "reading_id": "R0031",
+      "status": "CONFIRMADO",
+      "final_status": "CONFIRMADO",
+      "direction": -1,
+      "size": 2430,
+      "canonical": 0
+    },
+    {
+      "pattern_id": "P0110",
+      "reading_id": "R0034",
+      "status": "CONFIRMADO",
+      "final_status": "CONFIRMADO",
+      "direction": 1,
+      "size": 1340,
+      "canonical": 0
+    },
+    {
+      "pattern_id": "P0120",
+      "reading_id": "R0035",
+      "status": "CONFIRMADO",
+      "final_status": "CONFIRMADO",
+      "direction": -1,
+      "size": 1610,
+      "canonical": 0
+    },
+    {
+      "pattern_id": "P0121",
+      "reading_id": "R0036",
+      "status": "CONFIRMADO",
+      "final_status": "CONFIRMADO",
+      "direction": -1,
+      "size": 1610,
+      "canonical": 0
+    },
+    {
+      "pattern_id": "P0126",
+      "reading_id": "R0037",
+      "status": "CONFIRMADO",
+      "final_status": "CONFIRMADO",
+      "direction": -1,
+      "size": 620,
+      "canonical": 0
+    },
+    {
+      "pattern_id": "P0143",
+      "reading_id": "R0043",
+      "status": "CONFIRMADO",
+      "final_status": "CONFIRMADO",
+      "direction": 1,
+      "size": 2710,
+      "canonical": 0
+    },
+    {
+      "pattern_id": "P0153",
+      "reading_id": "R0038",
+      "status": "CONFIRMADO",
+      "final_status": "CONFIRMADO",
+      "direction": 1,
+      "size": 2440,
+      "canonical": 0
+    },
+    {
+      "pattern_id": "P0167",
+      "reading_id": "R0050",
+      "status": "CONFIRMADO",
+      "final_status": "CONFIRMADO",
+      "direction": 1,
+      "size": 1430,
+      "canonical": 0
+    }
+  ],
+  "allowed": [
+    "FT_CANDIDATE",
+    "FT_CANDIDATE_ABSORBED_BY_TT_EXTENSION",
+    "FT_CONFIRMED",
+    "FT_MISSED_OPERATIVELY",
+    "FT_REJECTED_AS_NOISE",
+    "FT_WINDOW_EXPIRED"
+  ],
+  "pass": false
+}

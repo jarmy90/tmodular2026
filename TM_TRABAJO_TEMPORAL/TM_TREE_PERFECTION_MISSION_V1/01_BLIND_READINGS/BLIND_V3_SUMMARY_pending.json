@@ -1,0 +1,11 @@
+{
+  "a_mode": "pending",
+  "ticks": 20335,
+  "generations": 1,
+  "end_reasons": {
+    "OPEN_AT_FEED_END": 1
+  },
+  "trace_sha256": "9875d1c1bf666f37799028fb87379493026b30a17a78c6a0142c63e5f35d2563",
+  "first_tick": 1,
+  "last_tick": 20335
+}

@@ -1,0 +1,19 @@
+{
+  "comparison": "v074_vs_v075",
+  "old_readings": 67,
+  "new_readings": 67,
+  "common_readings": 67,
+  "only_old": [],
+  "only_new": [],
+  "fields": [
+    "module_origin",
+    "module_extreme",
+    "x",
+    "a",
+    "b",
+    "tt_target",
+    "ft",
+    "state"
+  ],
+  "diffs": 0
+}

@@ -1,0 +1,6 @@
+id,time,reading,generation,expected,observed_v3,first_causal_tick,cause,classification,question
+D3-01,16:20:24.611,L2,L2-G1,"v005: 3=29830.3; module=19.7; A=20.5","3=29833.3; module=16.7; A=4.1; B=4.9 B_GRANDE; B=6.4 AUT_B",16:20:24.611,"A/B of 4.1/4.9 confirms A before 3 reaches its final extreme","Q_AUT","OPEN"
+D3-02,16:23:10.943,L2,L2-G3,"v2: illegal THREE_EXTENDED_ABSORBS_AB with 2 IMPOSSIBLE","2=IMPOSSIBLE; 3=IMPOSSIBLE; B=9.8 B_GRANDE; C=22.7 C_GRANDE; C_USED_AS_TREND",16:23:10.943,"v2 3 belonged to a generation whose 2 was impossible","READER_STATE_OWNERSHIP_ERROR","CLOSED"
+D3-03,16:24:44.788,L2,L2-G3,"v005: C trend -> new 1 down","C_USED_AS_TREND -> new 1 down origin 29852.6",16:24:44.788,"B Grande -> C path is legal","MATCH","NONE"
+D3-04,full,L1,all,"v2 corrected: 26 generations","v3: 51 generations (41 primary, 9 gap, 1 open)",16:20:24.611,"3-live/A-candidate state model + B Grande precedence","COUNT_CHANGE","Q_AUT"
+D3-05,16:19-16:24,L2,L2-G1..G4,"L2: 3 generations","L2: 4 generations; 2 unique, 2 duplicates of L1",16:24:44.788,"duplicate detection by one origin/extreme/size","AUDIT_METHOD","NONE"

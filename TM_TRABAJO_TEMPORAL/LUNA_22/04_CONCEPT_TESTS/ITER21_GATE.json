@@ -1,0 +1,125 @@
+{
+  "iteration": "21",
+  "status": "CANDIDATE_CONFIRMATION_ARCHITECTURE_COMPLETE",
+  "engine_sha256": "99046BB3387E1A9ADFCBF8FF786A7577BB448B6EE7CD5BCCB7E4801AAA0D343E",
+  "support_sha256": {
+    "tm_candidates.py": "F74BABB1B4DFD121DFC171A6327395E1DE6E383F16BFA1023E77C6FABF6C9C47",
+    "tm_concurrent_readings.py": "7D64844DAE268C1E5C0528C7656E95BA4292ED8F15E4C4AF6C39D0CF3E88AE1F",
+    "tm_market_layer.py": "5938A54C224AC2C15BD018843C98745D1A205DB3C19553262D60E08DCC1F1CCF",
+    "tm_reading_manager.py": "19AC7341CF0ADC0B835700F0696FB6E38A69C2D8A2E7E233DF1E46B7C235DADB",
+    "tm_reference_interpreter_v1_direct_aut.py": "99046BB3387E1A9ADFCBF8FF786A7577BB448B6EE7CD5BCCB7E4801AAA0D343E"
+  },
+  "regressions": {
+    "regressions_169": 169,
+    "regressions_169_total": 169,
+    "iteration_19b_tests": 23,
+    "iteration_19b_anchors": 12,
+    "iteration_20_anchors": 10,
+    "human_anchors_passed": 13,
+    "human_anchors_total": 19,
+    "iteration_21_tests": 50,
+    "iteration_21_tests_total": 50
+  },
+  "invariants": {
+    "candidate_state_writes": 0,
+    "cross_owner_reference_reads": 0,
+    "contrary_reference_leaks": 0,
+    "consumes_violations": 0,
+    "unowned_candidates": 0,
+    "unowned_functions": 0,
+    "recreated_absorbed_candidates": 0,
+    "same_birth_and_confirmation_evidence": 0,
+    "admit_writes_function_state": 0,
+    "third_branch_attempts": 0,
+    "archived_generation_writes": 0,
+    "active_branches": 1,
+    "active_slots": 1,
+    "commits_admit": 5,
+    "commits_confirm": 7,
+    "candidates_total": 6,
+    "movement_without_function_changes_node": false,
+    "determinism": true,
+    "prefix_consistency": true
+  },
+  "hardcoded_market_values": 0,
+  "human_claims": {
+    "total": 19,
+    "resolved": 13,
+    "unexplained": 6,
+    "note": "13/19 resueltas; las 6 restantes tienen primera divergencia localizada y clasificada, no regla nueva"
+  },
+  "first_divergence": {
+    "sequence_id": 2799,
+    "bar": "16:27",
+    "field": "b_grande_status",
+    "human_claim": {
+      "bar": "16:27",
+      "value": "B_GRANDE (lectura local)",
+      "source": "ITER17_ANCHORS B4-4"
+    },
+    "engine_value": "CANDIDATE/170",
+    "engine_measure": {
+      "b_origin": "CANDIDATE/170",
+      "b_size": 170,
+      "a_principal_size": 2630,
+      "note": "la B se mide contra la A principal 2630; 100 % = 2630"
+    },
+    "classification": "OWNER_ERROR",
+    "reason": "OWNER_ERROR: la B del tramo local se esta midiendo con la A de PRIMARY-G1. La lectura humana exige una A local propia (LOCAL-G2 limpia), no la A principal.",
+    "open_question": "AB_DELIMITATION_IN_NOISY_BAR"
+  },
+  "subsequent_divergences": [
+    {
+      "bar": "16:30",
+      "field": "module_origin",
+      "human_claim": {
+        "module_size": 5360,
+        "origin": 2983820,
+        "extreme": 2978460,
+        "source": "ITER17_ANCHORS B4-7 (53,6)"
+      },
+      "engine_value": {
+        "module_size": 2630,
+        "note": "modulo implicito del gap desde la apertura"
+      },
+      "classification": "QUESTION_ERROR",
+      "reason": "la excursion contraria inicial (apertura -> maximo) se absorbe y el modulo implicito nace en la apertura; la lectura humana mide el tramo dominante desde el extremo prohibido. Es la pregunta IMPLICIT_MODULE_ORIGIN, no una regla nueva.",
+      "open_question": "MODULE_ORIGIN_RESOLUTION"
+    },
+    {
+      "bar": "16:31",
+      "field": "tt_objective",
+      "human_claim": {
+        "final_a": 2981080,
+        "objective": 2975720,
+        "low": 2976030,
+        "distance_to_objective": 310,
+        "source": "ITER17_ANCHORS B4-8"
+      },
+      "engine_value": {
+        "tt": "TT_CONFIRMED",
+        "note": "el motor abre A 2610 y B -> C; no arma TT"
+      },
+      "classification": "OWNER_ERROR",
+      "reason": "consecuencia de la divergencia de 16:30: sin el modulo 5360 no existe el final_A 29810,7 que arma el TT humano.",
+      "open_question": "MODULE_ORIGIN_RESOLUTION"
+    }
+  ],
+  "open_questions": [
+    "AB_DELIMITATION_IN_NOISY_BAR",
+    "MODULE_ORIGIN_RESOLUTION"
+  ],
+  "tt_owners": [],
+  "generations": [
+    {
+      "generation_id": "PRIMARY-G1",
+      "status": "ACTIVE",
+      "close_reason": ""
+    },
+    {
+      "generation_id": "LOCAL-G1",
+      "status": "ARCHIVED",
+      "close_reason": "TT_FUNCTIONAL_EXTREME_CONFIRMED"
+    }
+  ]
+}

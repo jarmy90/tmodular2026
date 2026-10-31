@@ -1,0 +1,25 @@
+{
+  "fecha": "2026-10-28",
+  "motivo_sustitucion": "Manifiesto y resumen del paquete de auditoría v0.7.5.1.",
+  "estado": "AUDITADO_CON_RESERVAS",
+  "autoridad": "Auditoría técnica previa; no autoridad teórica",
+  "dependencias": [
+    "motores v0.7.5/v0.7.5.1",
+    "tests",
+    "tickfeed",
+    "golden v003"
+  ],
+  "archivos": [
+    {
+      "path": "manifest.json",
+      "size_bytes": 3620,
+      "sha256": "D5819AC018F998D46A75EBF7BB730207FB4432849D031773FC3CCAA74947811E"
+    },
+    {
+      "path": "A00_Resumen.json",
+      "size_bytes": 1546,
+      "sha256": "7BE772738400746996787F370830A58161C312DAC10ADD837D58789A2B317E15"
+    }
+  ],
+  "nota": "Copia histórica verificada; los originales se conservaron sin cambios."
+}

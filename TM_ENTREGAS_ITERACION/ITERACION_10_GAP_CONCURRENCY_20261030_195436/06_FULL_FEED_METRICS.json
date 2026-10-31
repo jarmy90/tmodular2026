@@ -1,0 +1,120 @@
+{
+  "ticks": 20335,
+  "deterministic": true,
+  "prefix_consistent": true,
+  "final_phase": "NEW_ONE_ACTIVE",
+  "active_function": "NEW_ONE",
+  "events_total": 335,
+  "event_counts": {
+    "AUT_CONFIRMED": 1,
+    "A_CONFIRMED": 1,
+    "B_CANDIDATE": 1,
+    "B_GRANDE": 1,
+    "CONTINUATION_ACROSS_BAR": 73,
+    "CONTRARY_MOVE_PENDING": 1,
+    "CORE_END": 1,
+    "INITIAL_BAR_CLOSED": 1,
+    "MODULE_BY_DISCARD": 1,
+    "NEW_ONE_ACTIVE": 1,
+    "NEW_ONE_EXTENDED": 248,
+    "ONE_CANDIDATE_INITIAL": 1,
+    "ONE_CONFIRMED_INITIAL": 1,
+    "RETURN_MOVE_PENDING": 1,
+    "TWO_CANDIDATE": 1,
+    "TWO_IMPOSSIBLE_CLOSE": 1
+  },
+  "anchors": {
+    "module_l1": "28,5",
+    "a_l1": "9,1",
+    "aut_by_b": "16:18:34.926",
+    "aut_direct_l2": "16:22:52.576"
+  },
+  "not_implemented": [
+    "CUT",
+    "TT",
+    "FT"
+  ],
+  "state_final": {
+    "one": {
+      "dir": -1,
+      "origin": 2987700,
+      "extreme": 2986080,
+      "size": 1620,
+      "status": "CONFIRMED"
+    },
+    "two": {
+      "origin": 2986110,
+      "extreme": 2984850,
+      "size": 1260,
+      "status": "IMPOSSIBLE_CLOSE"
+    },
+    "three": {
+      "extreme": 0,
+      "status": "IMPOSSIBLE",
+      "kt": ""
+    },
+    "module": {
+      "origin": 2987700,
+      "extreme": 2984850,
+      "size": 2850,
+      "status": "BY_DISCARD_1_2",
+      "owner": "2"
+    },
+    "a": {
+      "status": "A_CONFIRMED",
+      "dir": 1,
+      "origin": 2984850,
+      "extreme": 2985760,
+      "size": 910,
+      "structural_time": "16:16:17.809",
+      "knowledge_time": "16:17:08.913",
+      "confirmations": 1,
+      "aut_direct": "",
+      "aut_direct_knowledge_time": "",
+      "aut_direct_price": 0
+    },
+    "b": {
+      "status": "AUT",
+      "origin": 2985760,
+      "extreme": 2984530,
+      "size": 1230,
+      "structural_time": "16:17:05.425",
+      "knowledge_time": "16:17:08.913",
+      "grande_status": "AUT",
+      "grande_knowledge": "16:18:34.125",
+      "flags": "B_GRANDE"
+    },
+    "c": {
+      "status": "",
+      "dir": 0,
+      "origin": 0,
+      "extreme": 0,
+      "size": 0,
+      "structural_time": "",
+      "knowledge_time": "",
+      "authority": ""
+    },
+    "aut": {
+      "status": "AUT_CONFIRMED",
+      "knowledge_time": "16:18:34.926",
+      "price": 2984530
+    },
+    "new_one": {
+      "status": "NEW_ONE_ACTIVE",
+      "origin": 2985760,
+      "dir": -1,
+      "extreme": 2958510,
+      "size": 27250,
+      "structural_time": "16:17:05.425",
+      "knowledge_time": "16:18:34.926"
+    },
+    "active_function": "NEW_ONE",
+    "authority": {
+      "a": "ARCHIVED",
+      "b": "",
+      "three": "",
+      "module": "FROZEN_REFERENCE",
+      "c": ""
+    }
+  }
+}

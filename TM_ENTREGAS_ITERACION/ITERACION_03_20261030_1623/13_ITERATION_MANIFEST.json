@@ -1,0 +1,57 @@
+{
+  "iteration_id": "ITERACION_03_20261030_1623",
+  "date": "2026-10-30T16:23:17",
+  "objective": "Corregir propiedad de estados, invalidar 3 sin 2 y releer 16:15-17:29",
+  "reader": "blind_reader_v3_owned_states.py",
+  "reader_sha256": "AE559A31AAB3222A6F04029999102DCA6347D83201F2009888557CED60C1029F",
+  "counts": {
+    "L1_full_generations": 51,
+    "L1_invalid": 0,
+    "L1_three_without_two": 0,
+    "L1_primary": 41,
+    "L1_gap_integrated": 9,
+    "L1_pending": 1,
+    "L2_generations": 4,
+    "L2_unique": 2,
+    "L2_duplicates": 2,
+    "unique_total": 53,
+    "ownership_errors": 0
+  },
+  "determinism": {
+    "double_run": {
+      "equal": true,
+      "sha_full": "23800d07eb356cf3764739d28ba5820a06de3870d9b09b9bb745f2b721847b93",
+      "sha_run2": "23800d07eb356cf3764739d28ba5820a06de3870d9b09b9bb745f2b721847b93",
+      "lines": 20335
+    },
+    "prefixes": {
+      "16:30": {
+        "lines": 3829,
+        "equal": true,
+        "sha": "097764b0593a413cabc6c074dae4a5505b12bbd1ea59f7bd538c0a73366cfa12"
+      },
+      "17:00": {
+        "lines": 12265,
+        "equal": true,
+        "sha": "56a641db694b85deae155b1b16df36a73bd953932f39449ad77d857114179bd3"
+      },
+      "17:15": {
+        "lines": 16454,
+        "equal": true,
+        "sha": "7aa45639de31a73533943fd2a11f9123637631d2f02608d76dedd87d1c7fcf45"
+      }
+    }
+  },
+  "full_trace": {
+    "path": "TM_TRABAJO_TEMPORAL\\TM_TREE_PERFECTION_MISSION_V1\\01_BLIND_READINGS\\V3_FULL_TRACE.jsonl",
+    "sha256": "23800D07EB356CF3764739D28BA5820A06DE3870D9B09B9BB745F2B721847B93",
+    "lines": 20335
+  },
+  "originals_modified": false,
+  "tree_modified": false,
+  "engine_modified": false,
+  "golden_modified": false,
+  "tree_frozen": false,
+  "generations_approved": false,
+  "recommendation": "NEEDS_EXPERT_DECISION"
+}

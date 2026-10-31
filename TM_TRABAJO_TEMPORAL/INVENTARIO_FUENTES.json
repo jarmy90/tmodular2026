@@ -1,0 +1,536 @@
+{
+  "date": "2026-10-28",
+  "scope": "archivos relevantes de control, fuente, entregables y auditoría",
+  "files": [
+    {
+      "name": "deliverables_v0751_corrected_COMPLETE.zip",
+      "path": "C:\\Users\\profesor\\OpenBot\\Agents\\agent-ece275c8-821a-43f3-b05f-6cdf123b7ade\\deliverables_v0751_corrected_COMPLETE.zip",
+      "size_bytes": 910815,
+      "sha256": "9ECF30117FF878EEE970F95096DA0337E0E026BA74EC1529A9B0D3FBC4473418",
+      "legibility": "binary/unknown encoding",
+      "version_inferred_from_name_or_context": "v0.7.5.1",
+      "status": "fuente original preservada; ver autoridad por rol en manifiesto activo",
+      "dependencies": "ver README/manifest del paquete de origen"
+    },
+    {
+      "name": "test_v075_legacy.py",
+      "path": "C:\\Users\\profesor\\OpenBot\\Agents\\agent-ece275c8-821a-43f3-b05f-6cdf123b7ade\\pkg_v0751_complete\\tests\\legacy\\test_v075_legacy.py",
+      "size_bytes": 13217,
+      "sha256": "6A727AE980BE34A11FB89F28FE3AAA40C953CFBF2D730E216155289C049BBEAC",
+      "legibility": "UTF-8 legible",
+      "version_inferred_from_name_or_context": "v0.7.5.1",
+      "status": "fuente original preservada; ver autoridad por rol en manifiesto activo",
+      "dependencies": "ver README/manifest del paquete de origen"
+    },
+    {
+      "name": "audit_v0751_golden.py",
+      "path": "C:\\Users\\profesor\\tm\\Teoria Modular\\tm-explorer\\audit_v0751\\audit_v0751_golden.py",
+      "size_bytes": 5391,
+      "sha256": "728C1A5106120F427B112B52D62E799A8A137126390F5D793ABB1FDD865AFEBF",
+      "legibility": "UTF-8 legible",
+      "version_inferred_from_name_or_context": "v0.7.5.1",
+      "status": "fuente original preservada; ver autoridad por rol en manifiesto activo",
+      "dependencies": "ver README/manifest del paquete de origen"
+    },
+    {
+      "name": "audit_v0751_package.py",
+      "path": "C:\\Users\\profesor\\tm\\Teoria Modular\\tm-explorer\\audit_v0751\\audit_v0751_package.py",
+      "size_bytes": 7732,
+      "sha256": "D1263A9B45CCE1CC4D6A5B2D353174023A70FDCC9100E43BFFACF5867B0A88EF",
+      "legibility": "UTF-8 legible",
+      "version_inferred_from_name_or_context": "v0.7.5.1",
+      "status": "fuente original preservada; ver autoridad por rol en manifiesto activo",
+      "dependencies": "ver README/manifest del paquete de origen"
+    },
+    {
+      "name": "audit_v0751_prefix.py",
+      "path": "C:\\Users\\profesor\\tm\\Teoria Modular\\tm-explorer\\audit_v0751\\audit_v0751_prefix.py",
+      "size_bytes": 4184,
+      "sha256": "F0DFAFCC17079754B3DEAED45F976D24B4DDD89FE79A5C1EA2AD08D93852D978",
+      "legibility": "UTF-8 legible",
+      "version_inferred_from_name_or_context": "v0.7.5.1",
+      "status": "fuente original preservada; ver autoridad por rol en manifiesto activo",
+      "dependencies": "ver README/manifest del paquete de origen"
+    },
+    {
+      "name": "audit_v0751_tests.py",
+      "path": "C:\\Users\\profesor\\tm\\Teoria Modular\\tm-explorer\\audit_v0751\\audit_v0751_tests.py",
+      "size_bytes": 3793,
+      "sha256": "F5F6F77E27E5E19E6464E73B79861D5AC8A1D055597D09E742E5683158A34F25",
+      "legibility": "UTF-8 legible",
+      "version_inferred_from_name_or_context": "v0.7.5.1",
+      "status": "fuente original preservada; ver autoridad por rol en manifiesto activo",
+      "dependencies": "ver README/manifest del paquete de origen"
+    },
+    {
+      "name": "corrected_tests.txt",
+      "path": "C:\\Users\\profesor\\tm\\Teoria Modular\\tm-explorer\\audit_v0751\\corrected_tests.txt",
+      "size_bytes": 202,
+      "sha256": "F668559D5CB0BFB31C86800FE085200CA026A53C5133647D590CE2D70A174117",
+      "legibility": "CP1252 legible",
+      "version_inferred_from_name_or_context": "v0.7.5.1",
+      "status": "fuente original preservada; ver autoridad por rol en manifiesto activo",
+      "dependencies": "ver README/manifest del paquete de origen"
+    },
+    {
+      "name": "legacy_tests.txt",
+      "path": "C:\\Users\\profesor\\tm\\Teoria Modular\\tm-explorer\\audit_v0751\\legacy_tests.txt",
+      "size_bytes": 226,
+      "sha256": "C979B7BD1EB78CC8DEF9D4B43A2EC0A0CA0988832CE316EB653526E2443C527A",
+      "legibility": "CP1252 legible",
+      "version_inferred_from_name_or_context": "v0.7.5.1",
+      "status": "fuente original preservada; ver autoridad por rol en manifiesto activo",
+      "dependencies": "ver README/manifest del paquete de origen"
+    },
+    {
+      "name": "CONTRADICCIONES.md",
+      "path": "C:\\Users\\profesor\\tm\\Teoria Modular\\tm-explorer\\control\\CONTRADICCIONES.md",
+      "size_bytes": 18502,
+      "sha256": "CCECA566006E5BC3036C41935003FBC158D54A4E2264EB5F4D919DF6BE64F432",
+      "legibility": "UTF-8 legible",
+      "version_inferred_from_name_or_context": "no explicit version",
+      "status": "fuente original preservada; ver autoridad por rol en manifiesto activo",
+      "dependencies": "ver README/manifest del paquete de origen"
+    },
+    {
+      "name": "DECISIONES_EXPERTO.md",
+      "path": "C:\\Users\\profesor\\tm\\Teoria Modular\\tm-explorer\\control\\DECISIONES_EXPERTO.md",
+      "size_bytes": 68634,
+      "sha256": "A3B3B053DD5AB01CE96F6F606FFAE9917BDC8640A3D41464FF0E5AF922ADD6EC",
+      "legibility": "UTF-8 legible",
+      "version_inferred_from_name_or_context": "no explicit version",
+      "status": "fuente original preservada; ver autoridad por rol en manifiesto activo",
+      "dependencies": "ver README/manifest del paquete de origen"
+    },
+    {
+      "name": "DICCIONARIO_TM.md",
+      "path": "C:\\Users\\profesor\\tm\\Teoria Modular\\tm-explorer\\control\\DICCIONARIO_TM.md",
+      "size_bytes": 11609,
+      "sha256": "45AE2BD7AD2F58CF9E3823A1CBB0E67C990E2EEBB7E983B1C26E7027609F4F6A",
+      "legibility": "UTF-8 legible",
+      "version_inferred_from_name_or_context": "no explicit version",
+      "status": "fuente original preservada; ver autoridad por rol en manifiesto activo",
+      "dependencies": "ver README/manifest del paquete de origen"
+    },
+    {
+      "name": "PREGUNTAS_PENDIENTES.md",
+      "path": "C:\\Users\\profesor\\tm\\Teoria Modular\\tm-explorer\\control\\PREGUNTAS_PENDIENTES.md",
+      "size_bytes": 42411,
+      "sha256": "62FFE3D17ABC22A859C730536A3D726A761A3745DC1676FE40391D5D3CABEF2F",
+      "legibility": "UTF-8 legible",
+      "version_inferred_from_name_or_context": "no explicit version",
+      "status": "fuente original preservada; ver autoridad por rol en manifiesto activo",
+      "dependencies": "ver README/manifest del paquete de origen"
+    },
+    {
+      "name": "REGLAS_CERRADAS.md",
+      "path": "C:\\Users\\profesor\\tm\\Teoria Modular\\tm-explorer\\control\\REGLAS_CERRADAS.md",
+      "size_bytes": 24204,
+      "sha256": "B5FDBB3E19D95B78841F140E5952CE397FA2AEC533D2F6D0D2D1AA5AB086C1F2",
+      "legibility": "UTF-8 legible",
+      "version_inferred_from_name_or_context": "no explicit version",
+      "status": "fuente original preservada; ver autoridad por rol en manifiesto activo",
+      "dependencies": "ver README/manifest del paquete de origen"
+    },
+    {
+      "name": "REGLAS_PROVISIONALES.md",
+      "path": "C:\\Users\\profesor\\tm\\Teoria Modular\\tm-explorer\\control\\REGLAS_PROVISIONALES.md",
+      "size_bytes": 9639,
+      "sha256": "BB992BDDC47EC78F3DF5340328F1C48BEDC1EFF0765405AEC74F22A2DE3AD536",
+      "legibility": "UTF-8 legible",
+      "version_inferred_from_name_or_context": "no explicit version",
+      "status": "fuente original preservada; ver autoridad por rol en manifiesto activo",
+      "dependencies": "ver README/manifest del paquete de origen"
+    },
+    {
+      "name": "REGRESIONES.md",
+      "path": "C:\\Users\\profesor\\tm\\Teoria Modular\\tm-explorer\\control\\REGRESIONES.md",
+      "size_bytes": 39,
+      "sha256": "FF93937EE32191B4B357943FCCAB0F47736722D5F52126C2BB2152437CF6F5D0",
+      "legibility": "UTF-8 legible",
+      "version_inferred_from_name_or_context": "no explicit version",
+      "status": "fuente original preservada; ver autoridad por rol en manifiesto activo",
+      "dependencies": "ver README/manifest del paquete de origen"
+    },
+    {
+      "name": "TM_ARBOL_CANONICO_COMPLETO_v1.md",
+      "path": "C:\\Users\\profesor\\tm\\Teoria Modular\\tm-explorer\\control\\TM_ARBOL_CANONICO_COMPLETO_v1.md",
+      "size_bytes": 51786,
+      "sha256": "E9D4B419868233949B4459F9B97294B8B5487E84C7C4EE5A92AA3289113CFD3E",
+      "legibility": "UTF-8 legible",
+      "version_inferred_from_name_or_context": "no explicit version",
+      "status": "fuente original preservada; ver autoridad por rol en manifiesto activo",
+      "dependencies": "ver README/manifest del paquete de origen"
+    },
+    {
+      "name": "TM_ARBOL_MAESTRO_CANONICO_v0_5_MEGA_BORRADOR.md",
+      "path": "C:\\Users\\profesor\\tm\\Teoria Modular\\tm-explorer\\control\\TM_ARBOL_MAESTRO_CANONICO_v0_5_MEGA_BORRADOR.md",
+      "size_bytes": 68001,
+      "sha256": "87C3EE849786537E443B012CE5BA8CA373EC5A493FACAFCD393867E413231CC6",
+      "legibility": "UTF-8 legible",
+      "version_inferred_from_name_or_context": "no explicit version",
+      "status": "fuente original preservada; ver autoridad por rol en manifiesto activo",
+      "dependencies": "ver README/manifest del paquete de origen"
+    },
+    {
+      "name": "TM_ARBOL_MAESTRO_CANONICO_v1.md",
+      "path": "C:\\Users\\profesor\\tm\\Teoria Modular\\tm-explorer\\control\\TM_ARBOL_MAESTRO_CANONICO_v1.md",
+      "size_bytes": 23432,
+      "sha256": "6868D046332DA72F4702017F6E0DAEB38AC4C8443D5EBC11B587D936C6A348BE",
+      "legibility": "UTF-8 legible",
+      "version_inferred_from_name_or_context": "no explicit version",
+      "status": "fuente original preservada; ver autoridad por rol en manifiesto activo",
+      "dependencies": "ver README/manifest del paquete de origen"
+    },
+    {
+      "name": "TM_DUDAS_PENDIENTES_JAVIER.md",
+      "path": "C:\\Users\\profesor\\tm\\Teoria Modular\\tm-explorer\\control\\TM_DUDAS_PENDIENTES_JAVIER.md",
+      "size_bytes": 5599,
+      "sha256": "261D68AF1B30999280915262AB90828E0148056720659AA51053FC9D11CFABE2",
+      "legibility": "UTF-8 legible",
+      "version_inferred_from_name_or_context": "no explicit version",
+      "status": "fuente original preservada; ver autoridad por rol en manifiesto activo",
+      "dependencies": "ver README/manifest del paquete de origen"
+    },
+    {
+      "name": "TM_INFORME_ARBOL_CANONICO_v1.md",
+      "path": "C:\\Users\\profesor\\tm\\Teoria Modular\\tm-explorer\\control\\TM_INFORME_ARBOL_CANONICO_v1.md",
+      "size_bytes": 3484,
+      "sha256": "61E693F88BA161471326B3872801A3C8B8A71EF39432D231457862A117DE12A4",
+      "legibility": "UTF-8 legible",
+      "version_inferred_from_name_or_context": "no explicit version",
+      "status": "fuente original preservada; ver autoridad por rol en manifiesto activo",
+      "dependencies": "ver README/manifest del paquete de origen"
+    },
+    {
+      "name": "TM_MATRIZ_TRANSICIONES_v1.csv",
+      "path": "C:\\Users\\profesor\\tm\\Teoria Modular\\tm-explorer\\control\\TM_MATRIZ_TRANSICIONES_v1.csv",
+      "size_bytes": 15034,
+      "sha256": "1A989A19D8BF2E3DC24851811A0BFBDBA874033DDD8AA2C707AAB338FF1A1278",
+      "legibility": "UTF-8 legible",
+      "version_inferred_from_name_or_context": "no explicit version",
+      "status": "fuente original preservada; ver autoridad por rol en manifiesto activo",
+      "dependencies": "ver README/manifest del paquete de origen"
+    },
+    {
+      "name": "TM_TESTS_REQUERIDOS_v1.md",
+      "path": "C:\\Users\\profesor\\tm\\Teoria Modular\\tm-explorer\\control\\TM_TESTS_REQUERIDOS_v1.md",
+      "size_bytes": 6850,
+      "sha256": "C3964326234F9E44592B36FC78850C2E7C558C50FCAB5D59229D4FA28D4D5B05",
+      "legibility": "UTF-8 legible",
+      "version_inferred_from_name_or_context": "no explicit version",
+      "status": "fuente original preservada; ver autoridad por rol en manifiesto activo",
+      "dependencies": "ver README/manifest del paquete de origen"
+    },
+    {
+      "name": "A00_Resumen.json",
+      "path": "C:\\Users\\profesor\\tm\\Teoria Modular\\tm-explorer\\deliverables_v0751\\A00_Resumen.json",
+      "size_bytes": 1546,
+      "sha256": "7BE772738400746996787F370830A58161C312DAC10ADD837D58789A2B317E15",
+      "legibility": "UTF-8 legible",
+      "version_inferred_from_name_or_context": "v0.7.5.1",
+      "status": "fuente original preservada; ver autoridad por rol en manifiesto activo",
+      "dependencies": "ver README/manifest del paquete de origen"
+    },
+    {
+      "name": "A01_GoldenV003.json",
+      "path": "C:\\Users\\profesor\\tm\\Teoria Modular\\tm-explorer\\deliverables_v0751\\A01_GoldenV003.json",
+      "size_bytes": 3712,
+      "sha256": "9012F21801E97F7F4935E925834C49D3B33A87F435A8AC99BC1A6CFEC12B201C",
+      "legibility": "UTF-8 legible",
+      "version_inferred_from_name_or_context": "v0.7.5.1",
+      "status": "fuente original preservada; ver autoridad por rol en manifiesto activo",
+      "dependencies": "ver README/manifest del paquete de origen"
+    },
+    {
+      "name": "A02_GapsEspuriosEliminados.csv",
+      "path": "C:\\Users\\profesor\\tm\\Teoria Modular\\tm-explorer\\deliverables_v0751\\A02_GapsEspuriosEliminados.csv",
+      "size_bytes": 691,
+      "sha256": "54EB33B5F471FB218FF691E7D0A4D72E717A14DF8AF57F6587D366E2B159E94A",
+      "legibility": "UTF-8 legible",
+      "version_inferred_from_name_or_context": "v0.7.5.1",
+      "status": "fuente original preservada; ver autoridad por rol en manifiesto activo",
+      "dependencies": "ver README/manifest del paquete de origen"
+    },
+    {
+      "name": "A03_CorrespondenciaEventos.csv",
+      "path": "C:\\Users\\profesor\\tm\\Teoria Modular\\tm-explorer\\deliverables_v0751\\A03_CorrespondenciaEventos.csv",
+      "size_bytes": 68460,
+      "sha256": "F8A2A4C5434FE18635611C420E0747CCC11D0EF45D4C225219789CA29CE63F20",
+      "legibility": "UTF-8 legible",
+      "version_inferred_from_name_or_context": "v0.7.5.1",
+      "status": "fuente original preservada; ver autoridad por rol en manifiesto activo",
+      "dependencies": "ver README/manifest del paquete de origen"
+    },
+    {
+      "name": "A04_Prefijos.json",
+      "path": "C:\\Users\\profesor\\tm\\Teoria Modular\\tm-explorer\\deliverables_v0751\\A04_Prefijos.json",
+      "size_bytes": 3296,
+      "sha256": "7F99A1228350EA6061E667C10719C01C8B0B69EB1B0EC83F47E750155577D76F",
+      "legibility": "UTF-8 legible",
+      "version_inferred_from_name_or_context": "v0.7.5.1",
+      "status": "fuente original preservada; ver autoridad por rol en manifiesto activo",
+      "dependencies": "ver README/manifest del paquete de origen"
+    },
+    {
+      "name": "A05_R0062_R0064.json",
+      "path": "C:\\Users\\profesor\\tm\\Teoria Modular\\tm-explorer\\deliverables_v0751\\A05_R0062_R0064.json",
+      "size_bytes": 359,
+      "sha256": "CBE61D400353D86F85AC93504251BF68E9CC1A672D11812DDB24C6CDB94520A2",
+      "legibility": "UTF-8 legible",
+      "version_inferred_from_name_or_context": "v0.7.5.1",
+      "status": "fuente original preservada; ver autoridad por rol en manifiesto activo",
+      "dependencies": "ver README/manifest del paquete de origen"
+    },
+    {
+      "name": "A06_Readiness.json",
+      "path": "C:\\Users\\profesor\\tm\\Teoria Modular\\tm-explorer\\deliverables_v0751\\A06_Readiness.json",
+      "size_bytes": 29417,
+      "sha256": "0676E0420527C2BFAFB64641364D4C6A5813B58C64D8E76D14EC3E32203C644A",
+      "legibility": "UTF-8 legible",
+      "version_inferred_from_name_or_context": "v0.7.5.1",
+      "status": "fuente original preservada; ver autoridad por rol en manifiesto activo",
+      "dependencies": "ver README/manifest del paquete de origen"
+    },
+    {
+      "name": "A07_TestsLegacy.txt",
+      "path": "C:\\Users\\profesor\\tm\\Teoria Modular\\tm-explorer\\deliverables_v0751\\A07_TestsLegacy.txt",
+      "size_bytes": 226,
+      "sha256": "C979B7BD1EB78CC8DEF9D4B43A2EC0A0CA0988832CE316EB653526E2443C527A",
+      "legibility": "CP1252 legible",
+      "version_inferred_from_name_or_context": "v0.7.5.1",
+      "status": "fuente original preservada; ver autoridad por rol en manifiesto activo",
+      "dependencies": "ver README/manifest del paquete de origen"
+    },
+    {
+      "name": "A08_TestsCorrected.txt",
+      "path": "C:\\Users\\profesor\\tm\\Teoria Modular\\tm-explorer\\deliverables_v0751\\A08_TestsCorrected.txt",
+      "size_bytes": 202,
+      "sha256": "F668559D5CB0BFB31C86800FE085200CA026A53C5133647D590CE2D70A174117",
+      "legibility": "CP1252 legible",
+      "version_inferred_from_name_or_context": "v0.7.5.1",
+      "status": "fuente original preservada; ver autoridad por rol en manifiesto activo",
+      "dependencies": "ver README/manifest del paquete de origen"
+    },
+    {
+      "name": "lecturas_confirmadas_v002.txt",
+      "path": "C:\\Users\\profesor\\tm\\Teoria Modular\\tm-explorer\\deliverables_v0751\\legacy_frozen\\lecturas_confirmadas_v002.txt",
+      "size_bytes": 3548,
+      "sha256": "EAD9AEB2ACB7F05819E5FAF1C73F5E6ED97C5B7B77AAC30CCC7D7A19E6880EA3",
+      "legibility": "UTF-8 legible",
+      "version_inferred_from_name_or_context": "v0.7.5.1",
+      "status": "fuente original preservada; ver autoridad por rol en manifiesto activo",
+      "dependencies": "ver README/manifest del paquete de origen"
+    },
+    {
+      "name": "lecturas_confirmadas_v003.txt",
+      "path": "C:\\Users\\profesor\\tm\\Teoria Modular\\tm-explorer\\deliverables_v0751\\legacy_frozen\\lecturas_confirmadas_v003.txt",
+      "size_bytes": 20709,
+      "sha256": "1E634EBB6C004D297E0ACB6B0D378DE5CFBBE7BBEC82FE26363E47C762104E5B",
+      "legibility": "UTF-8 legible",
+      "version_inferred_from_name_or_context": "v0.7.5.1",
+      "status": "fuente original preservada; ver autoridad por rol en manifiesto activo",
+      "dependencies": "ver README/manifest del paquete de origen"
+    },
+    {
+      "name": "LEGACY_BASELINE_REPRODUCIBLE.txt",
+      "path": "C:\\Users\\profesor\\tm\\Teoria Modular\\tm-explorer\\deliverables_v0751\\legacy_frozen\\LEGACY_BASELINE_REPRODUCIBLE.txt",
+      "size_bytes": 153,
+      "sha256": "5A66F714BB9D37AD46A9BCB311E3C4FB6B31D59FC06CE7DE60A8BBFC2B212A88",
+      "legibility": "UTF-8 legible",
+      "version_inferred_from_name_or_context": "v0.7.5.1",
+      "status": "fuente original preservada; ver autoridad por rol en manifiesto activo",
+      "dependencies": "ver README/manifest del paquete de origen"
+    },
+    {
+      "name": "legacy_tests.txt",
+      "path": "C:\\Users\\profesor\\tm\\Teoria Modular\\tm-explorer\\deliverables_v0751\\legacy_frozen\\legacy_tests.txt",
+      "size_bytes": 226,
+      "sha256": "C979B7BD1EB78CC8DEF9D4B43A2EC0A0CA0988832CE316EB653526E2443C527A",
+      "legibility": "CP1252 legible",
+      "version_inferred_from_name_or_context": "v0.7.5.1",
+      "status": "fuente original preservada; ver autoridad por rol en manifiesto activo",
+      "dependencies": "ver README/manifest del paquete de origen"
+    },
+    {
+      "name": "manifest.json",
+      "path": "C:\\Users\\profesor\\tm\\Teoria Modular\\tm-explorer\\deliverables_v0751\\legacy_frozen\\manifest.json",
+      "size_bytes": 4280,
+      "sha256": "5A2A603919088241D13D9C5AE041662802A8C563AE2D311584E744AC9B340A7B",
+      "legibility": "CP1252 legible",
+      "version_inferred_from_name_or_context": "v0.7.5.1",
+      "status": "fuente original preservada; ver autoridad por rol en manifiesto activo",
+      "dependencies": "ver README/manifest del paquete de origen"
+    },
+    {
+      "name": "TM_CORE_PYTHON_v075_STREAMING.py",
+      "path": "C:\\Users\\profesor\\tm\\Teoria Modular\\tm-explorer\\deliverables_v0751\\legacy_frozen\\TM_CORE_PYTHON_v075_STREAMING.py",
+      "size_bytes": 76198,
+      "sha256": "45A467252C45A0DA437029FE7360E0AC029F195AE194791CB6BA7837BD34FD28",
+      "legibility": "UTF-8 legible",
+      "version_inferred_from_name_or_context": "v0.7.5.1",
+      "status": "fuente original preservada; ver autoridad por rol en manifiesto activo",
+      "dependencies": "ver README/manifest del paquete de origen"
+    },
+    {
+      "name": "TM_CORE_PYTHON_v075_TESTS.py",
+      "path": "C:\\Users\\profesor\\tm\\Teoria Modular\\tm-explorer\\deliverables_v0751\\legacy_frozen\\TM_CORE_PYTHON_v075_TESTS.py",
+      "size_bytes": 13299,
+      "sha256": "93005A2F0DCC0202A397AC09AD11D720B3C5D579CF5620FE6EDAB8A09F71C789",
+      "legibility": "UTF-8 legible",
+      "version_inferred_from_name_or_context": "v0.7.5.1",
+      "status": "fuente original preservada; ver autoridad por rol en manifiesto activo",
+      "dependencies": "ver README/manifest del paquete de origen"
+    },
+    {
+      "name": "manifest.json",
+      "path": "C:\\Users\\profesor\\tm\\Teoria Modular\\tm-explorer\\deliverables_v0751\\manifest.json",
+      "size_bytes": 3620,
+      "sha256": "D5819AC018F998D46A75EBF7BB730207FB4432849D031773FC3CCAA74947811E",
+      "legibility": "UTF-8 legible",
+      "version_inferred_from_name_or_context": "v0.7.5.1",
+      "status": "fuente original preservada; ver autoridad por rol en manifiesto activo",
+      "dependencies": "ver README/manifest del paquete de origen"
+    },
+    {
+      "name": "golden_v003.json",
+      "path": "C:\\Users\\profesor\\tm\\Teoria Modular\\tm-explorer\\out_v0751\\golden_v003.json",
+      "size_bytes": 3712,
+      "sha256": "9012F21801E97F7F4935E925834C49D3B33A87F435A8AC99BC1A6CFEC12B201C",
+      "legibility": "UTF-8 legible",
+      "version_inferred_from_name_or_context": "v0.7.5.1",
+      "status": "fuente original preservada; ver autoridad por rol en manifiesto activo",
+      "dependencies": "ver README/manifest del paquete de origen"
+    },
+    {
+      "name": "test_v071_regression.py",
+      "path": "C:\\Users\\profesor\\tm\\Teoria Modular\\tm-explorer\\python\\test_v071_regression.py",
+      "size_bytes": 1777,
+      "sha256": "DF9C864CA2A68904DE40A925B6DDEC3A253EA1727F0366A7FB37CE463F2296E9",
+      "legibility": "UTF-8 legible",
+      "version_inferred_from_name_or_context": "no explicit version",
+      "status": "fuente original preservada; ver autoridad por rol en manifiesto activo",
+      "dependencies": "ver README/manifest del paquete de origen"
+    },
+    {
+      "name": "TM_CORE_PYTHON_v071_STATE_ENGINE.py",
+      "path": "C:\\Users\\profesor\\tm\\Teoria Modular\\tm-explorer\\python\\TM_CORE_PYTHON_v071_STATE_ENGINE.py",
+      "size_bytes": 55194,
+      "sha256": "EB45D7843EE65D995BC354AC911A362D15A526C42FA93E66AC634368904FD8D6",
+      "legibility": "UTF-8 legible",
+      "version_inferred_from_name_or_context": "no explicit version",
+      "status": "fuente original preservada; ver autoridad por rol en manifiesto activo",
+      "dependencies": "ver README/manifest del paquete de origen"
+    },
+    {
+      "name": "TM_CORE_PYTHON_v074_FUNCTIONAL_READER.py",
+      "path": "C:\\Users\\profesor\\tm\\Teoria Modular\\tm-explorer\\python\\TM_CORE_PYTHON_v074_FUNCTIONAL_READER.py",
+      "size_bytes": 53614,
+      "sha256": "BD6A601080EBD4B306E7FDAFA59813F8E572B1304E4CB21694CE61884BD705DE",
+      "legibility": "UTF-8 legible",
+      "version_inferred_from_name_or_context": "no explicit version",
+      "status": "fuente original preservada; ver autoridad por rol en manifiesto activo",
+      "dependencies": "ver README/manifest del paquete de origen"
+    },
+    {
+      "name": "TM_CORE_PYTHON_v074_TESTS.py",
+      "path": "C:\\Users\\profesor\\tm\\Teoria Modular\\tm-explorer\\python\\TM_CORE_PYTHON_v074_TESTS.py",
+      "size_bytes": 9979,
+      "sha256": "B8527DF93559B3170DE92FD55754E2B401F89C378AC9BD6D759D6CF132BBA99D",
+      "legibility": "UTF-8 legible",
+      "version_inferred_from_name_or_context": "no explicit version",
+      "status": "fuente original preservada; ver autoridad por rol en manifiesto activo",
+      "dependencies": "ver README/manifest del paquete de origen"
+    },
+    {
+      "name": "TM_CORE_PYTHON_v0751_STREAMING.py",
+      "path": "C:\\Users\\profesor\\tm\\Teoria Modular\\tm-explorer\\python\\TM_CORE_PYTHON_v0751_STREAMING.py",
+      "size_bytes": 93635,
+      "sha256": "4A2877CC7F47E0565D6D788BA20D198486CDDEBA718F6A8F8498222B38DDEFE2",
+      "legibility": "UTF-8 legible",
+      "version_inferred_from_name_or_context": "v0.7.5.1",
+      "status": "fuente original preservada; ver autoridad por rol en manifiesto activo",
+      "dependencies": "ver README/manifest del paquete de origen"
+    },
+    {
+      "name": "TM_CORE_PYTHON_v075_REPORTS.py",
+      "path": "C:\\Users\\profesor\\tm\\Teoria Modular\\tm-explorer\\python\\TM_CORE_PYTHON_v075_REPORTS.py",
+      "size_bytes": 15927,
+      "sha256": "EE27D1546D4647AC21F0E2F15FA63E4CBD29B42C3345B8DD7609570FAE164F86",
+      "legibility": "UTF-8 legible",
+      "version_inferred_from_name_or_context": "v0.7.5",
+      "status": "fuente original preservada; ver autoridad por rol en manifiesto activo",
+      "dependencies": "ver README/manifest del paquete de origen"
+    },
+    {
+      "name": "TM_CORE_PYTHON_v075_STREAMING.py",
+      "path": "C:\\Users\\profesor\\tm\\Teoria Modular\\tm-explorer\\python\\TM_CORE_PYTHON_v075_STREAMING.py",
+      "size_bytes": 76198,
+      "sha256": "45A467252C45A0DA437029FE7360E0AC029F195AE194791CB6BA7837BD34FD28",
+      "legibility": "UTF-8 legible",
+      "version_inferred_from_name_or_context": "v0.7.5",
+      "status": "fuente original preservada; ver autoridad por rol en manifiesto activo",
+      "dependencies": "ver README/manifest del paquete de origen"
+    },
+    {
+      "name": "TM_CORE_PYTHON_v075_TESTS.py",
+      "path": "C:\\Users\\profesor\\tm\\Teoria Modular\\tm-explorer\\python\\TM_CORE_PYTHON_v075_TESTS.py",
+      "size_bytes": 13299,
+      "sha256": "93005A2F0DCC0202A397AC09AD11D720B3C5D579CF5620FE6EDAB8A09F71C789",
+      "legibility": "UTF-8 legible",
+      "version_inferred_from_name_or_context": "v0.7.5",
+      "status": "fuente original preservada; ver autoridad por rol en manifiesto activo",
+      "dependencies": "ver README/manifest del paquete de origen"
+    },
+    {
+      "name": "TM_CORE_PYTHONdeepseek_v072_STATE_ENGINE.py",
+      "path": "C:\\Users\\profesor\\tm\\Teoria Modular\\tm-explorer\\python\\TM_CORE_PYTHONdeepseek_v072_STATE_ENGINE.py",
+      "size_bytes": 74966,
+      "sha256": "FF08FB9684EC42EB6A3B7D878350A17EA99551EE6B6299EC69EF74213C3133C5",
+      "legibility": "UTF-8 legible",
+      "version_inferred_from_name_or_context": "no explicit version",
+      "status": "fuente original preservada; ver autoridad por rol en manifiesto activo",
+      "dependencies": "ver README/manifest del paquete de origen"
+    },
+    {
+      "name": "TM_CORE_PYTHONdeepseek_v072_TESTS.py",
+      "path": "C:\\Users\\profesor\\tm\\Teoria Modular\\tm-explorer\\python\\TM_CORE_PYTHONdeepseek_v072_TESTS.py",
+      "size_bytes": 12172,
+      "sha256": "B5F1210B38D52109EDA1C7DE3A9D885F9D3C4CC583F13D84B4CF44B8E79D48C3",
+      "legibility": "UTF-8 legible",
+      "version_inferred_from_name_or_context": "no explicit version",
+      "status": "fuente original preservada; ver autoridad por rol en manifiesto activo",
+      "dependencies": "ver README/manifest del paquete de origen"
+    },
+    {
+      "name": "TM_ARBOL_MAESTRO_CANONICO_COMPLETO_v2_12.md",
+      "path": "C:\\Users\\profesor\\tm\\Teoria Modular\\TM_ARBOL_MAESTRO_CANONICO_COMPLETO_v2_12.md",
+      "size_bytes": 548810,
+      "sha256": "07880B12EE0A40FC09821D2248CD01071B9AE8C3EF4147130049B3EB39F997A8",
+      "legibility": "UTF-8 legible",
+      "version_inferred_from_name_or_context": "v2.12",
+      "status": "fuente original preservada; ver autoridad por rol en manifiesto activo",
+      "dependencies": "ver README/manifest del paquete de origen"
+    },
+    {
+      "name": "TM_LECTURAS_CONFIRMADAS_16OCT_1615_1730_v003.txt",
+      "path": "C:\\Users\\profesor\\tm\\Teoria Modular\\TM_LECTURAS_CONFIRMADAS_16OCT_1615_1730_v003.txt",
+      "size_bytes": 20709,
+      "sha256": "1E634EBB6C004D297E0ACB6B0D378DE5CFBBE7BBEC82FE26363E47C762104E5B",
+      "legibility": "UTF-8 legible",
+      "version_inferred_from_name_or_context": "v003",
+      "status": "fuente original preservada; ver autoridad por rol en manifiesto activo",
+      "dependencies": "ver README/manifest del paquete de origen"
+    },
+    {
+      "name": "TM_TICKFEED_1615_1730.csv",
+      "path": "C:\\Users\\profesor\\tm\\Teoria Modular\\TM_TICKFEED_1615_1730.csv",
+      "size_bytes": 3496855,
+      "sha256": "5F701BE2307352CB559ABBD7BB856A6FD2A1F91E5D269A93DCC9AE2992E2C9FF",
+      "legibility": "UTF-8 legible",
+      "version_inferred_from_name_or_context": "no explicit version",
+      "status": "fuente original preservada; ver autoridad por rol en manifiesto activo",
+      "dependencies": "ver README/manifest del paquete de origen"
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "iteration_id": "ITERACION_04_20261030_1640",
+  "date": "2026-10-30T16:40:12",
+  "objective": "Aplicar Q-AUT funcional, Q-3-50 inclusivo y GAP sin zona muerta; releer 16:15-17:29 y auditar las generaciones",
+  "reader": "blind_reader_v4_functional_autonomy.py",
+  "reader_sha256": "EA5720ABD9CC121BA84197B4A1CE2D7D9030102B39F12533044EA227EE30A746",
+  "decisions": {
+    "Q_AUT": "B solo después de A_CONFIRMED",
+    "Q_3_50": "retroceso <= 50% conserva 3; 50% exacto válido",
+    "GAP": "toda apertura no plana prohíbe 2 y entra en gap"
+  },
+  "counts": {
+    "v3_full": 51,
+    "v4_classic": 4,
+    "v4_full": 44,
+    "v4_invalid": 0,
+    "v4_three_without_two": 0,
+    "v4_primary": 7,
+    "v4_gap": 36,
+    "v4_pending": 1,
+    "l2_generations": 4,
+    "l2_unique": 2,
+    "l2_duplicates": 2,
+    "unique_total": 46,
+    "ownership_errors": 0,
+    "removed_by_A": 47,
+    "added_by_gap": 40
+  },
+  "end_reasons": {
+    "AUT_B": 1,
+    "GAP": 36,
+    "A_USED_AS_TREND": 4,
+    "C_USED_AS_TREND": 2,
+    "OPEN_AT_FEED_END": 1
+  },
+  "determinism": {
+    "double_run": {
+      "equal": true,
+      "sha_full": "66099d49b0fca16d67913d599314d642b0a81c96b81f3ac40efeefc746756a9a",
+      "lines": 20335
+    },
+    "prefixes": {
+      "16:30": {
+        "lines": 3829,
+        "equal": true,
+        "sha": "32e329e19988b4e2e00f57a40a209c0f6242d756c771d478586b4783e0220f98"
+      },
+      "17:00": {
+        "lines": 12265,
+        "equal": true,
+        "sha": "02362f1ffd609c9cc97ce76bdc86bec00c6cdebca37600104b51d73029e2c6df"
+      },
+      "17:15": {
+        "lines": 16454,
+        "equal": true,
+        "sha": "46bf6242e5e82035d5028eaba5fae977f28078008d579ff269e14faf6cffd340"
+      }
+    }
+  },
+  "full_trace": {
+    "path": "TM_TRABAJO_TEMPORAL\\TM_TREE_PERFECTION_MISSION_V1\\01_BLIND_READINGS\\V4_FULL_TRACE.jsonl",
+    "sha256": "66099D49B0FCA16D67913D599314D642B0A81C96B81F3AC40EFEEFC746756A9A",
+    "lines": 20335
+  },
+  "open_question": "Q-AUT-REF (1 vs módulo 1+2)",
+  "originals_modified": false,
+  "tree_modified": false,
+  "engine_modified": false,
+  "golden_modified": false,
+  "tree_frozen": false,
+  "generations_approved": false,
+  "recommendation": "NEEDS_EXPERT_DECISION"
+}

@@ -1,0 +1,41 @@
+ITERACION_08_DIRECT_AUT - ENTREGA FINAL
+
+estado: entregado con ZIP verificado en disco
+fecha construccion: 2026-10-30T18:50:13
+zip_path: TM_ENTREGAS_ITERACION/TM_ITERATION_08_REVIEW.zip
+zip_size: 113337
+zip_sha256: 9b2faeabca2aefaa13347bdd88fb87f0bba847937a7cd39ecab75c4d296ef300
+pack_folder: TM_ENTREGAS_ITERACION/ITERACION_08_DIRECT_AUT_20261030_1850
+miembros_en_zip: 19
+integrity_check: todos los miembros verificados, hash coinciden
+fallas: ninguna de hash o ausencia; falla menor de comparacion de conjunto por comentario del script de verificacion
+canon_informado: 19 core + 32 bg_aut + 14 direct_aut = 65
+fallidas_informadas: 0
+gate_direct_aut: GATE_AUT_DIRECT_BY_A_PASS
+tree_gate: NOT_READY_TO_FREEZE_TREE
+engine_status: REFERENCE_ENGINE_INCOMPLETE
+anclas_informadas:
+L1_BG_AUT:
+B_grande_time 16:18:34.125
+B_grande 910
+AUT_time 16:18:34.926
+B_aut 1230
+new_one_origin 2985760
+new_one_extension 2984300
+L2_DIRECT_AUT:
+one 750
+two 1230
+three 2983030
+module 1970
+A 2050
+module_base 2985000
+A_cross_time 16:20:32.125
+direct_aut_time 16:20:59.125
+new_one_origin 2983030
+new_one_extension 2985730
+politicas:
+P_AB_04_RETURN_JUMP_4: REJECTED_EXPERIMENTAL_ASSUMPTION
+
+accionclusiva:
+verificar manualmente que el set del ZIP y el de disco coincidan antes de liberar definitivamente;
+el hash por miembro ya OK, solo persiste la diferencia de conjunto reportada por el verificador.

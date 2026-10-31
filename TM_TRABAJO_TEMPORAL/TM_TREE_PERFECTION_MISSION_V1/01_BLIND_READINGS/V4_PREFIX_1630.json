@@ -1,0 +1,17 @@
+{
+  "a_mode": "b100",
+  "autonomy": "structural_midpoint_or_origin",
+  "gap_mode": "all",
+  "reading_id": "L1",
+  "ticks": 3829,
+  "generations": 2,
+  "invalid_generations": 0,
+  "three_without_two": 0,
+  "end_reasons": {
+    "AUT_B": 1,
+    "OPEN_AT_FEED_END": 1
+  },
+  "trace_sha256": "ec66d141fadf61b750012f6c81306a786ae9f6bdba5479b62cde976ae20de7b3",
+  "first_tick": 1,
+  "last_tick": 3829
+}

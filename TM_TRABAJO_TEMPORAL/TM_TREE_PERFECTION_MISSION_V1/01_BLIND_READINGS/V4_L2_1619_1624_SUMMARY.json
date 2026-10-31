@@ -1,0 +1,17 @@
+{
+  "a_mode": "b100",
+  "autonomy": "structural_midpoint_or_origin",
+  "reading_id": "L2",
+  "ticks": 1360,
+  "generations": 4,
+  "invalid_generations": 0,
+  "three_without_two": 0,
+  "end_reasons": {
+    "A_USED_AS_TREND": 1,
+    "GAP": 2,
+    "OPEN_AT_FEED_END": 1
+  },
+  "trace_sha256": "7d3d375215fb8141f1d17187cf76daeb108595fdea2b4bd504d7f6e1a6ef0971",
+  "first_tick": 938,
+  "last_tick": 2297
+}

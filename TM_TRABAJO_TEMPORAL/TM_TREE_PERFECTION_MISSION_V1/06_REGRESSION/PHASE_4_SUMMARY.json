@@ -1,0 +1,23 @@
+{
+  "reader": "blind_reader_v4_functional_autonomy.py",
+  "L1_full_generations": 44,
+  "L2_generations": 4,
+  "audit_rows": 48,
+  "counts": {
+    "L1:VALID_PRIMARY": 7,
+    "L1:INTEGRATED_IN_LARGER_MODULE": 36,
+    "L1:VALID_PRIMARY_PENDING": 1,
+    "L2:VALID_PRIMARY": 1,
+    "L2:INTEGRATED_IN_LARGER_MODULE": 2,
+    "L2:VALID_PRIMARY_PENDING": 1
+  },
+  "error_counts": {},
+  "errors_total": 0,
+  "q_b3": "CLOSED",
+  "q_b3_note": "The 16:23 3 in v2 belonged to a generation whose 2 was IMPOSSIBLE. v3 invalidates it. The legal path is B Grande -> C, not 3 extension.",
+  "q_aut": "RESOLVED_STRUCTURAL_MIDPOINT",
+  "q_3_50": "RESOLVED_INCLUSIVE",
+  "generations_approved": false,
+  "tree_frozen": false,
+  "originals_modified": false
+}

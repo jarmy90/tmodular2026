@@ -1,0 +1,147 @@
+suite,test_id,status,classification,description
+core,T-001,PASS,CANONICAL_PASS,1 inicial 10000->9800 confirmada
+core,T-002,PASS,CANONICAL_PASS,2 candidata tras apertura plana
+core,T-003,PASS,CANONICAL_PASS,2 confirmada al 100% de 1
+core,T-004,PASS,CANONICAL_PASS,2 imposible al cierre sin 100%
+core,T-005,PASS,CANONICAL_PASS,"2 imposible por cola inicial > 0,25"
+core,T-015,PASS,CANONICAL_PASS,"0,25 exacto no es plano, prohibe 2 y abre nuevo 1 desde la apertura"
+core,T-016,PASS,CANONICAL_PASS,"0,10 es plano y permite 2 candidata"
+core,T-017,PASS,CANONICAL_PASS,apertura no plana prohibe 2
+core,T-006,PASS,CANONICAL_PASS,3 pendiente con retroceso valido
+core,T-007,PASS,CANONICAL_PASS,3 confirmada al superar el extremo de 2
+core,T-008,PASS,CANONICAL_PASS,50% exacto conserva 3
+core,T-009,PASS,CANONICAL_PASS,retroceso > 50% imposibilita 3
+core,T-010,PASS,CANONICAL_PASS,modulo regular 1+2+3
+core,T-018,PASS,CANONICAL_PASS,vibracion interna no abre 3 en la vela de 2
+core,T-019,PASS,CANONICAL_PASS,3 se abre en la vela siguiente tras retroceso valido
+core,T-011,PASS,CANONICAL_PASS,doble ejecucion identica
+core,T-012,PASS,CANONICAL_PASS,prefijo consistente
+core,T-013,PASS,CANONICAL_PASS,ancla 16:15-16:18
+core,T-014,PASS,CANONICAL_PASS,ancla L2 16:19-16:22
+A/B/B Grande/AUT,A-01,PASS,PROVISIONAL_POLICY_PASS,extension del modulo absorbe A interna (<35 %) [politica 35 %]
+A/B/B Grande/AUT,A-02,PASS,CANONICAL_PASS,retorno estructural confirma A y abre B
+A/B/B Grande/AUT,A-03,PASS,CANONICAL_PASS,retorno provisional absorbido en A
+A/B/B Grande/AUT,A-04,PASS,CANONICAL_PASS,"A pendiente cruza la base -> OPEN_RULE_BLOCK, sin inventar causalidad"
+A/B/B Grande/AUT,A-05,PASS,CANONICAL_PASS,A cruza velas sin cambiar origen
+A/B/B Grande/AUT,A-06,PASS,CANONICAL_PASS,"ancla L1 A=9,1 y una sola confirmacion"
+A/B/B Grande/AUT,A-07,PASS,CANONICAL_PASS,B conserva origen en el extremo de A
+A/B/B Grande/AUT,A-08,PASS,CANONICAL_PASS,structural_time != knowledge_time
+A/B/B Grande/AUT,A-09,PASS,CANONICAL_PASS,no existe B antes de A confirmada
+A/B/B Grande/AUT,A-10,PASS,CANONICAL_PASS,"L2 A confirmada una vez desde 29830,3"
+A/B/B Grande/AUT,A-11,PASS,CANONICAL_PASS,L1 B Grande y AUT en ticks separados
+A/B/B Grande/AUT,A-12,PASS,CANONICAL_PASS,L2 mantiene 1/2/3/modulo
+A/B/B Grande/AUT,A-13,PASS,CANONICAL_PASS,doble ejecucion y prefijo L1
+A/B/B Grande/AUT,A-14,PASS,CANONICAL_PASS,salto unico grande no confirma A sin extension propia
+A/B/B Grande/AUT,A-15,PASS,CANONICAL_PASS,nuevo 1 nace en AUT y conserva B
+A/B/B Grande/AUT,A-16,PASS,CANONICAL_PASS,3 y modulo archivados al confirmar A
+A/B/B Grande/AUT,BG-01,PASS,CANONICAL_PASS,B alcanza exactamente 100%
+A/B/B Grande/AUT,BG-02,PASS,CANONICAL_PASS,B entre 100% y limite
+A/B/B Grande/AUT,BG-03,PASS,CANONICAL_PASS,"B toca exactamente 127%+0,25"
+A/B/B Grande/AUT,BG-04,PASS,CANONICAL_PASS,B supera el limite por un tick minimo
+A/B/B Grande/AUT,BG-05,PASS,CANONICAL_PASS,salto de B candidata a AUT
+A/B/B Grande/AUT,BG-06,PASS,CANONICAL_PASS,B no existe sin A confirmada
+A/B/B Grande/AUT,BG-07,PASS,CANONICAL_PASS,AUT abre nuevo 1 en el mismo tick
+A/B/B Grande/AUT,BG-08,PASS,CANONICAL_PASS,nuevo 1 conserva origen de B
+A/B/B Grande/AUT,BG-09,PASS,CANONICAL_PASS,extension posterior extiende el nuevo 1; B congelada y TT pendiente
+A/B/B Grande/AUT,BG-10,PASS,CANONICAL_PASS,B Grande y AUT no quedan vigentes juntos
+A/B/B Grande/AUT,BG-11,PASS,CANONICAL_PASS,structural_time nuevo 1 < knowledge_time AUT
+A/B/B Grande/AUT,BG-12,PASS,CANONICAL_PASS,A y modulo sin autoridad activa tras AUT
+A/B/B Grande/AUT,BG-13,PASS,CANONICAL_PASS,A nace dentro de la vela de 3/modulo
+A/B/B Grande/AUT,BG-14,PASS,CANONICAL_PASS,A continua entre velas sin reiniciarse
+A/B/B Grande/AUT,BG-15,PASS,PROVISIONAL_POLICY_PASS,"retorno autonomo por extension propia, sin cuatro puntos"
+A/B/B Grande/AUT,BG-16,PASS,PROVISIONAL_POLICY_PASS,retorno absorbido no confirma A/B
+AUT directo por A,AD-BLOCK,PASS,CANONICAL_PASS,A pendiente cruza la base -> OPEN_RULE_BLOCK sin inventar AUT
+AUT directo por A,AD-01,PASS,PROVISIONAL_POLICY_PASS,A confirmada toca la base -> no AUT
+AUT directo por A,AD-02,PASS,PROVISIONAL_POLICY_PASS,A confirmada supera la base por 1 cent -> AUT
+AUT directo por A,AD-03,PASS,PROVISIONAL_POLICY_PASS,A salta de debajo a encima de la base en un tick
+AUT directo por A,AD-04,PASS,PROVISIONAL_POLICY_PASS,A continua tras el AUT y extiende el nuevo 1 (TT pendiente)
+AUT directo por A,AD-05,PASS,PROVISIONAL_POLICY_PASS,no existe B en la via directa
+AUT directo por A,AD-06,PASS,PROVISIONAL_POLICY_PASS,"no se aplica 127%+0,25 en la via directa"
+AUT directo por A,AD-07,PASS,PROVISIONAL_POLICY_PASS,nuevo 1 conserva origen de A
+AUT directo por A,AD-08,PASS,PROVISIONAL_POLICY_PASS,structural_time nuevo 1 = structural de A
+AUT directo por A,AD-09,PASS,PROVISIONAL_POLICY_PASS,knowledge_time = primer tick de cruce
+AUT directo por A,AD-10,PASS,PROVISIONAL_POLICY_PASS,A archivada sin autoridad activa
+AUT directo por A,AD-11,PASS,PROVISIONAL_POLICY_PASS,modulo congelado como referencia
+AUT directo por A,AD-12,PASS,PROVISIONAL_POLICY_PASS,tocar la base y retroceder -> no AUT
+AUT directo por A,AD-13,PASS,PROVISIONAL_POLICY_PASS,cruce dentro de la misma vela
+AUT directo por A,AD-14,PASS,PROVISIONAL_POLICY_PASS,cruce entre velas sin reiniciar A
+AUT directo por A,AD-DET,PASS,PROVISIONAL_POLICY_PASS,doble ejecucion identica
+AUT directo por A,AD-PRE,PASS,PROVISIONAL_POLICY_PASS,prefijo consistente
+C / CUT,C-01,PASS,PROVISIONAL_POLICY_PASS,C nace despues de B Grande
+C / CUT,C-02,PASS,PROVISIONAL_POLICY_PASS,origen de C en el extremo final de B
+C / CUT,C-03,PASS,PROVISIONAL_POLICY_PASS,direccion de C contraria a B
+C / CUT,C-04,PASS,PROVISIONAL_POLICY_PASS,B Grande queda historica y pierde autoridad
+C / CUT,C-05,PASS,PROVISIONAL_POLICY_PASS,C continua entre velas sin reiniciarse
+C / CUT,C-06,PASS,PROVISIONAL_POLICY_PASS,C toca exactamente la base -> no se transforma
+C / CUT,C-07,PASS,PROVISIONAL_POLICY_PASS,C supera la base -> C usada como tendencia
+C / CUT,C-08,PASS,PROVISIONAL_POLICY_PASS,salto sobre la base -> nuevo 1 en ese tick
+C / CUT,C-09,PASS,PROVISIONAL_POLICY_PASS,"nuevo 1 hereda C (origen, direccion, st)"
+C / CUT,C-10,PASS,PROVISIONAL_POLICY_PASS,"extension posterior pertenece al nuevo 1 / 1 del ciclo, no a C"
+C / CUT,C-11,PASS,PROVISIONAL_POLICY_PASS,C no depende del 100% de A para confirmarse
+C / CUT,C-12,PASS,PROVISIONAL_POLICY_PASS,no coexisten autoridad B y C activas
+C / CUT,CUT-01,PASS,PROVISIONAL_POLICY_PASS,C toca exactamente el final real de A -> no hay CUT
+C / CUT,CUT-02,PASS,PROVISIONAL_POLICY_PASS,C supera estrictamente el final real de A -> CUT confirmado
+C / CUT,CUT-03,PASS,PROVISIONAL_POLICY_PASS,CUT no crea nuevo 1 ni reset por invencion
+C / CUT,CUT-04,PASS,PROVISIONAL_POLICY_PASS,CUT no existe antes de B Grande
+C / CUT,C-DET,PASS,PROVISIONAL_POLICY_PASS,doble ejecucion identica en C
+C / CUT,C-PRE,PASS,PROVISIONAL_POLICY_PASS,prefijo consistente en C
+gap / concurrencia,GAP-01,PASS,CANONICAL_PASS,apertura no plana registrada con sus estados
+gap / concurrencia,GAP-02,PASS,CANONICAL_PASS,2 prohibido por apertura no plana
+gap / concurrencia,GAP-03,PASS,CANONICAL_PASS,gap resuelve A/B Grande/tendencia implicitos y nuevo 1 en la apertura
+gap / concurrencia,GAP-03b,PASS,CANONICAL_PASS,el gap no se mide como una unica A desde el extremo previo
+gap / concurrencia,GAP-04,PASS,CANONICAL_PASS,gap no inventa ticks ni precios internos
+gap / concurrencia,GAP-05,PASS,CANONICAL_PASS,la funcion viva no se divide al cambiar de vela ni rota sin TT
+gap / concurrencia,GAP-06,PASS,CANONICAL_PASS,"ancla 16:24-16:25: nuevo 1 alcista desde 29848,5"
+gap / concurrencia,GAP-07,PASS,CANONICAL_PASS,el nuevo 1 no se mide desde el cierre previo ni desde 29828-ish
+gap / concurrencia,GAP-08,PASS,CANONICAL_PASS,secuencia implicita registrada sin precios internos inventados
+gap / concurrencia,GAP-09,PASS,CANONICAL_PASS,las funciones previas pierden autoridad activa tras el gap
+gap / concurrencia,CONC-01,PASS,CANONICAL_PASS,L1 aislada == L1 en composicion (sin interferencia)
+gap / concurrencia,CONC-02,PASS,CANONICAL_PASS,L2 aislada == L2 en composicion (sin interferencia)
+gap / concurrencia,CONC-03,PASS,CANONICAL_PASS,"ids propios y parent correcto, sin tercera escala"
+gap / concurrencia,CONC-04,PASS,CANONICAL_PASS,cero fugas entre lecturas
+gap / concurrencia,CONC-05,PASS,CANONICAL_PASS,doble composicion identica
+gap / concurrencia,CONC-06,PASS,CANONICAL_PASS,tercera escala prohibida sin regla expresa
+TT,TT-01,PASS,CANONICAL_PASS,TT pendiente armado en el tick de AUT
+TT,TT-02,PASS,CANONICAL_PASS,no existe TT antes de AUT
+TT,TT-03,PASS,CANONICAL_PASS,"ancla TT principal = 29829,1 = final_A - modulo"
+TT,TT-04,PASS,CANONICAL_PASS,TT confirmado en el primer tick que alcanza el objetivo
+TT,TT-05,PASS,CANONICAL_PASS,"un tick 0,10 antes del objetivo no confirma TT"
+TT,TT-06,PASS,CANONICAL_PASS,TT extendido conserva el extremo real mas alla del 100 %
+TT,TT-07,PASS,CANONICAL_PASS,TT fallido al tocar final_A antes del objetivo
+TT,TT-08,PASS,CANONICAL_PASS,salto unico directo al objetivo confirma TT (cruce doble imposible)
+TT,TT-09,PASS,CANONICAL_PASS,"el objetivo TT usa modulo y final_A, no el tamano de B"
+TT,TT-10,PASS,CANONICAL_PASS,tras confirmar TT el nuevo 1 sigue siendo la funcion activa
+TT,TT-11,PASS,CANONICAL_PASS,doble ejecucion identica con TT
+TT,TT-12,PASS,CANONICAL_PASS,prefijo sin spoiler: el estado del prefijo no conoce el objetivo
+ciclo / FT,CR-01,PASS,CANONICAL_PASS,TT confirmado en el tick del objetivo
+ciclo / FT,CR-02,PASS,CANONICAL_PASS,la vela siguiente reinicia el ciclo y abre 2 candidata
+ciclo / FT,CR-03,PASS,CANONICAL_PASS,el reinicio conserva la trazabilidad del TT anterior
+ciclo / FT,CR-04,PASS,CANONICAL_PASS,el nuevo 1 no abre 2 dentro de su propia vela
+ciclo / FT,CR-05,PASS,CANONICAL_PASS,sin TT al 100 % no hay reinicio de ciclo
+ciclo / FT,CR-06,PASS,CANONICAL_PASS,gap en la vela siguiente: 2 prohibido y rama de gap
+ciclo / FT,CR-07,PASS,CANONICAL_PASS,reinicio tambien tras el nuevo 1 nacido de C-tendencia
+ciclo / FT,CUT-CHAIN-01,PASS,CANONICAL_PASS,CUT confirmado sin crear nuevo 1
+ciclo / FT,CUT-CHAIN-02,PASS,CANONICAL_PASS,CUT precede a C usada como tendencia y al nuevo 1
+ciclo / FT,CUT-CHAIN-03,PASS,CANONICAL_PASS,final real de A y base del modulo son referencias distintas
+ciclo / FT,FT-01,PASS,CANONICAL_PASS,antes del 100 % de TT no existe FT
+ciclo / FT,FT-02,PASS,CANONICAL_PASS,"FT se origina en el extremo REAL del TT, no en el nivel 100 %"
+ciclo / FT,FT-03,PASS,PROVISIONAL_POLICY_PASS,FT se confirma estructuralmente con extremo propio (tick exacto PROVISIONAL)
+ciclo / FT,FT-04,PASS,CANONICAL_PASS,FT convive con el ciclo nuevo sin consumir su autoridad
+ciclo / FT,FT-05,PASS,CANONICAL_PASS,FT es patron: no aparece como funcion activa
+ciclo / FT,FT-06,PASS,PROVISIONAL_POLICY_PASS,un retroceso menor que el filtro de ruido no confirma FT (filtro 2 pts PROVISIONAL)
+ciclo / FT,CR-DET,PASS,CANONICAL_PASS,doble ejecucion identica
+ciclo / FT,CR-PRE,PASS,CANONICAL_PASS,prefijo sin spoiler (estado previo no conoce el objetivo)
+gap prioridad / plano,GP-01,PASS,CANONICAL_PASS,TT pendiente: gap que alcanza el objetivo TT lo confirma
+gap prioridad / plano,GP-12,PASS,CANONICAL_PASS,doble pertenencia: TT heredado confirmado + nuevo 1 desde el OPEN
+gap prioridad / plano,GP-02,PASS,CANONICAL_PASS,TT pendiente: gap que cruza final_A antes del objetivo -> TT fallido
+gap prioridad / plano,GP-03,PASS,CANONICAL_PASS,un solo tick cruza ambas fronteras: gana la primera geometrica (final_A)
+gap prioridad / plano,GP-04,PASS,OPEN_RULE_BLOCK,gap durante B candidata: no se inventa resolucion de gap
+gap prioridad / plano,GP-05,PASS,OPEN_RULE_BLOCK,gap durante C: no se inventa resolucion administrativa
+gap prioridad / plano,GP-06,PASS,OPEN_RULE_BLOCK,"gap despues de CUT y antes de la base: CUT conservado, sin reset nuevo"
+gap prioridad / plano,GP-07,PASS,CANONICAL_PASS,el FT del ciclo anterior sigue activo despues del gap
+gap prioridad / plano,GP-08,PASS,CANONICAL_PASS,"0,24 es plano -> 2 candidata"
+gap prioridad / plano,GP-09,PASS,CANONICAL_PASS,"0,25 exactos no es plano -> 2 prohibido"
+gap prioridad / plano,GP-10,PASS,CANONICAL_PASS,"0,26 no es plano -> 2 prohibido"
+gap prioridad / plano,GP-11,PASS,CANONICAL_PASS,cierre causal (tick TT) distinto de la rotacion (apertura siguiente)
+gap prioridad / plano,GP-DET,PASS,CANONICAL_PASS,doble ejecucion identica
+gap prioridad / plano,GP-PRE,PASS,CANONICAL_PASS,prefijo consistente

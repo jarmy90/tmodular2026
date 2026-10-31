@@ -1,0 +1,302 @@
+{
+  "iteration": "23A",
+  "tests_total": 42,
+  "passed": 42,
+  "failed": 0,
+  "rows": [
+    {
+      "test_id": "G1",
+      "expected": "direccion del modulo coherente con origen/extremo",
+      "status": "PASS",
+      "actual": "mod=10400->10000 dir=-1 geo=True",
+      "authority": "CANONICAL"
+    },
+    {
+      "test_id": "G2",
+      "expected": "un modulo que se extiende no abre A prematura",
+      "status": "PASS",
+      "actual": "a_status='' module=700",
+      "authority": "CANONICAL"
+    },
+    {
+      "test_id": "G3",
+      "expected": "A nace desde el extremo funcional del modulo",
+      "status": "PASS",
+      "actual": "A.origin=10000 birth_module_extreme=10000 source=T23:MODULE:001",
+      "authority": "CANONICAL"
+    },
+    {
+      "test_id": "G4",
+      "expected": "A no comparte origen con el modulo sin reclasificacion",
+      "status": "PASS",
+      "actual": "mod.origin=10400 A.origin=10000 reclas=0",
+      "authority": "CANONICAL"
+    },
+    {
+      "test_id": "G5",
+      "expected": "A mayor que el modulo provoca reclasificacion trazada",
+      "status": "PASS",
+      "actual": "reclas=[{\"seq\": 1004, \"reason\": \"A_BIGGER_THAN_PROVISIONAL_MODULE\", \"previous\": {\"module_id\": \"T23:MODULE:001\", \"origin\": 10400, \"extreme\": 10000, \"size\": 400, \"dir\": ",
+      "authority": "CANONICAL"
+    },
+    {
+      "test_id": "G6",
+      "expected": "A conserva continuidad a traves del cambio de vela",
+      "status": "PASS",
+      "actual": "A=A_CONFIRMED commits=['LOCAL_A_DEVELOPMENT']",
+      "authority": "CANONICAL"
+    },
+    {
+      "test_id": "G7",
+      "expected": "una B fisica no delimita A",
+      "status": "PASS",
+      "actual": "B=B_PHYSICAL A=A_CONFIRMED",
+      "authority": "CANONICAL"
+    },
+    {
+      "test_id": "G8",
+      "expected": "una B fisica no modifica ni confirma A",
+      "status": "PASS",
+      "actual": "A=400/0 antes=(400, 0) b= commits=[]",
+      "authority": "CANONICAL"
+    },
+    {
+      "test_id": "G9",
+      "expected": "la confirmacion funcional de B delimita A",
+      "status": "PASS",
+      "actual": "A.kt=60004000 B.origin=10400 A.extreme=10400",
+      "authority": "CANONICAL"
+    },
+    {
+      "test_id": "G10",
+      "expected": "B nace exactamente en el extremo de su A",
+      "status": "PASS",
+      "actual": "B.origin=10400 A.extreme=10400 source=T23:A:001",
+      "authority": "CANONICAL"
+    },
+    {
+      "test_id": "G11",
+      "expected": "el ratio B/A es exacto y del mismo propietario",
+      "status": "PASS",
+      "actual": "ratio=0.75 100%=400 A=400",
+      "authority": "CANONICAL"
+    },
+    {
+      "test_id": "G12",
+      "expected": "una B bajo el 100 % no es B Grande",
+      "status": "PASS",
+      "actual": "status=B_CANDIDATE_CONFIRMED ratio=0.75",
+      "authority": "CANONICAL"
+    },
+    {
+      "test_id": "G13",
+      "expected": "sin B Grande no se arma TT por la via de tendencia",
+      "status": "PASS",
+      "actual": "tt='' grande_kt=0",
+      "authority": "CANONICAL"
+    },
+    {
+      "test_id": "G14",
+      "expected": "la evidencia de nacimiento difiere de la de confirmacion",
+      "status": "PASS",
+      "actual": "birth_seq=1003 confirm_seq=1004",
+      "authority": "CANONICAL"
+    },
+    {
+      "test_id": "G15",
+      "expected": "una direccion de modulo invertida se detecta",
+      "status": "PASS",
+      "actual": "geo=False",
+      "authority": "CANONICAL"
+    },
+    {
+      "test_id": "H1",
+      "expected": "B que alcanza exactamente el 100 % confirma B Grande",
+      "status": "PASS",
+      "actual": "B=400 A=400 status=B_GRANDE",
+      "authority": "CANONICAL"
+    },
+    {
+      "test_id": "H2",
+      "expected": "B dentro de 100 %-127 %+0,25 sigue siendo B Grande",
+      "status": "PASS",
+      "actual": "B=450 A=400 limite=533 status=B_GRANDE",
+      "authority": "CANONICAL"
+    },
+    {
+      "test_id": "H3",
+      "expected": "superar el limite por un tick resuelve AUT",
+      "status": "PASS",
+      "actual": "B=600 limite=533 status=AUT",
+      "authority": "CANONICAL"
+    },
+    {
+      "test_id": "H4",
+      "expected": "C aparece solo despues de B Grande",
+      "status": "PASS",
+      "actual": "eventos=['LOCAL_C_OPENED'] B=B_GRANDE grande_kt=60006000",
+      "authority": "CANONICAL"
+    },
+    {
+      "test_id": "H5",
+      "expected": "B Grande registra el cruce causal antes del AUT",
+      "status": "PASS",
+      "actual": "grande_status=CAUSAL_CROSS_IN_AUT_TICK kt=60006000",
+      "authority": "CANONICAL"
+    },
+    {
+      "test_id": "I1",
+      "expected": "el TT exige modulo propietario registrado",
+      "status": "PASS",
+      "actual": "id=LOCAL-G2:MODULE:001 size=700",
+      "authority": "CANONICAL"
+    },
+    {
+      "test_id": "I2",
+      "expected": "el TT exige final_A propietario",
+      "status": "PASS",
+      "actual": "final_A=2985060 A.extreme=2985060",
+      "authority": "CANONICAL"
+    },
+    {
+      "test_id": "I3",
+      "expected": "el objetivo del TT es derivable de su propia genealogia",
+      "status": "PASS",
+      "actual": "objetivo=2984360 final_A=2985060 dir=-1 modulo=700",
+      "authority": "CANONICAL"
+    },
+    {
+      "test_id": "I4",
+      "expected": "la ruta de activacion del TT queda trazada",
+      "status": "PASS",
+      "actual": "source=LOCAL-G2:B:001 seq=2842 kind=FINAL_A",
+      "authority": "CANONICAL"
+    },
+    {
+      "test_id": "I5",
+      "expected": "un TT nacido de un AUT invalida en final_A, no en el origen de A",
+      "status": "PASS",
+      "actual": "invalidacion=2985060 final_A=2985060 A.origin=2984710",
+      "authority": "CANONICAL"
+    },
+    {
+      "test_id": "I6",
+      "expected": "el TT local se confirma cuando alcanza su objetivo",
+      "status": "PASS",
+      "actual": "status=TT_CONFIRMED first=OBJECTIVE@2857",
+      "authority": "CANONICAL"
+    },
+    {
+      "test_id": "I7",
+      "expected": "un TT sin modulo propietario se rechaza",
+      "status": "PASS",
+      "actual": "tt_id='' status=''",
+      "authority": "CANONICAL"
+    },
+    {
+      "test_id": "I8",
+      "expected": "un TT falla si su invalidacion se cruza primero",
+      "status": "PASS",
+      "actual": "status=TT_FAILED first=INVALIDATION_FINAL_A@1007",
+      "authority": "CANONICAL"
+    },
+    {
+      "test_id": "I9",
+      "expected": "MAIN y LOCAL procesan el mismo tick sin referencias cruzadas",
+      "status": "PASS",
+      "actual": "local={'candidate_state_writes': 0, 'cross_owner_reference_reads': 0, 'consumes_violations': 0, 'unowned_candidates': 0, 'same_tick_confirmation': 0, 'third_branch_attempts': 0, 'shadow_recreations_blocked': 0, 'archived_generation_writes': 0, 'legacy_preemptions': 0} ",
+      "authority": "CANONICAL"
+    },
+    {
+      "test_id": "I10",
+      "expected": "los TT de MAIN y LOCAL tienen propietario y objetivo propios",
+      "status": "PASS",
+      "actual": "local=LOCAL-G2:TT:001@2984360 main=TT_CONFIRMED@2982280",
+      "authority": "CANONICAL"
+    },
+    {
+      "test_id": "I11",
+      "expected": "una A usada como tendencia exigiria B Grande valida",
+      "status": "PASS",
+      "actual": "kind=FINAL_A grande=CAUSAL_CROSS_IN_AUT_TICK",
+      "authority": "CANONICAL"
+    },
+    {
+      "test_id": "J1",
+      "expected": "el traslado de precios conserva la geometria",
+      "status": "PASS",
+      "actual": "{'module': 5170, 'module_dir': -1, 'a_size': 1120, 'a_dir': -1, 'b_size': 440, 'b_ratio': 0.3929, 'tt': '', 'first_boundary': ''} vs {'module': 5170, 'module_dir': -1, 'a_size': 1120, 'a_dir': -1, 'b_size': 440, 'b_ratio': 0.3929, 'tt': '', 'first_boundary': ''}",
+      "authority": "CANONICAL"
+    },
+    {
+      "test_id": "J2",
+      "expected": "la inversion vertical conserva tamanos y cambia direccion",
+      "status": "PASS",
+      "actual": "size=5170 dir=1",
+      "authority": "CANONICAL"
+    },
+    {
+      "test_id": "J3",
+      "expected": "el escalado duplica los tamanos sin cambiar la direccion",
+      "status": "PASS",
+      "actual": "size=10340 dir=-1",
+      "authority": "CANONICAL"
+    },
+    {
+      "test_id": "J4",
+      "expected": "cambiar los timestamps no altera la geometria",
+      "status": "PASS",
+      "actual": "{'module': 5170, 'module_dir': -1, 'a_size': 1120, 'a_dir': -1, 'b_size': 440, 'b_ratio': 0.3929, 'tt': '', 'first_boundary': ''}",
+      "authority": "CANONICAL"
+    },
+    {
+      "test_id": "J5",
+      "expected": "cambiar los sequence_id no altera la geometria",
+      "status": "PASS",
+      "actual": "{'module': 5170, 'module_dir': -1, 'a_size': 1120, 'a_dir': -1, 'b_size': 440, 'b_ratio': 0.3929, 'tt': '', 'first_boundary': ''}",
+      "authority": "CANONICAL"
+    },
+    {
+      "test_id": "J6",
+      "expected": "el prefijo 16:28 coincide con la ejecucion corta",
+      "status": "PASS",
+      "actual": "{'module': 4000, 'module_dir': -1, 'a_size': 1120, 'a_dir': -1, 'b_size': 440, 'b_ratio': 0.3929, 'tt': '', 'first_boundary': ''}",
+      "authority": "CANONICAL"
+    },
+    {
+      "test_id": "J7",
+      "expected": "la rama local es determinista",
+      "status": "PASS",
+      "actual": "snapshots identicos",
+      "authority": "CANONICAL"
+    },
+    {
+      "test_id": "J8",
+      "expected": "una escritura legacy sin ticket aborta",
+      "status": "PASS",
+      "actual": "aborta=True",
+      "authority": "CANONICAL"
+    },
+    {
+      "test_id": "J9",
+      "expected": "una referencia de otra rama aborta la lectura",
+      "status": "PASS",
+      "actual": "ok=False",
+      "authority": "CANONICAL"
+    },
+    {
+      "test_id": "J10",
+      "expected": "una lectura fuera de consumes es violacion",
+      "status": "PASS",
+      "actual": "ok=False",
+      "authority": "CANONICAL"
+    },
+    {
+      "test_id": "J11",
+      "expected": "la rama local no contiene precios ni horas del caso",
+      "status": "PASS",
+      "actual": "encontrados=[]",
+      "authority": "CANONICAL"
+    }
+  ]
+}

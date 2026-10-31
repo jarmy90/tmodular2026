@@ -1,0 +1,29 @@
+BAYES Y EL CAMBIO DE PERSPECTIVA
+
+La interpretación bayesiana de la probabilidad no propone una nueva
+aritmética, sino un cambio de postura. En lugar de preguntar cuál es la
+verdad objetiva esperada, pregunta qué convicción cabe mantener una vez
+observados los datos. Ese desplazamiento convierte al razonamiento en un
+proceso vivo: se parte de una creencia inicial, se examina una
+observación, y la creencia se ajusta. No se trata de certeza, sino de
+grado de adhesión justificada.
+
+Este estilo es especialmente útil cuando la evidencia es imperfecta. La
+regla básica sugiere que lo que se cree antes importa, y que la nueva
+evidencia no decide por sí sola, sino que la modifica según lo que ya
+se sabía. Así, la misma observación puede tener efectos distintos
+dependiendo del punto de partida. Eso no debilita el método; por el
+contrario, lo hace más honesto, porque reconoce que ninguna decisión se
+toma desde la nada.
+
+La fuerza del enfoque reside en su capacidad de ordenar ideas en un
+proceso coherente. Una creencia no es simplemente cierta o falsa; es
+razonable en cierto grado, y ese grado cambia cuando llega nueva
+información. Esto hace que el razonamiento sea explícito: se puede
+señalar qué se suponía, qué se observó y por qué el ajuste tiene sentido.
+Esa claridad es valiosa tanto en matemáticas como en la vida cotidiana.
+
+En resumen, la postura bayesiana convierte la probabilidad en un lenguaje
+para actualizar razonablemente lo que se cree. No elimina la duda, pero
+ayuda a gestionarla. No asegura la verdad, pero ofrece un método ordenado
+para moverse dentro de la incertidumbre.

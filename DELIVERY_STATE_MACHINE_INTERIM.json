@@ -1,0 +1,17 @@
+{
+  "delivery_state_machine_interim": {
+    "write_operations_stopped": true,
+    "background_tasks_running": false,
+    "new_tm_work_this_turn": false,
+    "new_tests_this_turn": false,
+    "new_build_this_turn": false,
+    "new_zip_this_turn": false,
+    "natural_language_explanation": "provided in this turn",
+    "full_changed_files_table": "not finalized in this turn",
+    "full_originals_integrity_json": "not finalized in this turn",
+    "closed_zip_review_package": "not finalized in this turn",
+    "textual_evidence": "collected in this turn",
+    "protected_originals_touched_this_turn": false,
+    "next_step": "close the ZIP review package cleanly"
+  }
+}

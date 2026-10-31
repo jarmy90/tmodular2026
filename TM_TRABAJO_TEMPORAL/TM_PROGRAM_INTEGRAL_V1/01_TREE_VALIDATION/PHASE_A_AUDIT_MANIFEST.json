@@ -1,0 +1,320 @@
+{
+  "phase": "A",
+  "subphase": "generation_audit",
+  "version": "v1",
+  "generated_utc": "2026-10-30T14:07:01.743111+00:00",
+  "authority": {
+    "tree": "v2.19 WORKING_CANON_NOT_FROZEN",
+    "tree_frozen": false,
+    "engine_authority": false,
+    "observational_only": true,
+    "originals_modified": false
+  },
+  "inputs": [
+    {
+      "role": "tree_v219",
+      "path": "TM_CANON_ACTIVO/01_ARBOL/TM_ARBOL_MAESTRO_CANONICO_COMPLETO_v2_19_ACUMULADO.md",
+      "absolute_path": "C:\\Users\\profesor\\tm\\Teoria Modular\\TM_CANON_ACTIVO\\01_ARBOL\\TM_ARBOL_MAESTRO_CANONICO_COMPLETO_v2_19_ACUMULADO.md",
+      "size": 562639,
+      "sha256": "94a1408a6123ed66948988334e7d540c2a2692c36eea3cb736dbff0da2346b17",
+      "modified_utc": "2026-10-30T08:17:04.256015+00:00",
+      "expected_sha256": "94A1408A6123ED66948988334E7D540C2A2692C36EEA3CB736DBFF0DA2346B17",
+      "hash_matches": true
+    },
+    {
+      "role": "tickfeed_maestro",
+      "path": "TM_CANON_ACTIVO/02_TICKS/TM_TICKFEED_1615_1730.csv",
+      "absolute_path": "C:\\Users\\profesor\\tm\\Teoria Modular\\TM_CANON_ACTIVO\\02_TICKS\\TM_TICKFEED_1615_1730.csv",
+      "size": 3496855,
+      "sha256": "5f701be2307352cb559abbd7bb856a6fd2a1f91e5d269a93dcc9ae2992e2c9ff",
+      "modified_utc": "2026-10-27T11:37:21.386620+00:00",
+      "expected_sha256": "5F701BE2307352CB559ABBD7BB856A6FD2A1F91E5D269A93DCC9AE2992E2C9FF",
+      "hash_matches": true
+    },
+    {
+      "role": "lecturas_v005",
+      "path": "TM_CANON_ACTIVO/03_LECTURAS_HUMANAS/TM_LECTURAS_CONFIRMADAS_16OCT_1615_1730_v005.txt",
+      "absolute_path": "C:\\Users\\profesor\\tm\\Teoria Modular\\TM_CANON_ACTIVO\\03_LECTURAS_HUMANAS\\TM_LECTURAS_CONFIRMADAS_16OCT_1615_1730_v005.txt",
+      "size": 26713,
+      "sha256": "f5d7550c42c90897d833e6c2a3faf772753a129640fd4411de4190cb2cf94226",
+      "modified_utc": "2026-10-29T08:29:20.935202+00:00",
+      "expected_sha256": "F5D7550C42C90897D833E6C2A3FAF772753A129640FD4411DE4190CB2CF94226",
+      "hash_matches": true
+    },
+    {
+      "role": "reader_fase_a",
+      "path": "TM_TRABAJO_TEMPORAL/TM_PROGRAM_INTEGRAL_V1/01_TREE_VALIDATION/blind_reader.py",
+      "absolute_path": "C:\\Users\\profesor\\tm\\Teoria Modular\\TM_TRABAJO_TEMPORAL\\TM_PROGRAM_INTEGRAL_V1\\01_TREE_VALIDATION\\blind_reader.py",
+      "size": 48000,
+      "sha256": "5453936409204d742d74e6f51d73b09dc3e1185e23f633261b5179c7e392f458",
+      "modified_utc": "2026-10-30T12:59:49.829207+00:00"
+    },
+    {
+      "role": "generaciones_bloqueadas",
+      "path": "TM_TRABAJO_TEMPORAL/TM_PROGRAM_INTEGRAL_V1/01_TREE_VALIDATION/BLIND_TREE_GENERATIONS_1649_1729.csv",
+      "absolute_path": "C:\\Users\\profesor\\tm\\Teoria Modular\\TM_TRABAJO_TEMPORAL\\TM_PROGRAM_INTEGRAL_V1\\01_TREE_VALIDATION\\BLIND_TREE_GENERATIONS_1649_1729.csv",
+      "size": 3707,
+      "sha256": "63768588aa7c0770bffe7569511b0b52abd2aef06fc26e28348d4ced792fb62b",
+      "modified_utc": "2026-10-30T13:00:46.193831+00:00"
+    },
+    {
+      "role": "eventos_bloqueados",
+      "path": "TM_TRABAJO_TEMPORAL/TM_PROGRAM_INTEGRAL_V1/01_TREE_VALIDATION/BLIND_TREE_EVENTS_1649_1729.csv",
+      "absolute_path": "C:\\Users\\profesor\\tm\\Teoria Modular\\TM_TRABAJO_TEMPORAL\\TM_PROGRAM_INTEGRAL_V1\\01_TREE_VALIDATION\\BLIND_TREE_EVENTS_1649_1729.csv",
+      "size": 36483,
+      "sha256": "369e823c9540073d071ce10b8bf073a69194b46af3a90fde6367e513aaad2111",
+      "modified_utc": "2026-10-30T13:00:46.170636+00:00"
+    },
+    {
+      "role": "traza_por_tick",
+      "path": "TM_TRABAJO_TEMPORAL/TM_PROGRAM_INTEGRAL_V1/01_TREE_VALIDATION/BLIND_TREE_TRACE_1649_1729.jsonl",
+      "absolute_path": "C:\\Users\\profesor\\tm\\Teoria Modular\\TM_TRABAJO_TEMPORAL\\TM_PROGRAM_INTEGRAL_V1\\01_TREE_VALIDATION\\BLIND_TREE_TRACE_1649_1729.jsonl",
+      "size": 12892900,
+      "sha256": "8150f4023523f37a7717101c8035bbd41da85ecf96ca0c006251bd338814ab03",
+      "modified_utc": "2026-10-30T13:00:46.149469+00:00"
+    },
+    {
+      "role": "verificacion_determinismo",
+      "path": "TM_TRABAJO_TEMPORAL/TM_PROGRAM_INTEGRAL_V1/01_TREE_VALIDATION/verify_phase_a.json",
+      "absolute_path": "C:\\Users\\profesor\\tm\\Teoria Modular\\TM_TRABAJO_TEMPORAL\\TM_PROGRAM_INTEGRAL_V1\\01_TREE_VALIDATION\\verify_phase_a.json",
+      "size": 330,
+      "sha256": "cb58f6071cc06b1a84912e72fca0fe89abcd8d124b086dafd3a9ac30cc012d14",
+      "modified_utc": "2026-10-30T13:00:43.644209+00:00"
+    },
+    {
+      "role": "acta_fase_a",
+      "path": "TM_TRABAJO_TEMPORAL/TM_PROGRAM_INTEGRAL_V1/01_TREE_VALIDATION/BLIND_TREE_READINGS_1649_1729.md",
+      "absolute_path": "C:\\Users\\profesor\\tm\\Teoria Modular\\TM_TRABAJO_TEMPORAL\\TM_PROGRAM_INTEGRAL_V1\\01_TREE_VALIDATION\\BLIND_TREE_READINGS_1649_1729.md",
+      "size": 17285,
+      "sha256": "d521cbc73b6d387e7dd493e75a604d4c8576e3927d9f3d7db9d2beedb5dc33f6",
+      "modified_utc": "2026-10-30T13:59:11.118782+00:00"
+    },
+    {
+      "role": "checkpoint_fase_a",
+      "path": "TM_TRABAJO_TEMPORAL/TM_PROGRAM_INTEGRAL_V1/08_REPORTS/PHASE_A_CHECKPOINT_v1.md",
+      "absolute_path": "C:\\Users\\profesor\\tm\\Teoria Modular\\TM_TRABAJO_TEMPORAL\\TM_PROGRAM_INTEGRAL_V1\\08_REPORTS\\PHASE_A_CHECKPOINT_v1.md",
+      "size": 7877,
+      "sha256": "6180c4991aec550705d29262f836442af4e573615639769058c18fab98fcd3d8",
+      "modified_utc": "2026-10-30T13:59:29.244585+00:00"
+    }
+  ],
+  "outputs": [
+    {
+      "role": "auditoria_generaciones",
+      "path": "TM_TRABAJO_TEMPORAL/TM_PROGRAM_INTEGRAL_V1/01_TREE_VALIDATION/PHASE_A_GENERATION_AUDIT.md",
+      "absolute_path": "C:\\Users\\profesor\\tm\\Teoria Modular\\TM_TRABAJO_TEMPORAL\\TM_PROGRAM_INTEGRAL_V1\\01_TREE_VALIDATION\\PHASE_A_GENERATION_AUDIT.md",
+      "size": 28788,
+      "sha256": "f135a8bbca478b1b9a0191309cfcab9739cb7a4fa2184630efc2128fe2410dd5",
+      "modified_utc": "2026-10-30T14:06:25.808017+00:00"
+    },
+    {
+      "role": "clasificacion_16",
+      "path": "TM_TRABAJO_TEMPORAL/TM_PROGRAM_INTEGRAL_V1/01_TREE_VALIDATION/PHASE_A_GENERATION_CLASSIFICATION.csv",
+      "absolute_path": "C:\\Users\\profesor\\tm\\Teoria Modular\\TM_TRABAJO_TEMPORAL\\TM_PROGRAM_INTEGRAL_V1\\01_TREE_VALIDATION\\PHASE_A_GENERATION_CLASSIFICATION.csv",
+      "size": 3304,
+      "sha256": "f8e22c6a9cbf7afe704f203385ada34aaae99b019a0a36b008ad94bf3e7ad5ea",
+      "modified_utc": "2026-10-30T14:02:34.258092+00:00"
+    },
+    {
+      "role": "politicas_experimentales",
+      "path": "TM_TRABAJO_TEMPORAL/TM_PROGRAM_INTEGRAL_V1/01_TREE_VALIDATION/PHASE_A_EXPERIMENTAL_POLICIES.md",
+      "absolute_path": "C:\\Users\\profesor\\tm\\Teoria Modular\\TM_TRABAJO_TEMPORAL\\TM_PROGRAM_INTEGRAL_V1\\01_TREE_VALIDATION\\PHASE_A_EXPERIMENTAL_POLICIES.md",
+      "size": 18250,
+      "sha256": "0aa0dc82ccff34d49c2765e49fb2d1b51b1cd0b74b2f0b5d842f71a199533b17",
+      "modified_utc": "2026-10-30T13:57:54.278509+00:00"
+    },
+    {
+      "role": "propiedad_extremos",
+      "path": "TM_TRABAJO_TEMPORAL/TM_PROGRAM_INTEGRAL_V1/01_TREE_VALIDATION/PHASE_A_EXTREME_OWNERSHIP.csv",
+      "absolute_path": "C:\\Users\\profesor\\tm\\Teoria Modular\\TM_TRABAJO_TEMPORAL\\TM_PROGRAM_INTEGRAL_V1\\01_TREE_VALIDATION\\PHASE_A_EXTREME_OWNERSHIP.csv",
+      "size": 4769,
+      "sha256": "b9bd3d25404a78e6099852a04e65f243345b98a685913c6531d28adf1e514f2a",
+      "modified_utc": "2026-10-30T14:02:34.260836+00:00"
+    },
+    {
+      "role": "mapa_primaria_secundaria",
+      "path": "TM_TRABAJO_TEMPORAL/TM_PROGRAM_INTEGRAL_V1/01_TREE_VALIDATION/PHASE_A_PRIMARY_SECONDARY_MAP.md",
+      "absolute_path": "C:\\Users\\profesor\\tm\\Teoria Modular\\TM_TRABAJO_TEMPORAL\\TM_PROGRAM_INTEGRAL_V1\\01_TREE_VALIDATION\\PHASE_A_PRIMARY_SECONDARY_MAP.md",
+      "size": 11105,
+      "sha256": "19091961c300142a6855381e632e093f8e7e00a0d24842b78a2c9f3946f158a0",
+      "modified_utc": "2026-10-30T14:04:32.659285+00:00"
+    },
+    {
+      "role": "resumen_auditoria",
+      "path": "TM_TRABAJO_TEMPORAL/TM_PROGRAM_INTEGRAL_V1/01_TREE_VALIDATION/PHASE_A_GENERATION_AUDIT.json",
+      "absolute_path": "C:\\Users\\profesor\\tm\\Teoria Modular\\TM_TRABAJO_TEMPORAL\\TM_PROGRAM_INTEGRAL_V1\\01_TREE_VALIDATION\\PHASE_A_GENERATION_AUDIT.json",
+      "size": 3772,
+      "sha256": "be44bc52493f5922638891df21209b7966270c3082a001177813a41e35142dda",
+      "modified_utc": "2026-10-30T14:02:34.260836+00:00"
+    },
+    {
+      "role": "script_auditoria",
+      "path": "TM_TRABAJO_TEMPORAL/TM_PROGRAM_INTEGRAL_V1/01_TREE_VALIDATION/audit_generations.py",
+      "absolute_path": "C:\\Users\\profesor\\tm\\Teoria Modular\\TM_TRABAJO_TEMPORAL\\TM_PROGRAM_INTEGRAL_V1\\01_TREE_VALIDATION\\audit_generations.py",
+      "size": 12088,
+      "sha256": "9edc58713cc0c17423905c902d1c885914691f55ede2a7e4b2134c94b7fb4ecd",
+      "modified_utc": "2026-10-30T14:02:06.633433+00:00"
+    },
+    {
+      "role": "script_verificacion",
+      "path": "TM_TRABAJO_TEMPORAL/TM_PROGRAM_INTEGRAL_V1/01_TREE_VALIDATION/verify_generation_audit.py",
+      "absolute_path": "C:\\Users\\profesor\\tm\\Teoria Modular\\TM_TRABAJO_TEMPORAL\\TM_PROGRAM_INTEGRAL_V1\\01_TREE_VALIDATION\\verify_generation_audit.py",
+      "size": 5391,
+      "sha256": "5654b6784ad5d26b1b91223f2f2e1b5885330be42ad8e9bc7511987aca9321a9",
+      "modified_utc": "2026-10-30T14:06:00.103245+00:00"
+    },
+    {
+      "role": "verificacion_auditoria",
+      "path": "TM_TRABAJO_TEMPORAL/TM_PROGRAM_INTEGRAL_V1/01_TREE_VALIDATION/PHASE_A_AUDIT_VERIFICATION.json",
+      "absolute_path": "C:\\Users\\profesor\\tm\\Teoria Modular\\TM_TRABAJO_TEMPORAL\\TM_PROGRAM_INTEGRAL_V1\\01_TREE_VALIDATION\\PHASE_A_AUDIT_VERIFICATION.json",
+      "size": 936,
+      "sha256": "0fb1464c6ceff76918a9c89e0e2e7916b7cebb6b2f62bde466dc72430c70500b",
+      "modified_utc": "2026-10-30T14:07:01.472433+00:00"
+    }
+  ],
+  "audit_counts": {
+    "INTEGRATED_IN_LARGER_MODULE": 4,
+    "VALID_PRIMARY": 4,
+    "PENDING_EXPERT_DECISION": 6,
+    "VALID_SECONDARY": 1,
+    "VALID_PRIMARY_OPEN": 1
+  },
+  "first_divergence": {
+    "generation": 12,
+    "transition_in": "C_USED_AS_TREND",
+    "rule_strength": "EXPLICIT",
+    "transition_time": "16:48:15.900",
+    "transition_dir": -1,
+    "one_dir": 1,
+    "direction_match": "NO",
+    "one_origin": 2966640,
+    "one_extreme": 2969990,
+    "one_size": 3350,
+    "one_kt": "16:49:59.949",
+    "one_confirmation_time": "16:50:00.152",
+    "module_size": "3350",
+    "a_size": "1620",
+    "b_measure": "1710",
+    "ended_by": "C_USED_AS_TREND",
+    "transition_margin_centipoints": "",
+    "classification": "INTEGRATED_IN_LARGER_MODULE",
+    "cause": "C_TREND_DIRECTION",
+    "transition_detail": "BLIND_TREE_READINGS_1649_1729.md seccion 0 (estado heredado)",
+    "structural_time": "16:49:59.949",
+    "knowledge_time": "16:50:00.152"
+  },
+  "direction_inversions": [
+    {
+      "generation": 12,
+      "transition_in": "C_USED_AS_TREND",
+      "transition_time": "16:48:15.900",
+      "transition_dir": -1,
+      "one_dir": 1,
+      "one_size": 3350,
+      "classification": "INTEGRATED_IN_LARGER_MODULE"
+    },
+    {
+      "generation": 14,
+      "transition_in": "AUT",
+      "transition_time": "16:52:17.291",
+      "transition_dir": -1,
+      "one_dir": 1,
+      "one_size": 1920,
+      "classification": "PENDING_EXPERT_DECISION"
+    },
+    {
+      "generation": 15,
+      "transition_in": "AUT",
+      "transition_time": "16:54:27.442",
+      "transition_dir": 1,
+      "one_dir": -1,
+      "one_size": 3330,
+      "classification": "PENDING_EXPERT_DECISION"
+    },
+    {
+      "generation": 16,
+      "transition_in": "AUT",
+      "transition_time": "16:56:05.283",
+      "transition_dir": -1,
+      "one_dir": 1,
+      "one_size": 2490,
+      "classification": "PENDING_EXPERT_DECISION"
+    },
+    {
+      "generation": 18,
+      "transition_in": "A_USED_AS_TREND",
+      "transition_time": "17:00:08.407",
+      "transition_dir": -1,
+      "one_dir": 1,
+      "one_size": 5420,
+      "classification": "INTEGRATED_IN_LARGER_MODULE"
+    },
+    {
+      "generation": 19,
+      "transition_in": "C_USED_AS_TREND",
+      "transition_time": "17:07:02.847",
+      "transition_dir": -1,
+      "one_dir": 1,
+      "one_size": 3670,
+      "classification": "INTEGRATED_IN_LARGER_MODULE"
+    },
+    {
+      "generation": 20,
+      "transition_in": "AUT",
+      "transition_time": "17:09:23.432",
+      "transition_dir": 1,
+      "one_dir": -1,
+      "one_size": 4460,
+      "classification": "PENDING_EXPERT_DECISION"
+    },
+    {
+      "generation": 23,
+      "transition_in": "A_USED_AS_TREND",
+      "transition_time": "17:15:37.388",
+      "transition_dir": -1,
+      "one_dir": 1,
+      "one_size": 2470,
+      "classification": "INTEGRATED_IN_LARGER_MODULE"
+    },
+    {
+      "generation": 24,
+      "transition_in": "AUT",
+      "transition_time": "17:18:09.401",
+      "transition_dir": 1,
+      "one_dir": -1,
+      "one_size": 2820,
+      "classification": "PENDING_EXPERT_DECISION"
+    },
+    {
+      "generation": 25,
+      "transition_in": "AUT",
+      "transition_time": "17:21:21.925",
+      "transition_dir": -1,
+      "one_dir": 1,
+      "one_size": 4470,
+      "classification": "PENDING_EXPERT_DECISION"
+    }
+  ],
+  "status": "NEEDS_EXPERT_DECISION",
+  "gate": "GATE_A_EVIDENCE_AUDITED__16_GENERATIONS_NOT_APPROVED",
+  "open_questions": [
+    "Q_AUT_DIRECTION",
+    "Q_C_GRANDE",
+    "Q_A_MARGIN"
+  ],
+  "limitations": [
+    "No se re-ejecuto el lector; se audito la salida bloqueada.",
+    "No hay golden humano del bloque 16:49-17:29 (v005 lo marca [D]).",
+    "Las 5 primarias locales tienen direccion valida pero origen en la vela siguiente.",
+    "Los hashes intermedios de las politicas P01-P17 no se archivaron."
+  ],
+  "commands": [
+    "python audit_generations.py",
+    "python verify_generation_audit.py",
+    "python build_audit_manifest.py"
+  ],
+  "environment": {
+    "python": "3.12.10",
+    "platform": "Windows-11-10.0.26200-SP0"
+  }
+}

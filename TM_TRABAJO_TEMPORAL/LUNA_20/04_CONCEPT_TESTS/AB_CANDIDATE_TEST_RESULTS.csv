@@ -1,0 +1,33 @@
+test_id,area,kind,description,pass,detail,classification
+A-01,absorption,negative,extension del modulo absorbe A interna (<35 %) [politica 35 %],True,a=ABSORBED_IN_ACTIVE_FUNCTION b= mod=1100,PROVISIONAL_POLICY_PASS
+A-02,A/B,positive,retorno estructural confirma A y abre B,True,a=A_CONFIRMED/500 b=CANDIDATE/9500/300,CANONICAL_PASS
+A-03,return,negative,retorno provisional absorbido en A,True,a=CONTRARY_MOVE_PENDING return=ABSORBED_IN_A b=,CANONICAL_PASS
+A-04,AUT direct/OPEN_RULE_BLOCK,negative,"A pendiente cruza la base -> OPEN_RULE_BLOCK, sin inventar causalidad",True,aut=OPEN_RULE_BLOCK n= b= conf=0,CANONICAL_PASS
+A-05,continuity,positive,A cruza velas sin cambiar origen,True,a=A_CONFIRMED/9000/9500,CANONICAL_PASS
+A-06,A,positive,"ancla L1 A=9,1 y una sola confirmacion",True,a=910 conf=1 events=1,CANONICAL_PASS
+A-07,B,positive,B conserva origen en el extremo de A,True,b=9500/300,CANONICAL_PASS
+A-08,times,positive,structural_time != knowledge_time,True,a_st=1792167377809 a_kt=1792167428913 b_st=1792167425425 b_kt=1792167428913,CANONICAL_PASS
+A-09,invariant,negative,no existe B antes de A confirmada,True,a=CONTRARY_MOVE_PENDING b=,CANONICAL_PASS
+A-10,A,positive,"L2 A confirmada una vez desde 29830,3",True,a=1/2983030 three=2983030 mod=1970,CANONICAL_PASS
+A-11,B Grande,positive,L1 B Grande y AUT en ticks separados,True,grande=1792167514125 aut=1792167514926 b=1230,CANONICAL_PASS
+A-12,core,real,L2 mantiene 1/2/3/modulo,True,1=750 2=1230 3=2983030 mod=1970,CANONICAL_PASS
+A-13,determinism,global,doble ejecucion y prefijo L1,True,trace=937 prefix=717,CANONICAL_PASS
+A-14,return/REJECTED_POLICY_REWRITTEN,boundary,salto unico grande no confirma A sin extension propia,True,a=CONTRARY_MOVE_PENDING return=RETURN_MOVE_PENDING jump=False b=,CANONICAL_PASS
+A-15,new one,positive,nuevo 1 nace en AUT y conserva B,True,n=2985760/2984300 st=1792167425425 kt=1792167514926,CANONICAL_PASS
+A-16,authority,positive,3 y modulo archivados al confirmar A,True,3auth=ARCHIVED mod=FROZEN_REFERENCE,CANONICAL_PASS
+BG-01,B Grande,boundary,B alcanza exactamente 100%,True,b=500 status=B_GRANDE aut=,CANONICAL_PASS
+BG-02,B Grande,positive,B entre 100% y limite,True,b=550 status=B_GRANDE,CANONICAL_PASS
+BG-03,B Grande,boundary,"B toca exactamente 127%+0,25",True,b=660 status=B_GRANDE aut=,CANONICAL_PASS
+BG-04,AUT,boundary,B supera el limite por un tick minimo,True,b=661 aut=AUT_CONFIRMED status=AUT,CANONICAL_PASS
+BG-05,AUT,jump,salto de B candidata a AUT,True,"events=['B_CANDIDATE', 'B_GRANDE_CAUSAL_CROSS', 'AUT_CONFIRMED', 'NEW_ONE_ACTIVE', 'TT_PENDING', 'CORE_END'] b=800 aut=AUT_CONFIRMED",CANONICAL_PASS
+BG-06,AUT,negative,B no existe sin A confirmada,True,b= aut=,CANONICAL_PASS
+BG-07,AUT,positive,AUT abre nuevo 1 en el mismo tick,True,aut=120400 n_kt=120400,CANONICAL_PASS
+BG-08,AUT,positive,nuevo 1 conserva origen de B,True,n=9500 b=9500,CANONICAL_PASS
+BG-09,new one,positive,extension posterior extiende el nuevo 1; B congelada y TT pendiente,True,b=661 n=700/8800 tt=TT_PENDING cycle=0,CANONICAL_PASS
+BG-10,AUT,invariant,B Grande y AUT no quedan vigentes juntos,True,b=AUT grande=AUT active=NEW_ONE,CANONICAL_PASS
+BG-11,times,positive,structural_time nuevo 1 < knowledge_time AUT,True,st=1792167425425 kt=1792167514926,CANONICAL_PASS
+BG-12,authority,positive,A y modulo sin autoridad activa tras AUT,True,a=ARCHIVED mod=FROZEN_REFERENCE active=NEW_ONE,CANONICAL_PASS
+BG-13,A birth,positive,A nace dentro de la vela de 3/modulo,True,a=CONTRARY_MOVE_PENDING/9200/100,CANONICAL_PASS
+BG-14,A continuity,positive,A continua entre velas sin reiniciarse,True,a=A_CONFIRMED/9000,CANONICAL_PASS
+BG-15,return/REJECTED_POLICY_REWRITTEN,positive,"retorno autonomo por extension propia, sin cuatro puntos",True,a=A_CONFIRMED ext=True jump=False b=CANDIDATE,PROVISIONAL_POLICY_PASS
+BG-16,return,negative,retorno absorbido no confirma A/B,True,a=CONTRARY_MOVE_PENDING b=,PROVISIONAL_POLICY_PASS

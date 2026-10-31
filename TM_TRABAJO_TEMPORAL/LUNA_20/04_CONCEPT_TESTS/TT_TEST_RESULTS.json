@@ -1,0 +1,66 @@
+{
+  "total": 12,
+  "passed": 12,
+  "checks": [
+    {
+      "test_id": "TT-01",
+      "pass": true,
+      "classification": "CANONICAL_PASS"
+    },
+    {
+      "test_id": "TT-02",
+      "pass": true,
+      "classification": "CANONICAL_PASS"
+    },
+    {
+      "test_id": "TT-03",
+      "pass": true,
+      "classification": "CANONICAL_PASS"
+    },
+    {
+      "test_id": "TT-04",
+      "pass": true,
+      "classification": "CANONICAL_PASS"
+    },
+    {
+      "test_id": "TT-05",
+      "pass": true,
+      "classification": "CANONICAL_PASS"
+    },
+    {
+      "test_id": "TT-06",
+      "pass": true,
+      "classification": "CANONICAL_PASS"
+    },
+    {
+      "test_id": "TT-07",
+      "pass": true,
+      "classification": "CANONICAL_PASS"
+    },
+    {
+      "test_id": "TT-08",
+      "pass": true,
+      "classification": "CANONICAL_PASS"
+    },
+    {
+      "test_id": "TT-09",
+      "pass": true,
+      "classification": "CANONICAL_PASS"
+    },
+    {
+      "test_id": "TT-10",
+      "pass": true,
+      "classification": "CANONICAL_PASS"
+    },
+    {
+      "test_id": "TT-11",
+      "pass": true,
+      "classification": "CANONICAL_PASS"
+    },
+    {
+      "test_id": "TT-12",
+      "pass": true,
+      "classification": "CANONICAL_PASS"
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "total": 14,
+  "passed": 14,
+  "canonical": 11,
+  "provisional": 0,
+  "blocked": 3,
+  "checks": [
+    {
+      "test_id": "GP-01",
+      "pass": true,
+      "classification": "CANONICAL_PASS"
+    },
+    {
+      "test_id": "GP-12",
+      "pass": true,
+      "classification": "CANONICAL_PASS"
+    },
+    {
+      "test_id": "GP-02",
+      "pass": true,
+      "classification": "CANONICAL_PASS"
+    },
+    {
+      "test_id": "GP-03",
+      "pass": true,
+      "classification": "CANONICAL_PASS"
+    },
+    {
+      "test_id": "GP-04",
+      "pass": true,
+      "classification": "OPEN_RULE_BLOCK"
+    },
+    {
+      "test_id": "GP-05",
+      "pass": true,
+      "classification": "OPEN_RULE_BLOCK"
+    },
+    {
+      "test_id": "GP-06",
+      "pass": true,
+      "classification": "OPEN_RULE_BLOCK"
+    },
+    {
+      "test_id": "GP-07",
+      "pass": true,
+      "classification": "CANONICAL_PASS"
+    },
+    {
+      "test_id": "GP-08",
+      "pass": true,
+      "classification": "CANONICAL_PASS"
+    },
+    {
+      "test_id": "GP-09",
+      "pass": true,
+      "classification": "CANONICAL_PASS"
+    },
+    {
+      "test_id": "GP-10",
+      "pass": true,
+      "classification": "CANONICAL_PASS"
+    },
+    {
+      "test_id": "GP-11",
+      "pass": true,
+      "classification": "CANONICAL_PASS"
+    },
+    {
+      "test_id": "GP-DET",
+      "pass": true,
+      "classification": "CANONICAL_PASS"
+    },
+    {
+      "test_id": "GP-PRE",
+      "pass": true,
+      "classification": "CANONICAL_PASS"
+    }
+  ]
+}

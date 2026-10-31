@@ -1,0 +1,41 @@
+--- v2.13_R1.md
++++ v2.13_R2.md
+@@ -1,6 +1,6 @@
+-# TM — ÁRBOL MAESTRO CANÓNICO COMPLETO v2.13 R1 (PROPUESTA)
++# TM — ÁRBOL MAESTRO CANÓNICO COMPLETO v2.13 R2 (PROPUESTA)
+ 
+-- **Estado:** `CANDIDATO_PENDIENTE_AUDITORIA_MIMO_Y_APROBACION_JAVIER`
++- **Estado:** `CANDIDATO_PENDIENTE_AUDITORIA_READER_VALIDATOR_Y_MIMO_Y_APROBACION_JAVIER`
+ - **Fecha:** 2026-10-28
+ - **Base documental:** `TM_ARBOL_MAESTRO_CANONICO_COMPLETO_v2_12.md` (histórica, preservada íntegra en `historical/`).
+ - **Golden humano vigente:** `TM_LECTURAS_CONFIRMADAS_16OCT_1615_1730_v003.txt`.
+@@ -152,3 +152,29 @@
+ ## 12. Control de aprobación
+ 
+ Esta propuesta se instala como `CANDIDATO_PENDIENTE_APROBACION`. La base activa y aprobada permanece v2.12 hasta que Javier apruebe expresamente `ARBOL_v2_13_APROBADO_POR_JAVIER`. La Fase 2 no está autorizada por este documento.
++
++## 13. Decision expresa de Javier: regla universal B Grande y dos vias AUT (R2)
++
++Esta seccion, recibida expresamente de Javier el 2026-10-28, sustituye cualquier texto incompatible anterior de esta propuesta. La propuesta sigue pendiente de auditoria y aprobacion; v2.12 aprobado no se sustituye.
++
++### Regla universal B Grande
++
++- B Grande comienza al alcanzar el 100 % de A Grande, medido desde el extremo final de A.
++- Antes del 100 %, B solo es candidata.
++- El intervalo exclusivo de B Grande es 100 % de A hasta 127 % de A + 0,25 puntos, incluyendo el limite exacto.
++- Al superar estrictamente 127 % + 0,25, B deja de ser B Grande y se confirma AUT en el primer tick que cruza el limite.
++- La regla no cambia por patron, vela, modulo ni contexto. Las anclas y la medida persisten entre velas.
++- Retrocesos internos de B no reinician ni fragmentan automaticamente B.
++- Despues de B Grande confirmada, el movimiento contrario posterior es C Grande, sin estado C candidata.
++
++### Nodo AUT: dos vias alternativas
++
++**Via B:** A Grande -> B candidata -> B Grande al 100 % -> cruce estricto de 127 % + 0,25 -> AUT. Esta via puede iniciar o confirmar TT.
++
++**Via A directa:** A Grande contraria al modulo o estructura 1-2-3 supera estrictamente su base/inicio funcional -> AUT directo. Esa A Grande se usa como tendencia y pasa a nuevo 1 dominante. No existe B ficticia, no se usa 127 % + 0,25 y esta via no inicia por si sola TT. Tocar la base no equivale a superarla.
++
++Metadatos causales: `AUT_CAUSE=B_EXCEEDS_127_PLUS_0_25` y `AUT_CAUSE=A_CROSSES_STRUCTURE_BASE`. AUT sigue siendo una sola funcion formal. Las ramas son alternativas y no se mezclan.
++
++### Prioridad y contradicciones preservadas
++
++La secuencia entre velas mantiene las prioridades aprobadas: GAP, plano, cola inicial, posibilidad/prohibicion de 2 y, cuando 2 queda prohibido, rama A/B/AUT aplicable. Esta decision no cambia GAP, plano ni cola inicial. Las reglas pendientes ajenas a esta decision no se amplian. El golden v003 se conserva sin cambios; toda divergencia de ejecucion se registra, no se corrige alterando golden.

@@ -1,0 +1,12 @@
+{
+  "a_mode": "b100",
+  "ticks": 1360,
+  "generations": 3,
+  "end_reasons": {
+    "A_USED_AS_TREND": 2,
+    "OPEN_AT_FEED_END": 1
+  },
+  "trace_sha256": "3dc19b27348d56071b6c39c46b4da6364af0fe40727d33347c9a11af311cdc1d",
+  "first_tick": 938,
+  "last_tick": 2297
+}

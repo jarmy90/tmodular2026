@@ -1,0 +1,44 @@
+====================================================================================================
+CASE A_two_authorities ticks 29
+====================================================================================================
+tick  6 p=  14.00 GAP               f=GAP     st=GAP          structural_p=  14.00 knowledge_p=  14.00 tt_100=   0.00
+tick 10 p=  14.00 LECTURA_CREADA    f=1       st=MODULE       structural_p=  14.00 knowledge_p=  14.00 tt_100=   0.00
+tick 10 p=  14.00 QUESTION          f=1       st=PENDING      structural_p=  14.00 knowledge_p=  14.00 tt_100=   0.00
+tick 15 p=  16.00 A_INICIO          f=A       st=A            structural_p=   8.00 knowledge_p=  16.00 tt_100=   0.00
+tick 16 p=  18.00 GAP               f=GAP     st=GAP          structural_p=  18.00 knowledge_p=  18.00 tt_100=   0.00
+tick 16 p=  18.00 B_CANDIDATA       f=B       st=B_CAND       structural_p=  18.00 knowledge_p=  18.00 tt_100=   0.00
+tick 16 p=  18.00 QUESTION          f=A       st=PENDING      structural_p=  18.00 knowledge_p=  18.00 tt_100=   0.00
+tick 17 p=  20.00 B_GRANDE          f=B       st=TT_PENDING   structural_p=  20.00 knowledge_p=  20.00 tt_100=   0.00
+tick 17 p=  20.00 QUESTION          f=B       st=PENDING      structural_p=  20.00 knowledge_p=  20.00 tt_100=   0.00
+tick 19 p=  24.00 AUT               f=AUT     st=AUT          structural_p=  24.00 knowledge_p=  24.00 tt_100=   0.00
+tick 19 p=  24.00 QUESTION          f=AUT     st=PENDING      structural_p=  24.00 knowledge_p=  24.00 tt_100=   0.00
+tick 21 p=  28.00 GAP               f=GAP     st=GAP          structural_p=  28.00 knowledge_p=  28.00 tt_100=   0.00
+tick 26 p=  34.00 GAP               f=GAP     st=GAP          structural_p=  34.00 knowledge_p=  34.00 tt_100=   0.00
+tick 26 p=  34.00 C                 f=C       st=A            structural_p=  34.00 knowledge_p=  34.00 tt_100=   0.00
+tick 26 p=  34.00 QUESTION          f=C       st=PENDING      structural_p=  34.00 knowledge_p=  34.00 tt_100=   0.00
+tick 26 p=  34.00 LECTURA_CREADA    f=1       st=LOCAL_MODULE structural_p=  28.00 knowledge_p=  34.00 tt_100=   0.00
+tick 26 p=  34.00 QUESTION          f=1       st=PENDING      structural_p=  34.00 knowledge_p=  34.00 tt_100=   0.00
+tick 26 p=  34.00 QUESTION          f=1       st=IMPOSSIBLE   structural_p=  34.00 knowledge_p=  34.00 tt_100=   0.00
+tick 26 p=  34.00 LOCAL_2_GATE      f=        st=MODULE       structural_p=  34.00 knowledge_p=  34.00 tt_100=   0.00
+tick 29 p=  29.00 LOCAL_FUNCTION    f=A       st=LOCAL_A      structural_p=  35.00 knowledge_p=  29.00 tt_100=   0.00
+tick 29 p=  29.00 QUESTION          f=A       st=PENDING      structural_p=  29.00 knowledge_p=  29.00 tt_100=   0.00
+READ R0001 dir=1 state=A module=0.0->20.0 A=20.0->8.0 B=8.0->35.0 tt_target=28.0 tt_hit=False tt_price=0.0 b_grande_t=241000 aut_t=243000 local=
+READ LR0001 dir=1 state=LOCAL_A module=28.0->35.0 A=35.0->29.0 B=0.0->0.0 tt_target=0.0 tt_hit=False tt_price=0.0 b_grande_t=0 aut_t=0 local=LS0001
+====================================================================================================
+CASE B_same_tick_b_aut_tt ticks 23
+====================================================================================================
+tick  6 p=  14.00 GAP               f=GAP     st=GAP          structural_p=  14.00 knowledge_p=  14.00 tt_100=   0.00
+tick 10 p=  14.00 LECTURA_CREADA    f=1       st=MODULE       structural_p=  14.00 knowledge_p=  14.00 tt_100=   0.00
+tick 10 p=  14.00 QUESTION          f=1       st=PENDING      structural_p=  14.00 knowledge_p=  14.00 tt_100=   0.00
+tick 15 p=  16.00 A_INICIO          f=A       st=A            structural_p=   8.00 knowledge_p=  16.00 tt_100=   0.00
+tick 16 p=  18.00 GAP               f=GAP     st=GAP          structural_p=  18.00 knowledge_p=  18.00 tt_100=   0.00
+tick 16 p=  18.00 B_CANDIDATA       f=B       st=B_CAND       structural_p=  18.00 knowledge_p=  18.00 tt_100=   0.00
+tick 16 p=  18.00 QUESTION          f=A       st=PENDING      structural_p=  18.00 knowledge_p=  18.00 tt_100=   0.00
+tick 17 p=  24.00 B_GRANDE          f=B       st=TT_PENDING   structural_p=  24.00 knowledge_p=  24.00 tt_100=   0.00
+tick 17 p=  24.00 QUESTION          f=B       st=PENDING      structural_p=  24.00 knowledge_p=  24.00 tt_100=   0.00
+tick 17 p=  24.00 AUT               f=AUT     st=AUT          structural_p=  24.00 knowledge_p=  24.00 tt_100=   0.00
+tick 17 p=  24.00 QUESTION          f=AUT     st=PENDING      structural_p=  24.00 knowledge_p=  24.00 tt_100=   0.00
+tick 21 p=  38.00 GAP               f=GAP     st=GAP          structural_p=  38.00 knowledge_p=  38.00 tt_100=   0.00
+tick 21 p=  38.00 C                 f=C       st=A            structural_p=  38.00 knowledge_p=  38.00 tt_100=   0.00
+tick 21 p=  38.00 QUESTION          f=C       st=PENDING      structural_p=  38.00 knowledge_p=  38.00 tt_100=   0.00
+READ R0001 dir=1 state=A module=0.0->20.0 A=20.0->8.0 B=8.0->40.0 tt_target=28.0 tt_hit=False tt_price=0.0 b_grande_t=241000 aut_t=241000 local=

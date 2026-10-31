@@ -1,0 +1,22 @@
+{
+  "reader": "blind_reader_v3_owned_states.py",
+  "L1_full_generations": 51,
+  "L2_generations": 4,
+  "audit_rows": 55,
+  "counts": {
+    "L1:VALID_PRIMARY": 41,
+    "L1:INTEGRATED_IN_LARGER_MODULE": 9,
+    "L1:VALID_PRIMARY_PENDING": 1,
+    "L2:VALID_PRIMARY": 2,
+    "L2:INTEGRATED_IN_LARGER_MODULE": 2
+  },
+  "error_counts": {},
+  "errors_total": 0,
+  "q_b3": "READER_STATE_OWNERSHIP_ERROR",
+  "q_b3_note": "The 16:23 3 in v2 belonged to a generation whose 2 was IMPOSSIBLE. v3 invalidates it. The legal path is B Grande -> C, not 3 extension.",
+  "q_aut": "OPEN",
+  "q_3_50": "OPEN",
+  "generations_approved": false,
+  "tree_frozen": false,
+  "originals_modified": false
+}

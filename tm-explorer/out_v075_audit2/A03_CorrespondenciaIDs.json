@@ -1,0 +1,9 @@
+{
+  "base_readings": 67,
+  "full_readings": 86,
+  "mapped": 66,
+  "unmapped": [
+    "R0001"
+  ],
+  "ambiguous": []
+}

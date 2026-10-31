@@ -1,0 +1,326 @@
+{
+  "mission": "TM_TREE_PERFECTION_MISSION_V1",
+  "phase": "PHASE_1_BLIND_READING",
+  "generated_at": "2026-10-30T14:38:49.870366+00:00",
+  "status": "NOT_READY_TO_FREEZE",
+  "gate": "NEEDS_EXPERT_DECISION",
+  "recommendation": "NOT_READY_TO_FREEZE",
+  "originals_modified": false,
+  "tree_modified": false,
+  "engine_modified": false,
+  "goldens_modified": false,
+  "observational_only": true,
+  "tree_status": "WORKING_CANON_NOT_FROZEN",
+  "inputs": [
+    {
+      "id": "TREE_V219",
+      "role": "arbol_de_trabajo",
+      "path": "C:\\Users\\profesor\\tm\\Teoria Modular\\TM_CANON_ACTIVO\\01_ARBOL\\TM_ARBOL_MAESTRO_CANONICO_COMPLETO_v2_19_ACUMULADO.md",
+      "exists": true,
+      "authority": "WORKING_CANON_NOT_FROZEN",
+      "size_bytes": 562639,
+      "lines": 14016,
+      "sha256": "94a1408a6123ed66948988334e7d540c2a2692c36eea3cb736dbff0da2346b17",
+      "modified_utc": "2026-10-30T08:17:04.256015+00:00",
+      "expected_sha256": "94a1408a6123ed66948988334e7d540c2a2692c36eea3cb736dbff0da2346b17",
+      "hash_matches": true
+    },
+    {
+      "id": "TICKFEED_MASTER",
+      "role": "tickfeed_maestro",
+      "path": "C:\\Users\\profesor\\tm\\Teoria Modular\\TM_TICKFEED_1615_1730.csv",
+      "exists": true,
+      "authority": "EVIDENCIA_FISICA_CAUSAL",
+      "size_bytes": 3496855,
+      "lines": 20336,
+      "sha256": "5f701be2307352cb559abbd7bb856a6fd2a1f91e5d269a93dcc9ae2992e2c9ff",
+      "modified_utc": "2026-10-27T11:37:21.386620+00:00",
+      "expected_sha256": "5f701be2307352cb559abbd7bb856a6fd2a1f91e5d269a93dcc9ae2992e2c9ff",
+      "hash_matches": true
+    },
+    {
+      "id": "LECTURAS_V005",
+      "role": "lecturas_humanas",
+      "path": "C:\\Users\\profesor\\tm\\Teoria Modular\\TM_CANON_ACTIVO\\03_LECTURAS_HUMANAS\\TM_LECTURAS_CONFIRMADAS_16OCT_1615_1730_v005.txt",
+      "exists": true,
+      "authority": "VERIFICA_APLICACION_NO_CREA_REGLA",
+      "size_bytes": 26713,
+      "lines": 737,
+      "sha256": "f5d7550c42c90897d833e6c2a3faf772753a129640fd4411de4190cb2cf94226",
+      "modified_utc": "2026-10-29T08:29:20.935202+00:00",
+      "expected_sha256": "f5d7550c42c90897d833e6c2a3faf772753a129640fd4411de4190cb2cf94226",
+      "hash_matches": true
+    },
+    {
+      "id": "R3_FROZEN",
+      "role": "motor_estable_congelado",
+      "path": "C:\\Users\\profesor\\tm\\Teoria Modular\\TM_CANON_ACTIVO\\04_MOTOR_PYTHON\\CANDIDATO_v0752_R3\\TM_CORE_PYTHON_v0752_CANONICAL_R3.py",
+      "exists": true,
+      "authority": "EVIDENCIA_NO_AUTORIDAD",
+      "size_bytes": 119657,
+      "lines": 2916,
+      "sha256": "71d9a97ac2c49848d152a790db0c70d20b30643782bfee0ac030d19110330b08",
+      "modified_utc": "2026-10-28T16:53:06.862138+00:00",
+      "expected_sha256": "71d9a97ac2c49848d152a790db0c70d20b30643782bfee0ac030d19110330b08",
+      "hash_matches": true
+    },
+    {
+      "id": "R5_AUDITED",
+      "role": "motor_r5_auditado",
+      "path": "C:\\Users\\profesor\\OpenBot\\Agents\\agent-ece275c8-821a-43f3-b05f-6cdf123b7ade\\deliverables_R5\\python\\TM_CORE_PYTHON_v0752_CANONICAL_R5.py",
+      "exists": true,
+      "authority": "EVIDENCIA_NO_AUTORIDAD",
+      "size_bytes": 158090,
+      "lines": 3579,
+      "sha256": "9bd1bedb5dec8c5a1c3a831338503e90cc04ee3cd776cf4e01d27cf8aa0ebeae",
+      "modified_utc": "2026-10-30T08:16:14.410577+00:00",
+      "expected_sha256": "9bd1bedb5dec8c5a1c3a831338503e90cc04ee3cd776cf4e01d27cf8aa0ebeae",
+      "hash_matches": true
+    },
+    {
+      "id": "R5_PACKAGED",
+      "role": "motor_r5_empaquetado",
+      "path": "C:\\Users\\profesor\\tm\\Teoria Modular\\TM_TRABAJO_TEMPORAL\\FREEBUFF_AUDIT_V219\\00_INPUTS_REFERENCE\\variants\\R5_PACKAGED_19A847C0.py",
+      "exists": true,
+      "authority": "EVIDENCIA_NO_AUTORIDAD",
+      "size_bytes": 144357,
+      "lines": 3367,
+      "sha256": "19a847c078e124616495e85a832f9d2fa12a371413046cbaeb7e9644d47c6a36",
+      "modified_utc": "2026-10-29T10:40:52+00:00",
+      "expected_sha256": "19a847c078e124616495e85a832f9d2fa12a371413046cbaeb7e9644d47c6a36",
+      "hash_matches": true
+    },
+    {
+      "id": "MANDATE",
+      "role": "mandato_vigente",
+      "path": "C:\\Users\\profesor\\tm\\Teoria Modular\\TM_TRABAJO_TEMPORAL\\TM_TREE_PERFECTION_MISSION_V1\\00_INPUTS\\PROMPT_FREEBUFF_PERFECCION_FINAL_ARBOL_TM.txt",
+      "exists": true,
+      "authority": "MANDATO_VIGENTE",
+      "size_bytes": 22206,
+      "lines": 821,
+      "sha256": "993a597d24f16e39a1b2424e0c51003fdff7e9c1269969047c9f81f562d06408",
+      "modified_utc": "2026-10-30T14:16:55.561121+00:00",
+      "expected_sha256": "993a597d24f16e39a1b2424e0c51003fdff7e9c1269969047c9f81f562d06408",
+      "hash_matches": true
+    }
+  ],
+  "all_expected_hashes_match": true,
+  "reader": {
+    "file": "01_BLIND_READINGS/blind_reader_v2.py",
+    "a_modes": [
+      "b100",
+      "pending",
+      "bturn"
+    ],
+    "ticks": 20335,
+    "generations_b100": 51,
+    "end_reasons_b100": {
+      "AUT_B": 20,
+      "A_USED_AS_TREND": 18,
+      "C_USED_AS_TREND": 3,
+      "GAP": 9,
+      "OPEN_AT_FEED_END": 1
+    },
+    "trace_sha256_b100": "19eb22002c84bc2453c7faad6e03c12c44f7a5868c424a4a303797c80679f876",
+    "double_run_identical": true,
+    "all_prefixes_pass": true
+  },
+  "prefix_check": {
+    "reader": "blind_reader_v2.py",
+    "a_mode": "b100",
+    "full_ticks": 20335,
+    "full_trace_sha256": "19eb22002c84bc2453c7faad6e03c12c44f7a5868c424a4a303797c80679f876",
+    "all_prefixes_pass": true,
+    "checks": [
+      {
+        "prefix_bar": "16:20",
+        "ticks": 1389,
+        "rows_compared": 1389,
+        "mismatch_index": null,
+        "pass": true
+      },
+      {
+        "prefix_bar": "16:30",
+        "ticks": 3829,
+        "rows_compared": 3829,
+        "mismatch_index": null,
+        "pass": true
+      },
+      {
+        "prefix_bar": "16:49",
+        "ticks": 9201,
+        "rows_compared": 9201,
+        "mismatch_index": null,
+        "pass": true
+      },
+      {
+        "prefix_bar": "17:00",
+        "ticks": 12265,
+        "rows_compared": 12265,
+        "mismatch_index": null,
+        "pass": true
+      },
+      {
+        "prefix_bar": "17:15",
+        "ticks": 16454,
+        "rows_compared": 16454,
+        "mismatch_index": null,
+        "pass": true
+      }
+    ]
+  },
+  "expert_questions": [
+    "Q1_concurrencia_L1_L2",
+    "Q2_vida_2_3",
+    "Q3_B_AUT_base_modulo"
+  ],
+  "outputs": [
+    {
+      "key": "reader_v2",
+      "path": "01_BLIND_READINGS/blind_reader_v2.py",
+      "exists": true,
+      "size_bytes": 37368,
+      "sha256": "35a997a216015cb07526bb2e6f2895e427d181581580900f3886edaef1ac9a31"
+    },
+    {
+      "key": "trace_b100",
+      "path": "01_BLIND_READINGS/BLIND_V2_TRACE.jsonl",
+      "exists": true,
+      "size_bytes": 28364733,
+      "sha256": "7b883a07f35c37f4339e0d3379d724982065a2eb0665837efacca4ea96ca53ff"
+    },
+    {
+      "key": "events_b100",
+      "path": "01_BLIND_READINGS/BLIND_V2_EVENTS.csv",
+      "exists": true,
+      "size_bytes": 65204,
+      "sha256": "92a1d8a9deb1457aa50bf5ea9f15ff9f8c1014f0a3d0071f576643c4b40946d7"
+    },
+    {
+      "key": "generations_b100",
+      "path": "01_BLIND_READINGS/BLIND_V2_GENERATIONS.csv",
+      "exists": true,
+      "size_bytes": 14414,
+      "sha256": "5cc2821631b5ad8289090ce0945b6302e3c6b14dbdad4e2c40a6148030d33f0f"
+    },
+    {
+      "key": "bar_close_b100",
+      "path": "01_BLIND_READINGS/BLIND_V2_BAR_CLOSE.csv",
+      "exists": true,
+      "size_bytes": 5060,
+      "sha256": "9e46a191514204fac5c09b023def257d2656d56f3b7cbab794248c4edb9ee579"
+    },
+    {
+      "key": "summary_b100",
+      "path": "01_BLIND_READINGS/BLIND_V2_SUMMARY.json",
+      "exists": true,
+      "size_bytes": 336,
+      "sha256": "4d869437d256f60a2577ff3798ea6b2b0cf6242ac80b75d828d57386126da1c4"
+    },
+    {
+      "key": "trace_pending",
+      "path": "01_BLIND_READINGS/BLIND_V2_TRACE_pending.jsonl",
+      "exists": true,
+      "size_bytes": 13642111,
+      "sha256": "5d1bc6e82d2e380f991896d7ae13178ca98459b86bebae5908eec4769b2cdb2e"
+    },
+    {
+      "key": "events_pending",
+      "path": "01_BLIND_READINGS/BLIND_V2_EVENTS_pending.csv",
+      "exists": true,
+      "size_bytes": 24884,
+      "sha256": "8d65684a6639ff702cb74583f0b74b2afdaed082e5d31ae5f5bb046bd80c4393"
+    },
+    {
+      "key": "generations_pending",
+      "path": "01_BLIND_READINGS/BLIND_V2_GENERATIONS_pending.csv",
+      "exists": true,
+      "size_bytes": 707,
+      "sha256": "b61ceb613b14cca9c202b3cc639b0586470571cd2f84c580e25f289c82b200eb"
+    },
+    {
+      "key": "summary_pending",
+      "path": "01_BLIND_READINGS/BLIND_V2_SUMMARY_pending.json",
+      "exists": true,
+      "size_bytes": 250,
+      "sha256": "5e3ce31692a5b5ed28171031ecc47c75bc291562822fad81e0bf3c5197c7d9b9"
+    },
+    {
+      "key": "trace_bturn",
+      "path": "01_BLIND_READINGS/BLIND_V2_TRACE_bturn.jsonl",
+      "exists": true,
+      "size_bytes": 28318452,
+      "sha256": "2fdcc7d3b236fecbac954df5078c5fadf8700b3ce20311c36b99bfcc6f6ab899"
+    },
+    {
+      "key": "events_bturn",
+      "path": "01_BLIND_READINGS/BLIND_V2_EVENTS_bturn.csv",
+      "exists": true,
+      "size_bytes": 67767,
+      "sha256": "7f6ea960bb867a0e40ea9af0b22c54d3afd87af7bda1fb77cf1b2f4664925bfb"
+    },
+    {
+      "key": "generations_bturn",
+      "path": "01_BLIND_READINGS/BLIND_V2_GENERATIONS_bturn.csv",
+      "exists": true,
+      "size_bytes": 14510,
+      "sha256": "9ca05bc795dcb79d60cd5e8f871cca9b859261e472381523ea0105c645d9078e"
+    },
+    {
+      "key": "summary_bturn",
+      "path": "01_BLIND_READINGS/BLIND_V2_SUMMARY_bturn.json",
+      "exists": true,
+      "size_bytes": 337,
+      "sha256": "25be0b7aa4a67238fac362e6eee0dea1906990917ef9b5098208ba8d2a83d767"
+    },
+    {
+      "key": "first_divergences",
+      "path": "02_MOVEMENT_ANALYSIS/PHASE_1_FIRST_DIVERGENCES.csv",
+      "exists": true,
+      "size_bytes": 3129,
+      "sha256": "e4e796c34dc2aa0890a683ef768ab2911725b7d20007327c6f191d5d7f326da4"
+    },
+    {
+      "key": "tree_contradictions",
+      "path": "03_CONCEPTUAL_GAPS/TREE_CONTRADICTIONS.csv",
+      "exists": true,
+      "size_bytes": 2988,
+      "sha256": "a6837186832cf26dcdadfad9256c475c3d4b1858c520bad245c0a97cdb28b8ec"
+    },
+    {
+      "key": "expert_questions",
+      "path": "04_EXPERT_QUESTIONS/PHASE_1_EXPERT_QUESTIONS.md",
+      "exists": true,
+      "size_bytes": 5961,
+      "sha256": "62b5dd90552a50a466047ac9877c4fc5b2cbb4c8477f3157346995c89ab89ee8"
+    },
+    {
+      "key": "revision_r1",
+      "path": "05_TREE_REVISIONS/PROPOSED_REVISION_R1_A_FUNCTIONAL.md",
+      "exists": true,
+      "size_bytes": 5514,
+      "sha256": "7fb29dc40365e6de0c81c2bc293eede04c554155985b2dbef5ca479c3f610e80"
+    },
+    {
+      "key": "prefix_check",
+      "path": "06_REGRESSION/PREFIX_CHECK_V2.json",
+      "exists": true,
+      "size_bytes": 971,
+      "sha256": "181c42650ce5d10f828cef3984db3c7eb185274a8b700c41356d5c44e17be538"
+    },
+    {
+      "key": "checkpoint_1",
+      "path": "09_REPORTS/CHECKPOINT_1_REPORT.md",
+      "exists": true,
+      "size_bytes": 14612,
+      "sha256": "5c7dd5932785f39ad1c7f9e46f15b3a76870bf48899198da957f92158dd02c35"
+    },
+    {
+      "key": "checkpoint_0",
+      "path": "09_REPORTS/CHECKPOINT_0_MANDATE_RECEPTION.md",
+      "exists": true,
+      "size_bytes": 3575,
+      "sha256": "9643a8e5fd2a34c5925e2686ca0d720871df41adfebd384eb3a896dbf87579fd"
+    }
+  ]
+}

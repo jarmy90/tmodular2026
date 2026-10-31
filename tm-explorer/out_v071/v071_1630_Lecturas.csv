@@ -1,0 +1,2 @@
+﻿reading_id,cycle_id,direction,state,scale,origin_event,parent_reading_id,parent_cycle_id,created_time,closed_time,module_origin,module_extreme,x,a_origin,a_end,a,b_origin,b_extreme,b,aut_time,aut_price,tt_target,tt_100_time,tt_100_price,tt_extreme,new1_origin,new1_extreme,ft_extreme,ft_candidate,fail_time,fail_price,fail_reason,note
+R0001,C0001,DOWN,TT_FALLIDO,1,SEED_MODULE,,,2026-10-16 16:30:00.026,2026-10-16 16:30:01.428,29820.60,29820.30,0.30,29820.30,29825.30,5.00,29825.30,29822.70,2.60,,,,,,,,,,0,16:30:01.428,29827.80,TT_FALLIDO_A_PERDIDA,SEED_EXPLICIT|END_OF_FEED

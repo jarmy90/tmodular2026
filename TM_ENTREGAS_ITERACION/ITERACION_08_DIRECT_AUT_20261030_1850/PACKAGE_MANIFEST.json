@@ -1,0 +1,180 @@
+{
+  "iteration_id": "ITERACION_08_DIRECT_AUT",
+  "date": "2026-10-30T18:50:13",
+  "objective": "AUT directo por A; pol\u00edtica de cuatro puntos retirada y pruebas reclasificadas",
+  "folder": "C:\\Users\\profesor\\tm\\Teoria Modular\\TM_ENTREGAS_ITERACION\\ITERACION_08_DIRECT_AUT_20261030_1850",
+  "zip_path": "C:\\Users\\profesor\\tm\\Teoria Modular\\TM_ENTREGAS_ITERACION\\TM_ITERATION_08_REVIEW.zip",
+  "members": [
+    {
+      "path": "01_CHECKPOINT_DIRECT_AUT.md",
+      "original_path": "TM_TRABAJO_TEMPORAL\\TM_TREE_AND_REFERENCE_ENGINE_V1\\10_REPORTS\\CHECKPOINT_8_DIRECT_AUT.md",
+      "size": 25392,
+      "sha256": "9973909c3b4da4b641ae4f6eac5d939d5402ff23fa5cb90b5998a3767d23faa3",
+      "reason": "checkpoint"
+    },
+    {
+      "path": "02_EXECUTABLE_TREE_DIRECT_AUT.md",
+      "original_path": "TM_TRABAJO_TEMPORAL\\TM_TREE_AND_REFERENCE_ENGINE_V1\\02_EXECUTABLE_TREE\\TM_TREE_EXECUTABLE_DIRECT_AUT_V1.md",
+      "size": 1705,
+      "sha256": "0e74bb9d86e5ce8c35cf06e89bf6e32f04e00fcb60d432dfbd7f733efa9f3348",
+      "reason": "direct AUT tree"
+    },
+    {
+      "path": "03_TRANSITIONS_DIRECT_AUT.csv",
+      "original_path": "TM_TRABAJO_TEMPORAL\\TM_TREE_AND_REFERENCE_ENGINE_V1\\03_TRANSITION_SPECS\\TM_TREE_TRANSITIONS_DIRECT_AUT_V1.csv",
+      "size": 2047,
+      "sha256": "eee4a376fd4e071879b037f8ef10905a3a2941779a8fa6e25589875385a9eb6d",
+      "reason": "direct AUT transitions"
+    },
+    {
+      "path": "04_TEST_MATRIX_DIRECT_AUT.csv",
+      "original_path": "TM_TRABAJO_TEMPORAL\\TM_TREE_AND_REFERENCE_ENGINE_V1\\04_CONCEPT_TESTS\\CONCEPT_TEST_MATRIX_DIRECT_AUT_V1.csv",
+      "size": 2060,
+      "sha256": "7ab6def3fcec03ad2eafdc50a45cf70a047dcd2ee9bf5601f35960c26fc75afb",
+      "reason": "test matrix"
+    },
+    {
+      "path": "05_REFERENCE_INTERPRETER_DIRECT_AUT.py",
+      "original_path": "TM_TRABAJO_TEMPORAL\\TM_TREE_AND_REFERENCE_ENGINE_V1\\05_REFERENCE_ENGINE\\tm_reference_interpreter_v1_direct_aut.py",
+      "size": 38566,
+      "sha256": "058129a002ba90fb5f5717a5024f8c14796bf152937864dfe330fbc3cae3fd19",
+      "reason": "direct AUT interpreter"
+    },
+    {
+      "path": "06_REFERENCE_INTERPRETER_BG_AUT.py",
+      "original_path": "TM_TRABAJO_TEMPORAL\\TM_TREE_AND_REFERENCE_ENGINE_V1\\05_REFERENCE_ENGINE\\tm_reference_interpreter_v1_bg_aut.py",
+      "size": 35683,
+      "sha256": "8b94e35d29e884788b3f3e72695d854307b3d42ddb77759f4c3867c24b2f1ff1",
+      "reason": "BG AUT baseline"
+    },
+    {
+      "path": "07_TEST_MATRIX_BG_AUT.csv",
+      "original_path": "TM_TRABAJO_TEMPORAL\\TM_TREE_AND_REFERENCE_ENGINE_V1\\04_CONCEPT_TESTS\\CONCEPT_TEST_MATRIX_B_GRANDE_AUT_V1.csv",
+      "size": 2358,
+      "sha256": "cb6606fb39793f25f62c4625a7730a0c4c8045282354975a1bbc5e9e55effc8a",
+      "reason": "BG AUT matrix"
+    },
+    {
+      "path": "08_TEST_RESULTS_BG_AUT.csv",
+      "original_path": "TM_TRABAJO_TEMPORAL\\TM_TREE_AND_REFERENCE_ENGINE_V1\\04_CONCEPT_TESTS\\AB_CANDIDATE_TEST_RESULTS.csv",
+      "size": 3175,
+      "sha256": "dc445f954aa9ba3053149eea167800d4a9f469a62ef9d922da8fe8948bbeedf8",
+      "reason": "32 A/B/BG/AUT tests"
+    },
+    {
+      "path": "09_CORE_TEST_RESULTS.csv",
+      "original_path": "TM_TRABAJO_TEMPORAL\\TM_TREE_AND_REFERENCE_ENGINE_V1\\04_CONCEPT_TESTS\\CORE_TEST_RESULTS.csv",
+      "size": 1649,
+      "sha256": "19a405447fbd97627a1d5c243f2a115d253ca671e58630814ac0f0fdd8531038",
+      "reason": "core 19/19"
+    },
+    {
+      "path": "10_CORE_TEST_SUMMARY.json",
+      "original_path": "TM_TRABAJO_TEMPORAL\\TM_TREE_AND_REFERENCE_ENGINE_V1\\04_CONCEPT_TESTS\\CORE_TEST_RESULTS.json",
+      "size": 180,
+      "sha256": "c8b034d3417d42656fdc9630a5d9a3dec6030cfe2a6c029c2fd6a02fd4a9f033",
+      "reason": "core summary"
+    },
+    {
+      "path": "11_CORE_REPLAY_CHECKS.json",
+      "original_path": "TM_TRABAJO_TEMPORAL\\TM_TREE_AND_REFERENCE_ENGINE_V1\\04_CONCEPT_TESTS\\CORE_REPLAY_CHECKS.json",
+      "size": 451,
+      "sha256": "0bc828f360c0122f226063d0525d6704b7ca072e4632e4957244062674b8fa7c",
+      "reason": "core replay checks"
+    },
+    {
+      "path": "13a_EVENTS_L2_BG.csv",
+      "original_path": "TM_TRABAJO_TEMPORAL\\TM_TREE_AND_REFERENCE_ENGINE_V1\\07_REAL_REPLAYS\\bg_events_L2_1619_1622.csv",
+      "size": 3324,
+      "sha256": "77d3f6eb1449100b917d9a8ad0d75338df9b115ed8baf97f7238618b23bdc42c",
+      "reason": "L2 B Grande events"
+    },
+    {
+      "path": "16_CHECKPOINT_7_BG_AUT.md",
+      "original_path": "TM_TRABAJO_TEMPORAL\\TM_TREE_AND_REFERENCE_ENGINE_V1\\10_REPORTS\\CHECKPOINT_7_B_GRANDE_AUT.md",
+      "size": 3325,
+      "sha256": "ea469d9eaa2d25ae81bd7fa5bd83a03bbf86bc38be6221b3c43b7d803ce35949",
+      "reason": "previous checkpoint"
+    },
+    {
+      "path": "17_REFERENCE_INTERPRETER_AB.py",
+      "original_path": "TM_TRABAJO_TEMPORAL\\TM_TREE_AND_REFERENCE_ENGINE_V1\\05_REFERENCE_ENGINE\\tm_reference_interpreter_v1_ab_candidate.py",
+      "size": 30520,
+      "sha256": "09a16f9ca1386855e26f4d49593e6c4171a67fe72f9494cb5bd98a4626cbaa71",
+      "reason": "A/B baseline"
+    },
+    {
+      "path": "18_REFERENCE_INTERPRETER_CORE.py",
+      "original_path": "TM_TRABAJO_TEMPORAL\\TM_TREE_AND_REFERENCE_ENGINE_V1\\05_REFERENCE_ENGINE\\tm_reference_interpreter_v1.py",
+      "size": 20485,
+      "sha256": "ef3a4a56ff56591497b6f478adcabf945077d518c174c8d604595a54ad5edcc6",
+      "reason": "core baseline"
+    },
+    {
+      "path": "20_TRACE_INDEX.json",
+      "original_path": "TM_TRABAJO_TEMPORAL/TM_TREE_AND_REFERENCE_ENGINE_V1",
+      "size": 1918215,
+      "sha256": "82f99798ea33cf4f82e77475f0b62dc47077112c4c713b86d72c9c48ddc51a3c",
+      "reason": "full trace hashes and paths"
+    },
+    {
+      "path": "21_TRACE_SAMPLE.jsonl",
+      "original_path": "TM_TRABAJO_TEMPORAL/TM_TREE_AND_REFERENCE_ENGINE_V1",
+      "size": 1362182,
+      "sha256": "970ccb260b081a503c257d1e71bf9e8fc14a440c96b13bcef64161a74c1919a3",
+      "reason": "focal trace sample"
+    },
+    {
+      "path": "SHA256SUMS.txt",
+      "original_path": "TM_ENTREGAS_ITERACION\\ITERACION_08_DIRECT_AUT_20261030_1850\\SHA256SUMS.txt",
+      "size": 1618,
+      "sha256": "0aa85d4ee2c03ed0f55636817962824ae02f54bc612f4bfab3fb23ee6dcd1a77",
+      "reason": "hashes of the package members"
+    }
+  ],
+  "member_count": 18,
+  "metadata_not_self_hashed": [
+    "PACKAGE_MANIFEST.json"
+  ],
+  "originals_modified": false,
+  "tree_modified": false,
+  "engine_modified": false,
+  "golden_modified": false,
+  "tests": {
+    "core": 19,
+    "bg_aut": 32,
+    "direct_aut": 14,
+    "total": 65,
+    "failed": 0
+  },
+  "anchors": {
+    "L1_BG_AUT": {
+      "B_grande_time": "16:18:34.125",
+      "B_grande": 910,
+      "AUT_time": "16:18:34.926",
+      "B_aut": 1230,
+      "new_one_origin": 2985760,
+      "new_one_extension": 2984300
+    },
+    "L2_DIRECT_AUT": {
+      "one": 750,
+      "two": 1230,
+      "three": 2983030,
+      "module": 1970,
+      "A": 2050,
+      "module_base": 2985000,
+      "A_cross_time": "16:20:32.125",
+      "direct_aut_time": "16:20:59.125",
+      "new_one_origin": 2983030,
+      "new_one_extension": 2985730
+    }
+  },
+  "policies": {
+    "P_AB_04_RETURN_JUMP_4": "REJECTED_EXPERIMENTAL_ASSUMPTION"
+  },
+  "gate_core": "PASS",
+  "gate_bg_aut": "GATE_B_GRANDE_AUT_PASS",
+  "gate_direct_aut": "GATE_AUT_DIRECT_BY_A_PASS",
+  "tree_gate": "NOT_READY_TO_FREEZE_TREE",
+  "engine_status": "REFERENCE_ENGINE_INCOMPLETE"
+}

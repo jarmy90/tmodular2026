@@ -1,0 +1,41 @@
+{
+  "AFS2_READY": true,
+  "AFS2_SCOPE": "integridad causal y prefijos; no implica cobertura funcional total",
+  "checks": {
+    "prefix_failures": 0,
+    "prefix_ok": true,
+    "event_id_append_only": true,
+    "sequence_id_real_feed": true,
+    "knowledge_time_valid": true,
+    "tt_after_b_grande": true,
+    "tt_target_formula": true,
+    "gap_before_other_branches": true,
+    "geometry_invariants": true,
+    "owner_audit_complete": true,
+    "causal_counts_valid": true,
+    "vocabulary_clean": true
+  },
+  "coverage": {
+    "owner_coverage_ok": false,
+    "owner_tick_count": 10786,
+    "uncovered_tick_count": 334,
+    "causal_geometric_ok": false,
+    "causal_functional_ok": false,
+    "causal_geometric_count": 1314,
+    "causal_functional_count": 1263,
+    "geometric_count": 1335,
+    "functional_count": 1335
+  },
+  "unresolved_rules": [
+    "post_tt_fallido_no_definido",
+    "ft_expiracion_no_definida",
+    "entrada_tardia_ft_no_definida",
+    "a_mayor_que_modulo_guardia_provisional",
+    "aut_extra_tick_unidad_cerrada_0_25",
+    "cobertura_estructural_definicion_por_confirmar",
+    "functional_coverage_causal_parcial",
+    "geometric_coverage_causal_parcial",
+    "lectura_abierta_al_final:R0063"
+  ],
+  "unresolved_blocking": []
+}

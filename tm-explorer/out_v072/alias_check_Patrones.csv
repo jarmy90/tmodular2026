@@ -1,0 +1,2 @@
+﻿pattern_id,type,status,final_status,direction,origin_time,origin_price,end_time,end_price,size,reading_id,cycle_id,detail
+P0001,FT,FT_CANDIDATE,FT_CANDIDATE,UP,16:44:59.014,29736.70,16:45:00.015,29733.30,3.40,R0001,C0001,"{""ext"": ""29733.30"", ""ext_time"": ""16:45:00.015"", ""formal"": ""ESTRUCTURAL_2_PUNTOS"", ""origin"": ""29736.70"", ""origin_time"": ""16:44:59.014"", ""size"": ""3.40""}"

@@ -1,0 +1,17 @@
+transition,node,condition,state_required,python_symbol,expected,actual,deviation,severity,root_cause,authority,test
+ONE_AT_CLOSE,CIERRE DE VELA,1 delimitado al cierre,_on_bar_close,_confirm_one_at_close,CONFIRMED kt=ultimo tick,CONFIRMED kt=ultimo tick,ninguna,-,Q-ONE-AT-CLOSE,CANONICAL,A1
+TWO_OWN_BAR,FIN DE VELA DE 2,2 confirmada al cierre,TWO_LIVE,_on_bar_close,TWO_FROZEN_AT_CLOSE,TWO_FROZEN_AT_CLOSE,ninguna,-,v2.13/v2.14,CANONICAL,T-004
+THREE_DEFAULT,TRAS 2,3 en la vela siguiente,WAIT_THREE,_on_three_tick,3 extremo real 29830,3,29830,3,ninguna,-,v2.13/v2.14,CANONICAL,A3
+MODULE_DISCARD,2 NO LLEGA AL 100%,medida al cierre,TWO_LIVE,_module_by_discard,mod 28,5,28,5,ninguna,-,v2.13 CANONICAL,A2
+A_STRUCTURAL,REANUDACION DEL MODULO,A >= 2 y >= 35% del dominante,A_PENDING,_on_a_pending_tick,B completada,B completada,PROVISIONAL proporción,media,P-PROP-35,PROVISIONAL,BG-15
+A_INTERNAL,OSCILACION INTERNA,A < 35% del dominante,A_PENDING,_on_a_pending_tick,absorbida por módulo,absorbida por módulo,PROVISIONAL proporción,media,P-PROP-35,PROVISIONAL,A-01
+B_REOPEN,B ABSORBIDA POR A,A confirmada + retorno estructural,B_LIVE,_open_b_from_return,nueva B candidata,nueva B candidata,ninguna,-,Q-STATE-LEAK,CANONICAL,AD-04
+AUT_B,B > 127%+0,25,B > limite,B_LIVE,_confirm_aut,AUT + nuevo 1 desde B,AUT + nuevo 1 desde B,ninguna,-,P-BG-02 CANONICAL,BG-14
+AUT_DIRECT,A SUPERA BASE,A confirmada y A > base,A_CONFIRMED,_confirm_aut_direct,nuevo 1 desde A,nuevo 1 desde A,ninguna,-,v2.19 CANONICAL,AD-*
+AUT_DIRECT_STRUCT,SEGUNDA ESTRUCTURA,Cada A puede abrir su cruce,A_PENDING,_confirm_aut_direct,AUT por estructura,AUT por estructura,ninguna,-,Q-STATE-LEAK,CANONICAL,L2-16:23
+C_GRANDE,CONTRARIO DESDE B,contrario >= 2 puntos,B_GRANDE,_open_c,C Grande,C Grande,ninguna,-,v2.19 CANONICAL,C-*
+CUT,C SUPERA FINAL DE A,C > final real de A,C_LIVE,_cut_tick,CUT sin reset,CUT sin reset,ninguna,-,v2.20 CANONICAL,CUT-*
+GAP_NEW_ONE,APERTURA NO PLANA,abs(open-prev_close) >= 0,25,WAIT_OPENING,_new_one_from_gap_open,nuevo 1 desde OPEN,nuevo 1 desde OPEN,ninguna,-,v2.19 CANONICAL,GP-*
+TT_AT_OPEN,TT PENDIENTE + GAP,arbitro antes del ciclo,NEW_ONE_ACTIVE,_maybe_tt_open_resolution,TT heredado + nuevo 1,DOUBLE_BELONGING,ninguna,-,decisión experta 2,GP-12
+L2_BIRTH,LECTURA LOCAL,primera vela del nuevo 1 + AUT directo,NEW_ONE_ACTIVE,Reader.local_probe,1/2/3 19,7 + A 20,5 + AUT,1/2/3 19,7 + A 20,5 + AUT,ninguna,-,P-L2-BIRTH,PROVISIONAL,B3
+L2_AUT_CHAIN,AUT LOCALES ENCADENADOS,nuevo recorrido > base del módulo AUT,A_PENDING,_confirm_aut_direct,AUT alcista y bajista en 16:23,AUT alcista y bajista en 16:23,ninguna,-,P-L2-AUT-3,PROVISIONAL,B3

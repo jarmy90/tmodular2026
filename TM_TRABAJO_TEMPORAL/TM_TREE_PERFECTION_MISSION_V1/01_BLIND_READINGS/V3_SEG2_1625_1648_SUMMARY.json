@@ -1,0 +1,17 @@
+{
+  "a_mode": "b100",
+  "reading_id": "L1_SEG2",
+  "ticks": 6624,
+  "generations": 21,
+  "invalid_generations": 0,
+  "three_without_two": 0,
+  "end_reasons": {
+    "A_USED_AS_TREND": 10,
+    "GAP": 5,
+    "AUT_B": 5,
+    "OPEN_AT_FEED_END": 1
+  },
+  "trace_sha256": "0973b77a746ca926119759b5714154ab0c18ce646d3267a67992f0c36331610a",
+  "first_tick": 2298,
+  "last_tick": 8921
+}

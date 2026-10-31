@@ -1,0 +1,280 @@
+{
+  "tests_total": 39,
+  "passed": 39,
+  "failed": 0,
+  "rows": [
+    {
+      "test_id": "A1",
+      "expected": "AFTER_MODULE y A_DEVELOPMENT deciden con autoridad propia",
+      "status": "PASS",
+      "actual": "authority={'A_DEVELOPMENT': 'TREE_QUESTION', 'B_GRANDE_CONFIRMATION': 'TREE_QUESTION', 'B_LIMIT': 'TREE_QUESTION'} commits=6",
+      "authority": "CANONICAL"
+    },
+    {
+      "test_id": "A2",
+      "expected": "cero confirmaciones con la evidencia de nacimiento",
+      "status": "PASS",
+      "actual": "same_tick=0",
+      "authority": "CANONICAL"
+    },
+    {
+      "test_id": "A3",
+      "expected": "el estado legacy no se escribe sin commit",
+      "status": "PASS",
+      "actual": "preemptions=0 failures=0",
+      "authority": "CANONICAL"
+    },
+    {
+      "test_id": "A4",
+      "expected": "cero escrituras directas al estado confirmado",
+      "status": "PASS",
+      "actual": "writes=0",
+      "authority": "CANONICAL"
+    },
+    {
+      "test_id": "A5",
+      "expected": "una escritura legacy sin ticket aborta",
+      "status": "PASS",
+      "actual": "aborta=True question=PX-Q001-A_DEVELOPMENT",
+      "authority": "CANONICAL"
+    },
+    {
+      "test_id": "A6",
+      "expected": "leer fuera de consumes es violacion, no decision",
+      "status": "PASS",
+      "actual": "ok=False violaciones={'candidate_state_writes': 0, 'cross_owner_reference_reads': 0, 'consumes_violations': 1, 'unowned_candidates': 0, 'same_tick_confirmation': 0, 'third_branch_attempts': 0, 'shadow_recreations_blocked': 0, 'archived_generation_writes': 0, 'legacy_preemptions': 0}",
+      "authority": "CANONICAL"
+    },
+    {
+      "test_id": "A7",
+      "expected": "referencia de otra rama aborta la lectura",
+      "status": "PASS",
+      "actual": "ok=False counts={'candidate_state_writes': 0, 'cross_owner_reference_reads': 1, 'consumes_violations': 0, 'unowned_candidates': 0, 'same_tick_confirmation': 0, 'third_branch_attempts': 0, 'shadow_recreations_blocked': 0, 'archived_generation_writes': 0, 'legacy_preemptions': 0}",
+      "authority": "CANONICAL"
+    },
+    {
+      "test_id": "A8",
+      "expected": "referencia de otra generacion aborta la lectura",
+      "status": "PASS",
+      "actual": "ok=False",
+      "authority": "CANONICAL"
+    },
+    {
+      "test_id": "A9",
+      "expected": "sin test de retencion no hay confirmacion",
+      "status": "PASS",
+      "actual": "aborta=True",
+      "authority": "CANONICAL"
+    },
+    {
+      "test_id": "B1",
+      "expected": "B confirmada congela el extremo de A",
+      "status": "PASS",
+      "actual": "A=2984710->2985060 size=350 kt=1792168030112",
+      "authority": "CANONICAL"
+    },
+    {
+      "test_id": "B2",
+      "expected": "B se mide contra su propia A (100 % = tamano de A)",
+      "status": "PASS",
+      "actual": "100%=350 A=350 127%=469",
+      "authority": "CANONICAL"
+    },
+    {
+      "test_id": "B3",
+      "expected": "B supera 127 %+0,25 y resuelve AUT",
+      "status": "PASS",
+      "actual": "B=680 limite=469 status=AUT",
+      "authority": "CANONICAL"
+    },
+    {
+      "test_id": "B4",
+      "expected": "B/A se expresa como ratio del mismo propietario",
+      "status": "PASS",
+      "actual": "ratio=1.9429",
+      "authority": "CANONICAL"
+    },
+    {
+      "test_id": "B5",
+      "expected": "A no se delimita al cambiar de vela sin B funcional",
+      "status": "PASS",
+      "actual": "commits=['LOCAL_A_DEVELOPMENT', 'LOCAL_B_DEVELOPMENT', 'LOCAL_B_LIMIT']",
+      "authority": "CANONICAL"
+    },
+    {
+      "test_id": "B6",
+      "expected": "rama sintetica: A confirmada y B ligada a la misma A",
+      "status": "PASS",
+      "actual": "A=A_CONFIRMED B.origin=10150 A.extreme=10150",
+      "authority": "CANONICAL"
+    },
+    {
+      "test_id": "B7",
+      "expected": "B fisica no toca el estado confirmado",
+      "status": "PASS",
+      "actual": "b_status='' commits=0",
+      "authority": "CANONICAL"
+    },
+    {
+      "test_id": "B8",
+      "expected": "ningun commit de B escribe campos de A",
+      "status": "PASS",
+      "actual": "campos=['a_status', 'b_status']",
+      "authority": "CANONICAL"
+    },
+    {
+      "test_id": "B9",
+      "expected": "B conserva su origen al absorber retrocesos internos",
+      "status": "PASS",
+      "actual": "B=2985060->2984380 size=680",
+      "authority": "CANONICAL"
+    },
+    {
+      "test_id": "C1",
+      "expected": "LOCAL-G2 se crea sin estado heredado",
+      "status": "PASS",
+      "actual": "fresca=LOCAL_CANDIDATE vacia=True tras_ticks=LOCAL_CONFIRMED",
+      "authority": "CANONICAL"
+    },
+    {
+      "test_id": "C2",
+      "expected": "cero referencias a LOCAL-G1",
+      "status": "PASS",
+      "actual": "menciones=0",
+      "authority": "CANONICAL"
+    },
+    {
+      "test_id": "C3",
+      "expected": "parent_context_id es descriptivo, no autoridad",
+      "status": "PASS",
+      "actual": "parent=PRIMARY-G1",
+      "authority": "CANONICAL"
+    },
+    {
+      "test_id": "C4",
+      "expected": "el prefijo 16:26-16:27 no conoce un TT que aun no existe",
+      "status": "PASS",
+      "actual": "pre_tt='' full_tt=''",
+      "authority": "CANONICAL"
+    },
+    {
+      "test_id": "C5",
+      "expected": "el modulo local no se abre sin excursion dominante",
+      "status": "PASS",
+      "actual": "mod=2987380->2982210 size=5170 dir=-1",
+      "authority": "CANONICAL"
+    },
+    {
+      "test_id": "C6",
+      "expected": "cada transicion local deja rastro auditable",
+      "status": "PASS",
+      "actual": "eventos=['LOCAL_A_CANDIDATE', 'LOCAL_A_CONFIRMED', 'LOCAL_B_CONFIRMED', 'LOCAL_B_OPENED', 'LOCAL_DOMINANT_DIRECTION', 'LOCAL_MODULE_EXTENDS_BEYOND_A', 'LOCAL_MODULE_RECLASSIFIED', 'LOCAL_SEEDED']",
+      "authority": "CANONICAL"
+    },
+    {
+      "test_id": "C6b",
+      "expected": "la B local medida contra su A local queda bajo el 100 %",
+      "status": "PASS",
+      "actual": "ratio=0.3929 B=440 A=1120 status=B_CANDIDATE_CONFIRMED",
+      "authority": "CANONICAL"
+    },
+    {
+      "test_id": "C7",
+      "expected": "una A local puede confirmarse retroactivamente",
+      "status": "PASS",
+      "actual": "A=A_CONFIRMED st=1792168026892 kt=1792168030112",
+      "authority": "CANONICAL"
+    },
+    {
+      "test_id": "C8",
+      "expected": "TT local y TT principal tienen propietarios distintos",
+      "status": "PASS",
+      "actual": "local_tt='LOCAL-G2:TT:001' main_tt=TT_CONFIRMED",
+      "authority": "CANONICAL"
+    },
+    {
+      "test_id": "C9",
+      "expected": "el TT local registra la primera frontera alcanzada",
+      "status": "PASS",
+      "actual": "status=TT_CONFIRMED first=OBJECTIVE@2857",
+      "authority": "CANONICAL"
+    },
+    {
+      "test_id": "C10",
+      "expected": "la rama local se integra y deja de ser escala activa",
+      "status": "PASS",
+      "actual": "status=LOCAL_INTEGRATED seq=999",
+      "authority": "CANONICAL"
+    },
+    {
+      "test_id": "C11",
+      "expected": "la sombra bloquea la geometria contenida y libera la amplia",
+      "status": "PASS",
+      "actual": "contenida=DISCARDED amplia=PHYSICAL intentos=1",
+      "authority": "CANONICAL"
+    },
+    {
+      "test_id": "C12",
+      "expected": "MAIN y LOCAL procesan el mismo tramo sin referencias cruzadas",
+      "status": "PASS",
+      "actual": "main_preempt=0 local_cross=0",
+      "authority": "CANONICAL"
+    },
+    {
+      "test_id": "D1",
+      "expected": "la lectura es invariante a traslado e inversion",
+      "status": "PASS",
+      "actual": "base=2700 traslado=2700 inversion=2700",
+      "authority": "CANONICAL"
+    },
+    {
+      "test_id": "D2",
+      "expected": "LOCAL-G2 es invariante al traslado de precios",
+      "status": "PASS",
+      "actual": "base=680 traslado=680",
+      "authority": "CANONICAL"
+    },
+    {
+      "test_id": "D3",
+      "expected": "consistencia de prefijo del estado funcional",
+      "status": "PASS",
+      "actual": "prefijo=2630 full=2630",
+      "authority": "CANONICAL"
+    },
+    {
+      "test_id": "D4",
+      "expected": "determinismo del lector y de la rama local",
+      "status": "PASS",
+      "actual": "identicos",
+      "authority": "CANONICAL"
+    },
+    {
+      "test_id": "D5",
+      "expected": "el arbitraje del TT local es determinista",
+      "status": "PASS",
+      "actual": "first='OBJECTIVE@2857'",
+      "authority": "CANONICAL"
+    },
+    {
+      "test_id": "D6",
+      "expected": "ejecutar la rama local no altera la lectura principal",
+      "status": "PASS",
+      "actual": "before=2630 after=2630",
+      "authority": "CANONICAL"
+    },
+    {
+      "test_id": "D7",
+      "expected": "la rama local no contiene precios ni horas del caso",
+      "status": "PASS",
+      "actual": "hallazgos=[]",
+      "authority": "CANONICAL"
+    },
+    {
+      "test_id": "D8",
+      "expected": "preguntas migradas presentes en el arbol",
+      "status": "PASS",
+      "actual": "nodos=['AFTER_MODULE', 'A_DEVELOPMENT', 'B_DEVELOPMENT', 'B_GRANDE_CONFIRMATION', 'B_LIMIT']",
+      "authority": "CANONICAL"
+    }
+  ]
+}

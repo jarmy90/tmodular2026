@@ -1,0 +1,63 @@
+{
+  "bars": 8,
+  "match": 1,
+  "mismatch": 7,
+  "rows": [
+    {
+      "bar_time": "16:15",
+      "esperado": "CONFIRMADA; modulo 29877.00->29860.80; X=16.20; sin plano",
+      "observado": "OHLC 29877.00/29877.00/29860.80/29861.00; gap=0.00; funciones=NINGUNA; lecturas_creadas=NINGUNA",
+      "cumple": 0,
+      "nota": "No se emite lectura en 16:15; R0001 nace en 16:16 con el modulo conjunto 29877.00->29848.50."
+    },
+    {
+      "bar_time": "16:16",
+      "esperado": "PLANO +0.10; sin cola superior; recorrido 29861.10->29848.50=12.60 < 16.20; modulo por descarte; modulo conjunto 29877.00->29848.50 X=28.50",
+      "observado": "OHLC 29861.10/29861.10/29848.50/29853.60; gap=0.10; funciones=GAP;1;A; lecturas_creadas=R0001; GAP_evento=16:16:00.061; A=29848.50->29856.30",
+      "cumple": 0,
+      "nota": "El motor emite GAP por +0.10 y no emite PLANO; la geometria conjunta si coincide."
+    },
+    {
+      "bar_time": "16:17",
+      "esperado": "NO PLANO +0.70; A Grande 29848.50->29857.60 A=9.10; despues B bajista",
+      "observado": "OHLC 29854.30/29857.60/29852.10/29854.50; gap=0.70; funciones=GAP;B; lecturas_creadas=NINGUNA; GAP_evento=16:17:00.169",
+      "cumple": 0,
+      "nota": "A se emite inicialmente hasta 29856.30; se extiende a 29857.60 solo al confirmar B_FALLIDA en 16:18."
+    },
+    {
+      "bar_time": "16:18",
+      "esperado": "max 29857.40 seq 740 no extiende A; min 29843.00 seq 923; AUT bajista; TT pendiente 29829.10",
+      "observado": "OHLC 29853.80/29857.40/29843.00/29849.30; gap=-0.70; funciones=GAP;B_FALLIDA;B;B_GRANDE;AUT;1; lecturas_creadas=R0002; GAP_evento=16:18:00.519; B_GRANDE=16:18:59.420; AUT=16:18:59.420",
+      "cumple": 1,
+      "nota": "AUT y B Grande coinciden; TT queda pendiente en 29829.10."
+    },
+    {
+      "bar_time": "16:19",
+      "esperado": "continuacion bajista AUT; max 29850.00 min 29842.50; lectura local en revision",
+      "observado": "OHLC 29848.90/29850.00/29842.50/29845.00; gap=-0.40; funciones=GAP;C;A; lecturas_creadas=NINGUNA; GAP_evento=16:19:00.024; A=29843.00->29850.00",
+      "cumple": 0,
+      "nota": "El motor emite C y A alcistas; la lectura humana pide continuacion bajista y lectura local en revision."
+    },
+    {
+      "bar_time": "16:20",
+      "esperado": "PLANO -0.20; abre en maximo y baja; si 16:19=1 entonces 16:20=2 valido",
+      "observado": "OHLC 29844.80/29844.80/29832.50/29836.00; gap=-0.20; funciones=GAP; lecturas_creadas=NINGUNA; GAP_evento=16:20:00.145",
+      "cumple": 0,
+      "nota": "El motor emite GAP por -0.20 y no reconoce el 2 alternativo."
+    },
+    {
+      "bar_time": "16:21",
+      "esperado": "NO PLANO -1.00; nuevo minimo 29830.30; posible 3; el gap no invalida el 2 previo",
+      "observado": "OHLC 29835.00/29836.30/29830.30/29830.80; gap=-1.00; funciones=GAP; lecturas_creadas=NINGUNA; GAP_evento=16:21:00.048",
+      "cumple": 0,
+      "nota": "El motor solo emite GAP; no reconoce el posible 3."
+    },
+    {
+      "bar_time": "16:22",
+      "esperado": "NO PLANO +0.50; A Grande alcista 29830.30->29850.80 A=20.50; AUT alcista NO confirmado; no supera 29877.00",
+      "observado": "OHLC 29831.30/29850.80/29831.30/29846.50; gap=0.50; funciones=GAP;C_CANCELADA;B;B;B_GRANDE;AUT;TT;1; lecturas_creadas=R0003; GAP_evento=16:22:00.161; B_GRANDE=16:22:05.219; AUT=16:22:05.219; TT=16:22:05.219 target=29835.40",
+      "cumple": 0,
+      "nota": "El motor no forma A Grande alcista desde 29830.30 en 16:22; emite AUT/TT sobre una lectura bajista distinta."
+    }
+  ]
+}

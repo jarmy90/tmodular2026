@@ -1,0 +1,15 @@
+test_id,area,kind,classification,description,pass,detail
+GP-01,gap+tt,positive,CANONICAL_PASS,TT pendiente: gap que alcanza el objetivo TT lo confirma,True,tt=TT_CONFIRMED n=NEW_ONE_ACTIVE origin=2982760
+GP-12,gap+tt,positive,CANONICAL_PASS,doble pertenencia: TT heredado confirmado + nuevo 1 desde el OPEN,True,prev_tt=2982910 origin=2982760 cycle=1
+GP-02,gap+tt,negative,CANONICAL_PASS,TT pendiente: gap que cruza final_A antes del objetivo -> TT fallido,True,tt=TT_FAILED cycle=0
+GP-03,gap+tt,boundary,CANONICAL_PASS,un solo tick cruza ambas fronteras: gana la primera geometrica (final_A),True,tt=TT_FAILED cycle=0
+GP-04,gap+heredado,boundary,OPEN_RULE_BLOCK,gap durante B candidata: no se inventa resolucion de gap,True,"phase=A_PENDING events=['CONTINUATION_ACROSS_BAR', 'CONTINUATION_ACROSS_BAR', 'CORE_END']"
+GP-05,gap+heredado,boundary,OPEN_RULE_BLOCK,gap durante C: no se inventa resolucion administrativa,True,c=C_GRANDE phase=C_LIVE
+GP-06,gap+heredado,boundary,OPEN_RULE_BLOCK,"gap despues de CUT y antes de la base: CUT conservado, sin reset nuevo",True,cut=CUT_CONFIRMED cycle=0
+GP-07,gap+ft,positive,CANONICAL_PASS,el FT del ciclo anterior sigue activo despues del gap,True,ft=FT_CONFIRMED origin=2982010
+GP-08,plano,boundary,CANONICAL_PASS,"0,24 es plano -> 2 candidata",True,two=CANDIDATE
+GP-09,plano,boundary,CANONICAL_PASS,"0,25 exactos no es plano -> 2 prohibido",True,two=IMPOSSIBLE_NO_FLAT
+GP-10,plano,boundary,CANONICAL_PASS,"0,26 no es plano -> 2 prohibido",True,two=IMPOSSIBLE_NO_FLAT
+GP-11,ciclo,positive,CANONICAL_PASS,cierre causal (tick TT) distinto de la rotacion (apertura siguiente),True,"closure={'closed_at_tt': '16:19:00.100', 'rotation_committed_at': '16:20:00.000', 'rotation_via': 'TT'}"
+GP-DET,ciclo,determinism,CANONICAL_PASS,doble ejecucion identica,True,len=941
+GP-PRE,ciclo,prefix,CANONICAL_PASS,prefijo consistente,True,prefix=938 full=941

@@ -1,0 +1,19 @@
+test_id,transition,kind,classification,description,pass,detail
+C-01,C,positive,PROVISIONAL_POLICY_PASS,C nace despues de B Grande,True,c=C_GRANDE phase=C_LIVE
+C-02,C,positive,PROVISIONAL_POLICY_PASS,origen de C en el extremo final de B,True,c_origin=9000 b_extreme=9000
+C-03,C,positive,PROVISIONAL_POLICY_PASS,direccion de C contraria a B,True,c_dir=1 b_dir=-1
+C-04,C,negative,PROVISIONAL_POLICY_PASS,B Grande queda historica y pierde autoridad,True,b_auth=ARCHIVED c_auth=LIVE active=C
+C-05,C,positive,PROVISIONAL_POLICY_PASS,C continua entre velas sin reiniciarse,True,c_extreme=9400 origin=9000
+C-06,C,boundary,PROVISIONAL_POLICY_PASS,C toca exactamente la base -> no se transforma,True,trend= n= c_extreme=10000
+C-07,C,positive,PROVISIONAL_POLICY_PASS,C supera la base -> C usada como tendencia,True,trend=C_USED_AS_TREND reason=C_USED_AS_TREND
+C-08,C,positive,PROVISIONAL_POLICY_PASS,salto sobre la base -> nuevo 1 en ese tick,True,trend=C_USED_AS_TREND n_extreme=10500
+C-09,C,positive,PROVISIONAL_POLICY_PASS,"nuevo 1 hereda C (origen, direccion, st)",True,n_origin=9000 c_origin=9000 n_dir=1 n_st=180100 c_st=180100
+C-10,C,positive,PROVISIONAL_POLICY_PASS,"extension posterior pertenece al nuevo 1 / 1 del ciclo, no a C",True,one=10001 two=10200 prev_c=10001
+C-11,C,negative,PROVISIONAL_POLICY_PASS,C no depende del 100% de A para confirmarse,True,b=500 a=500 c=C_GRANDE
+C-12,C,negative,PROVISIONAL_POLICY_PASS,no coexisten autoridad B y C activas,True,"open: b=ARCHIVED active=C; trend: active=1 prev=['cycle_id', 'module_origin', 'module_extreme', 'module_size']"
+CUT-01,C,boundary,PROVISIONAL_POLICY_PASS,C toca exactamente el final real de A -> no hay CUT,True,cut='' c_ext=9500 a_ext=9500
+CUT-02,C,positive,PROVISIONAL_POLICY_PASS,C supera estrictamente el final real de A -> CUT confirmado,True,cut=CUT_CONFIRMED kt=180200
+CUT-03,C,negative,PROVISIONAL_POLICY_PASS,CUT no crea nuevo 1 ni reset por invencion,True,n='' active=C
+CUT-04,C,negative,PROVISIONAL_POLICY_PASS,CUT no existe antes de B Grande,True,cut=''
+C-DET,C,determinism,PROVISIONAL_POLICY_PASS,doble ejecucion identica en C,True,len=14
+C-PRE,C,prefix,PROVISIONAL_POLICY_PASS,prefijo consistente en C,True,prefix=14 full=14

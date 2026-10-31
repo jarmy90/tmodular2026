@@ -1,0 +1,22 @@
+{
+  "B1": {
+    "ticks": 937,
+    "events": 24,
+    "rotation": 0
+  },
+  "B2": {
+    "ticks": 898,
+    "events": 38,
+    "rotation": 0
+  },
+  "B3": {
+    "ticks": 2297,
+    "events": 74,
+    "rotation": 0
+  },
+  "B4": {
+    "ticks": 2552,
+    "events": 140,
+    "rotation": 1
+  }
+}

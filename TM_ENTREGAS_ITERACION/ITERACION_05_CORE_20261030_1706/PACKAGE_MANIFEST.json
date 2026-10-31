@@ -1,0 +1,170 @@
+{
+  "iteration_id": "ITERACION_05_CORE",
+  "date": "2026-10-30T17:06:07",
+  "objective": "clean reference interpreter core and its concept tests",
+  "folder": "C:\\Users\\profesor\\tm\\Teoria Modular\\TM_ENTREGAS_ITERACION\\ITERACION_05_CORE_20261030_1706",
+  "zip_path": "C:\\Users\\profesor\\tm\\Teoria Modular\\TM_ENTREGAS_ITERACION\\TM_ITERATION_05_REVIEW.zip",
+  "members": [
+    {
+      "path": "01_CHECKPOINT_CORE.md",
+      "original_path": "TM_TRABAJO_TEMPORAL\\TM_TREE_AND_REFERENCE_ENGINE_V1\\10_REPORTS\\CHECKPOINT_5_CORE.md",
+      "size": 2763,
+      "sha256": "7890391b01b04107ade1d375b5211d8bebe7921999acf985ee47f9913d380439",
+      "reason": "checkpoint"
+    },
+    {
+      "path": "02_READING_OWNERSHIP_MODEL.md",
+      "original_path": "TM_TRABAJO_TEMPORAL\\TM_TREE_AND_REFERENCE_ENGINE_V1\\01_CONCEPTS\\READING_OWNERSHIP_MODEL.md",
+      "size": 1757,
+      "sha256": "4124f85371266e97469ed136b4e9f92b78d95a51c39035cd0fd36e86b16e19be",
+      "reason": "ownership model"
+    },
+    {
+      "path": "03_EXECUTABLE_TREE_CORE.md",
+      "original_path": "TM_TRABAJO_TEMPORAL\\TM_TREE_AND_REFERENCE_ENGINE_V1\\02_EXECUTABLE_TREE\\TM_TREE_EXECUTABLE_CORE_V1.md",
+      "size": 3320,
+      "sha256": "f9c73b72a6ffe79b3261c7e187f926b2e4f8f2b188ae8618d5206103b9121f93",
+      "reason": "executable tree core"
+    },
+    {
+      "path": "04_TRANSITIONS_CORE.csv",
+      "original_path": "TM_TRABAJO_TEMPORAL\\TM_TREE_AND_REFERENCE_ENGINE_V1\\03_TRANSITION_SPECS\\TM_TREE_TRANSITIONS_CORE_V1.csv",
+      "size": 3385,
+      "sha256": "0698e39bb5c7e7a7357b42dd63225ed76dab9336718e675ca84791a3b62ed11d",
+      "reason": "transition specs"
+    },
+    {
+      "path": "05_TEST_MATRIX_CORE.csv",
+      "original_path": "TM_TRABAJO_TEMPORAL\\TM_TREE_AND_REFERENCE_ENGINE_V1\\04_CONCEPT_TESTS\\CONCEPT_TEST_MATRIX_CORE_V1.csv",
+      "size": 1618,
+      "sha256": "318a15c50bffa63a3267c13b56c75765e7cee6159e5d1a3eec93fc27b326e9ba",
+      "reason": "test matrix"
+    },
+    {
+      "path": "06_TEST_RESULTS.csv",
+      "original_path": "TM_TRABAJO_TEMPORAL\\TM_TREE_AND_REFERENCE_ENGINE_V1\\04_CONCEPT_TESTS\\CORE_TEST_RESULTS.csv",
+      "size": 1637,
+      "sha256": "3b892c56fd7e9d8eca42a5411127cb4760f1de8bf861a1de067184f1d4034908",
+      "reason": "test results"
+    },
+    {
+      "path": "07_TEST_RESULTS.json",
+      "original_path": "TM_TRABAJO_TEMPORAL\\TM_TREE_AND_REFERENCE_ENGINE_V1\\04_CONCEPT_TESTS\\CORE_TEST_RESULTS.json",
+      "size": 180,
+      "sha256": "c8b034d3417d42656fdc9630a5d9a3dec6030cfe2a6c029c2fd6a02fd4a9f033",
+      "reason": "test summary"
+    },
+    {
+      "path": "08_REPLAY_CHECKS.json",
+      "original_path": "TM_TRABAJO_TEMPORAL\\TM_TREE_AND_REFERENCE_ENGINE_V1\\04_CONCEPT_TESTS\\CORE_REPLAY_CHECKS.json",
+      "size": 451,
+      "sha256": "0bc828f360c0122f226063d0525d6704b7ca072e4632e4957244062674b8fa7c",
+      "reason": "determinism and prefix checks"
+    },
+    {
+      "path": "09_REFERENCE_INTERPRETER_V1.py",
+      "original_path": "TM_TRABAJO_TEMPORAL\\TM_TREE_AND_REFERENCE_ENGINE_V1\\05_REFERENCE_ENGINE\\tm_reference_interpreter_v1.py",
+      "size": 20485,
+      "sha256": "ef3a4a56ff56591497b6f478adcabf945077d518c174c8d604595a54ad5edcc6",
+      "reason": "reference interpreter"
+    },
+    {
+      "path": "10_STATE_1615_1618.json",
+      "original_path": "TM_TRABAJO_TEMPORAL\\TM_TREE_AND_REFERENCE_ENGINE_V1\\06_SYNTHETIC_REPLAYS\\state_1615_1618.json",
+      "size": 693,
+      "sha256": "7bcc297581d39c9bc6f130232debe077a508f16d83491de65fdc5215fa0498b9",
+      "reason": "anchor 16:15-16:18 state"
+    },
+    {
+      "path": "11_EVENTS_1615_1618.csv",
+      "original_path": "TM_TRABAJO_TEMPORAL\\TM_TREE_AND_REFERENCE_ENGINE_V1\\06_SYNTHETIC_REPLAYS\\events_1615_1618.csv",
+      "size": 652,
+      "sha256": "a30e2497d25e8a43ac3866fe5cd507cf658074765df8799e9eb9bc24db6a982a",
+      "reason": "anchor 16:15-16:18 events"
+    },
+    {
+      "path": "12_STATE_L2_1619_1622.json",
+      "original_path": "TM_TRABAJO_TEMPORAL\\TM_TREE_AND_REFERENCE_ENGINE_V1\\07_REAL_REPLAYS\\state_L2_1619_1622.json",
+      "size": 703,
+      "sha256": "bba695bc6342d4af10a11459e9240b26d66c0e1465e726d51b79900fd90d097a",
+      "reason": "anchor L2 state"
+    },
+    {
+      "path": "13_EVENTS_L2_1619_1622.csv",
+      "original_path": "TM_TRABAJO_TEMPORAL\\TM_TREE_AND_REFERENCE_ENGINE_V1\\07_REAL_REPLAYS\\events_L2_1619_1622.csv",
+      "size": 2169,
+      "sha256": "4db3bded7fa0891111d08e25217ceec93de5f3ad77daa21633f624bbe1265600",
+      "reason": "anchor L2 events"
+    },
+    {
+      "path": "14_TREE_PYTHON_MATRIX.csv",
+      "original_path": "TM_TRABAJO_TEMPORAL\\TM_TREE_AND_REFERENCE_ENGINE_V1\\08_TREE_PYTHON_COMPARISON\\CORE_TREE_PYTHON_MATRIX_V1.csv",
+      "size": 1846,
+      "sha256": "b5e266933344635cdf7f4987e302077e46bbaabdced6951a7b877112451ac54b",
+      "reason": "tree-Python comparison"
+    },
+    {
+      "path": "15_OPEN_RULES.md",
+      "original_path": "TM_TRABAJO_TEMPORAL\\TM_TREE_AND_REFERENCE_ENGINE_V1\\09_OPEN_RULES\\OPEN_RULES_CORE_V1.md",
+      "size": 1784,
+      "sha256": "2c77c9150d57c1deac59b34286fee5db5d584a15738d7d48620701c05402e4a1",
+      "reason": "open rules"
+    },
+    {
+      "path": "16_CORE_MANIFEST.json",
+      "original_path": "TM_TRABAJO_TEMPORAL\\TM_TREE_AND_REFERENCE_ENGINE_V1\\11_MANIFEST\\CORE_MANIFEST.json",
+      "size": 5497,
+      "sha256": "6c2bbca8a0ad8e83e00ca5c9937cd9acfa06abf9f982b4d25e8af1bfd1c65d3f",
+      "reason": "core manifest"
+    },
+    {
+      "path": "17_TRACE_INDEX.json",
+      "original_path": "TM_TRABAJO_TEMPORAL/TM_TREE_AND_REFERENCE_ENGINE_V1",
+      "size": 677,
+      "sha256": "b80bd0dcbe5d799ff012b1b916ea0c4b661f818c33f20c959df87eb1f60c6730",
+      "reason": "full trace hashes and paths"
+    },
+    {
+      "path": "18_TRACE_SAMPLE.jsonl",
+      "original_path": "TM_TRABAJO_TEMPORAL/TM_TREE_AND_REFERENCE_ENGINE_V1",
+      "size": 7129,
+      "sha256": "5a9916c10cb79d9a6c8e215d04ec42772c4d9260f26778e5e0b305d377a5e0e2",
+      "reason": "focal trace sample"
+    },
+    {
+      "path": "SHA256SUMS.txt",
+      "original_path": "TM_ENTREGAS_ITERACION\\ITERACION_05_CORE_20261030_1706\\SHA256SUMS.txt",
+      "size": 1636,
+      "sha256": "907472f72cde9055ebf722d9a2fdc6f4621b3ee614d7e386089248a9103ec13e",
+      "reason": "hashes of the package members"
+    }
+  ],
+  "member_count": 19,
+  "metadata_not_self_hashed": [
+    "PACKAGE_MANIFEST.json"
+  ],
+  "originals_modified": false,
+  "tree_modified": false,
+  "engine_modified": false,
+  "golden_modified": false,
+  "scope": "1, opening, 2, module by discard, 3, module regular",
+  "not_implemented": [
+    "A",
+    "B",
+    "C",
+    "AUT",
+    "CUT",
+    "TT",
+    "FT",
+    "gap new 1",
+    "concurrency"
+  ],
+  "tests": {
+    "count": 19,
+    "passed": 19,
+    "failed": 0
+  },
+  "gate_core": "PASS",
+  "tree_gate": "NOT_READY_TO_FREEZE_TREE",
+  "engine_status": "REFERENCE_ENGINE_INCOMPLETE"
+}

@@ -1,0 +1,13 @@
+{
+ "determinism": {
+  "run1": "b219049b26d1221905b7451a92ba4710ea6b7103e54f7088fa74ca230656eede",
+  "run2": "b219049b26d1221905b7451a92ba4710ea6b7103e54f7088fa74ca230656eede",
+  "equal": true
+ },
+ "prefixes_checked": 41,
+ "prefixes_ok": 41,
+ "prefix_failures": [],
+ "ticks": 20335,
+ "readings": 1,
+ "generations": 28
+}

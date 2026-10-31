@@ -1,0 +1,18 @@
+{
+  "fecha": "2026-10-28",
+  "motivo_sustitucion": "Congelado como línea base previa.",
+  "estado": "LEGACY_SOLO_TRAZABILIDAD",
+  "autoridad": "Ninguna autoridad teórica",
+  "dependencias": [
+    "feed v0.7.5",
+    "tests legacy v0.7.5"
+  ],
+  "archivos": [
+    {
+      "path": "TM_CORE_PYTHON_v075_STREAMING.py",
+      "size_bytes": 76198,
+      "sha256": "45A467252C45A0DA437029FE7360E0AC029F195AE194791CB6BA7837BD34FD28"
+    }
+  ],
+  "nota": "Copia histórica verificada; los originales se conservaron sin cambios."
+}

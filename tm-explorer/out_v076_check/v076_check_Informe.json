@@ -1,0 +1,27 @@
+{
+  "version": "0.7.6",
+  "mode": "multi_scale",
+  "causal_warmup": true,
+  "visible_start": "16:52:00",
+  "ticks": 10000,
+  "seed": null,
+  "readings": 7,
+  "events": 1678,
+  "patterns": 8,
+  "a_invalidated": 0,
+  "minor_tt_absorbed": 1,
+  "active_operational": 2,
+  "max_scale": 1,
+  "validation": "OK",
+  "pending": [],
+  "TM_COVERAGE_OK": true,
+  "coverage_unresolved": [],
+  "post_tt_evaluation_checkpoints": 0,
+  "post_tt_windows_frozen": 4,
+  "post_tt_opportunities_lost": 4,
+  "outputs": [
+    "out_v076_check\\v076_check_Eventos.csv",
+    "out_v076_check\\v076_check_Lecturas.csv",
+    "out_v076_check\\v076_check_Patrones.csv"
+  ]
+}

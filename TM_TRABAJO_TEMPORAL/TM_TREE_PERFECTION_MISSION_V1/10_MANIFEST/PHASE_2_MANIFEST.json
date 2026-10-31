@@ -1,0 +1,161 @@
+{
+  "phase": "PHASE_2_CORRECTED_REREAD_AND_GENERATION_AUDIT",
+  "date": "2026-10-30T16:00:33",
+  "reader_version": "blind_reader_v2 + Q1/Q2/Q3",
+  "hierarchy_status": "EXPERIMENTAL_HIERARCHY_V1_NOT_CANON",
+  "counts": {
+    "L1_generations": 26,
+    "L1_valid_primary": 19,
+    "L1_integrated_gap": 6,
+    "L1_pending": 1,
+    "L2_rows": 3,
+    "L2_unique_secondary": 1,
+    "L2_duplicates_of_L1": 2,
+    "unique_total": 27,
+    "removed_from_previous_51": 25
+  },
+  "a_gate": {
+    "b100": 26,
+    "bturn": 26,
+    "pending": 1,
+    "conclusion": "generation count invariant to A confirmation time; timing remains open"
+  },
+  "outputs": {
+    "01_BLIND_READINGS/blind_reader_v2.py": {
+      "exists": true,
+      "bytes": 40484,
+      "sha256": "164CFBB25A56D111DF79F99A17CFCA92408E2A933437DCD62BC3AA054A56ABFB"
+    },
+    "01_BLIND_READINGS/BLIND_V3_TRACE.jsonl": {
+      "exists": true,
+      "bytes": 17001137,
+      "sha256": "5CB8354F6626B88D3BB39A46E5BE2375E7A5E873E7EC42077A079E89288AF3FE"
+    },
+    "01_BLIND_READINGS/BLIND_V3_EVENTS.csv": {
+      "exists": true,
+      "bytes": 78868,
+      "sha256": "0926393FCA85DA3D9D088DE5B833397E5FBABC32469AFDCC3C9FE8FB6FAF14D2"
+    },
+    "01_BLIND_READINGS/BLIND_V3_GENERATIONS.csv": {
+      "exists": true,
+      "bytes": 7325,
+      "sha256": "1B0928E4EE758252E7B067DAE6CDBEF91D8BB8784F26FE48EA8C5FE940209B9C"
+    },
+    "01_BLIND_READINGS/BLIND_V3_BAR_CLOSE.csv": {
+      "exists": true,
+      "bytes": 6404,
+      "sha256": "A1F7EEED07A73410AA78A5A5836763CE4999ACF0C2B9277F2C027F06F4C6AE9B"
+    },
+    "01_BLIND_READINGS/BLIND_V3_SUMMARY.json": {
+      "exists": true,
+      "bytes": 308,
+      "sha256": "1C54B4494F62B5179FDF97E8C58E4D360E18485840816F5D494FEAB5621D944E"
+    },
+    "01_BLIND_READINGS/BLIND_V3_SUMMARY_bturn.json": {
+      "exists": true,
+      "bytes": 309,
+      "sha256": "668F8CC41518DA08CDF2D7E1B740BDF6071CF90C120CED6D1F7BB175C19D339E"
+    },
+    "01_BLIND_READINGS/BLIND_V3_SUMMARY_pending.json": {
+      "exists": true,
+      "bytes": 250,
+      "sha256": "4A3E5B92B393B973841009FC9CCA3FEC1BF10F8085E64A8597828F02EE6E1F63"
+    },
+    "01_BLIND_READINGS/L2_1619_1624_GENERATIONS.csv": {
+      "exists": true,
+      "bytes": 1169,
+      "sha256": "593F9DE8F5DB6C6B5A7BC16BCF8C99EB011473E751CF09E2DDDB5D99F2A78A75"
+    },
+    "01_BLIND_READINGS/L2_1619_1624_SUMMARY.json": {
+      "exists": true,
+      "bytes": 274,
+      "sha256": "5609375290A25EC25D1BAC80856E5DE88E1213AF5BEDF72DEF331A9B26A6BAE5"
+    },
+    "02_MOVEMENT_ANALYSIS/build_phase2_map.py": {
+      "exists": true,
+      "bytes": 6773,
+      "sha256": "C0008F995DD6131847D91071BEE1385AD699C63F6B1D5F8E58383EAB3ED7DED8"
+    },
+    "02_MOVEMENT_ANALYSIS/PHASE_2_L1_L2_MAP.csv": {
+      "exists": true,
+      "bytes": 7949,
+      "sha256": "781ACA2CEAFFC4915391B96D2D24D977308914EA10E16CB6308DE07D3285E42A"
+    },
+    "02_MOVEMENT_ANALYSIS/PHASE_2_SUMMARY.json": {
+      "exists": true,
+      "bytes": 772,
+      "sha256": "1A6592477B5AF580961453A905C063AFA76379DBA227E6DE10C883CE475B11A6"
+    },
+    "02_MOVEMENT_ANALYSIS/PHASE_2_LABEL_AUDIT.csv": {
+      "exists": true,
+      "bytes": 386,
+      "sha256": "22B6E8049ABE57325DEA489F858FD7A0D6F91655E2487A5B018C87583647D997"
+    },
+    "05_TREE_REVISIONS/TREE_REVISION_v2_20_DRAFT.md": {
+      "exists": true,
+      "bytes": 8410,
+      "sha256": "703A3CD576C79E65A850B2B5668019E66B485576278F903589E976FF0BD38D6C"
+    },
+    "05_TREE_REVISIONS/EXPERIMENTAL_POLICIES_V2.md": {
+      "exists": true,
+      "bytes": 3614,
+      "sha256": "341F0E47F788B9C21D14A40747ABF75566FA99CC2F9E85EAD15C0C58C9EB6714"
+    },
+    "09_REPORTS/CHECKPOINT_2_REPORT.md": {
+      "exists": true,
+      "bytes": 12566,
+      "sha256": "0C7018D900A29B10DC24DFD3057737EF4994FCB51DCE9797959F9FE4D2CDC700"
+    },
+    "06_REGRESSION/PHASE_2_DETERMINISM.json": {
+      "exists": true,
+      "bytes": 735,
+      "sha256": "175EB0F0F3D611157B60BC18F7FE65D4E834D8FF512C68B940D48CCF346BE723"
+    },
+    "01_BLIND_READINGS/BLIND_V3_TRACE_RUN2.jsonl": {
+      "exists": true,
+      "bytes": 17001137,
+      "sha256": "5CB8354F6626B88D3BB39A46E5BE2375E7A5E873E7EC42077A079E89288AF3FE"
+    },
+    "01_BLIND_READINGS/PREFIX_1630.jsonl": {
+      "exists": true,
+      "bytes": 2531041,
+      "sha256": "E07618A30CE3A719E6816D20473FED83DB7BF4BC0CBF92FE598199DB96F69C31"
+    },
+    "01_BLIND_READINGS/PREFIX_1700.jsonl": {
+      "exists": true,
+      "bytes": 9399519,
+      "sha256": "B8A40488ECAC4F33534F62D7D7972033D2D015FE55E5050F6793FECC76529F97"
+    },
+    "01_BLIND_READINGS/PREFIX_1715.jsonl": {
+      "exists": true,
+      "bytes": 13188166,
+      "sha256": "BE64E805DAADE0DE0D800DD6AE5883B4816630C1FCB7C24BD4CCCECDDC7840C3"
+    }
+  },
+  "originals": {
+    "TM_CANON_ACTIVO/01_ARBOL/TM_ARBOL_MAESTRO_CANONICO_COMPLETO_v2_19_ACUMULADO.md": {
+      "exists": true,
+      "sha256": "94A1408A6123ED66948988334E7D540C2A2692C36EEA3CB736DBFF0DA2346B17",
+      "expected": "94A1408A6123ED66948988334E7D540C2A2692C36EEA3CB736DBFF0DA2346B17",
+      "match": true
+    },
+    "TM_CANON_ACTIVO/03_LECTURAS_HUMANAS/TM_LECTURAS_CONFIRMADAS_16OCT_1615_1730_v005.txt": {
+      "exists": true,
+      "sha256": "F5D7550C42C90897D833E6C2A3FAF772753A129640FD4411DE4190CB2CF94226",
+      "expected": "F5D7550C42C90897D833E6C2A3FAF772753A129640FD4411DE4190CB2CF94226",
+      "match": true
+    },
+    "TM_TICKFEED_1615_1730.csv": {
+      "exists": true,
+      "sha256": "5F701BE2307352CB559ABBD7BB856A6FD2A1F91E5D269A93DCC9AE2992E2C9FF",
+      "expected": "5F701BE2307352CB559ABBD7BB856A6FD2A1F91E5D269A93DCC9AE2992E2C9FF",
+      "match": true
+    }
+  },
+  "originals_modified": false,
+  "engine_modified": false,
+  "goldens_modified": false,
+  "tree_frozen": false,
+  "engine_authority": false,
+  "observational_only": true
+}

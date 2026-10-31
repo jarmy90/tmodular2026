@@ -1,0 +1,65 @@
+{
+  "artifact": "GOLDEN_COMPARISON",
+  "input": "out/CORE_RAW_OUTPUT.json",
+  "raw_sha256_before": "32daa8b1aa56946b3bdde6267cbe677ae3d57a8c2c05505a6b89bba07de05129",
+  "checks": [
+    {
+      "expectation": "16:19 local 1 bajista",
+      "passed": true
+    },
+    {
+      "expectation": "16:20 2 bajista",
+      "passed": true
+    },
+    {
+      "expectation": "16:21 3 bajista",
+      "passed": true
+    },
+    {
+      "expectation": "16:22 A alcista",
+      "passed": true
+    },
+    {
+      "expectation": "16:22 AUT alcista",
+      "passed": true
+    },
+    {
+      "expectation": "16:23 A bajista",
+      "passed": true
+    },
+    {
+      "expectation": "16:23 AUT alcista según v003",
+      "passed": false
+    },
+    {
+      "expectation": "16:23 AUT bajista",
+      "passed": false
+    },
+    {
+      "expectation": "16:24 A alcista y B/AUT bajistas",
+      "passed": false
+    }
+  ],
+  "passed": 6,
+  "total": 9,
+  "first_failure": "16:23 AUT alcista según v003",
+  "first_16_23_aut_core_event": null,
+  "rule_conflict": {
+    "classification": "REGLA_VIGENTE_VS_GOLDEN_INCOMPATIBLE",
+    "golden_reference_sequence_id": 1879,
+    "golden_reference_is": "máximo B, no primer cruce",
+    "first_causal_crossing_feed_sequence_id": 1876,
+    "prior_state": "A bajista confirmada; B alcista supera 100% de A, pero no 127% + 0,25",
+    "output_obtained": {
+      "A_size_price_units": 750,
+      "B_size_price_units": 600,
+      "required_AUT_excess_price_units": 977,
+      "aut_emitted": false
+    },
+    "rule_status": "La regla universal B Grande exige superar 127% + 0,25; v003 afirma AUT al superar solo el inicio de A. No se modifica el golden."
+  },
+  "raw_sha256_after": "32daa8b1aa56946b3bdde6267cbe677ae3d57a8c2c05505a6b89bba07de05129",
+  "raw_unchanged": true,
+  "status": "LECTURA_NO_REPRODUCIDA",
+  "note": "Comparación posterior de solo lectura; no escribe ni adapta el núcleo ni el golden."
+}

@@ -1,0 +1,345 @@
+sequence_id,time,bar,gid,parent,event,detail
+938,16:19:00.024,16:19,1,0,ONE_CANDIDATE_INITIAL,open=2984890
+-1,16:19:59.941,16:19,1,0,ONE_CONFIRMED_INITIAL,dir=-1 origin=2985000 extreme=2984250 size=750 kt=16:19:59.941
+1146,16:20:00.145,16:20,1,0,TWO_CANDIDATE,flat |gap|=20 origin=2984480 dir=-1 one_size=750
+1202,16:20:14.218,16:20,1,0,TWO_CONFIRMED,measure=750 >= 100% de 1 (750)
+1204,16:20:14.622,16:20,1,0,RETRACE_START,desde extremo de 2 2983610
+1209,16:20:15.654,16:20,1,0,RETRACE_START,desde extremo de 2 2983550
+1226,16:20:19.384,16:20,1,0,RETRACE_START,desde extremo de 2 2983400
+1239,16:20:22.401,16:20,1,0,THREE_CONFIRMED,extremo=2983330 estricto sobre 2=2983400 retroceso=210
+1239,16:20:22.401,16:20,1,0,MODULE_1_2_3_CONFIRMED,origin=2985000 extreme=2983330 size=1670 kt3=16:20:22.401; extremo de 3 vivo
+1245,16:20:24.611,16:20,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983330 modulo=1670; 3 sigue vivo
+1300,16:20:37.290,16:20,1,0,THREE_EXTENDED,extremo final de 3=2983310 modulo=1690; A vuelve a pending
+1301,16:20:37.492,16:20,1,0,THREE_EXTENDED,extremo final de 3=2983300 modulo=1700; A vuelve a pending
+1304,16:20:38.094,16:20,1,0,THREE_EXTENDED,extremo final de 3=2983280 modulo=1720; A vuelve a pending
+1314,16:20:41.153,16:20,1,0,THREE_EXTENDED,extremo final de 3=2983250 modulo=1750; A vuelve a pending
+1446,16:21:14.734,16:21,1,0,THREE_EXTENDED,extremo final de 3=2983230 modulo=1770; A vuelve a pending
+1584,16:21:49.662,16:21,1,0,THREE_EXTENDED,extremo final de 3=2983100 modulo=1900; A vuelve a pending
+1585,16:21:50.063,16:21,1,0,THREE_EXTENDED,extremo final de 3=2983080 modulo=1920; A vuelve a pending
+1590,16:21:51.869,16:21,1,0,THREE_EXTENDED,extremo final de 3=2983050 modulo=1950; A vuelve a pending
+1601,16:21:54.482,16:21,1,0,THREE_EXTENDED,extremo final de 3=2983030 modulo=1970; A vuelve a pending
+1649,16:22:07.633,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984030 size=1000 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:07.633
+1650,16:22:07.833,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1650,16:22:07.833,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984080 size=1050 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:07.833
+1651,16:22:08.033,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1651,16:22:08.033,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984060 size=1030 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:08.033
+1652,16:22:08.233,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1652,16:22:08.233,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984030 size=1000 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:08.233
+1653,16:22:08.444,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1653,16:22:08.444,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984050 size=1020 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:08.444
+1654,16:22:08.646,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1654,16:22:08.646,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984030 size=1000 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:08.646
+1655,16:22:09.047,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1656,16:22:09.248,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984130 size=1100 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:09.248
+1657,16:22:09.652,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1657,16:22:09.652,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984180 size=1150 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:09.652
+1658,16:22:09.852,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1658,16:22:09.852,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984040 size=1010 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:09.852
+1659,16:22:10.051,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1659,16:22:10.051,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984050 size=1020 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:10.051
+1660,16:22:10.253,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1660,16:22:10.253,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984060 size=1030 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:10.253
+1661,16:22:10.452,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1661,16:22:10.452,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984050 size=1020 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:10.452
+1662,16:22:10.653,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1662,16:22:10.653,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984030 size=1000 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:10.653
+1663,16:22:11.054,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1663,16:22:11.054,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984050 size=1020 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:11.054
+1664,16:22:11.257,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1664,16:22:11.257,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984060 size=1030 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:11.257
+1665,16:22:11.460,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1665,16:22:11.460,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984100 size=1070 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:11.460
+1666,16:22:11.860,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1666,16:22:11.860,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984080 size=1050 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:11.860
+1667,16:22:12.260,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1667,16:22:12.260,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984050 size=1020 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:12.260
+1668,16:22:12.461,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1668,16:22:12.461,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984080 size=1050 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:12.461
+1669,16:22:13.075,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1669,16:22:13.075,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984030 size=1000 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:13.075
+1670,16:22:13.276,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1672,16:22:13.680,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984030 size=1000 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:13.680
+1673,16:22:14.039,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1673,16:22:14.039,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984040 size=1010 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:14.039
+1674,16:22:14.240,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1674,16:22:14.240,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984130 size=1100 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:14.240
+1675,16:22:14.641,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1675,16:22:14.641,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984100 size=1070 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:14.641
+1676,16:22:14.840,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1676,16:22:14.840,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984130 size=1100 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:14.840
+1677,16:22:15.041,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1677,16:22:15.041,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984150 size=1120 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:15.041
+1678,16:22:15.444,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1678,16:22:15.444,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984230 size=1200 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:15.444
+1679,16:22:15.698,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1679,16:22:15.698,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984250 size=1220 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:15.698
+1680,16:22:15.901,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1680,16:22:15.901,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984230 size=1200 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:15.901
+1681,16:22:16.103,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1681,16:22:16.103,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984240 size=1210 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:16.103
+1682,16:22:16.301,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1682,16:22:16.301,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984250 size=1220 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:16.301
+1683,16:22:16.503,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1683,16:22:16.503,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984300 size=1270 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:16.503
+1684,16:22:17.103,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1684,16:22:17.103,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984380 size=1350 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:17.103
+1685,16:22:17.505,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1685,16:22:17.505,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984480 size=1450 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:17.505
+1686,16:22:17.706,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1686,16:22:17.706,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984440 size=1410 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:17.706
+1687,16:22:17.949,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1687,16:22:17.949,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984400 size=1370 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:17.949
+1688,16:22:18.149,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1688,16:22:18.149,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984300 size=1270 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:18.149
+1689,16:22:18.349,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1689,16:22:18.349,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984330 size=1300 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:18.349
+1690,16:22:18.551,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1690,16:22:18.551,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984200 size=1170 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:18.551
+1691,16:22:19.155,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1691,16:22:19.155,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984180 size=1150 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:19.155
+1692,16:22:19.356,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1692,16:22:19.356,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984150 size=1120 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:19.356
+1693,16:22:20.161,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1693,16:22:20.161,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984230 size=1200 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:20.161
+1694,16:22:20.762,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1694,16:22:20.762,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984180 size=1150 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:20.762
+1695,16:22:21.163,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1695,16:22:21.163,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984210 size=1180 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:21.163
+1696,16:22:21.564,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1696,16:22:21.564,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984280 size=1250 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:21.564
+1697,16:22:21.769,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1697,16:22:21.769,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984250 size=1220 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:21.769
+1698,16:22:21.970,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1698,16:22:21.970,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984280 size=1250 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:21.970
+1699,16:22:22.170,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1699,16:22:22.170,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984290 size=1260 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:22.170
+1700,16:22:22.598,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1700,16:22:22.598,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984280 size=1250 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:22.598
+1701,16:22:22.799,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1701,16:22:22.799,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984350 size=1320 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:22.799
+1702,16:22:23.002,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1702,16:22:23.002,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984330 size=1300 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:23.002
+1703,16:22:23.202,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1703,16:22:23.202,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984310 size=1280 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:23.202
+1704,16:22:23.404,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1704,16:22:23.404,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984300 size=1270 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:23.404
+1705,16:22:23.803,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1705,16:22:23.803,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984250 size=1220 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:23.803
+1706,16:22:24.405,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1706,16:22:24.405,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984280 size=1250 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:24.405
+1707,16:22:24.605,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1707,16:22:24.605,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984210 size=1180 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:24.605
+1708,16:22:24.805,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1708,16:22:24.805,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984200 size=1170 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:24.805
+1709,16:22:25.006,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1709,16:22:25.006,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984240 size=1210 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:25.006
+1710,16:22:25.406,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1710,16:22:25.406,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984330 size=1300 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:25.406
+1711,16:22:25.607,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1711,16:22:25.607,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984280 size=1250 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:25.607
+1712,16:22:26.695,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1712,16:22:26.695,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984250 size=1220 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:26.695
+1713,16:22:26.896,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1713,16:22:26.896,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984260 size=1230 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:26.896
+1714,16:22:27.297,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1714,16:22:27.297,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984230 size=1200 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:27.297
+1715,16:22:27.497,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1715,16:22:27.497,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984250 size=1220 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:27.497
+1716,16:22:27.699,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1716,16:22:27.699,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984280 size=1250 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:27.699
+1717,16:22:28.099,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1717,16:22:28.099,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984300 size=1270 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:28.099
+1718,16:22:28.509,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1718,16:22:28.509,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984310 size=1280 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:28.509
+1719,16:22:28.709,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1719,16:22:28.709,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984340 size=1310 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:28.709
+1720,16:22:28.911,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1720,16:22:28.911,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984350 size=1320 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:28.911
+1721,16:22:29.312,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1721,16:22:29.312,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984330 size=1300 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:29.312
+1722,16:22:29.515,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1722,16:22:29.515,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984260 size=1230 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:29.515
+1723,16:22:29.715,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1723,16:22:29.715,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984280 size=1250 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:29.715
+1724,16:22:29.915,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1724,16:22:29.915,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984290 size=1260 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:29.915
+1725,16:22:30.117,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1725,16:22:30.117,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984280 size=1250 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:30.117
+1726,16:22:30.316,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1726,16:22:30.316,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984230 size=1200 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:30.316
+1727,16:22:30.721,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1727,16:22:30.721,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984200 size=1170 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:30.721
+1728,16:22:31.124,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1728,16:22:31.124,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984180 size=1150 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:31.124
+1729,16:22:31.323,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1729,16:22:31.323,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984150 size=1120 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:31.323
+1730,16:22:31.930,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1730,16:22:31.930,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984180 size=1150 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:31.930
+1731,16:22:32.131,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1731,16:22:32.131,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984190 size=1160 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:32.131
+1732,16:22:32.339,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1732,16:22:32.339,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984210 size=1180 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:32.339
+1733,16:22:32.541,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1733,16:22:32.541,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984300 size=1270 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:32.541
+1734,16:22:32.968,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1734,16:22:32.968,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984280 size=1250 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:32.968
+1735,16:22:33.170,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1735,16:22:33.170,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984260 size=1230 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:33.170
+1736,16:22:33.370,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1736,16:22:33.370,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984280 size=1250 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:33.370
+1737,16:22:33.573,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1737,16:22:33.573,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984230 size=1200 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:33.573
+1738,16:22:33.772,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1738,16:22:33.772,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984250 size=1220 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:33.772
+1739,16:22:34.375,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1739,16:22:34.375,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984200 size=1170 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:34.375
+1740,16:22:34.575,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1740,16:22:34.575,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984460 size=1430 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:34.575
+1741,16:22:34.780,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1741,16:22:34.780,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984380 size=1350 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:34.780
+1742,16:22:35.183,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1742,16:22:35.183,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984450 size=1420 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:35.183
+1743,16:22:35.414,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1743,16:22:35.414,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984510 size=1480 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:35.414
+1744,16:22:35.614,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1744,16:22:35.614,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984530 size=1500 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:35.614
+1745,16:22:35.814,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1745,16:22:35.814,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984600 size=1570 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:35.814
+1746,16:22:36.015,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1746,16:22:36.015,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984630 size=1600 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:36.015
+1747,16:22:36.215,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1747,16:22:36.215,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984650 size=1620 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:36.215
+1748,16:22:36.416,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1748,16:22:36.416,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984600 size=1570 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:36.416
+1749,16:22:36.616,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1749,16:22:36.616,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984640 size=1610 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:36.616
+1750,16:22:36.817,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1750,16:22:36.817,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984630 size=1600 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:36.817
+1751,16:22:37.217,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1751,16:22:37.217,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984600 size=1570 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:37.217
+1752,16:22:37.620,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1752,16:22:37.620,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984550 size=1520 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:37.620
+1753,16:22:37.818,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1753,16:22:37.818,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984510 size=1480 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:37.818
+1754,16:22:38.020,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1754,16:22:38.020,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984450 size=1420 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:38.020
+1755,16:22:38.222,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1755,16:22:38.222,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984480 size=1450 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:38.222
+1756,16:22:38.422,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1756,16:22:38.422,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984450 size=1420 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:38.422
+1757,16:22:38.623,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1757,16:22:38.623,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984400 size=1370 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:38.623
+1758,16:22:38.933,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1758,16:22:38.933,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984430 size=1400 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:38.933
+1759,16:22:39.136,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1759,16:22:39.136,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984480 size=1450 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:39.136
+1760,16:22:39.910,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1760,16:22:39.910,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984450 size=1420 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:39.910
+1761,16:22:40.328,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1761,16:22:40.328,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984480 size=1450 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:40.328
+1762,16:22:40.530,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1762,16:22:40.530,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984500 size=1470 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:40.530
+1763,16:22:40.933,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1763,16:22:40.933,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984550 size=1520 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:40.933
+1764,16:22:41.163,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1764,16:22:41.163,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984580 size=1550 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:41.163
+1765,16:22:41.369,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1765,16:22:41.369,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984630 size=1600 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:41.369
+1766,16:22:41.864,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1766,16:22:41.864,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984650 size=1620 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:41.864
+1767,16:22:42.066,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1767,16:22:42.066,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984610 size=1580 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:42.066
+1768,16:22:42.303,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1768,16:22:42.303,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984650 size=1620 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:42.303
+1769,16:22:42.505,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1769,16:22:42.505,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984640 size=1610 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:42.505
+1770,16:22:42.706,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1770,16:22:42.706,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984660 size=1630 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:42.706
+1771,16:22:42.907,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1771,16:22:42.907,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984640 size=1610 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:42.907
+1772,16:22:43.308,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1772,16:22:43.308,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984680 size=1650 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:43.308
+1773,16:22:43.511,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1773,16:22:43.511,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984730 size=1700 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:43.511
+1774,16:22:43.711,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1774,16:22:43.711,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984830 size=1800 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:43.711
+1775,16:22:43.912,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1775,16:22:43.912,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984840 size=1810 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:43.912
+1776,16:22:44.111,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1776,16:22:44.111,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984890 size=1860 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:44.111
+1777,16:22:44.311,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1777,16:22:44.311,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984850 size=1820 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:44.311
+1778,16:22:44.513,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1778,16:22:44.513,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984800 size=1770 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:44.513
+1779,16:22:44.716,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1779,16:22:44.716,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984830 size=1800 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:44.716
+1780,16:22:44.918,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1780,16:22:44.918,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984810 size=1780 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:44.918
+1781,16:22:45.118,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1781,16:22:45.118,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984800 size=1770 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:45.118
+1782,16:22:45.320,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1782,16:22:45.320,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984840 size=1810 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:45.320
+1783,16:22:45.520,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1783,16:22:45.520,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984780 size=1750 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:45.520
+1784,16:22:45.721,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1784,16:22:45.721,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984850 size=1820 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:45.721
+1785,16:22:46.127,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1785,16:22:46.127,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984880 size=1850 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:46.127
+1786,16:22:46.328,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1786,16:22:46.328,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984810 size=1780 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:46.328
+1787,16:22:46.529,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1787,16:22:46.529,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984880 size=1850 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:46.529
+1788,16:22:47.119,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1788,16:22:47.119,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984930 size=1900 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:47.119
+1789,16:22:47.543,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1789,16:22:47.543,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984910 size=1880 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:47.543
+1790,16:22:47.744,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1790,16:22:47.744,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984900 size=1870 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:47.744
+1791,16:22:47.945,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1791,16:22:47.945,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984880 size=1850 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:47.945
+1792,16:22:48.147,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1792,16:22:48.147,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984830 size=1800 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:48.147
+1793,16:22:48.349,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1793,16:22:48.349,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984850 size=1820 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:48.349
+1794,16:22:48.760,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1794,16:22:48.760,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984830 size=1800 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:48.760
+1795,16:22:49.073,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1795,16:22:49.073,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984800 size=1770 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:49.073
+1796,16:22:49.275,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1796,16:22:49.275,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984850 size=1820 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:49.275
+1797,16:22:49.478,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1797,16:22:49.478,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984840 size=1810 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:49.478
+1798,16:22:49.679,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1798,16:22:49.679,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984880 size=1850 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:49.679
+1799,16:22:49.879,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1799,16:22:49.879,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984930 size=1900 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:49.879
+1800,16:22:50.079,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1800,16:22:50.079,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984980 size=1950 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:50.079
+1801,16:22:50.278,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1801,16:22:50.278,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984930 size=1900 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:50.278
+1802,16:22:50.773,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1802,16:22:50.773,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984910 size=1880 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:50.773
+1803,16:22:50.973,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1803,16:22:50.973,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984880 size=1850 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:50.973
+1804,16:22:51.374,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1804,16:22:51.374,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984890 size=1860 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:51.374
+1805,16:22:51.574,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1805,16:22:51.574,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984880 size=1850 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:51.574
+1806,16:22:51.775,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1806,16:22:51.775,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984830 size=1800 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:51.775
+1807,16:22:51.975,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1807,16:22:51.975,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984840 size=1810 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:51.975
+1808,16:22:52.174,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1808,16:22:52.174,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2984930 size=1900 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:52.174
+1809,16:22:52.576,16:22,1,0,A_CANDIDATE_AFTER_3,desde extremo final de 3=2983030 modulo=1970; 3 sigue vivo
+1809,16:22:52.576,16:22,1,0,A_CONFIRMED_BY_STRUCTURAL_MIDPOINT,A=2985080 size=2050 modulo=1970 midpoint=985.0 base=2985000; structural_time=16:21:54.482 knowledge_time=16:22:52.576
+1809,16:22:52.576,16:22,1,0,A_USED_AS_TREND,A size=2050 > modulo=1970 precio=2985080
+1809,16:22:52.576,16:22,2,1,NEW_ONE,reason=A_USED_AS_TREND dir=1 origin=2983030 st=16:21:54.482 kt=16:22:52.576
+1836,16:23:00.013,16:23,2,1,ONE_FROZEN,origin=2983030 extreme=2985080 size=2050 st=16:21:54.482 kt=16:22:59.811
+1836,16:23:00.013,16:23,2,1,TWO_IMPOSSIBLE_NO_FLAT,|gap|=30 >= 25 open=2984680 prev_close=2984650
+1836,16:23:00.013,16:23,2,1,GAP_IMPLICIT_ABAUT,"gap=30 (|gap|=30 >= 25): no plano, 2 prohibido; A/B/A usada como tendencia implicitas; nuevo 1 desde la apertura"
+1836,16:23:00.013,16:23,3,2,NEW_ONE,reason=GAP_IMPLICIT_ABAUT dir=1 origin=2984680 st=16:23:00.013 kt=16:23:00.013
+2065,16:24:00.098,16:24,3,2,ONE_FROZEN,origin=2984680 extreme=2985260 size=580 st=16:23:00.013 kt=16:23:59.899
+2065,16:24:00.098,16:24,3,2,TWO_IMPOSSIBLE_NO_FLAT,|gap|=140 >= 25 open=2983600 prev_close=2983740
+2065,16:24:00.098,16:24,3,2,GAP_IMPLICIT_ABAUT,"gap=-140 (|gap|=140 >= 25): no plano, 2 prohibido; A/B/A usada como tendencia implicitas; nuevo 1 desde la apertura"
+2065,16:24:00.098,16:24,4,3,NEW_ONE,reason=GAP_IMPLICIT_ABAUT dir=-1 origin=2983600 st=16:24:00.098 kt=16:24:00.098

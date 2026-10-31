@@ -1,0 +1,142 @@
+{
+  "version": 1,
+  "tipo": "golden_estados",
+  "alcance": "velas 1-8",
+  "provisional": true,
+  "meta": {
+    "simbolo": "USTEC",
+    "fecha": "2026-10-16",
+    "sesion": "16:30",
+    "fuente": "lectura profesional provisional + contradiccion verificada en vela 8",
+    "anti_spoiler": "El golden es externo al motor. El nucleo productivo NUNCA lee este archivo.",
+    "leyenda_estados": {
+      "CONFIRMADO": "hecho cerrado",
+      "POSIBILIDAD_VALIDA": "lectura matematicamente valida, no confirmada",
+      "PENDIENTE": "clasificacion pendiente de Javier; PROHIBIDO exigir en tests",
+      "INVALIDADO": "evento descartado por los ticks"
+    },
+    "nota": "Fotografia por vela. Los campos '*_estado' clasifican cada etiqueta. C Grande y CUT de la vela 8 quedan PENDIENTE; no se mueven a otra vela."
+  },
+  "velas": [
+    {
+      "n": 1,
+      "direccion": "BAJISTA",
+      "modular": ["1"],
+      "modular_estado": { "1": "CONFIRMADO" },
+      "patrones": [],
+      "patrones_estado": {},
+      "eventos": ["1"],
+      "eventos_estado": { "1": "CONFIRMADO" },
+      "pendientes": []
+    },
+    {
+      "n": 2,
+      "direccion": "BAJISTA",
+      "modular": ["1", "2"],
+      "modular_estado": { "1": "CONFIRMADO", "2": "CONFIRMADO" },
+      "patrones": [],
+      "patrones_estado": {},
+      "eventos": ["SALIDA_EN_PLANO", "POSIBLE_2", "2", "POSIBLE_3"],
+      "eventos_estado": {
+        "SALIDA_EN_PLANO": "PENDIENTE",
+        "POSIBLE_2": "POSIBILIDAD_VALIDA",
+        "2": "CONFIRMADO",
+        "POSIBLE_3": "POSIBILIDAD_VALIDA"
+      },
+      "pendientes": ["SALIDA_EN_PLANO (tolerancia §11 no cerrada)"]
+    },
+    {
+      "n": 3,
+      "direccion": "ALCISTA",
+      "modular": ["MODULO", "A"],
+      "modular_estado": { "MODULO": "CONFIRMADO", "A": "CONFIRMADO" },
+      "patrones": [],
+      "patrones_estado": {},
+      "eventos": ["MOVIMIENTO_CONTRARIO_SUPERA_50", "3_FALLIDO", "MODULO", "A"],
+      "eventos_estado": {
+        "MOVIMIENTO_CONTRARIO_SUPERA_50": "CONFIRMADO",
+        "3_FALLIDO": "CONFIRMADO",
+        "MODULO": "CONFIRMADO",
+        "A": "CONFIRMADO"
+      },
+      "pendientes": []
+    },
+    {
+      "n": 4,
+      "direccion": "BAJISTA",
+      "modular": ["MODULO", "A"],
+      "modular_estado": { "MODULO": "CONFIRMADO", "A": "CONFIRMADO" },
+      "patrones": [],
+      "patrones_estado": {},
+      "eventos": ["A_MAXIMO", "B_CANDIDATA"],
+      "eventos_estado": {
+        "A_MAXIMO": "CONFIRMADO",
+        "B_CANDIDATA": "POSIBILIDAD_VALIDA"
+      },
+      "pendientes": []
+    },
+    {
+      "n": 5,
+      "direccion": "BAJISTA",
+      "modular": ["MODULO", "A"],
+      "modular_estado": { "MODULO": "CONFIRMADO", "A": "CONFIRMADO" },
+      "patrones": [],
+      "patrones_estado": {},
+      "eventos": ["B_CANDIDATA"],
+      "eventos_estado": { "B_CANDIDATA": "POSIBILIDAD_VALIDA" },
+      "pendientes": []
+    },
+    {
+      "n": 6,
+      "direccion": "BAJISTA",
+      "modular": ["MODULO", "A", "B", "AUT"],
+      "modular_estado": { "MODULO": "CONFIRMADO", "A": "CONFIRMADO", "B": "CONFIRMADO", "AUT": "CONFIRMADO" },
+      "patrones": ["TT"],
+      "patrones_estado": { "TT": "CONFIRMADO" },
+      "eventos": ["B", "B_127_0_25", "AUT", "TT_PENDIENTE", "TT", "POSIBLE_1"],
+      "eventos_estado": {
+        "B": "CONFIRMADO",
+        "B_127_0_25": "CONFIRMADO",
+        "AUT": "CONFIRMADO",
+        "TT_PENDIENTE": "POSIBILIDAD_VALIDA",
+        "TT": "CONFIRMADO",
+        "POSIBLE_1": "POSIBILIDAD_VALIDA"
+      },
+      "pendientes": []
+    },
+    {
+      "n": 7,
+      "direccion": "ALCISTA",
+      "modular": ["A"],
+      "modular_estado": { "A": "CONFIRMADO" },
+      "patrones": ["TT"],
+      "patrones_estado": { "TT": "CONFIRMADO" },
+      "eventos": ["POSIBLE_1_FIN", "A"],
+      "eventos_estado": {
+        "POSIBLE_1_FIN": "PENDIENTE",
+        "A": "CONFIRMADO"
+      },
+      "pendientes": ["POSIBLE_1_FIN (permanencia de lectura §11 no cerrada)"]
+    },
+    {
+      "n": 8,
+      "direccion": "BAJISTA",
+      "modular": ["A", "B", "AUT", "C"],
+      "modular_estado": { "A": "CONFIRMADO", "B": "CONFIRMADO", "AUT": "CONFIRMADO", "C": "PENDIENTE" },
+      "patrones": ["TT"],
+      "patrones_estado": { "TT": "CONFIRMADO" },
+      "eventos": ["B", "B_127_0_25", "AUT", "C_CANDIDATA", "CUT"],
+      "eventos_estado": {
+        "B": "CONFIRMADO",
+        "B_127_0_25": "CONFIRMADO",
+        "AUT": "CONFIRMADO",
+        "C_CANDIDATA": "PENDIENTE",
+        "CUT": "PENDIENTE"
+      },
+      "pendientes": [
+        "C_CANDIDATA (momento de confirmacion §11 no cerrado)",
+        "CUT (contradiccion verificada: el nivel ~29738.40 no se alcanza dentro de la vela 8)"
+      ]
+    }
+  ]
+}

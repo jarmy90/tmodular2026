@@ -1,0 +1,990 @@
+TM FREEBUFF — CONTINUACION DEL MANDATO INTEGRAL
+SECCIONES 4 A 15
+
+Este archivo continúa exactamente el mandato ya recibido.
+No repitas ni sustituyas las secciones 0–3.
+La preparación realizada queda aceptada.
+Comienza a ejecutar desde la sección 4 de este documento.
+
+======================================================================
+4. REGLAS YA CERRADAS
+======================================================================
+
+No vuelvas a presentar como dudas estas reglas.
+
+4.1 PLANO
+
+|Open - Close_previo| < 0,25
+→ apertura en plano
+
+|Open - Close_previo| >= 0,25
+→ apertura no plana
+
+0,25 exactos no es plano.
+0,10 y 0,20 sí son plano.
+
+4.2 FUNCIÓN 2
+
+Después de 1, la vela siguiente solo puede evaluar 2 si:
+
+- abre en plano;
+- no existe gap;
+- no aparece cola inicial prohibitiva;
+- avanza en la dirección funcional de 1.
+
+Durante esa vela:
+
+- 2 permanece como una única candidata;
+- las vibraciones internas no fragmentan 2;
+- vibraciones superiores a 2 puntos tampoco cancelan 2;
+- no nace A Grande por una vibración interna;
+- 2 conserva el origen de salida en plano;
+- solo actualiza su extremo direccional.
+
+2 bajista:
+
+máximo de salida en plano → mínimo direccional alcanzado
+
+2 alcista:
+
+mínimo de salida en plano → máximo direccional alcanzado
+
+Si la medida alcanza o supera el 100 % de 1:
+
+2 CONFIRMADA en el primer tick que cumple la medida.
+
+Si termina la vela sin alcanzar el 100 % de 1:
+
+2 IMPOSIBLE
+→ recorrido resuelto como módulo por descarte
+→ siguiente pregunta por A Grande.
+
+2 no continúa pendiente a la vela siguiente.
+
+4.3 FUNCIÓN 3
+
+Después de 2 confirmado:
+
+- debe existir el retroceso funcional válido respecto de 2;
+- el precio recupera la dirección de 2;
+- supera estrictamente el extremo de 2;
+- se confirma 3 en ese primer tick válido.
+
+Después de 3 viene A Grande.
+
+Cuando 3 se confirma:
+
+1 + 2 + 3 = módulo regular completo.
+
+A Grande nace desde el extremo final real de 3 y en dirección contraria al módulo.
+
+El caso exacto del 50 % de retroceso de 2 debe investigarse. No inventar la respuesta si el árbol y la precedencia no la cierran.
+
+4.4 A, B, C Y AUT
+
+Después de A Grande, el recorrido contrario es B candidata.
+
+Antes del 100 % de A:
+
+B CANDIDATA.
+
+Desde el 100 % hasta 127 % de A + 0,25 inclusive:
+
+B GRANDE.
+
+Por encima de 127 % de A + 0,25:
+
+AUT inmediato en ese mismo tick.
+
+Si un único tick atraviesa el 100 % y también supera el límite AUT:
+
+- registrar ambos cruces causales;
+- estado vigente al terminar el tick = AUT;
+- no retrasar AUT un tick;
+- no mantener B Grande vigente después de AUT.
+
+Después de B Grande, el movimiento contrario es C Grande.
+
+Si C Grande supera la base del módulo:
+
+C Grande usada como tendencia
+→ nuevo 1.
+
+“A Grande usada como tendencia” y “C Grande usada como tendencia” no son funciones ontológicas nuevas. Son razones de transición.
+
+Ontología formal:
+
+1, 2, 3, A, B, C, AUT, CUT
+
+Patrones:
+
+TT, FT.
+
+4.5 AUT Y NUEVO 1
+
+AUT confirma inmediatamente el nuevo 1.
+
+No se espera al 100 % del TT para reconocer el nuevo 1.
+
+TT puede quedar simultáneamente posible o pendiente respecto de la estructura anterior.
+
+4.6 GAP
+
+Con gap no existe 2.
+
+El tramo no negociado se representa funcionalmente como:
+
+A Grande implícita
+→ B Grande implícita
+→ A Grande usada como tendencia implícita
+→ nuevo 1 observable desde la apertura de la segunda vela.
+
+No inventar ticks.
+No inventar precios internos.
+No medir todo el gap como una única A Grande desde el extremo anterior.
+La apertura de la segunda vela es el origen operativo del nuevo 1 observable.
+
+4.7 UMBRAL DE 2 PUNTOS
+
+El umbral de 2 puntos distingue ruido físico mínimo de movimiento estructural potencial.
+
+No obliga automáticamente a crear una nueva función.
+
+No confirma automáticamente A Grande.
+
+La nueva función depende de:
+
+- finalidad global;
+- continuidad;
+- autonomía;
+- claridad;
+- posición estructural;
+- evolución posterior.
+
+4.8 TT Y FT
+
+TT y FT son patrones, no funciones.
+
+TT puede estar:
+
+- posible;
+- pendiente;
+- confirmado;
+- extendido;
+- fallido.
+
+TT se confirma en el primer tick que alcanza el objetivo completo.
+No debe esperar al cierre de un movimiento físico.
+
+FT estructural y autorización operativa son capas distintas.
+
+Después del TT confirmado:
+
+- la extensión del TT puede continuar;
+- el movimiento contrario puede iniciar estructuralmente FT;
+- las variables operativas solo autorizan o rechazan la entrada;
+- las variables no crean la estructura FT.
+
+La condición exacta de confirmación estructural del FT debe investigarse con el árbol y los casos. No inventar un umbral.
+
+4.9 LECTURAS CONCURRENTES
+
+Un mismo tick físico puede cumplir funciones distintas en lecturas con referencias independientes.
+
+Las lecturas concurrentes pueden confirmar patrones distintos.
+
+No existe propiedad exclusiva absoluta del tick entre lecturas.
+
+La lectura dominante sirve para prioridad narrativa y operativa, pero no invalida automáticamente una secundaria estructural válida.
+
+Conservar como máximo las escalas autorizadas por el árbol.
+No proliferar mini módulos.
+
+4.10 STRUCTURAL_TIME Y KNOWLEDGE_TIME
+
+structural_time:
+instante o extremo donde la función comenzó realmente.
+
+knowledge_time:
+primer tick donde existe evidencia suficiente para conocer o confirmar la función.
+
+No presentar knowledge_time como si fuera structural_time.
+No utilizar información futura.
+
+======================================================================
+5. FASE A — LECTURA CIEGA DE VELAS PENDIENTES
+======================================================================
+
+OBJETIVO
+
+Comprobar si el árbol puede explicar todos los movimientos pendientes del tickfeed y descubrir únicamente conceptos universales insuficientes.
+
+BLOQUE PRINCIPAL
+
+16:49–17:29.
+
+Volver a bloques anteriores únicamente por regresión o cuando una nueva regla universal pueda afectarlos.
+
+PROTOCOLO
+
+PASADA A — SIN SPOILERS
+
+1. Recibir el estado estructural vivo del bloque anterior.
+2. Procesar los ticks cronológicamente.
+3. Recorrer todo el árbol aplicable antes de formular dudas.
+4. Mantener funciones vivas.
+5. Mantener lecturas concurrentes autorizadas.
+6. Registrar por tick:
+   - función activa;
+   - función esperada;
+   - pregunta activa;
+   - candidata;
+   - PENDING, CONFIRMED o IMPOSSIBLE;
+   - origen;
+   - extremo;
+   - módulo;
+   - patrón;
+   - lectura dominante;
+   - lectura secundaria;
+   - structural_time;
+   - knowledge_time;
+   - eventos.
+7. Bloquear la lectura antes de consultar referencias humanas o salidas de motores.
+
+PASADA B — COMPARACIÓN
+
+Solo después de bloquear la Pasada A:
+
+- consultar v005, si contiene información del bloque;
+- consultar informes anteriores;
+- comparar con R3 y R5 únicamente como evidencia;
+- localizar la primera divergencia causal;
+- separar:
+  - posible hueco del árbol;
+  - omisión humana;
+  - lectura secundaria válida no registrada;
+  - error del motor;
+  - regla realmente abierta.
+
+Los bloques [D] no son goldens.
+Deben mantenerse como pruebas ciegas.
+
+UNIDAD DE LECTURA
+
+No leer minuto a minuto como estructuras independientes.
+Leer movimientos funcionales que pueden atravesar varias velas.
+
+No crear una función por cada giro físico.
+No absorber automáticamente todo giro.
+Decidir por finalidad funcional.
+
+ENTREGABLES FASE A
+
+- BLIND_TREE_READINGS_1649_1729.md
+- BLIND_TREE_TRACE_1649_1729.jsonl
+- BLIND_TREE_EVENTS_1649_1729.csv
+- BLIND_TREE_SECONDARY_READINGS.md
+- BLIND_TREE_STATE_AT_BAR_CLOSE.csv
+- BLIND_TREE_FIRST_DIVERGENCES.csv
+- BLIND_TREE_CONCEPTUAL_GAPS.md
+- PHASE_A_MANIFEST.json
+
+GATE A
+
+PASS si:
+
+- todos los ticks pueden recorrerse;
+- toda función tiene trazabilidad;
+- las ambigüedades quedan explícitas;
+- no se usan spoilers;
+- la lectura es determinista;
+- los prefijos son consistentes;
+- no se crean reglas por precio, hora, vela o fixture.
+
+Si PASS, avanzar automáticamente a Fase B.
+
+Si aparece una duda local no bloqueante, registrarla y continuar.
+
+Detener solo por contradicción constitucional o por una cuestión que bloquee cinco o más bloques.
+
+======================================================================
+6. FASE B — PERFECCIONAMIENTO CONCEPTUAL DEL ÁRBOL
+======================================================================
+
+OBJETIVO
+
+Resolver errores universales detectados durante Fase A.
+
+No corregir velas individuales.
+Corregir conceptos.
+
+Para cada divergencia registrar:
+
+- movimiento observado;
+- estado recibido;
+- pregunta del árbol;
+- lectura producida;
+- primer tick divergente;
+- concepto insuficiente;
+- interpretaciones posibles;
+- consecuencias de cada interpretación;
+- casos equivalentes;
+- pregunta experta universal.
+
+AGRUPACIÓN
+
+Agrupar por conceptos, por ejemplo:
+
+- ciclo de vida de 1;
+- autonomía de A;
+- continuidad funcional;
+- propiedad de extremos;
+- CUT;
+- medida del módulo;
+- FT;
+- concurrencia;
+- 50 % exacto de 3.
+
+No enviar una pregunta por vela.
+
+Máximo de 3–5 preguntas por checkpoint.
+
+CUESTIONES A INVESTIGAR SIN ASUMIR RESPUESTA
+
+A. CICLO DE VIDA DE 1
+
+Distinguir:
+
+- nacimiento estructural;
+- candidatura;
+- actualización del extremo;
+- confirmación;
+- final funcional;
+- medida congelada;
+- apertura de la pregunta por 2.
+
+B. CUT
+
+Separar claramente:
+
+- CUT;
+- C Grande;
+- C usada como tendencia;
+- superación del final de A;
+- superación de la base del módulo.
+
+C. MEDIDA DEL MÓDULO
+
+Determinar si se mide mediante extremos estructurales de sus funciones o por rangos brutos de las velas contenedoras.
+
+No incluir mechas anteriores al origen funcional sin regla expresa.
+
+D. FT
+
+Separar:
+
+- origen estructural;
+- confirmación estructural;
+- filtro de ruido;
+- autorización operativa;
+- ventana temporal.
+
+E. 3 Y EL 50 % EXACTO
+
+Determinar si tocar exactamente el 50 % de 2 conserva o invalida la posibilidad de 3.
+
+F. SALTO DE PRECIO B→AUT
+
+Registrar las fronteras cruzadas sin retrasar AUT artificialmente.
+
+FORMATO DE PREGUNTA EXPERTA
+
+MOVIMIENTO
+Estábamos en...
+El precio hizo...
+Después ocurrió...
+
+DUDA
+¿Sigue siendo X o pasa a ser Y?
+
+SI X
+Consecuencia funcional.
+
+SI Y
+Consecuencia funcional.
+
+CASOS DESBLOQUEADOS
+Lista breve.
+
+ACTUALIZACIÓN DEL ÁRBOL
+
+Cuando Javier responda:
+
+- convertir la respuesta en regla universal;
+- añadir caso positivo;
+- caso negativo;
+- frontera;
+- ejemplo;
+- prohibición de regresión;
+- pruebas afectadas;
+- versión nueva acumulada.
+
+No sobrescribir v2.19.
+
+GATE B
+
+PASS si:
+
+- no quedan contradicciones vigentes;
+- reglas abiertas están resueltas o explícitamente bloqueadas;
+- cada transición tiene estados claros;
+- ejemplos no funcionan como hardcoding;
+- las nuevas reglas pasan regresión sobre bloques anteriores.
+
+Si PASS, avanzar a Fase C.
+
+Si quedan reglas abiertas centrales, detener antes de congelar.
+
+======================================================================
+7. FASE C — ÁRBOL TM EJECUTABLE Y CONGELACIÓN
+======================================================================
+
+OBJETIVO
+
+Separar el canon ejecutable de la historia documental.
+
+Crear:
+
+TM_TREE_EXECUTABLE_V1/
+
+Archivos:
+
+1. TM_TREE_EXECUTABLE_V1.md
+2. TM_TREE_TRANSITIONS_V1.csv
+3. TM_TREE_STATES_V1.json
+4. TM_TREE_INVARIANTS_V1.md
+5. TM_TREE_OPEN_RULES_V1.md
+6. TM_TREE_TEST_MATRIX_V1.csv
+7. TM_TREE_SOURCE_TRACEABILITY_V1.csv
+8. TM_TREE_FREEZE_MANIFEST_V1.json
+9. SHA256SUMS.txt
+
+Cada transición debe incluir:
+
+- transition_id;
+- estado de entrada;
+- función actual;
+- función esperada;
+- pregunta activa;
+- variables;
+- origen;
+- extremo;
+- propiedad de referencias;
+- condición PENDING;
+- condición CONFIRMED;
+- condición IMPOSSIBLE;
+- efecto;
+- estado de salida;
+- siguiente pregunta;
+- continuidad entre velas;
+- concurrencia;
+- structural_time;
+- knowledge_time;
+- invariantes;
+- pruebas;
+- fuente;
+- precedencia.
+
+No incluir anexos históricos como reglas ejecutables.
+Mantener trazabilidad documental.
+
+Emitir antes de congelar:
+
+READY_TO_FREEZE
+
+o
+
+NOT_READY_TO_FREEZE
+
+Si READY_TO_FREEZE:
+
+- calcular hashes;
+- crear copia inmutable;
+- crear rollback;
+- marcar:
+  TREE_AUTHORITY = TRUE
+  TREE_FROZEN = TRUE
+  ENGINE_AUTHORITY = FALSE
+
+GATE C
+
+PASS si:
+
+- todas las transiciones activas están clasificadas;
+- no hay TBD;
+- no quedan contradicciones vigentes;
+- las pruebas cubren las transiciones;
+- fuentes y precedencia están identificadas;
+- copia inmutable verificada.
+
+Si PASS, avanzar automáticamente a Fase D.
+
+======================================================================
+8. FASE D — CONTRATOS Y PRUEBAS ANTES DEL CÓDIGO
+======================================================================
+
+OBJETIVO
+
+Convertir el árbol congelado en contratos ejecutables antes de implementar.
+
+Crear pruebas:
+
+- positivas;
+- negativas;
+- frontera;
+- prefijos;
+- continuidad entre velas;
+- concurrencia;
+- gaps;
+- determinismo;
+- ausencia de spoilers;
+- structural_time;
+- knowledge_time.
+
+REGLAS OBLIGATORIAS PARA LAS PRUEBAS
+
+1. 2 termina su vela sin 100 %
+   → IMPOSSIBLE
+   → módulo por descarte.
+
+2. Dos puntos no confirman automáticamente A.
+
+3. Un tick puede atravesar el 100 % de B y superar AUT.
+   → AUT en ese mismo tick.
+
+4. 0,25 exactos no es plano.
+
+5. AUT abre nuevo 1.
+
+6. Lecturas concurrentes pueden confirmar patrones diferentes.
+
+7. FT estructural no equivale a autorización operativa.
+
+8. A/C usadas como tendencia no son funciones nuevas.
+
+PRUEBAS CONCEPTUALES MÍNIMAS
+
+- inicio de lectura;
+- 1 candidata;
+- 1 confirmada;
+- congelación de 1;
+- 2 válida;
+- 2 con vibraciones;
+- 2 imposible;
+- 3 confirmada;
+- 3 imposible;
+- módulo 1+2;
+- A después de 3;
+- A entre velas;
+- B candidata;
+- B Grande;
+- salto B→AUT;
+- C;
+- C usada como tendencia;
+- AUT directo por A;
+- CUT;
+- gap;
+- TT pendiente;
+- TT confirmado;
+- TT extendido;
+- TT fallido;
+- FT;
+- concurrencia;
+- integración de módulos.
+
+GATE D
+
+Toda expectativa debe derivar del árbol congelado, no de R5.
+
+PASS si:
+
+- matriz completa;
+- expectativas aprobadas;
+- preguntas bloqueadas identificadas;
+- pruebas deterministas;
+- no hay hardcoding;
+- no hay spoilers.
+
+Si PASS, avanzar a Fase E.
+
+======================================================================
+9. FASE E — CONSTRUCCIÓN DEL NUEVO MOTOR PYTHON
+======================================================================
+
+Crear:
+
+TM_ENGINE_TREE_V1/
+
+No sobrescribir motores anteriores.
+
+REUTILIZAR DE R5 SOLO COMPONENTES APROBADOS
+
+KEEP:
+
+- ingesta;
+- precios enteros;
+- orden temporal;
+- serialización;
+- CLI;
+- trazas;
+- comparadores;
+- pruebas de prefijos.
+
+KEEP_WITH_ADAPTER:
+
+- componentes matemáticos compatibles;
+- trackers compatibles;
+- eventos reutilizables.
+
+SUSTITUIR SEMÁNTICA
+
+- MovementBuilder como autoridad;
+- módulo retrospectivo;
+- umbral ontológico de 6 puntos;
+- máquina local 2/3;
+- mezcla de función, patrón y evento;
+- TT evaluado solo al cierre de movimientos.
+
+CAPAS
+
+CAPA 1 — INGESTA DE TICKS
+
+CAPA 2 — MOTOR DE FUNCIONES TM
+
+CAPA 3 — MOTOR DE PATRONES TT/FT
+
+CAPA 4 — OPERACIÓN
+
+Durante esta fase implementar solo Capas 1–3.
+No implementar entradas reales ni órdenes.
+
+SEPARACIÓN DE ESTADOS
+
+- FunctionState;
+- PatternState;
+- LifecycleEvent;
+- Reading;
+- References;
+- Module;
+- Genealogy.
+
+No crear nuevas funciones fuera de la ontología.
+
+RUTA ÚNICA
+
+on_tick(tick, state)
+→ validar tick
+→ actualizar extremos vivos
+→ evaluar pregunta activa
+→ PENDING / CONFIRMED / IMPOSSIBLE
+→ aplicar transición
+→ reevaluar transiciones inmediatas
+→ actualizar patrones
+→ emitir eventos
+→ validar invariantes
+→ devolver estado
+
+Mismo on_tick para histórico y directo.
+
+ORDEN DE IMPLEMENTACIÓN
+
+1. Infraestructura reutilizable.
+2. Inicio y 1.
+3. 2.
+4. 3.
+5. Módulo y A.
+6. B.
+7. C.
+8. AUT.
+9. CUT.
+10. Gap.
+11. TT.
+12. FT.
+13. Concurrencia.
+14. Integración.
+15. Serialización y replay.
+
+Después de cada bloque:
+
+- pruebas focales;
+- pruebas acumuladas;
+- prefijos;
+- determinismo;
+- regresión.
+
+No esperar autorización entre bloques si pasan los gates.
+
+GATE E
+
+PASS si:
+
+- todas las pruebas del árbol pasan;
+- no hay spoilers;
+- salida determinista;
+- prefijos consistentes;
+- el motor no depende de R5 como autoridad;
+- motores anteriores intactos.
+
+Si PASS, avanzar a Fase F.
+
+======================================================================
+10. FASE F — COMPARACIÓN ÁRBOL VS PYTHON
+======================================================================
+
+Para cada bloque comparar:
+
+salida del árbol
+vs.
+salida del Python.
+
+Comparar:
+
+- función;
+- pregunta;
+- candidata;
+- estado;
+- origen;
+- extremo;
+- módulo;
+- patrones;
+- structural_time;
+- knowledge_time;
+- lectura principal;
+- secundarias;
+- eventos;
+- estado final.
+
+La etiqueta final no basta.
+Debe coincidir la secuencia causal.
+
+Clasificar divergencias:
+
+- ENGINE_IMPLEMENTATION_ERROR;
+- TREE_AMBIGUITY;
+- TEST_EXPECTATION_ERROR;
+- INPUT_DATA_ERROR;
+- OPEN_RULE_BLOCK;
+- NON_DETERMINISM;
+- FUTURE_INFORMATION_RISK.
+
+No modificar el árbol para acomodar el motor.
+
+GATE F
+
+PASS si:
+
+- igualdad funcional en goldens [A];
+- lectura compatible y documentada en [B];
+- bloques [D] siguen ciegos;
+- ninguna divergencia queda inexplicada;
+- no se usa información futura.
+
+Si PASS, avanzar a Fase G.
+
+======================================================================
+11. FASE G — VALIDACIÓN CIEGA
+======================================================================
+
+Seleccionar bloques no utilizados para construir reglas.
+
+Protocolo:
+
+1. congelar motor provisional;
+2. calcular hash;
+3. documentar estado inicial;
+4. leer ticks sin golden;
+5. guardar primera salida;
+6. bloquearla;
+7. comparar después;
+8. localizar primera divergencia;
+9. corregir solo principio universal;
+10. probar la corrección en otro bloque nuevo.
+
+No corregir silenciosamente la primera salida.
+
+Realizar al menos:
+
+- una prueba ciega inicial;
+- una segunda prueba de confirmación;
+- prueba por prefijos;
+- doble ejecución;
+- replay truncado.
+
+GATE G
+
+PASS si:
+
+- el motor generaliza;
+- no memoriza casos;
+- divergencias corregidas universalmente;
+- un segundo bloque confirma la corrección;
+- no se rompen goldens anteriores.
+
+Si PASS, avanzar a Fase H.
+
+======================================================================
+12. FASE H — PREPARACIÓN DEL LECTOR EN DIRECTO
+======================================================================
+
+No ejecutar órdenes.
+
+Preparar solo lector en directo.
+
+Requisitos:
+
+- mismo on_tick;
+- buffer mínimo;
+- persistencia de estado;
+- recuperación tras reinicio;
+- sequence_id;
+- reloj;
+- logging;
+- latencia;
+- eventos;
+- health checks;
+- modo paper;
+- kill switch;
+- snapshots;
+- replay compatible.
+
+Separar completamente:
+
+lector TM
+vs.
+decisión operativa
+vs.
+ejecución.
+
+Entregar:
+
+- LIVE_READER_DESIGN.md
+- STATE_PERSISTENCE_SPEC.md
+- RECOVERY_TESTS.md
+- PAPER_MODE_SPEC.md
+- LIVE_SAFETY_GATES.md
+- FINAL_VALIDATION_REPORT.md
+
+No conectar a órdenes reales sin autorización posterior.
+
+GATE H
+
+Emitir uno de:
+
+READY_FOR_PAPER_LIVE_READING
+
+o
+
+NOT_READY_FOR_PAPER_LIVE_READING
+
+No declarar listo para operación real.
+
+======================================================================
+13. CHECKPOINTS Y COMUNICACIÓN
+======================================================================
+
+No enviar informes largos después de cada cambio pequeño.
+
+Entregar checkpoint cuando:
+
+- termina una fase;
+- aparece duda constitucional;
+- falla un gate;
+- una regla bloquea cinco o más casos;
+- aparece uso de información futura;
+- aparece no determinismo;
+- aparece regresión grave.
+
+Formato:
+
+- fase;
+- trabajo completado;
+- resultado;
+- divergencias;
+- reglas abiertas;
+- archivos;
+- hashes;
+- gate;
+- siguiente fase;
+- decisión necesaria.
+
+No detener el trabajo por dudas locales no bloqueantes.
+
+======================================================================
+14. ROLLBACK, MANIFIESTOS E INTEGRIDAD
+======================================================================
+
+Cada fase debe conservar:
+
+- manifiesto de entradas;
+- manifiesto de salidas;
+- hashes SHA-256;
+- comandos ejecutados;
+- versiones;
+- estado de gates;
+- originals_modified = false;
+- rollback verificable.
+
+No sobrescribir entregables anteriores.
+
+Si una fase falla:
+
+- conservar evidencia;
+- no borrar la salida;
+- marcar FAILED_GATE;
+- volver al último checkpoint válido;
+- no modificar originales.
+
+======================================================================
+15. RESULTADO FINAL Y COMIENZO
+======================================================================
+
+ENTREGA FINAL
+
+1. árbol ejecutable congelado;
+2. matriz de transiciones;
+3. matriz de pruebas;
+4. motor Python nuevo;
+5. comparación árbol-Python;
+6. regresión completa;
+7. pruebas ciegas;
+8. manifiestos;
+9. rollbacks;
+10. diseño del lector en directo;
+11. reglas abiertas;
+12. limitaciones conocidas;
+13. recomendación de siguiente paso.
+
+No declarar perfección absoluta.
+
+Declarar:
+
+READY_FOR_PAPER_LIVE_READING
+
+o
+
+NOT_READY_FOR_PAPER_LIVE_READING.
+
+No ejecutar operaciones reales.
+
+COMIENZO
+
+1. Registra este archivo como continuación oficial del mandato.
+2. Verifica que las secciones 0–3 ya recibidas y estas secciones 4–15 forman un encargo completo.
+3. Actualiza el acta de recepción sin modificar el texto original recibido.
+4. Comienza por Fase A.
+5. Recorre todo 16:49–17:29 antes de solicitar decisiones locales.
+6. Primero entiende el movimiento.
+7. Después identifica el concepto.
+8. Después formula preguntas universales.
+9. Continúa automáticamente entre fases cuando los gates lo permitan.
+

@@ -1,0 +1,40 @@
+test_id,expected,status,actual,authority
+A1,AFTER_MODULE y A_DEVELOPMENT deciden con autoridad propia,PASS,"authority={'A_DEVELOPMENT': 'TREE_QUESTION', 'B_GRANDE_CONFIRMATION': 'TREE_QUESTION', 'B_LIMIT': 'TREE_QUESTION'} commits=6",CANONICAL
+A2,cero confirmaciones con la evidencia de nacimiento,PASS,same_tick=0,CANONICAL
+A3,el estado legacy no se escribe sin commit,PASS,preemptions=0 failures=0,CANONICAL
+A4,cero escrituras directas al estado confirmado,PASS,writes=0,CANONICAL
+A5,una escritura legacy sin ticket aborta,PASS,aborta=True question=PX-Q001-A_DEVELOPMENT,CANONICAL
+A6,"leer fuera de consumes es violacion, no decision",PASS,"ok=False violaciones={'candidate_state_writes': 0, 'cross_owner_reference_reads': 0, 'consumes_violations': 1, 'unowned_candidates': 0, 'same_tick_confirmation': 0, 'third_branch_attempts': 0, 'shadow_recreations_blocked': 0, 'archived_generation_writes': 0, 'legacy_preemptions': 0}",CANONICAL
+A7,referencia de otra rama aborta la lectura,PASS,"ok=False counts={'candidate_state_writes': 0, 'cross_owner_reference_reads': 1, 'consumes_violations': 0, 'unowned_candidates': 0, 'same_tick_confirmation': 0, 'third_branch_attempts': 0, 'shadow_recreations_blocked': 0, 'archived_generation_writes': 0, 'legacy_preemptions': 0}",CANONICAL
+A8,referencia de otra generacion aborta la lectura,PASS,ok=False,CANONICAL
+A9,sin test de retencion no hay confirmacion,PASS,aborta=True,CANONICAL
+B1,B confirmada congela el extremo de A,PASS,A=2984710->2985060 size=350 kt=1792168030112,CANONICAL
+B2,B se mide contra su propia A (100 % = tamano de A),PASS,100%=350 A=350 127%=469,CANONICAL
+B3,"B supera 127 %+0,25 y resuelve AUT",PASS,B=680 limite=469 status=AUT,CANONICAL
+B4,B/A se expresa como ratio del mismo propietario,PASS,ratio=1.9429,CANONICAL
+B5,A no se delimita al cambiar de vela sin B funcional,PASS,"commits=['LOCAL_A_DEVELOPMENT', 'LOCAL_B_DEVELOPMENT', 'LOCAL_B_LIMIT']",CANONICAL
+B6,rama sintetica: A confirmada y B ligada a la misma A,PASS,A=A_CONFIRMED B.origin=10150 A.extreme=10150,CANONICAL
+B7,B fisica no toca el estado confirmado,PASS,b_status='' commits=0,CANONICAL
+B8,ningun commit de B escribe campos de A,PASS,"campos=['a_status', 'b_status']",CANONICAL
+B9,B conserva su origen al absorber retrocesos internos,PASS,B=2985060->2984380 size=680,CANONICAL
+C1,LOCAL-G2 se crea sin estado heredado,PASS,fresca=LOCAL_CANDIDATE vacia=True tras_ticks=LOCAL_CONFIRMED,CANONICAL
+C2,cero referencias a LOCAL-G1,PASS,menciones=0,CANONICAL
+C3,"parent_context_id es descriptivo, no autoridad",PASS,parent=PRIMARY-G1,CANONICAL
+C4,el prefijo 16:26-16:27 no conoce un TT que aun no existe,PASS,pre_tt='' full_tt='',CANONICAL
+C5,el modulo local no se abre sin excursion dominante,PASS,mod=2987380->2986700 size=680 dir=1,CANONICAL
+C6,cada transicion local deja rastro auditable,PASS,"eventos=['LOCAL_A_CANDIDATE', 'LOCAL_A_CONFIRMED', 'LOCAL_B_CONFIRMED', 'LOCAL_B_OPENED', 'LOCAL_DOMINANT_DIRECTION', 'LOCAL_MODULE_BY_DISCARD_A', 'LOCAL_MODULE_DECLARED', 'LOCAL_SEEDED']",CANONICAL
+C6b,la B local medida contra su A local queda bajo el 100 %,PASS,ratio=0.3929 B=440 A=1120 status=B_CANDIDATE_CONFIRMED,CANONICAL
+C7,una A local puede confirmarse retroactivamente,PASS,A=A_CONFIRMED st=1792168020074 kt=1792168030112,CANONICAL
+C8,TT local y TT principal tienen propietarios distintos,PASS,local_tt='LOCAL-G2-TT-001' main_tt=TT_CONFIRMED,CANONICAL
+C9,el TT local registra la primera frontera alcanzada,PASS,status=TT_FAILED first=INVALIDATION@2849,CANONICAL
+C10,la rama local se integra y deja de ser escala activa,PASS,status=LOCAL_INTEGRATED seq=999,CANONICAL
+C11,la sombra bloquea la geometria contenida y libera la amplia,PASS,contenida=DISCARDED amplia=PHYSICAL intentos=1,CANONICAL
+C12,MAIN y LOCAL procesan el mismo tramo sin referencias cruzadas,PASS,main_preempt=0 local_cross=0,CANONICAL
+D1,la lectura es invariante a traslado e inversion,PASS,base=2700 traslado=2700 inversion=2700,CANONICAL
+D2,LOCAL-G2 es invariante al traslado de precios,PASS,base=680 traslado=680,CANONICAL
+D3,consistencia de prefijo del estado funcional,PASS,prefijo=2630 full=2630,CANONICAL
+D4,determinismo del lector y de la rama local,PASS,identicos,CANONICAL
+D5,el arbitraje del TT local es determinista,PASS,first='INVALIDATION@2849',CANONICAL
+D6,ejecutar la rama local no altera la lectura principal,PASS,before=2630 after=2630,CANONICAL
+D7,la rama local no contiene precios ni horas del caso,PASS,hallazgos=[],CANONICAL
+D8,preguntas migradas presentes en el arbol,PASS,"nodos=['AFTER_MODULE', 'A_DEVELOPMENT', 'B_DEVELOPMENT', 'B_GRANDE_CONFIRMATION', 'B_LIMIT']",CANONICAL

@@ -1,0 +1,162 @@
+{
+  "iteration": "ITERACION_05_CORE",
+  "workspace": "C:\\Users\\profesor\\tm\\Teoria Modular\\TM_TRABAJO_TEMPORAL\\TM_TREE_AND_REFERENCE_ENGINE_V1",
+  "objective": "clean reference interpreter core: 1, 2, module by discard, 3, module regular",
+  "inputs": {
+    "tree": {
+      "path": "TM_CANON_ACTIVO/01_ARBOL/TM_ARBOL_MAESTRO_CANONICO_COMPLETO_v2_19_ACUMULADO.md",
+      "sha256": "94a1408a6123ed66948988334e7d540c2a2692c36eea3cb736dbff0da2346b17",
+      "expected": "94a1408a6123ed66948988334e7d540c2a2692c36eea3cb736dbff0da2346b17",
+      "match": true,
+      "size": 562639
+    },
+    "tickfeed": {
+      "path": "TM_CANON_ACTIVO/02_TICKS/TM_TICKFEED_1615_1730.csv",
+      "sha256": "5f701be2307352cb559abbd7bb856a6fd2a1f91e5d269a93dcc9ae2992e2c9ff",
+      "expected": "5f701be2307352cb559abbd7bb856a6fd2a1f91e5d269a93dcc9ae2992e2c9ff",
+      "match": true,
+      "size": 3496855
+    },
+    "human_readings": {
+      "path": "TM_CANON_ACTIVO/03_LECTURAS_HUMANAS/TM_LECTURAS_CONFIRMADAS_16OCT_1615_1730_v005.txt",
+      "sha256": "f5d7550c42c90897d833e6c2a3faf772753a129640fd4411de4190cb2cf94226",
+      "expected": "f5d7550c42c90897d833e6c2a3faf772753a129640fd4411de4190cb2cf94226",
+      "match": true,
+      "size": 26713
+    }
+  },
+  "originals_modified": false,
+  "tree_modified": false,
+  "engine_modified": false,
+  "golden_modified": false,
+  "scope": {
+    "implemented": [
+      "1",
+      "opening",
+      "2",
+      "module_by_discard",
+      "3",
+      "module_regular"
+    ],
+    "not_implemented": [
+      "A",
+      "B",
+      "C",
+      "AUT",
+      "CUT",
+      "TT",
+      "FT",
+      "gap_new_one",
+      "concurrency"
+    ]
+  },
+  "tests": {
+    "count": 19,
+    "passed": 19,
+    "failed": 0
+  },
+  "replay_checks": {
+    "all_pass": true,
+    "l2_trace_sha256": "1e62eb2dad69ecdda2b4c10af47c76deec63377b0ef6abc02b0eca9beb3ed13f"
+  },
+  "gate_core": "PASS",
+  "tree_gate": "NOT_READY_TO_FREEZE_TREE",
+  "engine_status": "REFERENCE_ENGINE_INCOMPLETE",
+  "files": [
+    {
+      "path": "01_CONCEPTS/READING_OWNERSHIP_MODEL.md",
+      "size": 1757,
+      "sha256": "4124f85371266e97469ed136b4e9f92b78d95a51c39035cd0fd36e86b16e19be"
+    },
+    {
+      "path": "02_EXECUTABLE_TREE/TM_TREE_EXECUTABLE_CORE_V1.md",
+      "size": 3320,
+      "sha256": "f9c73b72a6ffe79b3261c7e187f926b2e4f8f2b188ae8618d5206103b9121f93"
+    },
+    {
+      "path": "03_TRANSITION_SPECS/TM_TREE_TRANSITIONS_CORE_V1.csv",
+      "size": 3385,
+      "sha256": "0698e39bb5c7e7a7357b42dd63225ed76dab9336718e675ca84791a3b62ed11d"
+    },
+    {
+      "path": "04_CONCEPT_TESTS/CONCEPT_TEST_MATRIX_CORE_V1.csv",
+      "size": 1618,
+      "sha256": "318a15c50bffa63a3267c13b56c75765e7cee6159e5d1a3eec93fc27b326e9ba"
+    },
+    {
+      "path": "04_CONCEPT_TESTS/run_core_tests.py",
+      "size": 9109,
+      "sha256": "e76919c2518ddb5c120edcd105d7439bba2a49d71cca8b893fd770179c7c3711"
+    },
+    {
+      "path": "04_CONCEPT_TESTS/CORE_TEST_RESULTS.csv",
+      "size": 1637,
+      "sha256": "3b892c56fd7e9d8eca42a5411127cb4760f1de8bf861a1de067184f1d4034908"
+    },
+    {
+      "path": "04_CONCEPT_TESTS/CORE_TEST_RESULTS.json",
+      "size": 180,
+      "sha256": "c8b034d3417d42656fdc9630a5d9a3dec6030cfe2a6c029c2fd6a02fd4a9f033"
+    },
+    {
+      "path": "04_CONCEPT_TESTS/run_core_replay_checks.py",
+      "size": 2052,
+      "sha256": "a1042fdd042c5838843ddbec2d035f569c9971ecfbd1a5de353157abaadf8f4e"
+    },
+    {
+      "path": "04_CONCEPT_TESTS/CORE_REPLAY_CHECKS.json",
+      "size": 451,
+      "sha256": "0bc828f360c0122f226063d0525d6704b7ca072e4632e4957244062674b8fa7c"
+    },
+    {
+      "path": "05_REFERENCE_ENGINE/tm_reference_interpreter_v1.py",
+      "size": 20485,
+      "sha256": "ef3a4a56ff56591497b6f478adcabf945077d518c174c8d604595a54ad5edcc6"
+    },
+    {
+      "path": "06_SYNTHETIC_REPLAYS/state_1615_1618.json",
+      "size": 693,
+      "sha256": "7bcc297581d39c9bc6f130232debe077a508f16d83491de65fdc5215fa0498b9"
+    },
+    {
+      "path": "06_SYNTHETIC_REPLAYS/events_1615_1618.csv",
+      "size": 652,
+      "sha256": "a30e2497d25e8a43ac3866fe5cd507cf658074765df8799e9eb9bc24db6a982a"
+    },
+    {
+      "path": "06_SYNTHETIC_REPLAYS/trace_1615_1618.jsonl",
+      "size": 434443,
+      "sha256": "17dc038cd5895012aac7a63731049b315bc5b3d0734c7f60a33f4d6d857655ed"
+    },
+    {
+      "path": "07_REAL_REPLAYS/state_L2_1619_1622.json",
+      "size": 703,
+      "sha256": "bba695bc6342d4af10a11459e9240b26d66c0e1465e726d51b79900fd90d097a"
+    },
+    {
+      "path": "07_REAL_REPLAYS/events_L2_1619_1622.csv",
+      "size": 2169,
+      "sha256": "4db3bded7fa0891111d08e25217ceec93de5f3ad77daa21633f624bbe1265600"
+    },
+    {
+      "path": "07_REAL_REPLAYS/trace_L2_1619_1622.jsonl",
+      "size": 412074,
+      "sha256": "e692499574221abf1e5a9e4068675998c3484616d0d825f458a4ea7c282beee4"
+    },
+    {
+      "path": "08_TREE_PYTHON_COMPARISON/CORE_TREE_PYTHON_MATRIX_V1.csv",
+      "size": 1846,
+      "sha256": "b5e266933344635cdf7f4987e302077e46bbaabdced6951a7b877112451ac54b"
+    },
+    {
+      "path": "09_OPEN_RULES/OPEN_RULES_CORE_V1.md",
+      "size": 1784,
+      "sha256": "2c77c9150d57c1deac59b34286fee5db5d584a15738d7d48620701c05402e4a1"
+    },
+    {
+      "path": "10_REPORTS/CHECKPOINT_5_CORE.md",
+      "size": 2763,
+      "sha256": "7890391b01b04107ade1d375b5211d8bebe7921999acf985ee47f9913d380439"
+    }
+  ]
+}

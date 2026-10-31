@@ -1,0 +1,15 @@
+{
+  "fecha": "2026-10-28",
+  "motivo_sustitucion": "Versión base designada por Javier para la propuesta siguiente.",
+  "estado": "APROBADO_POR_JAVIER",
+  "autoridad": "Javier; autoridad base declarada",
+  "dependencias": [],
+  "archivos": [
+    {
+      "path": "TM_ARBOL_MAESTRO_CANONICO_COMPLETO_v2_12.md",
+      "size_bytes": 548810,
+      "sha256": "07880B12EE0A40FC09821D2248CD01071B9AE8C3EF4147130049B3EB39F997A8"
+    }
+  ],
+  "nota": "Copia histórica verificada; los originales se conservaron sin cambios."
+}

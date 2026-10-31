@@ -1,0 +1,13 @@
+test_id,area,kind,classification,description,pass,detail
+TT-01,tt,positive,CANONICAL_PASS,TT pendiente armado en el tick de AUT,True,tt=TT_PENDING aut=AUT_CONFIRMED
+TT-02,tt,negative,CANONICAL_PASS,no existe TT antes de AUT,True,first_tt=16 aut=14
+TT-03,tt,anchor,CANONICAL_PASS,"ancla TT principal = 29829,1 = final_A - modulo",True,objetivo=2982910 final_A=2985760 mod=2850
+TT-04,tt,positive,CANONICAL_PASS,TT confirmado en el primer tick que alcanza el objetivo,True,status=TT_CONFIRMED kt=200 target_tick=200
+TT-05,tt,boundary,CANONICAL_PASS,"un tick 0,10 antes del objetivo no confirma TT",True,status=TT_PENDING last=2982920 obj=2982910
+TT-06,tt,positive,CANONICAL_PASS,TT extendido conserva el extremo real mas alla del 100 %,True,status=TT_EXTENDED extreme=2980910
+TT-07,tt,negative,CANONICAL_PASS,TT fallido al tocar final_A antes del objetivo,True,status=TT_FAILED
+TT-08,tt,boundary,CANONICAL_PASS,salto unico directo al objetivo confirma TT (cruce doble imposible),True,status=TT_CONFIRMED last=2980910
+TT-09,tt,negative,CANONICAL_PASS,"el objetivo TT usa modulo y final_A, no el tamano de B",True,obj=2982910 final_A=2985760 mod=2850 b=1230
+TT-10,tt,positive,CANONICAL_PASS,tras confirmar TT el nuevo 1 sigue siendo la funcion activa,True,active=NEW_ONE one=NEW_ONE_ACTIVE
+TT-11,tt,determinism,CANONICAL_PASS,doble ejecucion identica con TT,True,identical
+TT-12,tt,prefix,CANONICAL_PASS,prefijo sin spoiler: el estado del prefijo no conoce el objetivo,True,prefix_tt=TT_PENDING

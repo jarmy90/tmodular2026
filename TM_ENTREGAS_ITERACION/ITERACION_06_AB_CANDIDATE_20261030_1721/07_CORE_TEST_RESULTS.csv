@@ -1,0 +1,20 @@
+test_id,transition,kind,description,pass,detail
+T-001,1,positive,1 inicial confirmada,True,status=CONFIRMED size=200
+T-002,2,positive,2 candidata tras apertura plana,True,status=CANDIDATE
+T-003,2,positive,2 confirmada al 100% de 1,True,status=CONFIRMED size=200
+T-004,2,negative,2 imposible al cierre sin 100%,True,two=IMPOSSIBLE_CLOSE mod=250
+T-005,2,negative,"2 imposible por cola inicial > 0,25",True,two=IMPOSSIBLE_TAIL mod=200
+T-015,opening,boundary,"0,25 exacto no es plano y prohibe 2",True,two=IMPOSSIBLE_NO_FLAT mod=200
+T-016,opening,boundary,"0,10 es plano y permite 2 candidata",True,two=CANDIDATE
+T-017,opening,negative,apertura no plana prohibe 2,True,two=IMPOSSIBLE_NO_FLAT
+T-006,3,pending,3 pendiente con retroceso valido,True,phase=CORE_WAIT_THREE_A_NOT_IMPLEMENTED three=
+T-007,3,positive,3 confirmada al superar el extremo de 2,True,three=CONFIRMED extreme=9100
+T-008,3,boundary,50% exacto conserva 3,True,event=True three=CONFIRMED
+T-009,3,negative,retroceso > 50% imposibilita 3,True,three=IMPOSSIBLE mod=800
+T-010,module,positive,modulo regular 1+2+3,True,status=REGULAR_1_2_3 size=900
+T-018,2/3,negative,vibracion interna no abre 3 en la vela de 2,True,three= two=9400/400
+T-019,3,positive,3 se abre en la vela siguiente tras retroceso valido,True,three=CONFIRMED/9350 mod=650
+T-011,global,determinism,doble ejecucion identica,True,lines=9
+T-012,global,prefix,prefijo consistente,True,prefix=6 full=9
+T-013,1/2/module,real,ancla 16:15-16:18,True,one=1620 two=IMPOSSIBLE_CLOSE/1260 mod=2850/BY_DISCARD_1_2
+T-014,1/2/3/module,real,ancla L2 16:19-16:22,True,one=750 two=1230 three=2983030 mod=1970

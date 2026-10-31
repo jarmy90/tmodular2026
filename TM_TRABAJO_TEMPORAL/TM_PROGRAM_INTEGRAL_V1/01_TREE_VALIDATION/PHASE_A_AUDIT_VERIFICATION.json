@@ -1,0 +1,71 @@
+{
+  "generations": 16,
+  "inversions": [
+    12,
+    14,
+    15,
+    16,
+    18,
+    19,
+    20,
+    23,
+    24,
+    25
+  ],
+  "explicit": [
+    12,
+    19
+  ],
+  "strong_inference": [
+    18,
+    23
+  ],
+  "open": [
+    14,
+    15,
+    16,
+    20,
+    24,
+    25
+  ],
+  "primary": [
+    13,
+    17,
+    22,
+    26,
+    27
+  ],
+  "secondary": [
+    21
+  ],
+  "integrated": [
+    12,
+    18,
+    19,
+    23
+  ],
+  "pending": [
+    14,
+    15,
+    16,
+    20,
+    24,
+    25
+  ],
+  "first_divergence": {
+    "generation": 12,
+    "structural_time": "16:49:59.949",
+    "knowledge_time": "16:50:00.152"
+  },
+  "case_17_22": {
+    "one_origin": 2963360,
+    "one_extreme": 2967830,
+    "two_extreme": 2966440,
+    "module_44_7": 4470,
+    "wrong_30_8": 3080
+  },
+  "unassigned_seconds": 551.515,
+  "unassigned_percent": 22.4,
+  "originals_ok": true,
+  "status": "PASS"
+}

@@ -1,0 +1,19 @@
+{
+  "artifact": "TM_ARBOL_MAESTRO_CANONICO_COMPLETO_v2_19_ACUMULADO",
+  "path": "C:\\Users\\profesor\\tm\\Teoria Modular\\TM_CANON_ACTIVO\\01_ARBOL\\TM_ARBOL_MAESTRO_CANONICO_COMPLETO_v2_19_ACUMULADO.md",
+  "source_path": "C:\\Users\\profesor\\OpenBot\\Shared\\Transfers\\33606e95-df67-429a-a10a-1cefe599632c\\TM_ARBOL_MAESTRO_CANONICO_COMPLETO_v2_19_ACUMULADO-3-.md",
+  "installed_utc": "2026-10-30T00:00:00Z",
+  "installed_by": "DS TM BOSS",
+  "authorization": "Javier Armada Lopez - auditoria profunda arbol TM -> Python (2026-10-30)",
+  "bytes": 562639,
+  "lines": 14016,
+  "sha256": "94A1408A6123ED66948988334E7D540C2A2692C36EEA3CB736DBFF0DA2346B17",
+  "sha256_verified_after_copy": "94A1408A6123ED66948988334E7D540C2A2692C36EEA3CB736DBFF0DA2346B17",
+  "bytes_identical": true,
+  "STATUS": "WORKING_CANON_NOT_FROZEN",
+  "ENGINE_AUTHORITY": false,
+  "final_tree_declared": false,
+  "overwritten": false,
+  "mutable": false,
+  "rule": "No se modifica esta copia. Correcciones solo por nueva version autorizada por Javier."
+}

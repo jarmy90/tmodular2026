@@ -1,0 +1,32 @@
+{
+  "anchors_total": 10,
+  "anchors_passed": 10,
+  "tt_1626": {
+    "tt_id": "PRIMARY-G1-TT-2982280",
+    "owner_generation": "PRIMARY-G1",
+    "module_size": 2630,
+    "final_A": 2984910,
+    "objective": 2982280,
+    "status": "TT_CONFIRMED",
+    "confirmed_at": 1792168199827,
+    "invalidation": [
+      "A_ORIGIN",
+      2987540
+    ]
+  },
+  "a_1626": {
+    "origin": 2978460,
+    "delimitation": "A_DELIMITED_AT_CLOSE"
+  },
+  "open_tramo": "16:30-16:32",
+  "human_reading_result": "HUMAN_READING_CORRECTED_BY_TICKS",
+  "human_correction": {
+    "anchor": "B4-4 (16:27)",
+    "human_value": "A Grande -> B Grande -> A Grande usada como tendencia",
+    "tick_derived_value": "A 26,3 por descarte -> B 1,7 (< 100 %) -> TT 29822,8",
+    "difference": "B Grande no alcanza el 100 % (faltan 24,6 puntos)",
+    "evidence": "maximo 29850,8 de 16:27 contra origen de A 29875,4",
+    "rule": "R20-1 A_DELIMITED_AT_CLOSE + modulo por descarte de A",
+    "downstream_effect": "el TT no requiere B Grande y confirma en 16:29"
+  }
+}

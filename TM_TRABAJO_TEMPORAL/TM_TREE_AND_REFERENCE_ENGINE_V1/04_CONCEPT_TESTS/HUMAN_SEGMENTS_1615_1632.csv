@@ -1,0 +1,20 @@
+segment_id,bar,sequence_from,sequence_to,expected_state,references_invariant,expected_end_event,authority,status,detail
+B1-S1,16:15,,,"1 inicial bajista 29877,0 -> 29860,8",,,CANONICAL,PASS,one=1620/-1
+B1-S2,16:16,,,"2 candidata no confirma; modulo conjunto 28,5",,,CANONICAL,PASS,two=IMPOSSIBLE_CLOSE mod=2850
+B1-S3,16:17,,,"A Grande 29848,5 -> 29857,6 (9,1)",,,CANONICAL,PASS,a=A_CONFIRMED/910
+B1-S4,16:18,,,"AUT bajista; TT principal pendiente 29829,1",,,CANONICAL,PASS,b=AUT tt=TT_PENDING/2982910
+B1-S5,16:19,,,"1 local bajista 7,5 (29850,0 -> 29842,5)",,,PROVISIONAL,FAIL,lectura local: no hay L2 descubierta en 16:19; L1 n=2985760->2984250
+B2-S1,16:20,,,"2 bajista confirmada 12,3 >= 7,5",,,CANONICAL,FAIL,two L1=IMPOSSIBLE_CLOSE/1260 (local no descubierta)
+B2-S2,16:21,,,"3 confirmada; extremo final 29830,3",,,CANONICAL,FAIL,three L1=IMPOSSIBLE/0
+B2-S3,16:22,,,"A Grande 29830,3 -> 29850,8; AUT directo; nuevo 1 alcista",,,CANONICAL,FAIL,aut= n=2985760
+B3-S1,16:23,,,"A bajista desde 29850,8; AUT local; nuevo 1 29852,6 -> 29837,3",,,CANONICAL,FAIL,n L1=2985760->2983030
+B3-S2,16:24,,,"A/B/AUT; TT bajista confirmado en 29828,1; TT alcista no alcanzado",,,CANONICAL,PASS,tt=TT_EXTENDED obj=2982910 n=2982810
+B4-S1,16:25,,,"gap +14; sin 2; secuencia implicita; nuevo 1 29848,5",,,CANONICAL,PASS,"two=IMPOSSIBLE_NO_FLAT n=2984850 ev=['GAP_IMPLICIT_SEQUENCE', 'GAP_IMPLICIT_NEW_ONE']"
+B4-S2,16:25,,,TT alcista confirmado en 16:25,,,CANONICAL,FAIL,tt=TT_EXTENDED obj=2982910
+B4-S3,16:26,,,FT del TT de 16:25 y A bajista principal,,,CANONICAL,FAIL,ft=FT_EXTENDED/2982900/1 a=A_CONFIRMED/2987540
+B4-S4,16:27,,,"apertura plana +0,2; A/B/A-tendencia; TT pendiente",,,CANONICAL,FAIL,two=IMPOSSIBLE_NO_FLAT b=C_OPENED tt=TT_EXTENDED
+B4-S5,16:28,,,gap bajista; dos TT pendientes coexistentes,,,CANONICAL,FAIL,TT_PENDING events=1
+B4-S6,16:29,,,dos TT culminados; nuevo 1 bajista dominante,,,CANONICAL,FAIL,tt=TT_EXTENDED n=2987540
+B4-S7,16:30,,,"1 bajista simplificado; modulo 53,6; A iniciada",,,CANONICAL,FAIL,mod=0 a=A_CONFIRMED
+B4-S8,16:31,,,"FINAL_A 29810,8; TT objetivo 29757,2; minimo 29760,3; pendiente 3,1",,,CANONICAL,FAIL,tt=TT_EXTENDED/2982910 min=2979310
+B4-S9,16:32,,,gap; TT falla al superar FINAL_A; modulo conjunto 16:30-16:31; nueva A,,,CANONICAL,FAIL,tt=TT_EXTENDED obj=2982910 a=A_CONFIRMED

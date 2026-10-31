@@ -1,0 +1,43 @@
+test_id,expected,status,actual,authority
+G1,"direccion del modulo coherente con origen/extremo",PASS,"mod=10400->10000 dir=-1 geo=True",CANONICAL
+G2,"un modulo que se extiende no abre A prematura",PASS,"a_status='' module=700",CANONICAL
+G3,"A nace desde el extremo funcional del modulo",PASS,"A.origin=10000 birth_module_extreme=10000 source=T23:MODULE:001",CANONICAL
+G4,"A no comparte origen con el modulo sin reclasificacion",PASS,"mod.origin=10400 A.origin=10000 reclas=0",CANONICAL
+G5,"A mayor que el modulo provoca reclasificacion trazada",PASS,"reclas=[{"seq": 1004, "reason": "A_BIGGER_THAN_PROVISIONAL_MODULE", "previous": {"module_id": "T23:MODULE:001", "origin": 10400, "extreme": 10000, "size": 400, "dir": ",CANONICAL
+G6,"A conserva continuidad a traves del cambio de vela",PASS,"A=A_CONFIRMED commits=['LOCAL_A_DEVELOPMENT']",CANONICAL
+G7,"una B fisica no delimita A",PASS,"B=B_PHYSICAL A=A_CONFIRMED",CANONICAL
+G8,"una B fisica no modifica ni confirma A",PASS,"A=400/0 antes=(400, 0) b= commits=[]",CANONICAL
+G9,"la confirmacion funcional de B delimita A",PASS,"A.kt=60004000 B.origin=10400 A.extreme=10400",CANONICAL
+G10,"B nace exactamente en el extremo de su A",PASS,"B.origin=10400 A.extreme=10400 source=T23:A:001",CANONICAL
+G11,"el ratio B/A es exacto y del mismo propietario",PASS,"ratio=0.75 100%=400 A=400",CANONICAL
+G12,"una B bajo el 100 % no es B Grande",PASS,"status=B_CANDIDATE_CONFIRMED ratio=0.75",CANONICAL
+G13,"sin B Grande no se arma TT por la via de tendencia",PASS,"tt='' grande_kt=0",CANONICAL
+G14,"la evidencia de nacimiento difiere de la de confirmacion",PASS,"birth_seq=1003 confirm_seq=1004",CANONICAL
+G15,"una direccion de modulo invertida se detecta",PASS,"geo=False",CANONICAL
+H1,"B que alcanza exactamente el 100 % confirma B Grande",PASS,"B=400 A=400 status=B_GRANDE",CANONICAL
+H2,"B dentro de 100 %-127 %+0,25 sigue siendo B Grande",PASS,"B=450 A=400 limite=533 status=B_GRANDE",CANONICAL
+H3,"superar el limite por un tick resuelve AUT",PASS,"B=600 limite=533 status=AUT",CANONICAL
+H4,"C aparece solo despues de B Grande",PASS,"eventos=['LOCAL_C_OPENED'] B=B_GRANDE grande_kt=60006000",CANONICAL
+H5,"B Grande registra el cruce causal antes del AUT",PASS,"grande_status=CAUSAL_CROSS_IN_AUT_TICK kt=60006000",CANONICAL
+I1,"el TT exige modulo propietario registrado",PASS,"id=LOCAL-G2:MODULE:001 size=700",CANONICAL
+I2,"el TT exige final_A propietario",PASS,"final_A=2985060 A.extreme=2985060",CANONICAL
+I3,"el objetivo del TT es derivable de su propia genealogia",PASS,"objetivo=2984360 final_A=2985060 dir=-1 modulo=700",CANONICAL
+I4,"la ruta de activacion del TT queda trazada",PASS,"source=LOCAL-G2:B:001 seq=2842 kind=FINAL_A",CANONICAL
+I5,"un TT nacido de un AUT invalida en final_A, no en el origen de A",PASS,"invalidacion=2985060 final_A=2985060 A.origin=2984710",CANONICAL
+I6,"el TT local se confirma cuando alcanza su objetivo",PASS,"status=TT_CONFIRMED first=OBJECTIVE@2857",CANONICAL
+I7,"un TT sin modulo propietario se rechaza",PASS,"tt_id='' status=''",CANONICAL
+I8,"un TT falla si su invalidacion se cruza primero",PASS,"status=TT_FAILED first=INVALIDATION_FINAL_A@1007",CANONICAL
+I9,"MAIN y LOCAL procesan el mismo tick sin referencias cruzadas",PASS,"local={'candidate_state_writes': 0, 'cross_owner_reference_reads': 0, 'consumes_violations': 0, 'unowned_candidates': 0, 'same_tick_confirmation': 0, 'third_branch_attempts': 0, 'shadow_recreations_blocked': 0, 'archived_generation_writes': 0, 'legacy_preemptions': 0} ",CANONICAL
+I10,"los TT de MAIN y LOCAL tienen propietario y objetivo propios",PASS,"local=LOCAL-G2:TT:001@2984360 main=TT_CONFIRMED@2982280",CANONICAL
+I11,"una A usada como tendencia exigiria B Grande valida",PASS,"kind=FINAL_A grande=CAUSAL_CROSS_IN_AUT_TICK",CANONICAL
+J1,"el traslado de precios conserva la geometria",PASS,"{'module': 5170, 'module_dir': -1, 'a_size': 1120, 'a_dir': -1, 'b_size': 440, 'b_ratio': 0.3929, 'tt': '', 'first_boundary': ''} vs {'module': 5170, 'module_dir': -1, 'a_size': 1120, 'a_dir': -1, 'b_size': 440, 'b_ratio': 0.3929, 'tt': '', 'first_boundary': ''}",CANONICAL
+J2,"la inversion vertical conserva tamanos y cambia direccion",PASS,"size=5170 dir=1",CANONICAL
+J3,"el escalado duplica los tamanos sin cambiar la direccion",PASS,"size=10340 dir=-1",CANONICAL
+J4,"cambiar los timestamps no altera la geometria",PASS,"{'module': 5170, 'module_dir': -1, 'a_size': 1120, 'a_dir': -1, 'b_size': 440, 'b_ratio': 0.3929, 'tt': '', 'first_boundary': ''}",CANONICAL
+J5,"cambiar los sequence_id no altera la geometria",PASS,"{'module': 5170, 'module_dir': -1, 'a_size': 1120, 'a_dir': -1, 'b_size': 440, 'b_ratio': 0.3929, 'tt': '', 'first_boundary': ''}",CANONICAL
+J6,"el prefijo 16:28 coincide con la ejecucion corta",PASS,"{'module': 4000, 'module_dir': -1, 'a_size': 1120, 'a_dir': -1, 'b_size': 440, 'b_ratio': 0.3929, 'tt': '', 'first_boundary': ''}",CANONICAL
+J7,"la rama local es determinista",PASS,"snapshots identicos",CANONICAL
+J8,"una escritura legacy sin ticket aborta",PASS,"aborta=True",CANONICAL
+J9,"una referencia de otra rama aborta la lectura",PASS,"ok=False",CANONICAL
+J10,"una lectura fuera de consumes es violacion",PASS,"ok=False",CANONICAL
+J11,"la rama local no contiene precios ni horas del caso",PASS,"encontrados=[]",CANONICAL

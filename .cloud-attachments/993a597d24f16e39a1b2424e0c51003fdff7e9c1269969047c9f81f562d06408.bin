@@ -1,0 +1,821 @@
+TM FREEBUFF — MISIÓN AUTÓNOMA DE LARGA DURACIÓN
+PERFECCIONAMIENTO FINAL, VALIDACIÓN EXHAUSTIVA Y CONGELACIÓN DEL ÁRBOL TM
+
+Este mandato se centra exclusivamente en dejar el lenguaje y el árbol TM tan completos, coherentes, causales y ejecutables como sea posible antes de construir el motor oficial.
+
+No debes comenzar todavía la implementación definitiva del motor Python.
+No debes modificar R3, R5, el motor activo, los goldens ni los archivos originales.
+No debes convertir el lector experimental en autoridad.
+
+El objetivo de esta misión es comprender profundamente todos los movimientos del tickfeed, encontrar las carencias conceptuales reales del árbol, resolverlas mediante principios universales y producir un Árbol TM Ejecutable preparado para congelación.
+
+======================================================================
+0. OBJETIVO Y FILOSOFÍA
+======================================================================
+
+La Teoría Modular debe funcionar como un lenguaje cerrado capaz de explicar todos los movimientos mediante:
+
+FUNCIONES
+1, 2, 3, A, B, C, AUT, CUT
+
+PATRONES
+TT, FT
+
+El objetivo no es etiquetar velas.
+El objetivo es comprender la función de cada movimiento dentro de la estructura viva.
+
+Principio rector:
+
+    movimiento físico
+    → finalidad funcional
+    → pregunta activa
+    → condición pendiente
+    → confirmación o imposibilidad
+    → transición siguiente
+
+El trabajo debe descubrir qué conceptos faltan, están ambiguos, se contradicen o se aplican incorrectamente.
+
+No propongas parches por ejemplo.
+No ajustes el árbol para que coincida con un motor.
+No adoptes umbrales provisionales como si fueran teoría.
+No confundas una salida determinista con una lectura correcta.
+
+======================================================================
+1. FUENTES Y PRECEDENCIA
+======================================================================
+
+ÁRBOL DE TRABAJO
+TM_ARBOL_MAESTRO_CANONICO_COMPLETO_v2_19_ACUMULADO.md
+SHA-256:
+94A1408A6123ED66948988334E7D540C2A2692C36EEA3CB736DBFF0DA2346B17
+Estado:
+WORKING_CANON_NOT_FROZEN
+
+LECTURAS HUMANAS
+TM_LECTURAS_CONFIRMADAS_16OCT_1615_1730_v005.txt
+SHA-256:
+F5D7550C42C90897D833E6C2A3FAF772753A129640FD4411DE4190CB2CF94226
+
+TICKFEED MAESTRO
+TM_TICKFEED_1615_1730.csv
+SHA-256:
+5F701BE2307352CB559ABBD7BB856A6FD2A1F91E5D269A93DCC9AE2992E2C9FF
+
+Características:
+- 20.335 ticks;
+- sequence_id 1–20.335;
+- cero huecos;
+- primer tick 16:15:00.016;
+- último tick 17:29:59.897.
+
+PRECEDENCIA
+
+1. Decisión expresa más reciente de Javier.
+2. Parches v2.13–v2.19.
+3. Canon activo del árbol.
+4. Reglas cerradas y decisiones expertas.
+5. Anexo v1 compatible con el canon superior.
+6. Lecturas humanas confirmadas.
+7. Pruebas conceptuales.
+8. Motores Python y código histórico.
+
+El Python nunca prevalece sobre el árbol.
+Las lecturas humanas verifican la aplicación, pero no crean reglas.
+El tickfeed es la evidencia física causal.
+Los anexos históricos no pueden revivir reglas sustituidas.
+
+======================================================================
+2. ESPACIO DE TRABAJO Y PROTECCIÓN
+======================================================================
+
+Trabajar dentro de:
+
+TM_TRABAJO_TEMPORAL/TM_TREE_PERFECTION_MISSION_V1/
+
+Crear:
+
+00_INPUTS
+01_BLIND_READINGS
+02_MOVEMENT_ANALYSIS
+03_CONCEPTUAL_GAPS
+04_EXPERT_QUESTIONS
+05_TREE_REVISIONS
+06_REGRESSION
+07_EXECUTABLE_TREE
+08_TEST_MATRIX
+09_REPORTS
+10_MANIFEST
+11_ROLLBACK
+
+No modificar originales.
+No sobrescribir entregables anteriores.
+Cada revisión debe tener versión, hash, motivo y rollback.
+
+Registrar siempre:
+- archivo fuente;
+- tamaño;
+- SHA-256;
+- fecha;
+- comando;
+- versión del lector experimental;
+- reglas aplicadas;
+- políticas experimentales;
+- originals_modified = false.
+
+======================================================================
+3. PROHIBICIÓN DE SPOILERS
+======================================================================
+
+Para cada bloque se exige doble pasada.
+
+PASADA A — LECTURA CIEGA
+
+Utilizar únicamente:
+- ticks hasta el tick actual;
+- estado estructural recibido;
+- árbol vigente;
+- reglas cerradas;
+- referencias activas.
+
+No consultar durante esta pasada:
+- lectura humana del bloque;
+- salida de R3/R5;
+- informes previos con resultado;
+- precios objetivo conocidos;
+- etiquetas del caso;
+- reconstrucción macro posterior.
+
+Bloquear y hashear la primera lectura antes de comparar.
+
+PASADA B — COMPARACIÓN
+
+Solo después:
+- consultar lecturas humanas;
+- consultar motores;
+- comparar;
+- localizar la primera divergencia causal;
+- separar error del árbol, del lector experimental, del motor o de la lectura humana.
+
+No corregir silenciosamente la Pasada A.
+
+======================================================================
+4. UNIDAD DE ANÁLISIS
+======================================================================
+
+No leer minuto por minuto como unidades independientes.
+No crear una función por cada giro físico.
+No absorber automáticamente todo giro.
+
+La unidad es el movimiento funcional.
+
+Para cada movimiento determinar:
+
+1. función activa;
+2. función esperada;
+3. pregunta activa;
+4. origen estructural;
+5. extremo actual;
+6. referencia de confirmación;
+7. referencia de imposibilidad;
+8. finalidad del movimiento;
+9. continuidad o autonomía;
+10. función propietaria del extremo;
+11. lectura dominante;
+12. lecturas secundarias;
+13. patrón pendiente;
+14. structural_time;
+15. knowledge_time;
+16. estado transmitido.
+
+Una función puede:
+- ocupar parte de una vela;
+- ocupar varias velas;
+- contener vibraciones;
+- confirmarse después de nacer;
+- ampliar su extremo;
+- transformarse en tendencia;
+- coexistir con otra lectura de referencias distintas.
+
+======================================================================
+5. REGLAS CERRADAS QUE NO DEBEN REABRIRSE
+======================================================================
+
+PLANO
+|Open - Close_previo| < 0,25 → plano.
+|Open - Close_previo| >= 0,25 → no plano.
+0,25 exactos no es plano.
+
+FUNCIÓN 2
+- requiere apertura en plano, ausencia de gap y ausencia de cola inicial prohibitiva;
+- sigue la dirección funcional de 1;
+- conserva una sola candidatura durante su vela;
+- las vibraciones internas no fragmentan ni cancelan 2;
+- confirma al alcanzar el 100 % de 1;
+- si termina la vela sin alcanzarlo, queda imposible y el recorrido se resuelve como módulo por descarte;
+- no continúa pendiente en la vela siguiente.
+
+FUNCIÓN 3
+- exige 2 confirmado;
+- retroceso funcional válido;
+- recuperación de la dirección de 2;
+- superación estricta del extremo de 2;
+- después de 3 viene A Grande.
+
+B Y AUT
+- antes del 100 % de A: B candidata;
+- 100 % a 127 % + 0,25 inclusive: B Grande;
+- superar estrictamente 127 % + 0,25: AUT inmediato;
+- si un tick cruza ambas fronteras, registrar los cruces, pero el estado final de ese tick es AUT.
+
+C
+- después de B Grande, el movimiento funcional contrario es C Grande;
+- C no necesita alcanzar el 100 % de A para existir;
+- si C supera la base del módulo, C se usa como tendencia y abre nuevo 1.
+
+AUT Y NUEVO 1
+- AUT abre inmediatamente nuevo 1;
+- no espera a TT;
+- el nuevo 1 es el movimiento que se transformó;
+- AUT por B: dirección del nuevo 1 = dirección de B; origen estructural = origen de B, final de A;
+- AUT directo por A: dirección = A; origen = origen estructural de A;
+- C usada como tendencia: dirección = C; origen = origen estructural de C;
+- el tick de cruce es normalmente knowledge_time, no necesariamente structural_time.
+
+GAP
+- con gap no hay 2;
+- resolución implícita A → B Grande → A usada como tendencia;
+- nuevo 1 observable desde la apertura;
+- no inventar ticks ni precios internos.
+
+DOS PUNTOS
+- distinguen ruido físico mínimo de movimiento estructural potencial;
+- no obligan a crear una función;
+- no confirman automáticamente A Grande.
+
+TT Y FT
+- son patrones, no funciones;
+- TT confirma en el primer tick que alcanza el objetivo;
+- no espera al cierre de un swing;
+- FT estructural y autorización operativa son capas distintas.
+
+LECTURAS CONCURRENTES
+- un mismo tick puede afectar lecturas con referencias independientes;
+- la dominante no elimina automáticamente una secundaria válida;
+- limitar escalas según el árbol;
+- no proliferar mini módulos.
+
+======================================================================
+6. PRINCIPIO DE PROPIEDAD DE MOVIMIENTOS
+======================================================================
+
+No determinar funciones por color, vela o rango bruto.
+
+Cada movimiento debe conservar genealogía:
+
+movement_id
+parent_reading_id
+function_owner
+structural_origin
+current_extreme
+structural_time
+knowledge_time
+transition_reason
+module_owner
+pattern_owner
+
+Cuando una función se transforma:
+- no reiniciar el origen en la vela siguiente;
+- no fijar automáticamente el origen en el tick de confirmación;
+- conservar el origen del movimiento transformado;
+- actualizar el extremo mientras continúe la misma finalidad.
+
+Cuando un recorrido queda absorbido:
+- conservar evidencia física;
+- no abrir una función nueva;
+- registrar ABSORBED_IN_FUNCTION.
+
+Cuando se integra en un módulo mayor:
+- conservar trazabilidad de las escalas previas;
+- no duplicar objetivos;
+- registrar INTEGRATED_IN_LARGER_MODULE.
+
+======================================================================
+7. POLÍTICAS EXPERIMENTALES
+======================================================================
+
+Todo lector experimental debe declarar sus políticas.
+
+Para cada política:
+
+POLICY_ID
+versión
+hash anterior
+hash posterior
+problema observado
+regla del árbol que la respalda
+resultado anterior
+resultado posterior
+ticks afectados
+clasificación:
+- TREE_SUPPORTED
+- EXPERIMENTAL_ASSUMPTION
+- OPEN_RULE_DEPENDENCY
+
+Una EXPERIMENTAL_ASSUMPTION:
+- no valida el árbol;
+- no puede congelarse;
+- no puede convertirse en regla;
+- no puede usarse como golden.
+
+Prohibido introducir umbrales provisionales de autonomía:
+- 2;
+- 6;
+- 12;
+- 20 puntos;
+- 35 %;
+- cualquier otro.
+
+======================================================================
+8. RECORRIDO EXHAUSTIVO
+======================================================================
+
+Recorrer todo el feed 16:15–17:29, pero con prioridades:
+
+A. Bloques [A]
+Usarlos para regresión y validación conocida.
+
+B. Bloques [B]
+Completar y normalizar causalmente.
+
+C. Bloques [C]
+Usar solo como referencia física.
+
+D. Bloques [D]
+Mantener como pruebas ciegas reales.
+
+Orden:
+
+1. reconstruir estado inicial;
+2. 16:15–16:24;
+3. 16:25–16:32;
+4. 16:33–16:39;
+5. 16:40–16:48;
+6. 16:49–17:29;
+7. segunda pasada completa 16:15–17:29 con reglas consolidadas;
+8. regresión por prefijos;
+9. doble ejecución;
+10. comparación posterior.
+
+No detenerse por dudas locales.
+Registrar y continuar cuando la rama sea independiente.
+
+======================================================================
+9. AUDITORÍA DE CADA GENERACIÓN O NUEVO 1
+======================================================================
+
+Para cada candidato a nuevo 1 verificar:
+
+1. transición que lo origina;
+2. función transformada;
+3. dirección heredada;
+4. origen estructural verdadero;
+5. tick de conocimiento;
+6. extremo posterior;
+7. si es primaria o secundaria;
+8. si absorbe recorridos;
+9. si integra módulos;
+10. si produce TT propio;
+11. si cambia dominancia;
+12. si la vela siguiente fue usada erróneamente como origen.
+
+Clasificar:
+
+VALID_PRIMARY
+VALID_SECONDARY
+EXTENSION_OF_ACTIVE_ONE
+A_OF_ACTIVE_ONE
+ABSORBED_IN_FUNCTION
+INTEGRATED_IN_LARGER_MODULE
+ARTIFICIAL_FRAGMENTATION
+PENDING_EXPERT_DECISION
+
+Ninguna generación se aprueba solo por dirección coincidente.
+
+======================================================================
+10. CONCEPTOS A PERFECCIONAR
+======================================================================
+
+Investigar profundamente, sin asumir respuesta:
+
+A. CICLO DE VIDA DE 1
+- nacimiento estructural;
+- candidatura;
+- confirmación;
+- extensión;
+- final funcional;
+- congelación de medida;
+- apertura de pregunta por 2.
+
+B. AUTONOMÍA DE A
+- recorrido contrario pendiente;
+- absorción;
+- autonomía;
+- structural_time y knowledge_time;
+- continuidad entre velas.
+
+C. CUT
+- significado funcional propio;
+- referencia exacta;
+- diferencia con C usada como tendencia;
+- diferencia con superar final de A o base del módulo.
+
+D. MEDIDA DEL MÓDULO
+- extremos estructurales;
+- propiedad de extremos;
+- módulo 1+2;
+- módulo 1+2+3;
+- módulo conjunto;
+- integración;
+- exclusión de mechas ajenas al origen funcional.
+
+E. FT
+- nacimiento estructural;
+- confirmación;
+- extensión;
+- diferencia respecto de autorización operativa;
+- ventana temporal.
+
+F. 50 % EXACTO EN 3
+- inclusión o exclusión;
+- efecto sobre módulo regular y módulo 1+2.
+
+G. DOMINANCIA
+- reglas para elegir dominante;
+- conservación de secundarias;
+- cambio autorizado de dominancia;
+- evitar que AUT local sustituya una lectura macro sin fundamento.
+
+======================================================================
+11. PROTOCOLO DE DUDAS
+======================================================================
+
+Antes de preguntar:
+
+1. recorrer todo el árbol;
+2. aplicar precedencia;
+3. revisar reglas cerradas;
+4. reconstruir movimiento completo;
+5. revisar ticks anteriores y posteriores;
+6. revisar lecturas humanas después de bloquear la propia;
+7. revisar casos equivalentes;
+8. determinar impacto universal.
+
+Solo preguntar si la duda sigue abierta.
+
+No preguntar por código.
+Preguntar por función del movimiento.
+
+Formato:
+
+MOVIMIENTO
+Estábamos en...
+El precio hizo...
+Después ocurrió...
+
+CONCEPTO NO RESUELTO
+...
+
+PREGUNTA
+¿El recorrido sigue absorbido en X o adquiere autonomía como Y?
+
+SI X
+Consecuencia.
+
+SI Y
+Consecuencia.
+
+CASOS DESBLOQUEADOS
+...
+
+Máximo 3 preguntas por checkpoint.
+Agrupar dudas equivalentes.
+
+======================================================================
+12. CICLO DE MEJORA DEL ÁRBOL
+======================================================================
+
+Para cada respuesta experta:
+
+1. convertirla en regla universal;
+2. definir estado de entrada;
+3. pregunta activa;
+4. condición PENDING;
+5. condición CONFIRMED;
+6. condición IMPOSSIBLE;
+7. positivo;
+8. negativo;
+9. frontera;
+10. structural_time;
+11. knowledge_time;
+12. continuidad;
+13. concurrencia;
+14. prohibición de regresión;
+15. pruebas afectadas;
+16. fuentes sustituidas;
+17. versión nueva acumulada.
+
+Después:
+- volver a ejecutar todos los bloques previos;
+- comprobar regresiones;
+- verificar determinismo y prefijos;
+- no aceptar una regla que arregle solo un caso.
+
+======================================================================
+13. CRITERIOS DE CALIDAD DEL ÁRBOL
+======================================================================
+
+El árbol solo puede recomendarse para congelación si:
+
+1. explica todos los movimientos del feed o marca explícitamente la ambigüedad;
+2. no depende de horas, precios o velas concretas;
+3. mantiene causalidad tick a tick;
+4. separa structural_time y knowledge_time;
+5. contiene PENDING, CONFIRMED e IMPOSSIBLE cuando corresponda;
+6. define propiedad de extremos;
+7. define continuidad entre velas;
+8. define concurrencia;
+9. limita escalas;
+10. separa funciones y patrones;
+11. define gaps sin ticks inventados;
+12. produce la misma lectura en doble ejecución;
+13. mantiene consistencia por prefijos;
+14. supera regresiones en bloques [A];
+15. conserva incertidumbre en bloques no resueltos;
+16. no usa políticas experimentales abiertas;
+17. dispone de matriz de pruebas;
+18. dispone de trazabilidad documental;
+19. no contiene contradicciones vigentes;
+20. las preguntas restantes son pocas, universales y no bloqueantes o están cerradas expresamente.
+
+No declarar “perfecto”.
+Declarar:
+
+READY_TO_FREEZE
+
+o
+
+NOT_READY_TO_FREEZE
+
+con evidencia.
+
+======================================================================
+14. ÁRBOL EJECUTABLE FINAL
+======================================================================
+
+Cuando todos los gates conceptuales pasen, crear una sección limpia y ejecutable:
+
+TM_TREE_EXECUTABLE_V1/
+
+Entregables:
+
+TM_TREE_EXECUTABLE_V1.md
+TM_TREE_TRANSITIONS_V1.csv
+TM_TREE_STATES_V1.json
+TM_TREE_INVARIANTS_V1.md
+TM_TREE_QUESTIONS_V1.csv
+TM_TREE_REFERENCES_V1.csv
+TM_TREE_CONCURRENCY_V1.md
+TM_TREE_OPEN_RULES_V1.md
+TM_TREE_TEST_MATRIX_V1.csv
+TM_TREE_SOURCE_TRACEABILITY_V1.csv
+TM_TREE_FREEZE_RECOMMENDATION.md
+TM_TREE_FREEZE_MANIFEST_V1.json
+SHA256SUMS.txt
+
+Cada transición debe contener:
+
+transition_id
+input_state
+active_function
+expected_function
+active_question
+required_references
+structural_origin
+current_extreme
+reference_owner
+pending_condition
+confirmation_condition
+impossibility_condition
+transition_effect
+output_state
+next_question
+bar_continuity
+concurrency_rules
+structural_time_rule
+knowledge_time_rule
+invariants
+tests
+source
+precedence
+
+No incluir anexos históricos como reglas ejecutables.
+Conservarlos solo como trazabilidad.
+
+======================================================================
+15. PRUEBAS DEL ÁRBOL
+======================================================================
+
+Crear pruebas conceptuales antes de programar el motor.
+
+Para cada transición:
+- positiva;
+- negativa;
+- frontera;
+- prefijo previo a confirmación;
+- continuidad entre velas;
+- concurrencia, si aplica;
+- determinismo;
+- ausencia de spoilers;
+- structural_time;
+- knowledge_time;
+- replay real.
+
+Casos mínimos obligatorios:
+
+- inicio y 1;
+- final y congelación de 1;
+- plano 0,10 y 0,20;
+- 0,25 exactos no plano;
+- gap;
+- cola inicial;
+- 2 con vibraciones;
+- 2 al 100 %;
+- 2 imposible al cierre;
+- 3 confirmada;
+- 3 imposible;
+- 50 % exacto;
+- módulo 1+2;
+- módulo 1+2+3;
+- A después de 3;
+- autonomía de A;
+- A entre velas;
+- B candidata;
+- B Grande;
+- salto B→AUT;
+- AUT por B;
+- AUT directo por A;
+- C Grande;
+- C usada como tendencia;
+- CUT;
+- TT pendiente;
+- TT confirmado;
+- TT extendido;
+- TT fallido;
+- FT;
+- integración;
+- lecturas concurrentes;
+- cambio de dominancia;
+- gap implícito;
+- propiedad de extremos.
+
+======================================================================
+16. INSTRUCCIÓN DE LARGA DURACIÓN
+======================================================================
+
+Trabaja de forma continua y exhaustiva.
+
+No detengas la misión por:
+- una duda local;
+- una lectura secundaria;
+- un anexo repetido;
+- falta de golden en bloques ciegos;
+- diferencias de nombres;
+- una rama abierta que no bloquee las demás.
+
+Detente únicamente si:
+- aparece contradicción constitucional;
+- una cuestión bloquea cinco o más bloques;
+- dos reglas vigentes del mismo rango se contradicen;
+- la lectura requiere inventar semántica;
+- existe no determinismo;
+- existe información futura;
+- falla integridad;
+- no puedes continuar sin decisión experta.
+
+Cuando la detención sea necesaria:
+- presenta máximo 3 preguntas;
+- naturales;
+- universales;
+- con consecuencias;
+- con casos desbloqueados.
+
+No envíes actualizaciones extensas por cada cambio menor.
+Entrega checkpoints por hitos.
+
+======================================================================
+17. CHECKPOINTS
+======================================================================
+
+CHECKPOINT 1
+Auditoría completa 16:15–17:29 con lectura ciega del bloque pendiente.
+
+CHECKPOINT 2
+Conceptos insuficientes agrupados y preguntas expertas.
+
+CHECKPOINT 3
+Reglas nuevas incorporadas y regresión completa.
+
+CHECKPOINT 4
+Árbol ejecutable preparado y matriz de pruebas.
+
+CHECKPOINT 5
+Recomendación READY_TO_FREEZE o NOT_READY_TO_FREEZE.
+
+Cada checkpoint:
+- trabajo completado;
+- resultados;
+- divergencias;
+- conceptos;
+- preguntas;
+- archivos;
+- hashes;
+- gate;
+- siguiente acción.
+
+======================================================================
+18. PROHIBICIONES
+======================================================================
+
+- no modificar motores oficiales;
+- no programar el motor definitivo;
+- no usar R5 como autoridad;
+- no crear reglas desde salidas del motor;
+- no hardcodear casos;
+- no usar golden durante lectura ciega;
+- no inventar ticks;
+- no introducir umbrales provisionales;
+- no convertir políticas experimentales en canon;
+- no aprobar generaciones por dirección solamente;
+- no usar vela siguiente como origen automático;
+- no confundir tick de confirmación con origen estructural;
+- no añadir funciones ontológicas;
+- no congelar con dudas centrales abiertas;
+- no ejecutar operaciones reales.
+
+======================================================================
+19. ENTREGA FINAL
+======================================================================
+
+Entregar:
+
+1. lectura completa ciega y bloqueada;
+2. comparación posterior;
+3. mapa primario/secundario;
+4. propiedad de extremos;
+5. genealogía de funciones;
+6. conceptos insuficientes;
+7. preguntas expertas;
+8. revisiones universales;
+9. regresión completa;
+10. árbol ejecutable limpio;
+11. matriz de transiciones;
+12. matriz de estados;
+13. invariantes;
+14. matriz de pruebas;
+15. trazabilidad;
+16. manifiestos;
+17. rollbacks;
+18. recomendación de congelación.
+
+Conclusión obligatoria:
+
+READY_TO_FREEZE
+
+o
+
+NOT_READY_TO_FREEZE
+
+No declarar perfección absoluta.
+
+======================================================================
+20. COMIENZO
+======================================================================
+
+1. Registra este mandato y calcula su SHA-256.
+2. Verifica entradas y originales.
+3. Conserva todos los trabajos anteriores como evidencia, no como autoridad.
+4. Crea una versión nueva del lector experimental solo si es necesaria.
+5. Aplica correctamente propiedad de transición, dirección, origen y tiempos.
+6. Recorre todo 16:15–17:29.
+7. Bloquea primero las lecturas pendientes.
+8. Compara después.
+9. Agrupa huecos por concepto.
+10. Formula preguntas solo al finalizar el recorrido completo.
+11. Mejora el árbol mediante reglas universales.
+12. Ejecuta regresión completa después de cada mejora.
+13. Continúa hasta poder recomendar o rechazar la congelación con evidencia.
+
+Primero entiende el movimiento.
+Luego entiende el concepto.
+Después perfecciona el árbol.
+Solo al final prepara la especificación ejecutable.

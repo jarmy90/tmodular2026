@@ -1,0 +1,56 @@
+{
+  "branch": "CORRECTED_BASELINE_V0751",
+  "version": "0.7.5.1",
+  "generated_at": "2026-10-28T08:09:41.643433+00:00",
+  "legacy": {
+    "label": "LEGACY_BASELINE_REPRODUCIBLE",
+    "version": "0.7.5",
+    "tests": "....................                                                     [100%]\n20 passed in 86.01s (0:01:26)",
+    "events": 1411,
+    "readings": 86,
+    "gap_events": 74
+  },
+  "corrected": {
+    "tests": ".......                                                                  [100%]\n7 passed in 6.92s",
+    "events": 1399,
+    "readings": 86,
+    "gap_events": 62,
+    "local_sequences": 1,
+    "local_events": 71
+  },
+  "diff": {
+    "only_removed_gap_events": 12,
+    "readings_identical": true,
+    "remaining_events_identical": true
+  },
+  "golden_v003": {
+    "passed": 22,
+    "total": 22,
+    "ok": true
+  },
+  "prefixes": {
+    "failures": 0,
+    "cases": 11,
+    "ok": true
+  },
+  "r0062": {
+    "full_reading": "R0064",
+    "event_count": 26,
+    "mapped_ok": true
+  },
+  "readiness": {
+    "AFS2_READY": false,
+    "pending": [
+      "post_tt_fallido_no_definido",
+      "ft_expiracion_no_definida",
+      "entrada_tardia_ft_no_definida",
+      "a_mayor_que_modulo_guardia_provisional",
+      "aut_extra_tick_unidad_cerrada_0_25",
+      "cobertura_estructural_definicion_por_confirmar",
+      "functional_coverage_causal_parcial",
+      "geometric_coverage_causal_parcial",
+      "lectura_abierta_al_final:R0086"
+    ],
+    "production_ready": false
+  }
+}

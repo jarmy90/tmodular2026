@@ -1,0 +1,129 @@
+{
+  "generations": 16,
+  "counts": {
+    "INTEGRATED_IN_LARGER_MODULE": 4,
+    "VALID_PRIMARY": 4,
+    "PENDING_EXPERT_DECISION": 6,
+    "VALID_SECONDARY": 1,
+    "VALID_PRIMARY_OPEN": 1
+  },
+  "first_divergence": {
+    "generation": 12,
+    "transition_in": "C_USED_AS_TREND",
+    "rule_strength": "EXPLICIT",
+    "transition_time": "16:48:15.900",
+    "transition_dir": -1,
+    "one_dir": 1,
+    "direction_match": "NO",
+    "one_origin": 2966640,
+    "one_extreme": 2969990,
+    "one_size": 3350,
+    "one_kt": "16:49:59.949",
+    "one_confirmation_time": "16:50:00.152",
+    "module_size": "3350",
+    "a_size": "1620",
+    "b_measure": "1710",
+    "ended_by": "C_USED_AS_TREND",
+    "transition_margin_centipoints": "",
+    "classification": "INTEGRATED_IN_LARGER_MODULE",
+    "cause": "C_TREND_DIRECTION",
+    "transition_detail": "BLIND_TREE_READINGS_1649_1729.md seccion 0 (estado heredado)",
+    "structural_time": "16:49:59.949",
+    "knowledge_time": "16:50:00.152"
+  },
+  "direction_inversions": [
+    {
+      "generation": 12,
+      "transition_in": "C_USED_AS_TREND",
+      "transition_time": "16:48:15.900",
+      "transition_dir": -1,
+      "one_dir": 1,
+      "one_size": 3350,
+      "classification": "INTEGRATED_IN_LARGER_MODULE"
+    },
+    {
+      "generation": 14,
+      "transition_in": "AUT",
+      "transition_time": "16:52:17.291",
+      "transition_dir": -1,
+      "one_dir": 1,
+      "one_size": 1920,
+      "classification": "PENDING_EXPERT_DECISION"
+    },
+    {
+      "generation": 15,
+      "transition_in": "AUT",
+      "transition_time": "16:54:27.442",
+      "transition_dir": 1,
+      "one_dir": -1,
+      "one_size": 3330,
+      "classification": "PENDING_EXPERT_DECISION"
+    },
+    {
+      "generation": 16,
+      "transition_in": "AUT",
+      "transition_time": "16:56:05.283",
+      "transition_dir": -1,
+      "one_dir": 1,
+      "one_size": 2490,
+      "classification": "PENDING_EXPERT_DECISION"
+    },
+    {
+      "generation": 18,
+      "transition_in": "A_USED_AS_TREND",
+      "transition_time": "17:00:08.407",
+      "transition_dir": -1,
+      "one_dir": 1,
+      "one_size": 5420,
+      "classification": "INTEGRATED_IN_LARGER_MODULE"
+    },
+    {
+      "generation": 19,
+      "transition_in": "C_USED_AS_TREND",
+      "transition_time": "17:07:02.847",
+      "transition_dir": -1,
+      "one_dir": 1,
+      "one_size": 3670,
+      "classification": "INTEGRATED_IN_LARGER_MODULE"
+    },
+    {
+      "generation": 20,
+      "transition_in": "AUT",
+      "transition_time": "17:09:23.432",
+      "transition_dir": 1,
+      "one_dir": -1,
+      "one_size": 4460,
+      "classification": "PENDING_EXPERT_DECISION"
+    },
+    {
+      "generation": 23,
+      "transition_in": "A_USED_AS_TREND",
+      "transition_time": "17:15:37.388",
+      "transition_dir": -1,
+      "one_dir": 1,
+      "one_size": 2470,
+      "classification": "INTEGRATED_IN_LARGER_MODULE"
+    },
+    {
+      "generation": 24,
+      "transition_in": "AUT",
+      "transition_time": "17:18:09.401",
+      "transition_dir": 1,
+      "one_dir": -1,
+      "one_size": 2820,
+      "classification": "PENDING_EXPERT_DECISION"
+    },
+    {
+      "generation": 25,
+      "transition_in": "AUT",
+      "transition_time": "17:21:21.925",
+      "transition_dir": -1,
+      "one_dir": 1,
+      "one_size": 4470,
+      "classification": "PENDING_EXPERT_DECISION"
+    }
+  ],
+  "reader_sha256": "5453936409204d742d74e6f51d73b09dc3e1185e23f633261b5179c7e392f458",
+  "generations_sha256": "63768588aa7c0770bffe7569511b0b52abd2aef06fc26e28348d4ced792fb62b",
+  "events_sha256": "369e823c9540073d071ce10b8bf073a69194b46af3a90fde6367e513aaad2111"
+}

@@ -1,0 +1,2012 @@
+[
+  {
+    "cutoff_time": "2026-10-16 16:20:59.646",
+    "cutoff_ms": 1792167659646,
+    "full_events": 0,
+    "prefix_events": 0,
+    "full_readings": 67,
+    "prefix_readings": 0,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:21:59.760",
+    "cutoff_ms": 1792167719760,
+    "full_events": 1,
+    "prefix_events": 1,
+    "full_readings": 67,
+    "prefix_readings": 0,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:22:59.811",
+    "cutoff_ms": 1792167779811,
+    "full_events": 3,
+    "prefix_events": 3,
+    "full_readings": 67,
+    "prefix_readings": 1,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:23:59.899",
+    "cutoff_ms": 1792167839899,
+    "full_events": 8,
+    "prefix_events": 8,
+    "full_readings": 67,
+    "prefix_readings": 2,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:24:28.265",
+    "cutoff_ms": 1792167868265,
+    "full_events": 11,
+    "prefix_events": 11,
+    "full_readings": 67,
+    "prefix_readings": 2,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:24:28.266",
+    "cutoff_ms": 1792167868266,
+    "full_events": 11,
+    "prefix_events": 11,
+    "full_readings": 67,
+    "prefix_readings": 2,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:24:58.065",
+    "cutoff_ms": 1792167898065,
+    "full_events": 13,
+    "prefix_events": 13,
+    "full_readings": 67,
+    "prefix_readings": 2,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:24:58.066",
+    "cutoff_ms": 1792167898066,
+    "full_events": 18,
+    "prefix_events": 18,
+    "full_readings": 67,
+    "prefix_readings": 3,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:24:59.676",
+    "cutoff_ms": 1792167899676,
+    "full_events": 18,
+    "prefix_events": 18,
+    "full_readings": 67,
+    "prefix_readings": 3,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:25:00.279",
+    "cutoff_ms": 1792167900279,
+    "full_events": 19,
+    "prefix_events": 19,
+    "full_readings": 67,
+    "prefix_readings": 3,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:25:00.280",
+    "cutoff_ms": 1792167900280,
+    "full_events": 19,
+    "prefix_events": 19,
+    "full_readings": 67,
+    "prefix_readings": 3,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:25:01.080",
+    "cutoff_ms": 1792167901080,
+    "full_events": 19,
+    "prefix_events": 19,
+    "full_readings": 67,
+    "prefix_readings": 3,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:25:01.081",
+    "cutoff_ms": 1792167901081,
+    "full_events": 26,
+    "prefix_events": 26,
+    "full_readings": 67,
+    "prefix_readings": 4,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:25:41.139",
+    "cutoff_ms": 1792167941139,
+    "full_events": 29,
+    "prefix_events": 29,
+    "full_readings": 67,
+    "prefix_readings": 4,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:25:41.140",
+    "cutoff_ms": 1792167941140,
+    "full_events": 34,
+    "prefix_events": 34,
+    "full_readings": 67,
+    "prefix_readings": 5,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:25:59.074",
+    "cutoff_ms": 1792167959074,
+    "full_events": 37,
+    "prefix_events": 37,
+    "full_readings": 67,
+    "prefix_readings": 5,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:25:59.075",
+    "cutoff_ms": 1792167959075,
+    "full_events": 45,
+    "prefix_events": 45,
+    "full_readings": 67,
+    "prefix_readings": 6,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:25:59.876",
+    "cutoff_ms": 1792167959876,
+    "full_events": 45,
+    "prefix_events": 45,
+    "full_readings": 67,
+    "prefix_readings": 6,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:26:59.874",
+    "cutoff_ms": 1792168019874,
+    "full_events": 46,
+    "prefix_events": 46,
+    "full_readings": 67,
+    "prefix_readings": 6,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:27:59.930",
+    "cutoff_ms": 1792168079930,
+    "full_events": 47,
+    "prefix_events": 47,
+    "full_readings": 67,
+    "prefix_readings": 6,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:28:59.990",
+    "cutoff_ms": 1792168139990,
+    "full_events": 55,
+    "prefix_events": 55,
+    "full_readings": 67,
+    "prefix_readings": 7,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:29:43.782",
+    "cutoff_ms": 1792168183782,
+    "full_events": 58,
+    "prefix_events": 58,
+    "full_readings": 67,
+    "prefix_readings": 7,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:29:43.783",
+    "cutoff_ms": 1792168183783,
+    "full_events": 58,
+    "prefix_events": 58,
+    "full_readings": 67,
+    "prefix_readings": 7,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:29:59.827",
+    "cutoff_ms": 1792168199827,
+    "full_events": 60,
+    "prefix_events": 60,
+    "full_readings": 67,
+    "prefix_readings": 7,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:30:01.427",
+    "cutoff_ms": 1792168201427,
+    "full_events": 61,
+    "prefix_events": 61,
+    "full_readings": 67,
+    "prefix_readings": 7,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:30:01.428",
+    "cutoff_ms": 1792168201428,
+    "full_events": 66,
+    "prefix_events": 66,
+    "full_readings": 67,
+    "prefix_readings": 8,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:30:26.079",
+    "cutoff_ms": 1792168226079,
+    "full_events": 69,
+    "prefix_events": 69,
+    "full_readings": 67,
+    "prefix_readings": 8,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:30:26.080",
+    "cutoff_ms": 1792168226080,
+    "full_events": 74,
+    "prefix_events": 74,
+    "full_readings": 67,
+    "prefix_readings": 9,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:30:59.969",
+    "cutoff_ms": 1792168259969,
+    "full_events": 102,
+    "prefix_events": 102,
+    "full_readings": 67,
+    "prefix_readings": 9,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:31:04.374",
+    "cutoff_ms": 1792168264374,
+    "full_events": 106,
+    "prefix_events": 106,
+    "full_readings": 67,
+    "prefix_readings": 9,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:31:04.375",
+    "cutoff_ms": 1792168264375,
+    "full_events": 106,
+    "prefix_events": 106,
+    "full_readings": 67,
+    "prefix_readings": 9,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:31:06.177",
+    "cutoff_ms": 1792168266177,
+    "full_events": 106,
+    "prefix_events": 106,
+    "full_readings": 67,
+    "prefix_readings": 9,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:31:06.178",
+    "cutoff_ms": 1792168266178,
+    "full_events": 114,
+    "prefix_events": 114,
+    "full_readings": 67,
+    "prefix_readings": 10,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:31:59.913",
+    "cutoff_ms": 1792168319913,
+    "full_events": 133,
+    "prefix_events": 133,
+    "full_readings": 67,
+    "prefix_readings": 10,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:32:59.857",
+    "cutoff_ms": 1792168379857,
+    "full_events": 156,
+    "prefix_events": 156,
+    "full_readings": 67,
+    "prefix_readings": 12,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:33:05.670",
+    "cutoff_ms": 1792168385670,
+    "full_events": 159,
+    "prefix_events": 159,
+    "full_readings": 67,
+    "prefix_readings": 12,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:33:05.671",
+    "cutoff_ms": 1792168385671,
+    "full_events": 163,
+    "prefix_events": 163,
+    "full_readings": 67,
+    "prefix_readings": 13,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:33:29.329",
+    "cutoff_ms": 1792168409329,
+    "full_events": 175,
+    "prefix_events": 175,
+    "full_readings": 67,
+    "prefix_readings": 14,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:33:29.330",
+    "cutoff_ms": 1792168409330,
+    "full_events": 175,
+    "prefix_events": 175,
+    "full_readings": 67,
+    "prefix_readings": 14,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:33:37.348",
+    "cutoff_ms": 1792168417348,
+    "full_events": 175,
+    "prefix_events": 175,
+    "full_readings": 67,
+    "prefix_readings": 14,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:33:37.349",
+    "cutoff_ms": 1792168417349,
+    "full_events": 182,
+    "prefix_events": 182,
+    "full_readings": 67,
+    "prefix_readings": 15,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:33:51.383",
+    "cutoff_ms": 1792168431383,
+    "full_events": 193,
+    "prefix_events": 193,
+    "full_readings": 67,
+    "prefix_readings": 16,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:33:51.384",
+    "cutoff_ms": 1792168431384,
+    "full_events": 202,
+    "prefix_events": 202,
+    "full_readings": 67,
+    "prefix_readings": 17,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:33:58.198",
+    "cutoff_ms": 1792168438198,
+    "full_events": 205,
+    "prefix_events": 205,
+    "full_readings": 67,
+    "prefix_readings": 17,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:33:58.199",
+    "cutoff_ms": 1792168438199,
+    "full_events": 205,
+    "prefix_events": 205,
+    "full_readings": 67,
+    "prefix_readings": 17,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:33:58.600",
+    "cutoff_ms": 1792168438600,
+    "full_events": 205,
+    "prefix_events": 205,
+    "full_readings": 67,
+    "prefix_readings": 17,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:33:58.601",
+    "cutoff_ms": 1792168438601,
+    "full_events": 205,
+    "prefix_events": 205,
+    "full_readings": 67,
+    "prefix_readings": 17,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:33:59.803",
+    "cutoff_ms": 1792168439803,
+    "full_events": 205,
+    "prefix_events": 205,
+    "full_readings": 67,
+    "prefix_readings": 17,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:34:05.218",
+    "cutoff_ms": 1792168445218,
+    "full_events": 206,
+    "prefix_events": 206,
+    "full_readings": 67,
+    "prefix_readings": 17,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:34:05.219",
+    "cutoff_ms": 1792168445219,
+    "full_events": 213,
+    "prefix_events": 213,
+    "full_readings": 67,
+    "prefix_readings": 17,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:34:58.155",
+    "cutoff_ms": 1792168498155,
+    "full_events": 227,
+    "prefix_events": 227,
+    "full_readings": 67,
+    "prefix_readings": 19,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:34:58.156",
+    "cutoff_ms": 1792168498156,
+    "full_events": 232,
+    "prefix_events": 232,
+    "full_readings": 67,
+    "prefix_readings": 20,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:34:59.960",
+    "cutoff_ms": 1792168499960,
+    "full_events": 232,
+    "prefix_events": 232,
+    "full_readings": 67,
+    "prefix_readings": 20,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:35:07.373",
+    "cutoff_ms": 1792168507373,
+    "full_events": 236,
+    "prefix_events": 236,
+    "full_readings": 67,
+    "prefix_readings": 20,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:35:07.374",
+    "cutoff_ms": 1792168507374,
+    "full_events": 243,
+    "prefix_events": 243,
+    "full_readings": 67,
+    "prefix_readings": 21,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:35:59.907",
+    "cutoff_ms": 1792168559907,
+    "full_events": 252,
+    "prefix_events": 252,
+    "full_readings": 67,
+    "prefix_readings": 21,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:36:28.958",
+    "cutoff_ms": 1792168588958,
+    "full_events": 257,
+    "prefix_events": 257,
+    "full_readings": 67,
+    "prefix_readings": 22,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:36:28.959",
+    "cutoff_ms": 1792168588959,
+    "full_events": 261,
+    "prefix_events": 261,
+    "full_readings": 67,
+    "prefix_readings": 23,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:36:34.372",
+    "cutoff_ms": 1792168594372,
+    "full_events": 263,
+    "prefix_events": 263,
+    "full_readings": 67,
+    "prefix_readings": 23,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:36:34.373",
+    "cutoff_ms": 1792168594373,
+    "full_events": 263,
+    "prefix_events": 263,
+    "full_readings": 67,
+    "prefix_readings": 23,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:36:37.180",
+    "cutoff_ms": 1792168597180,
+    "full_events": 263,
+    "prefix_events": 263,
+    "full_readings": 67,
+    "prefix_readings": 23,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:36:37.181",
+    "cutoff_ms": 1792168597181,
+    "full_events": 270,
+    "prefix_events": 270,
+    "full_readings": 67,
+    "prefix_readings": 24,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:36:59.837",
+    "cutoff_ms": 1792168619837,
+    "full_events": 295,
+    "prefix_events": 295,
+    "full_readings": 67,
+    "prefix_readings": 26,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:37:03.841",
+    "cutoff_ms": 1792168623841,
+    "full_events": 300,
+    "prefix_events": 300,
+    "full_readings": 67,
+    "prefix_readings": 26,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:37:03.842",
+    "cutoff_ms": 1792168623842,
+    "full_events": 300,
+    "prefix_events": 300,
+    "full_readings": 67,
+    "prefix_readings": 26,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:37:04.642",
+    "cutoff_ms": 1792168624642,
+    "full_events": 300,
+    "prefix_events": 300,
+    "full_readings": 67,
+    "prefix_readings": 26,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:37:04.643",
+    "cutoff_ms": 1792168624643,
+    "full_events": 305,
+    "prefix_events": 305,
+    "full_readings": 67,
+    "prefix_readings": 26,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:37:07.047",
+    "cutoff_ms": 1792168627047,
+    "full_events": 305,
+    "prefix_events": 305,
+    "full_readings": 67,
+    "prefix_readings": 26,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:37:07.048",
+    "cutoff_ms": 1792168627048,
+    "full_events": 305,
+    "prefix_events": 305,
+    "full_readings": 67,
+    "prefix_readings": 26,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:37:07.247",
+    "cutoff_ms": 1792168627247,
+    "full_events": 305,
+    "prefix_events": 305,
+    "full_readings": 67,
+    "prefix_readings": 26,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:37:07.248",
+    "cutoff_ms": 1792168627248,
+    "full_events": 305,
+    "prefix_events": 305,
+    "full_readings": 67,
+    "prefix_readings": 26,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:37:13.662",
+    "cutoff_ms": 1792168633662,
+    "full_events": 305,
+    "prefix_events": 305,
+    "full_readings": 67,
+    "prefix_readings": 26,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:37:13.663",
+    "cutoff_ms": 1792168633663,
+    "full_events": 314,
+    "prefix_events": 314,
+    "full_readings": 67,
+    "prefix_readings": 27,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:37:36.912",
+    "cutoff_ms": 1792168656912,
+    "full_events": 322,
+    "prefix_events": 322,
+    "full_readings": 67,
+    "prefix_readings": 28,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:37:36.913",
+    "cutoff_ms": 1792168656913,
+    "full_events": 327,
+    "prefix_events": 327,
+    "full_readings": 67,
+    "prefix_readings": 29,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:37:41.319",
+    "cutoff_ms": 1792168661319,
+    "full_events": 330,
+    "prefix_events": 330,
+    "full_readings": 67,
+    "prefix_readings": 29,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:37:41.320",
+    "cutoff_ms": 1792168661320,
+    "full_events": 330,
+    "prefix_events": 330,
+    "full_readings": 67,
+    "prefix_readings": 29,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:37:43.125",
+    "cutoff_ms": 1792168663125,
+    "full_events": 330,
+    "prefix_events": 330,
+    "full_readings": 67,
+    "prefix_readings": 29,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:37:43.126",
+    "cutoff_ms": 1792168663126,
+    "full_events": 340,
+    "prefix_events": 340,
+    "full_readings": 67,
+    "prefix_readings": 30,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:37:57.368",
+    "cutoff_ms": 1792168677368,
+    "full_events": 342,
+    "prefix_events": 342,
+    "full_readings": 67,
+    "prefix_readings": 30,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:37:57.369",
+    "cutoff_ms": 1792168677369,
+    "full_events": 342,
+    "prefix_events": 342,
+    "full_readings": 67,
+    "prefix_readings": 30,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:37:59.977",
+    "cutoff_ms": 1792168679977,
+    "full_events": 342,
+    "prefix_events": 342,
+    "full_readings": 67,
+    "prefix_readings": 30,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:38:08.792",
+    "cutoff_ms": 1792168688792,
+    "full_events": 343,
+    "prefix_events": 343,
+    "full_readings": 67,
+    "prefix_readings": 30,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:38:08.793",
+    "cutoff_ms": 1792168688793,
+    "full_events": 346,
+    "prefix_events": 346,
+    "full_readings": 67,
+    "prefix_readings": 30,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:38:27.633",
+    "cutoff_ms": 1792168707633,
+    "full_events": 349,
+    "prefix_events": 349,
+    "full_readings": 67,
+    "prefix_readings": 31,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:38:27.634",
+    "cutoff_ms": 1792168707634,
+    "full_events": 353,
+    "prefix_events": 353,
+    "full_readings": 67,
+    "prefix_readings": 32,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:38:59.914",
+    "cutoff_ms": 1792168739914,
+    "full_events": 361,
+    "prefix_events": 361,
+    "full_readings": 67,
+    "prefix_readings": 32,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:39:24.770",
+    "cutoff_ms": 1792168764770,
+    "full_events": 364,
+    "prefix_events": 364,
+    "full_readings": 67,
+    "prefix_readings": 32,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:39:24.771",
+    "cutoff_ms": 1792168764771,
+    "full_events": 365,
+    "prefix_events": 365,
+    "full_readings": 67,
+    "prefix_readings": 32,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:39:51.027",
+    "cutoff_ms": 1792168791027,
+    "full_events": 366,
+    "prefix_events": 366,
+    "full_readings": 67,
+    "prefix_readings": 32,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:39:51.028",
+    "cutoff_ms": 1792168791028,
+    "full_events": 369,
+    "prefix_events": 369,
+    "full_readings": 67,
+    "prefix_readings": 32,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:39:59.850",
+    "cutoff_ms": 1792168799850,
+    "full_events": 372,
+    "prefix_events": 372,
+    "full_readings": 67,
+    "prefix_readings": 33,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:40:01.250",
+    "cutoff_ms": 1792168801250,
+    "full_events": 373,
+    "prefix_events": 373,
+    "full_readings": 67,
+    "prefix_readings": 33,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:40:01.251",
+    "cutoff_ms": 1792168801251,
+    "full_events": 377,
+    "prefix_events": 377,
+    "full_readings": 67,
+    "prefix_readings": 34,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:40:03.658",
+    "cutoff_ms": 1792168803658,
+    "full_events": 377,
+    "prefix_events": 377,
+    "full_readings": 67,
+    "prefix_readings": 34,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:40:03.659",
+    "cutoff_ms": 1792168803659,
+    "full_events": 379,
+    "prefix_events": 379,
+    "full_readings": 67,
+    "prefix_readings": 34,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:40:04.059",
+    "cutoff_ms": 1792168804059,
+    "full_events": 379,
+    "prefix_events": 379,
+    "full_readings": 67,
+    "prefix_readings": 34,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:40:04.060",
+    "cutoff_ms": 1792168804060,
+    "full_events": 379,
+    "prefix_events": 379,
+    "full_readings": 67,
+    "prefix_readings": 34,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:40:14.082",
+    "cutoff_ms": 1792168814082,
+    "full_events": 379,
+    "prefix_events": 379,
+    "full_readings": 67,
+    "prefix_readings": 34,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:40:14.083",
+    "cutoff_ms": 1792168814083,
+    "full_events": 387,
+    "prefix_events": 387,
+    "full_readings": 67,
+    "prefix_readings": 35,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:40:59.986",
+    "cutoff_ms": 1792168859986,
+    "full_events": 397,
+    "prefix_events": 397,
+    "full_readings": 67,
+    "prefix_readings": 36,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:41:11.214",
+    "cutoff_ms": 1792168871214,
+    "full_events": 400,
+    "prefix_events": 400,
+    "full_readings": 67,
+    "prefix_readings": 36,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:41:11.215",
+    "cutoff_ms": 1792168871215,
+    "full_events": 400,
+    "prefix_events": 400,
+    "full_readings": 67,
+    "prefix_readings": 36,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:41:13.018",
+    "cutoff_ms": 1792168873018,
+    "full_events": 400,
+    "prefix_events": 400,
+    "full_readings": 67,
+    "prefix_readings": 36,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:41:13.019",
+    "cutoff_ms": 1792168873019,
+    "full_events": 405,
+    "prefix_events": 405,
+    "full_readings": 67,
+    "prefix_readings": 37,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:41:16.230",
+    "cutoff_ms": 1792168876230,
+    "full_events": 408,
+    "prefix_events": 408,
+    "full_readings": 67,
+    "prefix_readings": 37,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:41:16.231",
+    "cutoff_ms": 1792168876231,
+    "full_events": 412,
+    "prefix_events": 412,
+    "full_readings": 67,
+    "prefix_readings": 38,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:41:19.436",
+    "cutoff_ms": 1792168879436,
+    "full_events": 415,
+    "prefix_events": 415,
+    "full_readings": 67,
+    "prefix_readings": 38,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:41:19.437",
+    "cutoff_ms": 1792168879437,
+    "full_events": 415,
+    "prefix_events": 415,
+    "full_readings": 67,
+    "prefix_readings": 38,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:41:23.450",
+    "cutoff_ms": 1792168883450,
+    "full_events": 415,
+    "prefix_events": 415,
+    "full_readings": 67,
+    "prefix_readings": 38,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:41:23.451",
+    "cutoff_ms": 1792168883451,
+    "full_events": 425,
+    "prefix_events": 425,
+    "full_readings": 67,
+    "prefix_readings": 39,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:41:32.875",
+    "cutoff_ms": 1792168892875,
+    "full_events": 428,
+    "prefix_events": 428,
+    "full_readings": 67,
+    "prefix_readings": 39,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:41:32.876",
+    "cutoff_ms": 1792168892876,
+    "full_events": 428,
+    "prefix_events": 428,
+    "full_readings": 67,
+    "prefix_readings": 39,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:41:36.082",
+    "cutoff_ms": 1792168896082,
+    "full_events": 428,
+    "prefix_events": 428,
+    "full_readings": 67,
+    "prefix_readings": 39,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:41:36.083",
+    "cutoff_ms": 1792168896083,
+    "full_events": 436,
+    "prefix_events": 436,
+    "full_readings": 67,
+    "prefix_readings": 40,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:41:53.721",
+    "cutoff_ms": 1792168913721,
+    "full_events": 452,
+    "prefix_events": 452,
+    "full_readings": 67,
+    "prefix_readings": 41,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:41:53.722",
+    "cutoff_ms": 1792168913722,
+    "full_events": 452,
+    "prefix_events": 452,
+    "full_readings": 67,
+    "prefix_readings": 41,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:41:58.933",
+    "cutoff_ms": 1792168918933,
+    "full_events": 452,
+    "prefix_events": 452,
+    "full_readings": 67,
+    "prefix_readings": 41,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:41:58.934",
+    "cutoff_ms": 1792168918934,
+    "full_events": 460,
+    "prefix_events": 460,
+    "full_readings": 67,
+    "prefix_readings": 42,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:41:59.937",
+    "cutoff_ms": 1792168919937,
+    "full_events": 460,
+    "prefix_events": 460,
+    "full_readings": 67,
+    "prefix_readings": 42,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:42:34.429",
+    "cutoff_ms": 1792168954429,
+    "full_events": 472,
+    "prefix_events": 472,
+    "full_readings": 67,
+    "prefix_readings": 43,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:42:34.430",
+    "cutoff_ms": 1792168954430,
+    "full_events": 472,
+    "prefix_events": 472,
+    "full_readings": 67,
+    "prefix_readings": 43,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:42:41.445",
+    "cutoff_ms": 1792168961445,
+    "full_events": 475,
+    "prefix_events": 475,
+    "full_readings": 67,
+    "prefix_readings": 43,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:42:41.446",
+    "cutoff_ms": 1792168961446,
+    "full_events": 482,
+    "prefix_events": 482,
+    "full_readings": 67,
+    "prefix_readings": 44,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:42:48.867",
+    "cutoff_ms": 1792168968867,
+    "full_events": 485,
+    "prefix_events": 485,
+    "full_readings": 67,
+    "prefix_readings": 44,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:42:48.868",
+    "cutoff_ms": 1792168968868,
+    "full_events": 491,
+    "prefix_events": 491,
+    "full_readings": 67,
+    "prefix_readings": 45,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:42:59.885",
+    "cutoff_ms": 1792168979885,
+    "full_events": 495,
+    "prefix_events": 495,
+    "full_readings": 67,
+    "prefix_readings": 45,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:43:15.124",
+    "cutoff_ms": 1792168995124,
+    "full_events": 502,
+    "prefix_events": 502,
+    "full_readings": 67,
+    "prefix_readings": 45,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:43:15.125",
+    "cutoff_ms": 1792168995125,
+    "full_events": 502,
+    "prefix_events": 502,
+    "full_readings": 67,
+    "prefix_readings": 45,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:43:31.763",
+    "cutoff_ms": 1792169011763,
+    "full_events": 504,
+    "prefix_events": 504,
+    "full_readings": 67,
+    "prefix_readings": 45,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:43:31.764",
+    "cutoff_ms": 1792169011764,
+    "full_events": 509,
+    "prefix_events": 509,
+    "full_readings": 67,
+    "prefix_readings": 45,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:43:59.835",
+    "cutoff_ms": 1792169039835,
+    "full_events": 513,
+    "prefix_events": 513,
+    "full_readings": 67,
+    "prefix_readings": 46,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:44:59.815",
+    "cutoff_ms": 1792169099815,
+    "full_events": 518,
+    "prefix_events": 518,
+    "full_readings": 67,
+    "prefix_readings": 46,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:45:33.688",
+    "cutoff_ms": 1792169133688,
+    "full_events": 525,
+    "prefix_events": 525,
+    "full_readings": 67,
+    "prefix_readings": 47,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:45:33.689",
+    "cutoff_ms": 1792169133689,
+    "full_events": 529,
+    "prefix_events": 529,
+    "full_readings": 67,
+    "prefix_readings": 48,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:45:59.964",
+    "cutoff_ms": 1792169159964,
+    "full_events": 537,
+    "prefix_events": 537,
+    "full_readings": 67,
+    "prefix_readings": 49,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:46:02.567",
+    "cutoff_ms": 1792169162567,
+    "full_events": 538,
+    "prefix_events": 538,
+    "full_readings": 67,
+    "prefix_readings": 49,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:46:02.568",
+    "cutoff_ms": 1792169162568,
+    "full_events": 542,
+    "prefix_events": 542,
+    "full_readings": 67,
+    "prefix_readings": 50,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:46:28.440",
+    "cutoff_ms": 1792169188440,
+    "full_events": 552,
+    "prefix_events": 552,
+    "full_readings": 67,
+    "prefix_readings": 50,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:46:28.441",
+    "cutoff_ms": 1792169188441,
+    "full_events": 556,
+    "prefix_events": 556,
+    "full_readings": 67,
+    "prefix_readings": 50,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:46:39.267",
+    "cutoff_ms": 1792169199267,
+    "full_events": 556,
+    "prefix_events": 556,
+    "full_readings": 67,
+    "prefix_readings": 50,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:46:39.268",
+    "cutoff_ms": 1792169199268,
+    "full_events": 563,
+    "prefix_events": 563,
+    "full_readings": 67,
+    "prefix_readings": 51,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:46:53.502",
+    "cutoff_ms": 1792169213502,
+    "full_events": 570,
+    "prefix_events": 570,
+    "full_readings": 67,
+    "prefix_readings": 51,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:46:53.503",
+    "cutoff_ms": 1792169213503,
+    "full_events": 572,
+    "prefix_events": 572,
+    "full_readings": 67,
+    "prefix_readings": 51,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:46:59.915",
+    "cutoff_ms": 1792169219915,
+    "full_events": 572,
+    "prefix_events": 572,
+    "full_readings": 67,
+    "prefix_readings": 51,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:47:00.714",
+    "cutoff_ms": 1792169220714,
+    "full_events": 573,
+    "prefix_events": 573,
+    "full_readings": 67,
+    "prefix_readings": 51,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:47:00.715",
+    "cutoff_ms": 1792169220715,
+    "full_events": 578,
+    "prefix_events": 578,
+    "full_readings": 67,
+    "prefix_readings": 52,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:47:10.135",
+    "cutoff_ms": 1792169230135,
+    "full_events": 581,
+    "prefix_events": 581,
+    "full_readings": 67,
+    "prefix_readings": 52,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:47:10.136",
+    "cutoff_ms": 1792169230136,
+    "full_events": 585,
+    "prefix_events": 585,
+    "full_readings": 67,
+    "prefix_readings": 53,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:47:16.354",
+    "cutoff_ms": 1792169236354,
+    "full_events": 588,
+    "prefix_events": 588,
+    "full_readings": 67,
+    "prefix_readings": 53,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:47:16.355",
+    "cutoff_ms": 1792169236355,
+    "full_events": 588,
+    "prefix_events": 588,
+    "full_readings": 67,
+    "prefix_readings": 53,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:47:20.763",
+    "cutoff_ms": 1792169240763,
+    "full_events": 588,
+    "prefix_events": 588,
+    "full_readings": 67,
+    "prefix_readings": 53,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:47:20.764",
+    "cutoff_ms": 1792169240764,
+    "full_events": 598,
+    "prefix_events": 598,
+    "full_readings": 67,
+    "prefix_readings": 54,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:47:27.375",
+    "cutoff_ms": 1792169247375,
+    "full_events": 601,
+    "prefix_events": 601,
+    "full_readings": 67,
+    "prefix_readings": 54,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:47:27.376",
+    "cutoff_ms": 1792169247376,
+    "full_events": 609,
+    "prefix_events": 609,
+    "full_readings": 67,
+    "prefix_readings": 55,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:47:59.861",
+    "cutoff_ms": 1792169279861,
+    "full_events": 628,
+    "prefix_events": 628,
+    "full_readings": 67,
+    "prefix_readings": 55,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:48:03.270",
+    "cutoff_ms": 1792169283270,
+    "full_events": 629,
+    "prefix_events": 629,
+    "full_readings": 67,
+    "prefix_readings": 55,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:48:03.271",
+    "cutoff_ms": 1792169283271,
+    "full_events": 629,
+    "prefix_events": 629,
+    "full_readings": 67,
+    "prefix_readings": 55,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:48:59.811",
+    "cutoff_ms": 1792169339811,
+    "full_events": 629,
+    "prefix_events": 629,
+    "full_readings": 67,
+    "prefix_readings": 55,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:49:10.832",
+    "cutoff_ms": 1792169350832,
+    "full_events": 630,
+    "prefix_events": 630,
+    "full_readings": 67,
+    "prefix_readings": 55,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:49:10.833",
+    "cutoff_ms": 1792169350833,
+    "full_events": 635,
+    "prefix_events": 635,
+    "full_readings": 67,
+    "prefix_readings": 55,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:49:29.884",
+    "cutoff_ms": 1792169369884,
+    "full_events": 638,
+    "prefix_events": 638,
+    "full_readings": 67,
+    "prefix_readings": 56,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:49:29.885",
+    "cutoff_ms": 1792169369885,
+    "full_events": 642,
+    "prefix_events": 642,
+    "full_readings": 67,
+    "prefix_readings": 57,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:49:47.329",
+    "cutoff_ms": 1792169387329,
+    "full_events": 649,
+    "prefix_events": 649,
+    "full_readings": 67,
+    "prefix_readings": 57,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:49:47.330",
+    "cutoff_ms": 1792169387330,
+    "full_events": 649,
+    "prefix_events": 649,
+    "full_readings": 67,
+    "prefix_readings": 57,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:49:50.330",
+    "cutoff_ms": 1792169390330,
+    "full_events": 649,
+    "prefix_events": 649,
+    "full_readings": 67,
+    "prefix_readings": 57,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:49:50.331",
+    "cutoff_ms": 1792169390331,
+    "full_events": 655,
+    "prefix_events": 655,
+    "full_readings": 67,
+    "prefix_readings": 57,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:49:52.935",
+    "cutoff_ms": 1792169392935,
+    "full_events": 657,
+    "prefix_events": 657,
+    "full_readings": 67,
+    "prefix_readings": 57,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:49:52.936",
+    "cutoff_ms": 1792169392936,
+    "full_events": 657,
+    "prefix_events": 657,
+    "full_readings": 67,
+    "prefix_readings": 57,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:49:58.745",
+    "cutoff_ms": 1792169398745,
+    "full_events": 657,
+    "prefix_events": 657,
+    "full_readings": 67,
+    "prefix_readings": 57,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:49:58.746",
+    "cutoff_ms": 1792169398746,
+    "full_events": 660,
+    "prefix_events": 660,
+    "full_readings": 67,
+    "prefix_readings": 57,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:49:59.949",
+    "cutoff_ms": 1792169399949,
+    "full_events": 660,
+    "prefix_events": 660,
+    "full_readings": 67,
+    "prefix_readings": 57,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:50:24.006",
+    "cutoff_ms": 1792169424006,
+    "full_events": 667,
+    "prefix_events": 667,
+    "full_readings": 67,
+    "prefix_readings": 59,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:50:24.007",
+    "cutoff_ms": 1792169424007,
+    "full_events": 667,
+    "prefix_events": 667,
+    "full_readings": 67,
+    "prefix_readings": 59,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:50:58.701",
+    "cutoff_ms": 1792169458701,
+    "full_events": 667,
+    "prefix_events": 667,
+    "full_readings": 67,
+    "prefix_readings": 59,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:50:58.702",
+    "cutoff_ms": 1792169458702,
+    "full_events": 673,
+    "prefix_events": 673,
+    "full_readings": 67,
+    "prefix_readings": 60,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:50:59.899",
+    "cutoff_ms": 1792169459899,
+    "full_events": 673,
+    "prefix_events": 673,
+    "full_readings": 67,
+    "prefix_readings": 60,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:51:10.919",
+    "cutoff_ms": 1792169470919,
+    "full_events": 677,
+    "prefix_events": 677,
+    "full_readings": 67,
+    "prefix_readings": 60,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:51:10.920",
+    "cutoff_ms": 1792169470920,
+    "full_events": 682,
+    "prefix_events": 682,
+    "full_readings": 67,
+    "prefix_readings": 61,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:51:21.347",
+    "cutoff_ms": 1792169481347,
+    "full_events": 685,
+    "prefix_events": 685,
+    "full_readings": 67,
+    "prefix_readings": 61,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:51:21.348",
+    "cutoff_ms": 1792169481348,
+    "full_events": 685,
+    "prefix_events": 685,
+    "full_readings": 67,
+    "prefix_readings": 61,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:51:23.152",
+    "cutoff_ms": 1792169483152,
+    "full_events": 685,
+    "prefix_events": 685,
+    "full_readings": 67,
+    "prefix_readings": 61,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:51:23.153",
+    "cutoff_ms": 1792169483153,
+    "full_events": 685,
+    "prefix_events": 685,
+    "full_readings": 67,
+    "prefix_readings": 61,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:51:59.859",
+    "cutoff_ms": 1792169519859,
+    "full_events": 685,
+    "prefix_events": 685,
+    "full_readings": 67,
+    "prefix_readings": 61,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:52:48.558",
+    "cutoff_ms": 1792169568558,
+    "full_events": 686,
+    "prefix_events": 686,
+    "full_readings": 67,
+    "prefix_readings": 61,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:52:48.559",
+    "cutoff_ms": 1792169568559,
+    "full_events": 696,
+    "prefix_events": 696,
+    "full_readings": 67,
+    "prefix_readings": 62,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:52:59.988",
+    "cutoff_ms": 1792169579988,
+    "full_events": 696,
+    "prefix_events": 696,
+    "full_readings": 67,
+    "prefix_readings": 62,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:53:59.965",
+    "cutoff_ms": 1792169639965,
+    "full_events": 708,
+    "prefix_events": 708,
+    "full_readings": 67,
+    "prefix_readings": 63,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:54:59.928",
+    "cutoff_ms": 1792169699928,
+    "full_events": 725,
+    "prefix_events": 725,
+    "full_readings": 67,
+    "prefix_readings": 63,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:55:17.768",
+    "cutoff_ms": 1792169717768,
+    "full_events": 732,
+    "prefix_events": 732,
+    "full_readings": 67,
+    "prefix_readings": 64,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:55:17.769",
+    "cutoff_ms": 1792169717769,
+    "full_events": 739,
+    "prefix_events": 739,
+    "full_readings": 67,
+    "prefix_readings": 65,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:55:59.872",
+    "cutoff_ms": 1792169759872,
+    "full_events": 754,
+    "prefix_events": 754,
+    "full_readings": 67,
+    "prefix_readings": 66,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:56:32.144",
+    "cutoff_ms": 1792169792144,
+    "full_events": 761,
+    "prefix_events": 761,
+    "full_readings": 67,
+    "prefix_readings": 66,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:56:32.145",
+    "cutoff_ms": 1792169792145,
+    "full_events": 761,
+    "prefix_events": 761,
+    "full_readings": 67,
+    "prefix_readings": 66,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:56:59.827",
+    "cutoff_ms": 1792169819827,
+    "full_events": 761,
+    "prefix_events": 761,
+    "full_readings": 67,
+    "prefix_readings": 66,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:57:16.858",
+    "cutoff_ms": 1792169836858,
+    "full_events": 762,
+    "prefix_events": 762,
+    "full_readings": 67,
+    "prefix_readings": 66,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:57:16.859",
+    "cutoff_ms": 1792169836859,
+    "full_events": 768,
+    "prefix_events": 768,
+    "full_readings": 67,
+    "prefix_readings": 66,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:57:59.821",
+    "cutoff_ms": 1792169879821,
+    "full_events": 782,
+    "prefix_events": 782,
+    "full_readings": 67,
+    "prefix_readings": 67,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:58:59.613",
+    "cutoff_ms": 1792169939613,
+    "full_events": 811,
+    "prefix_events": 811,
+    "full_readings": 67,
+    "prefix_readings": 67,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 16:59:59.791",
+    "cutoff_ms": 1792169999791,
+    "full_events": 836,
+    "prefix_events": 836,
+    "full_readings": 67,
+    "prefix_readings": 67,
+    "pass": true,
+    "mismatch": null
+  },
+  {
+    "cutoff_time": "2026-10-16 17:00:59.931",
+    "cutoff_ms": 1792170059931,
+    "full_events": 872,
+    "prefix_events": 872,
+    "full_readings": 67,
+    "prefix_readings": 67,
+    "pass": true,
+    "mismatch": null
+  }
+]

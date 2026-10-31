@@ -1,0 +1,125 @@
+{
+  "iteration_id": "ITERACION_10_GAP_CONCURRENCY",
+  "created_utc": "2026-10-30T19:54:37.147157+00:00",
+  "engine": "TM_REFERENCE_INTERPRETER_V1_DIRECT_AUT (revision 10)",
+  "objective": "gap explicito con propiedad funcional y concurrencia L1/L2",
+  "files": [
+    {
+      "original": "10_REPORTS/CHECKPOINT_10_GAP_CONCURRENCY.md",
+      "package_name": "01_CHECKPOINT_10.md",
+      "size": 3694,
+      "sha256": "ee5fdb0d2456de3af620a8d94a607e7fdb5ffee229a00a7ee015ebc3be70debe"
+    },
+    {
+      "original": "09_OPEN_RULES/OPEN_RULES_C_GRANDE_V1.md",
+      "package_name": "02_OPEN_RULES.md",
+      "size": 2665,
+      "sha256": "9e1be0b1bfcd49a3ad38fa2a10dfca97929b253173a3af61357a494e7f4dd0d0"
+    },
+    {
+      "original": "04_CONCEPT_TESTS/GAP_CONCURRENCY_TEST_RESULTS.csv",
+      "package_name": "03_TEST_RESULTS_GAP_CONC.csv",
+      "size": 1372,
+      "sha256": "8fb6bbad88464694619ba4757f6e3b3d11e56f23ca056f38d7441eab73750a70"
+    },
+    {
+      "original": "04_CONCEPT_TESTS/ITERATION_10_TEST_RESULTS.json",
+      "package_name": "04_TEST_RESULTS.json",
+      "size": 218,
+      "sha256": "25a2f1bdb04577d077d88ea1b7788e9784a90860abd491e7f705cc1a83ce25cd"
+    },
+    {
+      "original": "04_CONCEPT_TESTS/ITERATION_09_TEST_RESULTS.json",
+      "package_name": "05_REGRESSION_09.json",
+      "size": 894,
+      "sha256": "99a8601d0cd75e13c22faa577dfaa1905ff3572077d9ba7087a9e556703b4883"
+    },
+    {
+      "original": "07_REAL_REPLAYS/full_feed_metrics.json",
+      "package_name": "06_FULL_FEED_METRICS.json",
+      "size": 2774,
+      "sha256": "16564cda8ad2a7fabb84059ad3bbb40729627a31e8debfcffd498c6e6c12d5a8"
+    },
+    {
+      "original": "05_REFERENCE_ENGINE/tm_reference_interpreter_v1_direct_aut.py",
+      "package_name": "07_INTERPRETER.py",
+      "size": 43854,
+      "sha256": "afe2dbf3946ed30cfa624623a8a1b489f995209737f75b5499ce678a01fce548"
+    },
+    {
+      "original": "05_REFERENCE_ENGINE/tm_concurrent_readings.py",
+      "package_name": "08_CONCURRENCY.py",
+      "size": 3619,
+      "sha256": "7d64844dae268c1e5c0528c7656e95ba4292ed8f15e4c4af6c39d0cf3e88ae1f"
+    },
+    {
+      "original": "04_CONCEPT_TESTS/run_iteration_10_tests.py",
+      "package_name": "09_RUNNER_GAP_CONC.py",
+      "size": 5985,
+      "sha256": "8e53faa198baa3856aee1384c94a447416fa5da6682dc6d231e75e3c5208dbca"
+    },
+    {
+      "original": "04_CONCEPT_TESTS/run_full_feed.py",
+      "package_name": "10_RUNNER_FULL_FEED.py",
+      "size": 2271,
+      "sha256": "c5ef04ad3403cd4dc29fae722376ac88843dc2e7c2950d515c1e62fdfaf1116a"
+    },
+    {
+      "original": "07_REAL_REPLAYS/direct_aut_state_L1_1615_1618.json",
+      "package_name": "11_STATE_L1.json",
+      "size": 2198,
+      "sha256": "6f887d7b96884c7072e9a519f0aad33c52150a9edef84b5fa81fca63f17622ac"
+    },
+    {
+      "original": "07_REAL_REPLAYS/direct_aut_state_L2_1619_1622.json",
+      "package_name": "12_STATE_L2.json",
+      "size": 2217,
+      "sha256": "b09bee16aa0cad3cf8fca5e3c0b181a15dc73ad7d7e0907ee5346bcb0fbea709"
+    },
+    {
+      "original": "07_REAL_REPLAYS/direct_aut_events_L2_1619_1622.csv",
+      "package_name": "13_EVENTS_L2.csv",
+      "size": 3426,
+      "sha256": "07340e1bcf892e5dc7c416b86aa5ce76aea8bf5dd624b1d4c55396b28318f775"
+    },
+    {
+      "original": "08_TREE_PYTHON_COMPARISON/C_GRANDE_TREE_PYTHON_MATRIX_V1.csv",
+      "package_name": "14_MATRIX_C.csv",
+      "size": 1713,
+      "sha256": "420208bc73d3c03d073d6ac18d599227439a4df6307f8887452dc47031002747"
+    }
+  ],
+  "gates": [
+    "GATE_GAP_PASS",
+    "GATE_CONCURRENCY_PASS"
+  ],
+  "tests": {
+    "gap_concurrency": {
+      "total": 11,
+      "passed": 11
+    },
+    "regression_09": {
+      "total": 82,
+      "passed": 82
+    }
+  },
+  "full_feed": {
+    "ticks": 20335,
+    "deterministic": true,
+    "prefix_consistent": true,
+    "events": 335,
+    "finding": "un solo ciclo; ciclo de 1 en OPEN_RULE_BLOCK"
+  },
+  "open_rule_blocks": [
+    "CYCLE_1",
+    "CUT",
+    "TT",
+    "FT"
+  ],
+  "originals_modified": false,
+  "tree_modified": false,
+  "official_engine_modified": false,
+  "TREE_STATUS": "NOT_READY_TO_FREEZE_TREE",
+  "REFERENCE_ENGINE_STATUS": "REFERENCE_ENGINE_INCOMPLETE",
+  "PATTERN_ENGINE_STATUS": "PATTERN_ENGINE_BLOCKED"
+}

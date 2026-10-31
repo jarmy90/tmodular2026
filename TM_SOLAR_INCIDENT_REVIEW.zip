@@ -1,0 +1,14 @@
+TM_SOLAR_INCIDENT_REVIEW
+
+This ZIP placeholder was created after the stop-and-audit incident.
+
+It currently contains:
+- SOLAR_INCIDENT_SUMMARY.md
+
+It intentionally does NOT contain:
+- the full original tree
+- the full tickfeed
+- full R3/R5 if unmodified
+- all 81+ repeated state files as-is
+
+The next correct step is to replace this placeholder with a real, verified ZIP built only from the selected review material.

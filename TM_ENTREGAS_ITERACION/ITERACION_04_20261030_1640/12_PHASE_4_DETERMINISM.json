@@ -1,0 +1,24 @@
+{
+  "double_run": {
+    "equal": true,
+    "sha_full": "66099d49b0fca16d67913d599314d642b0a81c96b81f3ac40efeefc746756a9a",
+    "lines": 20335
+  },
+  "prefixes": {
+    "16:30": {
+      "lines": 3829,
+      "equal": true,
+      "sha": "32e329e19988b4e2e00f57a40a209c0f6242d756c771d478586b4783e0220f98"
+    },
+    "17:00": {
+      "lines": 12265,
+      "equal": true,
+      "sha": "02362f1ffd609c9cc97ce76bdc86bec00c6cdebca37600104b51d73029e2c6df"
+    },
+    "17:15": {
+      "lines": 16454,
+      "equal": true,
+      "sha": "46bf6242e5e82035d5028eaba5fae977f28078008d579ff269e14faf6cffd340"
+    }
+  }
+}

@@ -1,0 +1,6 @@
+source,generations,primary,gap,pending,notes
+v3_full,51,41,9,1,"P-A-B100 + gap classic"
+v4_classic,4,3,0,1,"A funcional; 3 AUT_B + 1 abierta; aisla el efecto A"
+v4_all,44,7,36,1,"A funcional + gap sin zona muerta"
+l2_v4,4,1,2,1,"1 primaria, 2 duplicadas de L1, 1 abierta"
+unique_v4,46,8,36,2,"44 L1 + 2 L2 unicas"
